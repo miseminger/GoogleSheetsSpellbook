@@ -1,6 +1,6 @@
 # GoogleSheetsSpellbook
 
-This repo is for storing practice with the Google API for Python. The use case is for managing the mints sheet for GENEPIO, but may branch out into other areas in the future.
+This repo is for storing practice with the Google API Python Client. The current use case is for managing the mints sheet for GENEPIO, but may branch out into other applications in the future.
 
 **Getting Started:**
 
