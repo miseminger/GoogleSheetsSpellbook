@@ -13,3 +13,4 @@ Install the [google-api-python-client package from conda::forge](https://anacond
 
 * https://developers.google.com/workspace/sheets/api/quickstart/python
 * https://www.thebricks.com/resources/guide-how-to-edit-google-sheets-with-python
+* https://github.com/cbarcl01/mint_qc_script
