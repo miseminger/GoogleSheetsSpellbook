@@ -3,11 +3,11 @@
 This repo is for storing practice with the Google API Python Client. The current use case is for managing the mints sheet for GENEPIO, but may branch out into other applications in the future.
 
 **Getting Started:**
-
-Follow the directions at: https://developers.google.com/workspace/sheets/api/quickstart/python.
+* The app is called ```mints-tracker``` and is part of the project ```ontology-mints-tracker```.
+* It is available to external users--but for the moment only external users who I have granted permission to as the app is under Testing status and has not been verified by Google yet. (Add new users as needed under the Audience tab.)
 
 **Madeline's Process Notes:**
-
+* Follow the directions at: https://developers.google.com/workspace/sheets/api/quickstart/python.
 * Install all required packages using Conda, e.g. [google-api-python-client package from conda::forge](https://anaconda.org/channels/conda-forge/packages/google-api-python-client/overview). 
 * If using ```tamarisk``` (Madeline's laptop, b. January 2020 AD), all packages are installed inside the virtual Conda environment called ```google-mint```, using Python 3.13.11 and Ubuntu 20.04.
 * I had to add myself as a test user to gain access
