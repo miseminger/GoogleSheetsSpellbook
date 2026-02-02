@@ -5,6 +5,7 @@ This repo is for storing practice with the Google API Python Client. The current
 **Getting Started:**
 * The app is called ```mints-tracker``` and is part of the project ```ontology-mints-tracker```.
 * It is available to external users--but for the moment only external users who I have granted permission to as the app is under Testing status and has not been verified by Google yet. (Add new users as needed under the Audience tab.)
+* The scope is "https://www.googleapis.com/auth/spreadsheets", which can read and write all files in Google Sheets.
 
 **Madeline's Process Notes:**
 * Follow the directions at: https://developers.google.com/workspace/sheets/api/quickstart/python.
