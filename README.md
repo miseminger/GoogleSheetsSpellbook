@@ -12,6 +12,7 @@ This repo is for storing practice with the Google API Python Client. The current
 * Install all required packages using Conda, e.g. [google-api-python-client package from conda::forge](https://anaconda.org/channels/conda-forge/packages/google-api-python-client/overview). 
 * If using ```tamarisk``` (Madeline's laptop, b. January 2020 AD), all packages are installed inside the virtual Conda environment called ```google-mint```, using Python 3.13.11 and Ubuntu 20.04.
 * I had to add myself as a test user to gain access with ```quickstart.py``` as in [the tutorial](https://developers.google.com/workspace/sheets/api/quickstart/python).
+* Remember to enable the Google Sheets API at https://console.developers.google.com/apis/api/sheets.googleapis.com/overview?project=88442894636.
 * ```credentials.json``` is stored locally and not shown in this repo in order to keep the client secret a secret...
 
 **Pages that might be helpful (saving them for my own reference while I figure this out):**
