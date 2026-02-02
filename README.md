@@ -17,7 +17,7 @@ This repo is for storing practice with the Google API Python Client. The current
 
 **Pages that might be helpful (saving them for my own reference while I figure this out):**
 
-* https://www.thebricks.com/resources/guide-how-to-edit-google-sheets-with-python
 * https://github.com/cbarcl01/mint_qc_script
 * [GitHub repo for the Google API Python Client](https://github.com/googleapis/google-api-python-client/tree/main/docs)
+* ~~https://www.thebricks.com/resources/guide-how-to-edit-google-sheets-with-python~~ (don't use this: ```gspread``` is old)
 
