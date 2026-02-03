@@ -16,7 +16,7 @@ SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 #SAMPLE_SPREADSHEET_ID = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms" #original sample
 SAMPLE_SPREADSHEET_ID = "1tcFcInsaGcrKpJKcdKGxzCpV7BvmvDQLIH2BLbnso1g" #mine
 #SAMPLE_SPREADSHEET_ID = "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0" #mints sheet
-SAMPLE_RANGE_NAME = "A2:B" # use the form "Sheet!ColumnRow:ColumnRow", eg. "2025!A2:B"
+SAMPLE_RANGE_NAME = "A2:B" # use A1 notation, of the form "Sheet!ColumnRow:ColumnRow", eg. "2025!A2:B"
 
 
 def main():
@@ -75,6 +75,25 @@ def main():
     # save the data as a pandas df
     df = pd.DataFrame(values)
     print(df)
+    # modify the "pets" column to make the pets blue
+    df[1] = "blue " + df[1]
+    print(df)
+    # update the spreadsheet in Google Sheets
+    values = df.values.tolist() # convert df back to nested list
+    body = {"values": values}
+    result = (
+        service.spreadsheets()
+        .values()
+        .update(
+            spreadsheetId=SAMPLE_SPREADSHEET_ID,
+            range=SAMPLE_RANGE_NAME,
+            valueInputOption="RAW",
+            body=body,
+        )
+        .execute()
+    )
+    print(f"{result.get('updatedCells')} cells updated.")
+    return result
 
     # now try creating an empty spreadsheet in the Root folder of my Drive
     spreadsheet = {"properties": {"title": "Madeline_26"}}
