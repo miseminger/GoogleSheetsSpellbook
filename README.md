@@ -14,6 +14,7 @@ This repo is for storing practice with the Google API Python Client. The current
 * I had to add myself as a test user to gain access with ```quickstart.py``` as in [the tutorial](https://developers.google.com/workspace/sheets/api/quickstart/python).
 * Remember to enable the Google Sheets API at https://console.developers.google.com/apis/api/sheets.googleapis.com/overview?project=88442894636.
 * ```credentials.json``` is stored locally and not shown in this repo in order to keep the client secret a secret...
+* ADC must be in place for functions.py to work. See [Issue #1](https://github.com/miseminger/GoogleSheetsSpellbook/issues/1) for directions.
 
 **Pages that might be helpful (saving them for my own reference while I figure this out):**
 
