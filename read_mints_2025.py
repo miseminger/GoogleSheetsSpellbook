@@ -76,17 +76,20 @@ def main():
     df = pd.DataFrame(values)
     print(df)
     # modify the "pets" column to make the pets blue
-    df[1] = "blue " + df[1]
+    df[1] = "red " + df[1]
+    df[2] = df[0] + " inc."
     print(df)
     # update the spreadsheet in Google Sheets
     values = df.values.tolist() # convert df back to nested list
+    print("three columns")
+    print(values)
     body = {"values": values}
     result = (
         service.spreadsheets()
         .values()
         .update(
             spreadsheetId=SAMPLE_SPREADSHEET_ID,
-            range=SAMPLE_RANGE_NAME,
+            range="A2:C",
             valueInputOption="RAW",
             body=body,
         )
