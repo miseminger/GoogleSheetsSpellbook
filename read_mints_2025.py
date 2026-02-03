@@ -1,4 +1,5 @@
 import os.path
+import pandas as pd
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -70,6 +71,10 @@ def main():
     for row in values:
       # Print columns A and B, which correspond to indices 0 and 1.
       print(f"{row[0]}, {row[1]}")
+
+    # save the data as a pandas df
+    df = pd.DataFrame(values)
+    print(df)
 
     # now try creating an empty spreadsheet in the Root folder of my Drive
     spreadsheet = {"properties": {"title": "Madeline_26"}}
