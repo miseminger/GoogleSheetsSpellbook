@@ -45,6 +45,15 @@ def get_values(spreadsheet_id, range_name):
     # Pass: spreadsheet_id, and range_name
   get_values("1CM29gwKIzeXsAppeNwrc8lbYaVMmUclprLuLYuHog4k", "A1:C2")
   """
+
+  
+def get_values(spreadsheet_id, range_name):
+  """
+  Creates the batch_update the user has access to.
+  Load pre-authorized user credentials from the environment.
+  TODO(developer) - See https://developers.google.com/identity
+  for guides on implementing OAuth2 for the application.
+  """
   creds, _ = google.auth.default()
   # pylint: disable=maybe-no-member
   try:
@@ -62,6 +71,7 @@ def get_values(spreadsheet_id, range_name):
   except HttpError as error:
     print(f"An error occurred: {error}")
     return error
+
   
 
 
