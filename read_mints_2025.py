@@ -8,8 +8,7 @@ from googleapiclient.errors import HttpError
 
 # If modifying these scopes, delete the file token.json.
 #SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
-SCOPES = ["https://www.googleapis.com/auth/drive.readonly",
-          "https://www.googleapis.com/auth/spreadsheets.readonly"]
+SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 
 # The ID and range of a sample spreadsheet.
@@ -47,6 +46,8 @@ def main():
 
     # Call the Sheets API
     sheet = service.spreadsheets()
+
+    # Try retrieving data from a spreadsheet
     result = (
         sheet.values()
         .get(spreadsheetId=SAMPLE_SPREADSHEET_ID, range=SAMPLE_RANGE_NAME)
@@ -58,14 +59,28 @@ def main():
       print("No data found.")
       return
     
+    # print out the data raw
     print("type:")
     print(type(values))
     print(values)
     print("")
+
+    # print out the data prettily
     print("ColumnA, ColumnB:")
     for row in values:
       # Print columns A and B, which correspond to indices 0 and 1.
       print(f"{row[0]}, {row[1]}")
+
+    # now try creating an empty spreadsheet in the Root folder of my Drive
+    spreadsheet = {"properties": {"title": "Madeline_26"}}
+    spreadsheet = (
+        service.spreadsheets()
+        .create(body=spreadsheet, fields="spreadsheetId")
+        .execute()
+    )
+    print(f"Spreadsheet ID: {(spreadsheet.get('spreadsheetId'))}")
+    return spreadsheet.get("spreadsheetId")
+
   except HttpError as err:
     print(err)
 
