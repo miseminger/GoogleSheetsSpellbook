@@ -16,6 +16,7 @@
 # sed 's/ /\t/' = now replace the first space with a tab--since the Type space is gone, this is the space between the IRI and the Label.
 # 's/Property/ Property/' = put the space back in the Type column
 # > genepio_edit_terms.tsv = save to a file called genepio_edit_terms.tsv
- 
-cat /home/madeline/Desktop/git_temp/genepio/src/ontology/genepio-edit.owl | grep '^#' | grep "GENEPIO_" | sed 's/: obo:/\t/g' | sed 's/^# //g' | sed 's/GENEPIO_/GENEPIO:/g' | sed 's/)$//g' | sed 's/(//' | sed 's/ Property/Property/' | sed 's/ /\t/' | sed 's/Property/ Property/' > genepio_edit_terms.tsv
+
+echo -e "type\tIRI\tlabel" > genepio_edit_terms.tsv # initiate TSV with header row
+cat /home/madeline/Desktop/git_temp/genepio/src/ontology/genepio-edit.owl | grep '^#' | grep "GENEPIO_" | sed 's/: obo:/\t/g' | sed 's/^# //g' | sed 's/GENEPIO_/GENEPIO:/g' | sed 's/)$//g' | sed 's/(//' | sed 's/ Property/Property/' | sed 's/ /\t/' | sed 's/Property/ Property/' >> genepio_edit_terms.tsv
 

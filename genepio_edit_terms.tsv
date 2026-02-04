@@ -1,3 +1,4 @@
+type	IRI	label
 Annotation Property	GENEPIO:0000001	metadata section
 Annotation Property	GENEPIO:0000004	term as in existing standard
 Annotation Property	GENEPIO:0000005	term source
