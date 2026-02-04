@@ -27,10 +27,9 @@ if __name__ == "__main__":
 
   # read 2025 mints sheet into a df
   mints_list = get_values(MINTS_SPREADSHEET_ID, SAMPLE_RANGE_NAME).get("values", [])
-  mints_df = pd.DataFrame(mints_list, columns=['IRI', 'Label'])
+  mints_df = pd.DataFrame(mints_list, columns=['IRI', 'Label']) # convert to a pandas df
+  mints_df = mints_df[mints_df['Label'].notna()] # remove rows with an IRI but no label
   print(mints_df)
 
-  '''
-  In genepio-edit.owl, the terms that have been ontologized are written in like this:
-    # Class: obo:GENEPIO_0000047 (secondary enzyme (LMACI))
-  '''
+  # read in TSV of terms that are already in GENEPIO
+  # this TSV must have columns titled ['IRI', 'Label']
