@@ -18,12 +18,18 @@ from functions import *
 
 
 # The ID and range of the mints spreadsheet.
+
 MINTS_SPREADSHEET_ID = "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0" # mints sheet
 MINTS_RANGE_NAME = "2025!A3:E" # fetch columns A-E from the 2025 sheet
 MINTS_COLUMNS = ['IRI', 'label', 'creator (GitHub username)', 'reservation date', 'subset'] # names of columns A-E in order
 
 GENEPIO_ROBOT_SPREADSHEET_ID = "1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4" # ROBOT sheet
 GENEPIO_ROBOT_RANGE_NAME = "spec_field (new)!A4:B" # fetch first two columns
+GENEPIO_ROBOT_ARCHIVAL_RANGE_NAMES = ''
+
+CURATION_SHEET_2023 = "1s6FB9EyPWYBgssIU9a9AKATEfZnMdixwvrGhBXUHAVk" # GENEPIO 2023 Curation Tables
+CURATION_SHEET_2024 = "14r_qlNJUCGJ_59MA3MR0x4JObsYpQI_2AFJGMu_wyl4" # GENEPIO 2024 Curation Tables
+
 
 if __name__ == "__main__":
 
@@ -37,15 +43,13 @@ if __name__ == "__main__":
   # read in TSV of terms that are already in GENEPIO
   # this TSV must have columns titled ['IRI', 'label']
   genepio_edit_df = pd.read_csv("genepio_edit_terms.tsv", sep='\t', header=0)
-  genepio_edit_df['In genepio-edit.owl?'] = 'YYYY' # add column to be used in merge
+  genepio_edit_df['In genepio-edit.owl?'] = 'YES' # add column to be used in merge
   genepio_edit_df = genepio_edit_df.drop(columns=['type'])# drop 'type' column
   print("genepio_edit_df")
   print(genepio_edit_df)
 
   # merge mints sheet with genepio-edit sheet
   merged_df = pd.merge(mints_df, genepio_edit_df, on=['IRI', 'label'], how='left')
-  print("merged_df")
-  print(merged_df)
   # final df should be the same size as mints_df!
 
   print(merged_df[merged_df['In genepio-edit.owl?'].notna()])
@@ -56,15 +60,22 @@ if __name__ == "__main__":
   robot_df = robot_df.replace(r'^\s+$', np.nan, regex=True) # replace empty strings with nan
   robot_df = robot_df[robot_df['IRI'].str.contains("GENEPIO")] # remove rows with no IRI
   robot_df = robot_df[robot_df['label'].notna()] # remove rows with no label
-  print("robot_df")
-  print(robot_df)
 
   # check if mints are in genepio-ROBOT sheet: spec_field (new)
-  robot_df['In GENEPIO ROBOT?'] = 'YYYY' # add column to be used in merge
-  # merge mints sheet with genepio-edit sheet
+  robot_df['In GENEPIO ROBOT?'] = 'YES' # add column to be used in merge
+  # merge mints sheet with genepio-ROBOT sheet
   merged_df_2 = pd.merge(merged_df, robot_df, on=['IRI', 'label'], how='left')
   print("merged_df_2")
   print(merged_df_2)
   # final df should be the same size as mints_df!
 
+  # print out any terms that are in the ROBOT file
   print(merged_df_2[merged_df_2['In GENEPIO ROBOT?'].notna()])
+
+  # replace all NaN values with empty strings
+  merged_df_2 = merged_df_2.fillna('')
+
+  # update the Mints_review spreadsheet in Google Sheets
+  values2 = merged_df_2.values.tolist() # convert df back to nested list
+  print(values2)
+  update_values(MINTS_SPREADSHEET_ID, "Mints review!A3:K", "RAW", values2)
