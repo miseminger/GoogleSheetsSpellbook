@@ -153,7 +153,7 @@ def append_values(spreadsheet_id, range_name, value_input_option, _values):
 
 
 
-def batch_get_values(spreadsheet_id, _range_names):
+def batch_get_values(spreadsheet_id, range_names):
   """
   https://github.com/googleworkspace/python-samples/blob/main/sheets/snippets/sheets_batch_get_values.py
 
@@ -171,9 +171,7 @@ def batch_get_values(spreadsheet_id, _range_names):
   # pylint: disable=maybe-no-member
   try:
     service = build("sheets", "v4", credentials=creds)
-    range_names = [
-        # Range names ...
-    ]
+
     result = (
         service.spreadsheets()
         .values()
