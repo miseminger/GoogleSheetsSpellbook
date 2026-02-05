@@ -59,7 +59,7 @@ if __name__ == "__main__":
   print("robot_df")
   print(robot_df)
 
-
+  # check if mints are in genepio-ROBOT sheet: spec_field (new)
   robot_df['In GENEPIO ROBOT?'] = 'YYYY' # add column to be used in merge
   # merge mints sheet with genepio-edit sheet
   merged_df_2 = pd.merge(merged_df, robot_df, on=['IRI', 'label'], how='left')
