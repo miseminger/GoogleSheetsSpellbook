@@ -53,7 +53,18 @@ if __name__ == "__main__":
   # read in genepio-ROBOT sheet: spec_field (new)
   robot_list = get_values(GENEPIO_ROBOT_SPREADSHEET_ID, GENEPIO_ROBOT_RANGE_NAME).get("values", [])
   robot_df = pd.DataFrame(robot_list, columns=['IRI', 'label']) # convert to a pandas df
-  robot_df = robot_df[robot_df['IRI'].notna()] # remove rows with no IRI
+  robot_df = robot_df.replace(r'^\s+$', np.nan, regex=True) # replace empty strings with nan
+  robot_df = robot_df[robot_df['IRI'].str.contains("GENEPIO")] # remove rows with no IRI
   robot_df = robot_df[robot_df['label'].notna()] # remove rows with no label
   print("robot_df")
   print(robot_df)
+
+
+  robot_df['In GENEPIO ROBOT?'] = 'YYYY' # add column to be used in merge
+  # merge mints sheet with genepio-edit sheet
+  merged_df_2 = pd.merge(merged_df, robot_df, on=['IRI', 'label'], how='left')
+  print("merged_df_2")
+  print(merged_df_2)
+  # final df should be the same size as mints_df!
+
+  print(merged_df_2[merged_df_2['In GENEPIO ROBOT?'].notna()])
