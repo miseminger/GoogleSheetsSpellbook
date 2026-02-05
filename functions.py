@@ -33,19 +33,6 @@ def create(title):
   
 
 
-def get_values(spreadsheet_id, range_name):
-  """
-  https://github.com/googleworkspace/python-samples/blob/main/sheets/snippets/sheets_get_values.py
-
-  Creates the batch_update the user has access to.
-  Load pre-authorized user credentials from the environment.
-  TODO(developer) - See https://developers.google.com/identity
-  for guides on implementing OAuth2 for the application.
-
-    # Pass: spreadsheet_id, and range_name
-  get_values("1CM29gwKIzeXsAppeNwrc8lbYaVMmUclprLuLYuHog4k", "A1:C2")
-  """
-
   
 def get_values(spreadsheet_id, range_name):
   """
@@ -170,17 +157,11 @@ def append_values(spreadsheet_id, range_name, value_input_option, _values):
     return error
 
 
-import google.auth
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
-
-
-
 
 def batch_get_values(spreadsheet_id, _range_names):
   """
   https://github.com/googleworkspace/python-samples/blob/main/sheets/snippets/sheets_batch_get_values.py
-  
+
   Creates the batch_update the user has access to.
   Load pre-authorized user credentials from the environment.
   TODO(developer) - See https://developers.google.com/identity
