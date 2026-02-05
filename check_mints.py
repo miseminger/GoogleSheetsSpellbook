@@ -6,6 +6,7 @@ identifying whether a given mint has been added to the OWL file or not yet.
 
 import os.path
 import pandas as pd
+import numpy as np
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -17,15 +18,17 @@ from functions import *
 
 
 # The ID and range of the mints spreadsheet.
-MINTS_SPREADSHEET_ID = "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0" #mints sheet
-SAMPLE_RANGE_NAME = "2025!A3:E" # fetch columns A-E from the 2025 sheet
+MINTS_SPREADSHEET_ID = "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0" # mints sheet
+MINTS_RANGE_NAME = "2025!A3:E" # fetch columns A-E from the 2025 sheet
 MINTS_COLUMNS = ['IRI', 'label', 'creator (GitHub username)', 'reservation date', 'subset'] # names of columns A-E in order
 
+GENEPIO_ROBOT_SPREADSHEET_ID = "1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4" # ROBOT sheet
+GENEPIO_ROBOT_RANGE_NAME = "spec_field (new)!A4:B" # fetch first two columns
 
 if __name__ == "__main__":
 
   # read 2025 mints sheet into a df
-  mints_list = get_values(MINTS_SPREADSHEET_ID, SAMPLE_RANGE_NAME).get("values", [])
+  mints_list = get_values(MINTS_SPREADSHEET_ID, MINTS_RANGE_NAME).get("values", [])
   mints_df = pd.DataFrame(mints_list, columns=MINTS_COLUMNS) # convert to a pandas df
   mints_df = mints_df[mints_df['label'].notna()] # remove rows with an IRI but no label
   print("mints_df")
@@ -46,3 +49,11 @@ if __name__ == "__main__":
   # final df should be the same size as mints_df!
 
   print(merged_df[merged_df['In genepio-edit.owl?'].notna()])
+
+  # read in genepio-ROBOT sheet: spec_field (new)
+  robot_list = get_values(GENEPIO_ROBOT_SPREADSHEET_ID, GENEPIO_ROBOT_RANGE_NAME).get("values", [])
+  robot_df = pd.DataFrame(robot_list, columns=['IRI', 'label']) # convert to a pandas df
+  robot_df = robot_df[robot_df['IRI'].notna()] # remove rows with no IRI
+  robot_df = robot_df[robot_df['label'].notna()] # remove rows with no label
+  print("robot_df")
+  print(robot_df)
