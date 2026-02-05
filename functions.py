@@ -62,7 +62,7 @@ def get_values(spreadsheet_id, range_name):
   
 
 
-def update_values(spreadsheet_id, range_name, value_input_option, _values):
+def update_values(spreadsheet_id, range_name, value_input_option, values):
   """
   https://github.com/googleworkspace/python-samples/blob/main/sheets/snippets/sheets_update_values.py
 
@@ -83,12 +83,6 @@ def update_values(spreadsheet_id, range_name, value_input_option, _values):
   # pylint: disable=maybe-no-member
   try:
     service = build("sheets", "v4", credentials=creds)
-    values = [
-        [
-            # Cell values ...
-        ],
-        # Additional rows ...
-    ]
     body = {"values": values}
     result = (
         service.spreadsheets()
@@ -103,6 +97,7 @@ def update_values(spreadsheet_id, range_name, value_input_option, _values):
     )
     print(f"{result.get('updatedCells')} cells updated.")
     return result
+  
   except HttpError as error:
     print(f"An error occurred: {error}")
     return error
