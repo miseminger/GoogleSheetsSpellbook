@@ -125,7 +125,7 @@ def update_values(spreadsheet_id, range_name, value_input_option, _values):
 def append_values(spreadsheet_id, range_name, value_input_option, _values):
   """
   https://github.com/googleworkspace/python-samples/blob/main/sheets/snippets/sheets_append_values.py
-  
+
   Creates the batch_update the user has access to.
   Load pre-authorized user credentials from the environment.
   TODO(developer) - See https://developers.google.com/identity
@@ -165,6 +165,48 @@ def append_values(spreadsheet_id, range_name, value_input_option, _values):
     print(f"{(result.get('updates').get('updatedCells'))} cells appended.")
     return result
 
+  except HttpError as error:
+    print(f"An error occurred: {error}")
+    return error
+
+
+import google.auth
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
+
+
+
+
+def batch_get_values(spreadsheet_id, _range_names):
+  """
+  https://github.com/googleworkspace/python-samples/blob/main/sheets/snippets/sheets_batch_get_values.py
+  
+  Creates the batch_update the user has access to.
+  Load pre-authorized user credentials from the environment.
+  TODO(developer) - See https://developers.google.com/identity
+  for guides on implementing OAuth2 for the application.
+
+
+  # Pass: spreadsheet_id, and range_name
+
+  batch_get_values("1CM29gwKIzeXsAppeNwrc8lbYaVMmUclprLuLYuHog4k", "A1:C2")
+  """
+  creds, _ = google.auth.default()
+  # pylint: disable=maybe-no-member
+  try:
+    service = build("sheets", "v4", credentials=creds)
+    range_names = [
+        # Range names ...
+    ]
+    result = (
+        service.spreadsheets()
+        .values()
+        .batchGet(spreadsheetId=spreadsheet_id, ranges=range_names)
+        .execute()
+    )
+    ranges = result.get("valueRanges", [])
+    print(f"{len(ranges)} ranges retrieved")
+    return result
   except HttpError as error:
     print(f"An error occurred: {error}")
     return error
