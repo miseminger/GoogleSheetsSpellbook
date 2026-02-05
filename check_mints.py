@@ -34,7 +34,7 @@ if __name__ == "__main__":
   # read in TSV of terms that are already in GENEPIO
   # this TSV must have columns titled ['IRI', 'label']
   genepio_edit_df = pd.read_csv("genepio_edit_terms.tsv", sep='\t', header=0)
-  genepio_edit_df['in_GENEPIO'] = 'YYYY' # add column to be used in merge
+  genepio_edit_df['In genepio-edit.owl?'] = 'YYYY' # add column to be used in merge
   genepio_edit_df = genepio_edit_df.drop(columns=['type'])# drop 'type' column
   print("genepio_edit_df")
   print(genepio_edit_df)
@@ -45,4 +45,4 @@ if __name__ == "__main__":
   print(merged_df)
   # final df should be the same size as mints_df!
 
-  print(merged_df[merged_df['in_GENEPIO'].notna()])
+  print(merged_df[merged_df['In genepio-edit.owl?'].notna()])
