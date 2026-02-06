@@ -2,6 +2,8 @@ import google.auth
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
+import pandas as pd
+
 
 def create(title):
   """
@@ -184,3 +186,36 @@ def batch_get_values(spreadsheet_id, range_names):
   except HttpError as error:
     print(f"An error occurred: {error}")
     return error
+
+
+def get_multitab_df(spreadsheet_id, range_names, column_names):
+  # eg. range_names = ["2023_to_request_ontologies (Charlie)", "2023_mints_wastewater (Charlie)"]
+  # eg. column_names = ['Ontology ID','label', 'alternative label']
+  # get multiple sheets within spreadsheet_id into one large df
+  values = batch_get_values(spreadsheet_id, range_names)
+  # initialize empty df
+  curation_df = pd.DataFrame(columns=column_names)
+  # fill in empty df sheet by sheet
+  for sheet in range(len(values['valueRanges'])):
+      tab = values['valueRanges'][sheet]['range'].split('!')[0] # save the name of the tab, eg. '2023_error_curation (Charlie)'
+      #print(tab)
+      # collect the data in that tab in a pandas df
+      sheet_data = values['valueRanges'][sheet]['values']
+      sheet_df = pd.DataFrame(sheet_data, columns=sheet_data[0])
+      sheet_df = sheet_df[2:] # leave off ROBOT instructions
+      #print(sheet_df.columns)
+      # only keep columns specified in column_names variable
+      sheet_df = sheet_df[column_names]
+      # add a column showing the tab name
+      sheet_df["tab"] = tab
+      #print(sheet_df)
+      # append sheet_df to the spreadsheet df
+      curation_df = pd.concat([curation_df, sheet_df])
+  # combine duplicate rows and transform "tab" into a comma-separated list
+  sheet_df = sheet_df.fillna('')
+  curation_df = curation_df.groupby(column_names).agg({'tab': ', '.join}).reset_index()
+  # add a column showing the spreadsheet_id
+  # curation_df["spreadsheet_id"] = spreadsheet_id
+  print(curation_df)
+
+  return curation_df
