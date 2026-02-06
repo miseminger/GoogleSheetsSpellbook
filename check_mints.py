@@ -79,3 +79,25 @@ if __name__ == "__main__":
   values2 = merged_df_2.values.tolist() # convert df back to nested list
   print(values2)
   update_values(MINTS_SPREADSHEET_ID, "Mints review!A3:K", "RAW", values2)
+
+  # get multiple sheets within CURATION_SHEET_2023 into one large df
+  values = batch_get_values(CURATION_SHEET_2023, ["2023_to_request_ontologies (Charlie)", "2023_mints_wastewater (Charlie)"])
+  # initialize empty df
+  curation_2023_df = pd.DataFrame(columns=['Ontology ID','label', 'alternative label', 'tab', 'spreadsheet_id'])
+  for sheet in range(len(values['valueRanges'])):
+      tab = values['valueRanges'][sheet]['range'].split('!')[0] # save the name of the tab, eg. '2023_error_curation (Charlie)'
+      #print(tab)
+      # collect the data in that tab in a pandas df
+      sheet_data = values['valueRanges'][sheet]['values']
+      sheet_df = pd.DataFrame(sheet_data, columns=sheet_data[0])
+      sheet_df = sheet_df[2:] # leave off ROBOT instructions
+      #print(sheet_df.columns)
+      # only keep ['Ontology ID','label', 'alternative label'] columns
+      sheet_df = sheet_df[['Ontology ID','label', 'alternative label']]
+      # add a column showing the tab name
+      sheet_df["tab"] = tab
+      sheet_df["spreadsheet_id"] = CURATION_SHEET_2023
+      #print(sheet_df)
+      # append sheet_df to the spreadsheet df
+      curation_2023_df = pd.concat([curation_2023_df, sheet_df])
+  print(curation_2023_df)
