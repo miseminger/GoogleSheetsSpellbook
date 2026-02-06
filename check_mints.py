@@ -69,8 +69,8 @@ if __name__ == "__main__":
   robot_df = robot_df[robot_df['label'].notna()] # remove rows with no label
 
   # check if mints are in genepio-ROBOT sheet: spec_field (new)
-  robot_df['In GENEPIO ROBOT?'] = 'YES' # add column to be used in merge
-  robot_df['Tab location in GENEPIO ROBOT'] = 'Coming soon!'
+  robot_df['In GENEPIO ROBOT?'] = 'YES - spec field (new)' # add column to be used in merge
+  robot_df['Tab location in GENEPIO ROBOT'] = 'Other ROBOT tab checks coming soon!'
   # merge mints sheet with genepio-ROBOT sheet
   mints_review_df = pd.merge(mints_review_df, robot_df, on=['IRI', 'label'], how='left')
   #print("mints_review_df")
