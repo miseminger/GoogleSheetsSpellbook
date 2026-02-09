@@ -99,7 +99,7 @@ def main():
     return result
 
     # now try creating an empty spreadsheet in the Root folder of my Drive
-    spreadsheet = {"properties": {"title": "Madeline_26"}}
+    spreadsheet = {"properties": {"title": "Madeline_2900"}}
     spreadsheet = (
         service.spreadsheets()
         .create(body=spreadsheet, fields="spreadsheetId")
@@ -107,6 +107,11 @@ def main():
     )
     print(f"Spreadsheet ID: {(spreadsheet.get('spreadsheetId'))}")
     return spreadsheet.get("spreadsheetId")
+  
+    # now try reading multiple sheets:
+    batch = batch_get_values("1CM29gwKIzeXsAppeNwrc8lbYaVMmUclprLuLYuHog4k", ["A1:A2", "B1:C2"]).get("values", [])
+    print("batch")
+    type(batch)
 
   except HttpError as err:
     print(err)
