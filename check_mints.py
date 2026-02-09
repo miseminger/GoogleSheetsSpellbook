@@ -49,7 +49,7 @@ if __name__ == "__main__":
   # read in TSV of terms that are already in GENEPIO
   # this TSV must have columns titled ['IRI', 'label']
   genepio_edit_df = pd.read_csv("genepio_edit_terms.tsv", sep='\t', header=0)
-  genepio_edit_df['In genepio-edit.owl?'] = 'YES' # add column to be used in merge
+  genepio_edit_df['In genepio-edit.owl?'] = 'yes' # add column to be used in merge
   genepio_edit_df = genepio_edit_df.drop(columns=['type'])# drop 'type' column
   #print("genepio_edit_df")
   #print(genepio_edit_df)
@@ -64,7 +64,7 @@ if __name__ == "__main__":
   robot_df = get_multitab_df(GENEPIO_ROBOT_SPREADSHEET_ID, GENEPIO_ROBOT_RANGE_NAMES, GENEPIO_ROBOT_COLUMN_NAMES, startrow=2)
   robot_df = robot_df[robot_df['Ontology ID'].str.contains("GENEPIO")] # remove rows with no IRI
   robot_df = robot_df[robot_df['label'].notna()] # remove rows with no label
-  robot_df['In GENEPIO ROBOT?'] = 'YES' # add column to be used in merge
+  robot_df['In GENEPIO ROBOT?'] = 'yes' # add column to be used in merge
   # rename "Ontology ID" column to "IRI" to match mints sheet
   robot_df = robot_df.rename(columns={"Ontology ID": "IRI", "tab": "Tab location in GENEPIO ROBOT"})
 
@@ -84,7 +84,7 @@ if __name__ == "__main__":
   # concatenate curation sheets into one long df
   curation_df = pd.concat([curation_2023_df, curation_2024_df])
   # add "In GENEPIO curation?" tab
-  curation_df["In GENEPIO curation?"] = 'YES'
+  curation_df["In GENEPIO curation?"] = 'yes'
   # rename "Ontology ID" column to "IRI" to match mints sheet
   curation_df = curation_df.rename(columns={"Ontology ID": "IRI", "tab": "Tab location in GENEPIO curation"})
   # restrict columns to those that should be merged into mints_review
@@ -108,6 +108,10 @@ if __name__ == "__main__":
   # update the Mints_review spreadsheet in Google Sheets
   # replace all NaN values with empty strings
   mints_review_df = mints_review_df.fillna('')
+  # fill in 'no' in the absence of 'yes'
+  mints_review_df['In genepio-edit.owl?'] = mints_review_df['In genepio-edit.owl?'].where(mints_review_df['In genepio-edit.owl?'] == 'yes', 'no')
+  mints_review_df['In GENEPIO ROBOT?'] = mints_review_df['In GENEPIO ROBOT?'].where(mints_review_df['In GENEPIO ROBOT?'] == 'yes', 'no')
+  mints_review_df['In GENEPIO curation?'] = mints_review_df['In GENEPIO curation?'].where(mints_review_df['In GENEPIO curation?'] == 'yes', 'no')
   # make sure columns are in order
   mints_review_df = mints_review_df[mints_review_df_columns]
   print(mints_review_df)
