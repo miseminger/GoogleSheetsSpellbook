@@ -22,10 +22,10 @@ MINTS_SPREADSHEET_ID = "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0" # mints sh
 MINTS_RANGE_NAMES = ["2022", "2023", "2024", "2025"]  # fetch 2022-2025 sheets
 MINTS_COLUMN_NAMES = ['IRI', 'label', 'creator (GitHub username)', 'reservation date', 'subset'] # names of columns A-E in order
 
-# GENEPIO ROBOT Table
+# GENEPIO ROBOT Tables
 GENEPIO_ROBOT_SPREADSHEET_ID = "1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4" # ROBOT sheet
-GENEPIO_ROBOT_RANGE_NAME = "spec_field (new)!A4:B" # fetch first two columns
-GENEPIO_ROBOT_ARCHIVAL_RANGE_NAMES = ''
+GENEPIO_ROBOT_RANGE_NAMES = ["spec_field (new)", "spec_field (retired)", "identifiers (draft)", "SSSOM-Import-Overlay", "spec_enum", "Rhi Term List"] # ignore "Master Review 2025", "deprecation", "IMPORT (To-dos)" and "DEPRECATE (To-dos)" until further notice
+GENEPIO_ROBOT_COLUMN_NAMES = ['Ontology ID','label']
 
 # GENEPIO 2023 Curation Tables
 CURATION_SHEET_2023 = "1s6FB9EyPWYBgssIU9a9AKATEfZnMdixwvrGhBXUHAVk" 
@@ -37,13 +37,11 @@ CURATION_SHEET_2024 = "14r_qlNJUCGJ_59MA3MR0x4JObsYpQI_2AFJGMu_wyl4"
 CURATION_SHEET_2024_RANGE_NAMES = ["2024_hAMRonization", "2024_GRDI", "2024_HPAI", "2024_QC", "2024_CanCOGen", "2024_Pathoplexus", "2024_MPOX", "2024_wastewater"]
 CURATION_SHEET_2024_COLUMN_NAMES = ['Ontology ID','label', 'alternative label']
 
+mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio-edit.owl?",	"In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation"] #,	"Notes"
 
 if __name__ == "__main__":
 
-  # read 2023 mints sheet into a df
-  #mints_list = get_values(MINTS_SPREADSHEET_ID, MINTS_RANGE_NAMES).get("values", [])
-  #mints_df = pd.DataFrame(mints_list, columns=MINTS_COLUMN_NAMES) # convert to a pandas df
-  #mints_df = mints_df[mints_df['label'].notna()] # remove rows with an IRI but no label
+  # read all mints sheets into a df
   mints_df = get_multitab_df(MINTS_SPREADSHEET_ID, MINTS_RANGE_NAMES, MINTS_COLUMN_NAMES, startrow=1) 
   print(mints_df.shape)
   mints_df = mints_df[MINTS_COLUMN_NAMES] # leave off the 'tab' column here
@@ -62,22 +60,19 @@ if __name__ == "__main__":
 
   #print(merged_df[merged_df['In genepio-edit.owl?'].notna()])
 
-  # read in genepio-ROBOT sheet: spec_field (new)
-  robot_list = get_values(GENEPIO_ROBOT_SPREADSHEET_ID, GENEPIO_ROBOT_RANGE_NAME).get("values", [])
-  robot_df = pd.DataFrame(robot_list, columns=['IRI', 'label']) # convert to a pandas df
-  robot_df = robot_df[robot_df['IRI'].str.contains("GENEPIO")] # remove rows with no IRI
+  # read in genepio-ROBOT sheets
+  robot_df = get_multitab_df(GENEPIO_ROBOT_SPREADSHEET_ID, GENEPIO_ROBOT_RANGE_NAMES, GENEPIO_ROBOT_COLUMN_NAMES, startrow=2)
+  robot_df = robot_df[robot_df['Ontology ID'].str.contains("GENEPIO")] # remove rows with no IRI
   robot_df = robot_df[robot_df['label'].notna()] # remove rows with no label
+  robot_df['In GENEPIO ROBOT?'] = 'YES' # add column to be used in merge
+  # rename "Ontology ID" column to "IRI" to match mints sheet
+  robot_df = robot_df.rename(columns={"Ontology ID": "IRI", "tab": "Tab location in GENEPIO ROBOT"})
 
-  # check if mints are in genepio-ROBOT sheet: spec_field (new)
-  robot_df['In GENEPIO ROBOT?'] = 'YES - spec field (new)' # add column to be used in merge
-  robot_df['Tab location in GENEPIO ROBOT'] = 'Other ROBOT tab checks coming soon!'
   # merge mints sheet with genepio-ROBOT sheet
   mints_review_df = pd.merge(mints_review_df, robot_df, on=['IRI', 'label'], how='left')
   #print("mints_review_df")
   #print(mints_review_df)
   # final df should be the same size as mints_df!
-
-  ### check if mints are in genepio-ROBOT archival sheets
 
   # print out any terms that are in the ROBOT file
   #print("terms in ROBOT spec field (new)")
@@ -113,6 +108,8 @@ if __name__ == "__main__":
   # update the Mints_review spreadsheet in Google Sheets
   # replace all NaN values with empty strings
   mints_review_df = mints_review_df.fillna('')
+  # make sure columns are in order
+  mints_review_df = mints_review_df[mints_review_df_columns]
   print(mints_review_df)
   print(mints_df)
   mints_review_df_values = mints_review_df.values.tolist() # convert df back to nested list
