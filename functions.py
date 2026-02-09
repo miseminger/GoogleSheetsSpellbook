@@ -188,15 +188,20 @@ def batch_get_values(spreadsheet_id, range_names):
     return error
 
 
-def get_multitab_df(spreadsheet_id, range_names, column_names, startrow):
+def get_multitab_df(input_dict):
   # eg. range_names = ["2023_to_request_ontologies (Charlie)", "2023_mints_wastewater (Charlie)"]
   # eg. column_names = ['Ontology ID','label', 'alternative label']
   # get multiple sheets within spreadsheet_id into one large df
   # startrow is 0-indexed: so if the first row of data is row 2 in Google Sheets, write startrow=1 here
+  spreadsheet_id = input_dict.pop("SPREADSHEET_ID")
+  print("Processing: ", spreadsheet_id)
+  range_names = input_dict.pop("RANGE_NAMES")
+  column_names = input_dict.pop("COLUMN_NAMES")
+  start_row = input_dict.pop("START_ROW")
   values = batch_get_values(spreadsheet_id, range_names)
   # initialize empty df
   multitab_df = pd.DataFrame(columns=column_names)
-  print(column_names)
+
   # fill in empty df sheet by sheet
   for sheet in range(len(values['valueRanges'])):
       tab = values['valueRanges'][sheet]['range'].split('!')[0] # save the name of the tab, eg. '2023_error_curation (Charlie)'
@@ -204,12 +209,12 @@ def get_multitab_df(spreadsheet_id, range_names, column_names, startrow):
       # collect the data in that tab in a pandas df
       sheet_data = values['valueRanges'][sheet]['values']
       sheet_df = pd.DataFrame(sheet_data, columns=sheet_data[0])
-      sheet_df = sheet_df[startrow:] # leave off ROBOT instructions
+      sheet_df = sheet_df[start_row:] # leave off ROBOT instructions
       # replace '\n' in column names with a space
       sheet_df.columns = [colname.replace('\n', ' ') for colname in sheet_df.columns.tolist()]
       # only keep columns specified in column_names variable
       sheet_df = sheet_df[column_names]
-      print(sheet_df.columns)
+      #print(sheet_df.columns)
       # add a column showing the tab name
       sheet_df["tab"] = tab
       #print(sheet_df)
@@ -220,6 +225,6 @@ def get_multitab_df(spreadsheet_id, range_names, column_names, startrow):
   multitab_df = multitab_df.groupby(column_names).agg({'tab': ', '.join}).reset_index()
   # add a column showing the spreadsheet_id
   # multitab_df["spreadsheet_id"] = spreadsheet_id
-  print(multitab_df)
+  #print(multitab_df)
 
   return multitab_df

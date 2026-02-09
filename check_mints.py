@@ -7,6 +7,8 @@ identifying whether a given mint has been added to the OWL file or not yet.
 import os.path
 import pandas as pd
 import numpy as np
+import json
+import argparse
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -16,35 +18,30 @@ from googleapiclient.errors import HttpError
 
 from functions import *
 
-
-# The ID and range of the Mints spreadsheet
-MINTS_SPREADSHEET_ID = "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0" # mints sheet id
-MINTS_RANGE_NAMES = ["2022", "2023", "2024", "2025"]  # fetch 2022-2025 sheets
-MINTS_COLUMN_NAMES = ['IRI', 'label', 'creator (GitHub username)', 'reservation date', 'subset'] # names of columns A-E in order
-
-# GENEPIO ROBOT Tables
-GENEPIO_ROBOT_SPREADSHEET_ID = "1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4" # ROBOT sheet
-GENEPIO_ROBOT_RANGE_NAMES = ["spec_field (new)", "spec_field (retired)", "identifiers (draft)", "SSSOM-Import-Overlay", "spec_enum", "Rhi Term List"] # ignore "Master Review 2025", "deprecation", "IMPORT (To-dos)" and "DEPRECATE (To-dos)" until further notice
-GENEPIO_ROBOT_COLUMN_NAMES = ['Ontology ID','label']
-
-# GENEPIO 2023 Curation Tables
-CURATION_SHEET_2023 = "1s6FB9EyPWYBgssIU9a9AKATEfZnMdixwvrGhBXUHAVk" 
-CURATION_SHEET_2023_RANGE_NAMES = ["2023_mints_wastewater_terms (Charlie)", "2023_manual_curation (Charlie)"] # don't search "2023_mints_wastewater (Charlie)" until further notice
-CURATION_SHEET_2023_COLUMN_NAMES = ['Ontology ID','label', 'alternative label']
-
-# GENEPIO 2024 Curation Tables
-CURATION_SHEET_2024 = "14r_qlNJUCGJ_59MA3MR0x4JObsYpQI_2AFJGMu_wyl4" 
-CURATION_SHEET_2024_RANGE_NAMES = ["2024_hAMRonization", "2024_GRDI", "2024_HPAI", "2024_QC", "2024_CanCOGen", "2024_Pathoplexus", "2024_MPOX", "2024_wastewater"]
-CURATION_SHEET_2024_COLUMN_NAMES = ['Ontology ID','label', 'alternative label']
-
 mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio-edit.owl?",	"In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation"] #,	"Notes"
+
+def parse_args():
+    
+    parser = argparse.ArgumentParser(
+        description='Updates the mints review sheet.')
+    parser.add_argument('--input', type=str, default=None, required=True,
+                        help='Path to the JSON file of spreadsheet metadata')
+ 
+    return parser.parse_args()
 
 if __name__ == "__main__":
 
+  args = parse_args()
+
+  with open(args.input) as fp:
+    RESOURCE_DICT = json.load(fp)
+
+  mints_review_sheet_id = "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0"
+
   # read all mints sheets into a df
-  mints_df = get_multitab_df(MINTS_SPREADSHEET_ID, MINTS_RANGE_NAMES, MINTS_COLUMN_NAMES, startrow=1) 
+  mints_df = get_multitab_df(RESOURCE_DICT["MINTS_SPREADSHEET"]) 
   print(mints_df.shape)
-  mints_df = mints_df[MINTS_COLUMN_NAMES] # leave off the 'tab' column here
+  mints_df = mints_df.drop(columns=['tab'])# drop 'tab' column
 
   # read in TSV of terms that are already in GENEPIO
   # this TSV must have columns titled ['IRI', 'label']
@@ -61,7 +58,7 @@ if __name__ == "__main__":
   #print(merged_df[merged_df['In genepio-edit.owl?'].notna()])
 
   # read in genepio-ROBOT sheets
-  robot_df = get_multitab_df(GENEPIO_ROBOT_SPREADSHEET_ID, GENEPIO_ROBOT_RANGE_NAMES, GENEPIO_ROBOT_COLUMN_NAMES, startrow=2)
+  robot_df = get_multitab_df(RESOURCE_DICT["GENEPIO_ROBOT_SPREADSHEET"])
   robot_df = robot_df[robot_df['Ontology ID'].str.contains("GENEPIO")] # remove rows with no IRI
   robot_df = robot_df[robot_df['label'].notna()] # remove rows with no label
   robot_df['In GENEPIO ROBOT?'] = 'yes' # add column to be used in merge
@@ -79,8 +76,8 @@ if __name__ == "__main__":
   #print(merged_df_2[merged_df_2['In GENEPIO ROBOT?'].notna()])
 
   ## check if mints are in a curation sheet
-  curation_2023_df = get_multitab_df(CURATION_SHEET_2023, CURATION_SHEET_2023_RANGE_NAMES, CURATION_SHEET_2023_COLUMN_NAMES, startrow=2)
-  curation_2024_df = get_multitab_df(CURATION_SHEET_2024, CURATION_SHEET_2024_RANGE_NAMES, CURATION_SHEET_2024_COLUMN_NAMES, startrow=2)
+  curation_2023_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEET_2023_SPREADSHEET"])
+  curation_2024_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEET_2024_SPREADSHEET"])
   # concatenate curation sheets into one long df
   curation_df = pd.concat([curation_2023_df, curation_2024_df])
   # add "In GENEPIO curation?" tab
@@ -114,7 +111,7 @@ if __name__ == "__main__":
   mints_review_df['In GENEPIO curation?'] = mints_review_df['In GENEPIO curation?'].where(mints_review_df['In GENEPIO curation?'] == 'yes', 'no')
   # make sure columns are in order
   mints_review_df = mints_review_df[mints_review_df_columns]
-  print(mints_review_df)
-  print(mints_df)
+  #print(mints_review_df)
+  #print(mints_df)
   mints_review_df_values = mints_review_df.values.tolist() # convert df back to nested list
-  update_values(MINTS_SPREADSHEET_ID, "Mints review!A3:K", "RAW", mints_review_df_values)
+  update_values(mints_review_sheet_id, "Mints review!A3:K", "RAW", mints_review_df_values)
