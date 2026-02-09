@@ -19,7 +19,7 @@ from functions import *
 
 # The ID and range of the Mints spreadsheet
 MINTS_SPREADSHEET_ID = "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0" # mints sheet id
-MINTS_RANGE_NAMES = "2023!A2:E" #["2026", "2025"] #, "2024!A2:E", "2023!A2:E", "2022!A2:E"] # fetch columns A-E from the 2022-2026 sheets
+MINTS_RANGE_NAMES = ["2024", "2025"] #, "2024!A2:E", "2023!A2:E", "2022!A2:E"] # fetch columns A-E from the 2022-2026 sheets
 MINTS_COLUMN_NAMES = ['IRI', 'label', 'creator (GitHub username)', 'reservation date', 'subset'] # names of columns A-E in order
 
 # GENEPIO ROBOT Table
@@ -41,12 +41,10 @@ CURATION_SHEET_2024_COLUMN_NAMES = ['Ontology ID','label', 'alternative label']
 if __name__ == "__main__":
 
   # read 2023 mints sheet into a df
-  mints_list = get_values(MINTS_SPREADSHEET_ID, MINTS_RANGE_NAMES).get("values", [])
-  mints_df = pd.DataFrame(mints_list, columns=MINTS_COLUMN_NAMES) # convert to a pandas df
-  mints_df = mints_df[mints_df['label'].notna()] # remove rows with an IRI but no label
-  #mints_df = get_multitab_df(MINTS_SPREADSHEET_ID, MINTS_RANGE_NAMES, MINTS_COLUMN_NAMES)
-  print("mints_df")
-  print(mints_df)
+  #mints_list = get_values(MINTS_SPREADSHEET_ID, MINTS_RANGE_NAMES).get("values", [])
+  #mints_df = pd.DataFrame(mints_list, columns=MINTS_COLUMN_NAMES) # convert to a pandas df
+  #mints_df = mints_df[mints_df['label'].notna()] # remove rows with an IRI but no label
+  mints_df = get_multitab_df(MINTS_SPREADSHEET_ID, MINTS_RANGE_NAMES, MINTS_COLUMN_NAMES, startrow=1) 
 
   # read in TSV of terms that are already in GENEPIO
   # this TSV must have columns titled ['IRI', 'label']
@@ -84,8 +82,8 @@ if __name__ == "__main__":
   #print(merged_df_2[merged_df_2['In GENEPIO ROBOT?'].notna()])
 
   ## check if mints are in a curation sheet
-  curation_2023_df = get_multitab_df(CURATION_SHEET_2023, CURATION_SHEET_2023_RANGE_NAMES, CURATION_SHEET_2023_COLUMN_NAMES)
-  curation_2024_df = get_multitab_df(CURATION_SHEET_2024, CURATION_SHEET_2024_RANGE_NAMES, CURATION_SHEET_2024_COLUMN_NAMES)
+  curation_2023_df = get_multitab_df(CURATION_SHEET_2023, CURATION_SHEET_2023_RANGE_NAMES, CURATION_SHEET_2023_COLUMN_NAMES, startrow=2)
+  curation_2024_df = get_multitab_df(CURATION_SHEET_2024, CURATION_SHEET_2024_RANGE_NAMES, CURATION_SHEET_2024_COLUMN_NAMES, startrow=2)
   # concatenate curation sheets into one long df
   curation_df = pd.concat([curation_2023_df, curation_2024_df])
   # add "In GENEPIO curation?" tab
@@ -116,4 +114,4 @@ if __name__ == "__main__":
   print(mints_review_df)
   print(mints_df)
   mints_review_df_values = mints_review_df.values.tolist() # convert df back to nested list
-  update_values(MINTS_SPREADSHEET_ID, "Mints review!A3:K", "RAW", mints_review_df_values)
+  #update_values(MINTS_SPREADSHEET_ID, "Mints review!A3:K", "RAW", mints_review_df_values)
