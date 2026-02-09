@@ -5,6 +5,7 @@ This repo is for storing practice with the Google API Python Client. The current
 **How to run this code from the shell:**
 
 ```conda activate google-mint```
+
 ```python3 check_mints.py --input input.json``` 
 
 
