@@ -4,14 +4,20 @@ This repo is for storing practice with the Google API Python Client. The current
 
 **How to run this code from the shell:**
 
+Make sure you have the latest version of ```genepio-edit.owl```:
+Fetch the latest version of GENEPIO with:
+```git pull``` 
+
+Run the shell script to get GENEPIO-edit terms in a TSV file:
+```./genepio_to_tsv.sh```
+
+Activate the conda environment:
 ```conda activate google-mint```
 
+Run the Python script:
 ```python3 check_mints.py --input input.json``` 
 
-
-**Notes**
-* The app is called ```mints-tracker``` and is part of the project ```ontology-mints-tracker```.
-* It is available to external users--but for the moment only external users who I have granted permission to as the app is under Testing status and has not been verified by Google yet. (Add new users as needed under the Audience tab.)
+Finally, check that the ```mints_review``` tab of the GENEPIO Mints Google sheet is updated correctly.
 
 **Requirements:**
 * Follow the directions at: https://developers.google.com/workspace/sheets/api/quickstart/python.
@@ -21,6 +27,11 @@ This repo is for storing practice with the Google API Python Client. The current
 * Remember to enable the Google Sheets API at https://console.developers.google.com/apis/api/sheets.googleapis.com/overview?project=88442894636.
 * ```credentials.json``` is stored locally and not shown in this repo in order to keep the client secret a secret...
 * ADC must be in place for functions.py to work. See [Issue #1](https://github.com/miseminger/GoogleSheetsSpellbook/issues/1) for directions.
+
+**Notes**
+* The app is called ```mints-tracker``` and is part of the project ```ontology-mints-tracker```.
+* It is available to external users--but for the moment only external users who I have granted permission to as the app is under Testing status and has not been verified by Google yet. (Add new users as needed under the Audience tab.)
+
 
 **Useful links:**
 
