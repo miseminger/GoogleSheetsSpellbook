@@ -43,6 +43,12 @@ if __name__ == "__main__":
   print(mints_df.shape)
   mints_df = mints_df.drop(columns=['tab'])# drop 'tab' column
 
+  # check for duplicated IRIs with different labels
+  duplicated_IRIs = mints_df[mints_df.duplicated(subset=["IRI"])]
+  print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints sheets")
+  #print(duplicated_IRIs) # 41 show at baseline and have already been solved (see 2024 Mints sheet)
+  
+
   # read in TSV of terms that are already in GENEPIO
   # this TSV must have columns titled ['IRI', 'label']
   genepio_edit_df = pd.read_csv("genepio_edit_terms.tsv", sep='\t', header=0)
@@ -113,5 +119,8 @@ if __name__ == "__main__":
   mints_review_df = mints_review_df[mints_review_df_columns]
   #print(mints_review_df)
   #print(mints_df)
-  mints_review_df_values = mints_review_df.values.tolist() # convert df back to nested list
+  # convert df back to nested list
+  mints_review_df_values = mints_review_df.values.tolist() 
+  
+  # update Mints_review tab
   update_values(mints_review_sheet_id, "Mints review!A3:K", "RAW", mints_review_df_values)
