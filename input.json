@@ -1,7 +1,7 @@
 {
     "MINTS_SPREADSHEET": {
         "SPREADSHEET_ID": "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0",
-        "RANGE_NAMES": ["2022", "2023", "2024", "2025"],
+        "RANGE_NAMES": ["2022", "2023", "2024!A:E1070", "2025"],
         "COLUMN_NAMES": ["IRI", "label", "creator (GitHub username)", "reservation date", "subset"],
         "START_ROW": 1
      },
@@ -22,5 +22,12 @@
         "RANGE_NAMES": ["2024_hAMRonization", "2024_GRDI", "2024_HPAI", "2024_QC", "2024_CanCOGen", "2024_Pathoplexus", "2024_MPOX", "2024_wastewater"],
         "COLUMN_NAMES": ["Ontology ID","label", "alternative label"],
         "START_ROW": 2
+    },
+    "MADELINE_MPOX_ROBOT_SPREADSHEET": {
+        "SPREADSHEET_ID": "1i5C-lJwd8Ua0AgnABZXUDCUh5eadXgdM0atxVuCXzps",
+        "RANGE_NAMES": ["gene_names_no_repeats", "gene_symbols_no_repeats", "protein_names_no_repeats", "protein_symbols_no_repeats", "mpox_raw_with_repeats"],
+        "COLUMN_NAMES": ["Ontology ID","label", "alternative label"],
+        "START_ROW": 2
     }
 }
+

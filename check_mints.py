@@ -79,13 +79,15 @@ if __name__ == "__main__":
 
   # print out any terms that are in the ROBOT file
   #print("terms in ROBOT spec field (new)")
-  #print(merged_df_2[merged_df_2['In GENEPIO ROBOT?'].notna()])
+  #print(mints_review_df[mints_review_df['In GENEPIO ROBOT?'].notna()])
 
   ## check if mints are in a curation sheet
   curation_2023_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEET_2023_SPREADSHEET"])
   curation_2024_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEET_2024_SPREADSHEET"])
+  madeline_mpox_curation_df = get_multitab_df(RESOURCE_DICT["MADELINE_MPOX_ROBOT_SPREADSHEET"])
   # concatenate curation sheets into one long df
   curation_df = pd.concat([curation_2023_df, curation_2024_df])
+  curation_df = pd.concat([curation_df, madeline_mpox_curation_df])
   # add "In GENEPIO curation?" tab
   curation_df["In GENEPIO curation?"] = 'yes'
   # rename "Ontology ID" column to "IRI" to match mints sheet
