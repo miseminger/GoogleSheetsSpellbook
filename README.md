@@ -4,11 +4,17 @@ This repo is for storing practice with the Google API Python Client. The current
 
 **How to run this code from the shell:**
 
-1. Make sure you have the latest version of ```genepio-edit.owl```. Fetch the latest version of GENEPIO with
-```git pull```.
+1. Navigate to ```genepio/src/ontology```. Make sure you have the latest version of ```genepio.owl```. Fetch the latest version of GENEPIO with ```git pull```.
 
-2. Run the shell script to get GENEPIO-edit terms in a TSV file:
-```./genepio_to_tsv.sh```
+2. Run ROBOT export to get genepio.owl terms in a CSV file:
+
+```sudo docker ps``` # check that Docker is running
+
+```sudo docker pull obolibrary/odkfull``` # pull the ODK docker image
+
+```sudo sh run.sh robot --version``` # check that ODK is running
+
+```sudo sh run.sh robot export --input genepio.owl   --header "ID|LABEL|SYNONYMS"   --export genepio_terms.csv``` # create a CSV of terms in genepio.owl
 
 3. Activate the conda environment:
 ```conda activate google-mint```
