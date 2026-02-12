@@ -8,13 +8,15 @@ This repo is for storing practice with the Google API Python Client. The current
 
 2. Run ROBOT export to get genepio.owl terms in a CSV file:
 
-```sudo docker ps``` # check that Docker is running
+```
+sudo docker ps # check that Docker is running
 
-```sudo docker pull obolibrary/odkfull``` # pull the ODK docker image
+sudo docker pull obolibrary/odkfull # pull the ODK docker image
 
-```sudo sh run.sh robot --version``` # check that ODK is running
+sudo sh run.sh robot --version # check that ODK is running
 
-```sudo sh run.sh robot export --input genepio.owl   --header "ID|LABEL|SYNONYMS"   --export genepio_terms.csv``` # create a CSV of terms in genepio.owl
+sudo sh run.sh robot export --input genepio.owl   --header "ID|LABEL|SYNONYMS"   --export genepio_terms.csv # create a CSV of terms in genepio.owl
+```
 
 3. Activate the conda environment:
 ```conda activate google-mint```
