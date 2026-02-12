@@ -4,7 +4,10 @@ This repo is for storing practice with the Google API Python Client. The current
 
 **How to run this code from the shell:**
 
-1. Navigate to ```genepio/src/ontology```. Make sure you have the latest version of ```genepio.owl```. Fetch the latest version of GENEPIO with ```git pull```.
+1. Navigate to ```genepio/src/ontology```. Make sure you have the latest version of ```genepio.owl```:
+```
+git pull
+```
 
 2. Run ROBOT export to get genepio.owl terms in a CSV file:
 
@@ -19,10 +22,14 @@ sudo sh run.sh robot export --input genepio.owl   --header "ID|LABEL|SYNONYMS"  
 ```
 
 3. Activate the conda environment:
-```conda activate google-mint```
+```
+conda activate google-mint
+```
 
 4. Run the Python script:
-```python3 check_mints.py --input input.json``` 
+```
+python3 check_mints.py --input input.json
+``` 
 
 5. Finally, check that the ```mints_review``` tab of the GENEPIO Mints Google sheet is updated correctly.
 
