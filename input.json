@@ -1,7 +1,7 @@
 {
     "MINTS_SPREADSHEET": {
         "SPREADSHEET_ID": "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0",
-        "RANGE_NAMES": ["2022", "2023", "2024!A:E1070", "2025"],
+        "RANGE_NAMES": ["2022", "2023", "2024", "2025"], 
         "COLUMN_NAMES": ["IRI", "label", "creator (GitHub username)", "reservation date", "subset"],
         "START_ROW": 1
      },

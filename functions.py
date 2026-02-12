@@ -64,7 +64,7 @@ def get_values(spreadsheet_id, range_name):
   
 
 
-def update_values(spreadsheet_id, range_name, value_input_option, values):
+def update_values(spreadsheet_id, range_name, value_input_option, values, creds):
   """
   https://github.com/googleworkspace/python-samples/blob/main/sheets/snippets/sheets_update_values.py
 
@@ -81,7 +81,7 @@ def update_values(spreadsheet_id, range_name, value_input_option, values):
       [["A", "B"], ["C", "D"]],
   )
   """
-  creds, _ = google.auth.default()
+  #creds, _ = google.auth.default()
   # pylint: disable=maybe-no-member
   try:
     service = build("sheets", "v4", credentials=creds)
@@ -155,7 +155,7 @@ def append_values(spreadsheet_id, range_name, value_input_option, _values):
 
 
 
-def batch_get_values(spreadsheet_id, range_names):
+def batch_get_values(spreadsheet_id, range_names, creds):
   """
   https://github.com/googleworkspace/python-samples/blob/main/sheets/snippets/sheets_batch_get_values.py
 
@@ -169,7 +169,7 @@ def batch_get_values(spreadsheet_id, range_names):
 
   batch_get_values("1CM29gwKIzeXsAppeNwrc8lbYaVMmUclprLuLYuHog4k", "A1:C2")
   """
-  creds, _ = google.auth.default()
+  #creds, _ = google.auth.default()
   # pylint: disable=maybe-no-member
   try:
     service = build("sheets", "v4", credentials=creds)
@@ -188,7 +188,7 @@ def batch_get_values(spreadsheet_id, range_names):
     return error
 
 
-def get_multitab_df(input_dict):
+def get_multitab_df(input_dict, creds):
   # eg. range_names = ["2023_to_request_ontologies (Charlie)", "2023_mints_wastewater (Charlie)"]
   # eg. column_names = ['Ontology ID','label', 'alternative label']
   # get multiple sheets within spreadsheet_id into one large df
@@ -198,7 +198,7 @@ def get_multitab_df(input_dict):
   range_names = input_dict.pop("RANGE_NAMES")
   column_names = input_dict.pop("COLUMN_NAMES")
   start_row = input_dict.pop("START_ROW")
-  values = batch_get_values(spreadsheet_id, range_names)
+  values = batch_get_values(spreadsheet_id, range_names, creds)
   # initialize empty df
   multitab_df = pd.DataFrame(columns=column_names)
 
@@ -210,14 +210,14 @@ def get_multitab_df(input_dict):
       sheet_data = values['valueRanges'][sheet]['values']
       sheet_df = pd.DataFrame(sheet_data, columns=sheet_data[0])
       sheet_df = sheet_df[start_row:] # leave off ROBOT instructions
-      print("sheet_df columns")
-      print(sheet_df.columns)
+      #print("sheet_df columns")
+      #print(sheet_df.columns)
       # replace '\n' in column names with a space
       sheet_df.columns = [colname.replace('\n', ' ') for colname in sheet_df.columns.tolist()]
       # only keep columns specified in column_names variable
       sheet_df = sheet_df[column_names]
-      print("sheet_df columns after fixing newline")
-      print(sheet_df.columns)
+      #print("sheet_df columns after fixing newline")
+      #print(sheet_df.columns)
       # add a column showing the tab name
       sheet_df["tab"] = tab
       #print(sheet_df)
