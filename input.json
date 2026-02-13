@@ -34,6 +34,11 @@
         "RANGE_NAMES": ["MI_DRAFT_spec_mint", "MI_ADDED_to_GENEPIO", "MI_TO_DO_STILL", "MI_sc2_gene_protein_data", "MI_not_minting_anymore"],
         "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
         "START_ROW": 2
+    },
+    "MADELINE_POKAY_ROBOT_SPREADSHEET": {
+        "SPREADSHEET_ID": "18qmm046gde9Insgc_cNF9NVPRDmUAcwOs-IuLeHmJNM",
+        "RANGE_NAMES": ["import_file", "no_subclasses", "import_file_no_subclass_axioms", "for_enums", "Cancelled terms", "Draft"],
+        "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
+        "START_ROW": 2
     }
 }
-
