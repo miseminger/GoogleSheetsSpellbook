@@ -25,8 +25,14 @@
     },
     "MADELINE_MPOX_ROBOT_SPREADSHEET": {
         "SPREADSHEET_ID": "1i5C-lJwd8Ua0AgnABZXUDCUh5eadXgdM0atxVuCXzps",
-        "RANGE_NAMES": ["gene_names_no_repeats", "gene_symbols_no_repeats", "protein_names_no_repeats", "protein_symbols_no_repeats", "mpox_raw_with_repeats"],
-        "COLUMN_NAMES": ["Ontology ID","label", "alternative label"],
+        "RANGE_NAMES": ["gene_names_no_repeats", "gene_symbols_no_repeats", "protein_names_no_repeats", "protein_symbols_no_repeats"],
+        "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
+        "START_ROW": 2
+    },
+    "MADELINE_VIRUSMVP_ROBOT_SPREADSHEET": {
+        "SPREADSHEET_ID": "1s3M6rtEs3fpwtccyN-MuXgRe-fpeF4d1jsIC4N1NgyA",
+        "RANGE_NAMES": ["MI_DRAFT_spec_mint", "MI_ADDED_to_GENEPIO", "MI_TO_DO_STILL", "MI_sc2_gene_protein_data", "MI_not_minting_anymore"],
+        "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
         "START_ROW": 2
     }
 }

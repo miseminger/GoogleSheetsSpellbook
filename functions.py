@@ -210,17 +210,12 @@ def get_multitab_df(input_dict, creds):
       sheet_data = values['valueRanges'][sheet]['values']
       sheet_df = pd.DataFrame(sheet_data, columns=sheet_data[0])
       sheet_df = sheet_df[start_row:] # leave off ROBOT instructions
-      #print("sheet_df columns")
-      #print(sheet_df.columns)
       # replace '\n' in column names with a space
       sheet_df.columns = [colname.replace('\n', ' ') for colname in sheet_df.columns.tolist()]
       # only keep columns specified in column_names variable
       sheet_df = sheet_df[column_names]
-      #print("sheet_df columns after fixing newline")
-      #print(sheet_df.columns)
       # add a column showing the tab name
       sheet_df["tab"] = tab
-      #print(sheet_df)
       # append sheet_df to the spreadsheet df
       multitab_df = pd.concat([multitab_df, sheet_df])
   # combine duplicate rows and transform "tab" into a comma-separated list

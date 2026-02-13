@@ -117,10 +117,12 @@ if __name__ == "__main__":
   ## check if mints are in a curation sheet
   curation_2023_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEET_2023_SPREADSHEET"], creds)
   curation_2024_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEET_2024_SPREADSHEET"], creds)
-  #madeline_mpox_curation_df = get_multitab_df(RESOURCE_DICT["MADELINE_MPOX_ROBOT_SPREADSHEET"], creds)
+  madeline_mpox_curation_df = get_multitab_df(RESOURCE_DICT["MADELINE_MPOX_ROBOT_SPREADSHEET"], creds)
+  madeline_virusmvp_curation_df = get_multitab_df(RESOURCE_DICT["MADELINE_VIRUSMVP_ROBOT_SPREADSHEET"], creds)
   # concatenate curation sheets into one long df
   curation_df = pd.concat([curation_2023_df, curation_2024_df])
-  #curation_df = pd.concat([curation_df, madeline_mpox_curation_df])
+  curation_df = pd.concat([curation_df, madeline_mpox_curation_df])
+  curation_df = pd.concat([curation_df, madeline_virusmvp_curation_df])
   # add "In GENEPIO curation?" tab
   curation_df["In GENEPIO curation?"] = 'yes'
   # rename "Ontology ID" column to "IRI" to match mints sheet
