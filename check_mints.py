@@ -16,7 +16,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-from functions import get_multitab_df, update_values
+from functions import get_multitab_df, update_values, compare_terms
 
 mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio.owl?",	"In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation"] #,	"Notes"
 
@@ -84,14 +84,20 @@ if __name__ == "__main__":
   # read in CSV of terms that are already in GENEPIO (from ROBOT export of genepio.owl)
   # this CSV must have columns titled ['IRI', 'LABEL']
   genepio_df = pd.read_csv("genepio_terms.csv", sep=',', header=0)
-  genepio_df['In genepio.owl?'] = 'yes' # add column to be used in merge
   # rename columns to match mints sheet
   genepio_df = genepio_df.rename(columns={"ID": "IRI", "LABEL": "label"})
   # drop 'SYNONYMS' column
   genepio_df = genepio_df.drop(columns=['SYNONYMS'])
 
   # merge mints sheet with genepio sheet
-  mints_review_df = pd.merge(mints_df, genepio_df, on=['IRI', 'label'], how='left')
+  mints_review_df = compare_terms(mints_df, genepio_df, 'In genepio.owl?', None)
+  # replace all NaN values with empty strings
+  #test_ids = test_ids.fillna('')
+  #test_ids_values = test_ids.values.tolist() 
+  #update_values("1Ts4nU6vQRwmnXQz0HzBM7Wz3N4tOVxo9F3-nH6cp06A", "Mints review!A2:K", "RAW", test_ids_values, creds)
+  print(mints_review_df.columns)
+  print(mints_review_df['In genepio.owl?'].unique())
+  #mints_review_df = pd.merge(mints_df, genepio_df, on=['IRI', 'label'], how='left')
   # final df should be the same size as mints_df!
 
   #print(merged_df[merged_df['In genepio.owl?'].notna()])
@@ -100,7 +106,7 @@ if __name__ == "__main__":
   robot_df = get_multitab_df(RESOURCE_DICT["GENEPIO_ROBOT_SPREADSHEET"], creds)
   robot_df = robot_df[robot_df['Ontology ID'].str.contains("GENEPIO")] # remove rows with no IRI
   robot_df = robot_df[robot_df['label'].notna()] # remove rows with no label
-  robot_df['In GENEPIO ROBOT?'] = 'yes' # add column to be used in merge
+  robot_df['In GENEPIO ROBOT?'] = 'id_and_label_match' # add column to be used in merge
   # rename "Ontology ID" column to "IRI" to match mints sheet
   robot_df = robot_df.rename(columns={"Ontology ID": "IRI", "tab": "Tab location in GENEPIO ROBOT"})
 
@@ -109,6 +115,8 @@ if __name__ == "__main__":
   #print("mints_review_df")
   #print(mints_review_df)
   # final df should be the same size as mints_df!
+  print(mints_review_df.columns)
+  print(mints_review_df['In genepio.owl?'].unique())
 
   # print out any terms that are in the ROBOT file
   #print("terms in ROBOT spec field (new)")
@@ -126,7 +134,7 @@ if __name__ == "__main__":
   curation_df = pd.concat([curation_df, madeline_virusmvp_curation_df])
   curation_df = pd.concat([curation_df, madeline_pokay_curation_df])
   # add "In GENEPIO curation?" tab
-  curation_df["In GENEPIO curation?"] = 'yes'
+  curation_df["In GENEPIO curation?"] = 'id_and_label_match'
   # rename "Ontology ID" column to "IRI" to match mints sheet
   curation_df = curation_df.rename(columns={"Ontology ID": "IRI", "tab": "Tab location in GENEPIO curation"})
   # restrict columns to those that should be merged into mints_review
@@ -151,9 +159,8 @@ if __name__ == "__main__":
   # replace all NaN values with empty strings
   mints_review_df = mints_review_df.fillna('')
   # fill in 'no' in the absence of 'yes'
-  mints_review_df['In genepio.owl?'] = mints_review_df['In genepio.owl?'].where(mints_review_df['In genepio.owl?'] == 'yes', 'no')
-  mints_review_df['In GENEPIO ROBOT?'] = mints_review_df['In GENEPIO ROBOT?'].where(mints_review_df['In GENEPIO ROBOT?'] == 'yes', 'no')
-  mints_review_df['In GENEPIO curation?'] = mints_review_df['In GENEPIO curation?'].where(mints_review_df['In GENEPIO curation?'] == 'yes', 'no')
+  mints_review_df['In GENEPIO ROBOT?'] = mints_review_df['In GENEPIO ROBOT?'].where(mints_review_df['In GENEPIO ROBOT?'] == 'id_and_label_match', 'TBD')
+  mints_review_df['In GENEPIO curation?'] = mints_review_df['In GENEPIO curation?'].where(mints_review_df['In GENEPIO curation?'] == 'id_and_label_match', 'TBD')
   # make sure columns are in order
   mints_review_df = mints_review_df[mints_review_df_columns]
   #print(mints_review_df)
@@ -163,3 +170,4 @@ if __name__ == "__main__":
   
   # update Mints_review tab
   update_values(mints_review_sheet_id, "Mints review!A3:K", "RAW", mints_review_df_values, creds)
+  update_values("1Ts4nU6vQRwmnXQz0HzBM7Wz3N4tOVxo9F3-nH6cp06A", "Mints review!A2:K", "RAW", mints_review_df_values, creds)

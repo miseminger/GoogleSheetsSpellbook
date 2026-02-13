@@ -226,3 +226,38 @@ def get_multitab_df(input_dict, creds):
   #print(multitab_df)
 
   return multitab_df
+
+
+def compare_terms(mints_df, search_df, result_column, tab_column):
+
+  # if both ID and label match, record 'id_and_label_match' in result_column
+  # if tab_column != None, record tab name in tab_column
+  search_df['id_and_label_match'] = 'id_and_label_match' # add column to be used in merge
+  merged_df = pd.merge(mints_df, search_df[['IRI', 'label', 'id_and_label_match']], on=['IRI', 'label'], how='left')
+
+  # elif only the ID matches, record "id_match" in result_column
+  search_df['id_match'] = 'id_match' # add column to be used in merge
+  merged_df = pd.merge(merged_df, search_df[['IRI', 'id_match']], on=['IRI'], how='left')
+  # if tab_column != None, record tab name in tab_column
+
+  # elif only the label matches, record "label_match" in result_column
+  # if tab_column != None, record tab name in tab_column
+  search_df['label_match'] = 'label_match' # add column to be used in merge
+  merged_df = pd.merge(merged_df, search_df[['label', 'label_match']], on=['label'], how='left')
+
+  # merge all match results into result_column
+  # fill in 'no_match' as the default
+  merged_df[result_column] = 'no_match'
+  # fill in 'id_and_label_match'
+  merged_df.loc[merged_df['id_and_label_match'] == 'id_and_label_match', result_column] = 'id_and_label_match'
+  # fill in 'id_match'
+  merged_df.loc[(merged_df['id_match'] == 'id_match') & (merged_df[result_column] == 'no_match'), result_column] = 'id_match'
+  # fill in 'label_match'
+  merged_df.loc[(merged_df['label_match'] == 'label_match') & (merged_df[result_column] == 'no_match'), result_column] = 'label_match'
+  # fill in 'id_and_label_cross_row_match'
+  merged_df.loc[(merged_df['label_match'] == 'label_match') & (merged_df['id_match'] == 'id_match') & (merged_df['id_and_label_match'] != 'id_and_label_match'), result_column] = 'id_and_label_cross_row_match'
+
+  # restrict columns to original mints_df columns + result_column
+  merged_df = merged_df.drop(columns=['id_and_label_match', 'id_match', 'label_match'])
+
+  return merged_df
