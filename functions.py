@@ -233,31 +233,57 @@ def compare_terms(mints_df, search_df, result_column, tab_column):
   # if both ID and label match, record 'id_and_label_match' in result_column
   # if tab_column != None, record tab name in tab_column
   search_df['id_and_label_match'] = 'id_and_label_match' # add column to be used in merge
-  merged_df = pd.merge(mints_df, search_df[['IRI', 'label', 'id_and_label_match']], on=['IRI', 'label'], how='left')
+  # if tab_column != None, record tab name in tab_column
+  if tab_column != None:
+    search_df['id_and_label_match_tab'] = search_df['tab']
+  else:
+    search_df['id_and_label_match_tab'] = ''
+  merged_df = pd.merge(mints_df, search_df[['IRI', 'label', 'id_and_label_match', 'id_and_label_match_tab']], on=['IRI', 'label'], how='left')
 
   # elif only the ID matches, record "id_match" in result_column
   search_df['id_match'] = 'id_match' # add column to be used in merge
-  merged_df = pd.merge(merged_df, search_df[['IRI', 'id_match']], on=['IRI'], how='left')
   # if tab_column != None, record tab name in tab_column
-
+  if tab_column != None:
+    search_df['id_match_tab'] = search_df['tab']
+  else:
+    search_df['id_match_tab'] = ''
+  merged_df = pd.merge(merged_df, search_df[['IRI', 'id_match', 'id_match_tab']], on=['IRI'], how='left')
+  
   # elif only the label matches, record "label_match" in result_column
-  # if tab_column != None, record tab name in tab_column
   search_df['label_match'] = 'label_match' # add column to be used in merge
-  merged_df = pd.merge(merged_df, search_df[['label', 'label_match']], on=['label'], how='left')
+  # if tab_column != None, record tab name in tab_column
+  if tab_column != None:
+    search_df['label_match_tab'] = search_df['tab']
+  else:
+    search_df['label_match_tab'] = ''
+  merged_df = pd.merge(merged_df, search_df[['label', 'label_match', 'label_match_tab']], on=['label'], how='left')
 
   # merge all match results into result_column
   # fill in 'no_match' as the default
   merged_df[result_column] = 'no_match'
+  if tab_column != None:
+    merged_df[tab_column] = ''
   # fill in 'id_and_label_match'
-  merged_df.loc[merged_df['id_and_label_match'] == 'id_and_label_match', result_column] = 'id_and_label_match'
+  id_and_label_match_mask = (merged_df['id_and_label_match'] == 'id_and_label_match')
+  merged_df.loc[id_and_label_match_mask, result_column] = 'id_and_label_match'
+  if tab_column != None:
+    merged_df.loc[id_and_label_match_mask, tab_column] = merged_df['id_and_label_match_tab']
   # fill in 'id_match'
-  merged_df.loc[(merged_df['id_match'] == 'id_match') & (merged_df[result_column] == 'no_match'), result_column] = 'id_match'
+  id_match_mask = (merged_df['id_match'] == 'id_match') & (merged_df[result_column] == 'no_match')
+  merged_df.loc[id_match_mask, result_column] = 'id_match'
+  if tab_column != None:
+    merged_df.loc[id_match_mask, tab_column] = merged_df['id_match_tab']
   # fill in 'label_match'
-  merged_df.loc[(merged_df['label_match'] == 'label_match') & (merged_df[result_column] == 'no_match'), result_column] = 'label_match'
+  label_match_mask = (merged_df['label_match'] == 'label_match') & (merged_df[result_column] == 'no_match')
+  merged_df.loc[label_match_mask, result_column] = 'label_match'
+  if tab_column != None:
+    merged_df.loc[label_match_mask, tab_column] = merged_df['label_match_tab']
   # fill in 'id_and_label_cross_row_match'
-  merged_df.loc[(merged_df['label_match'] == 'label_match') & (merged_df['id_match'] == 'id_match') & (merged_df['id_and_label_match'] != 'id_and_label_match'), result_column] = 'id_and_label_cross_row_match'
-
-  # restrict columns to original mints_df columns + result_column
-  merged_df = merged_df.drop(columns=['id_and_label_match', 'id_match', 'label_match'])
+  id_and_label_cross_row_match_mask = (merged_df['label_match'] == 'label_match') & (merged_df['id_match'] == 'id_match') & (merged_df['id_and_label_match'] != 'id_and_label_match')
+  merged_df.loc[id_and_label_cross_row_match_mask, result_column] = 'id_and_label_cross_row_match'
+  if tab_column != None:
+    merged_df.loc[id_and_label_cross_row_match_mask, tab_column] = 'ID in ' + merged_df['id_match_tab'] + '; label in ' + merged_df['label_match_tab']
+  # restrict columns to original mints_df columns + result_column + tab_column
+  merged_df = merged_df.drop(columns=['id_and_label_match', 'id_and_label_match_tab', 'id_match', 'id_match_tab', 'label_match', 'label_match_tab'])
 
   return merged_df
