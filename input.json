@@ -8,19 +8,19 @@
     "GENEPIO_ROBOT_SPREADSHEET": {
         "SPREADSHEET_ID": "1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4",
         "RANGE_NAMES": ["spec_field (new)", "spec_field (retired)", "identifiers (draft)", "SSSOM-Import-Overlay", "spec_enum", "Rhi Term List"],
-        "COLUMN_NAMES": ["Ontology ID","label"],
+        "COLUMN_NAMES": ["Ontology ID", "label"],
         "START_ROW": 2
      },
     "CURATION_SHEET_2023_SPREADSHEET": {
         "SPREADSHEET_ID": "1s6FB9EyPWYBgssIU9a9AKATEfZnMdixwvrGhBXUHAVk",
         "RANGE_NAMES": ["2023_mints_wastewater_terms (Charlie)", "2023_manual_curation (Charlie)"],
-        "COLUMN_NAMES": ["Ontology ID","label", "alternative label"],
+        "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
         "START_ROW": 2
     },
     "CURATION_SHEET_2024_SPREADSHEET": {
         "SPREADSHEET_ID": "14r_qlNJUCGJ_59MA3MR0x4JObsYpQI_2AFJGMu_wyl4",
         "RANGE_NAMES": ["2024_hAMRonization", "2024_GRDI", "2024_HPAI", "2024_QC", "2024_CanCOGen", "2024_Pathoplexus", "2024_MPOX", "2024_wastewater"],
-        "COLUMN_NAMES": ["Ontology ID","label", "alternative label"],
+        "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
         "START_ROW": 2
     },
     "MADELINE_MPOX_ROBOT_SPREADSHEET": {
