@@ -230,6 +230,12 @@ def get_multitab_df(input_dict, creds):
 
 def compare_terms(mints_df, search_df, result_column, tab_column):
 
+  # make 'label' columns of mints_df and search_df lowercase
+  mints_df['label'] = mints_df['label'].str.lower()
+  search_df['label'] = search_df['label'].str.lower()
+  # replace spaces with underscores
+  #mints_df['label'] = mints_df['label'].str.replace(' ', '_', regex=False)
+  #search_df['label'] = search_df['label'].str.replace(' ', '_', regex=False)
   # if both ID and label match, record 'id_and_label_match' in result_column
   # if tab_column != None, record tab name in tab_column
   search_df['id_and_label_match'] = 'id_and_label_match' # add column to be used in merge
