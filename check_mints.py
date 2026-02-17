@@ -85,9 +85,9 @@ if __name__ == "__main__":
   # this CSV must have columns titled ['IRI', 'LABEL']
   genepio_df = pd.read_csv("genepio_terms.csv", sep=',', header=0)
   # rename columns to match mints sheet
-  genepio_df = genepio_df.rename(columns={"ID": "IRI", "LABEL": "label"})
+  genepio_df = genepio_df.rename(columns={"ID": "IRI", "LABEL": "label", "SYNONYMS": "alternative label"})
   # drop 'SYNONYMS' column
-  genepio_df = genepio_df.drop(columns=['SYNONYMS'])
+  #genepio_df = genepio_df.drop(columns=['SYNONYMS'])
   # merge mints sheet with genepio sheet
   mints_review_df = compare_terms(mints_df, genepio_df, 'In genepio.owl?', None)
   duplicated_IRIs = mints_review_df[mints_review_df.duplicated(subset=["IRI"])]
@@ -142,6 +142,8 @@ if __name__ == "__main__":
   mints_review_df = mints_review_df.fillna('')
   # make sure columns are in order
   mints_review_df = mints_review_df[mints_review_df_columns]
+  # drop duplicated rows
+  mints_review_df = mints_review_df.drop_duplicates()
   # convert df back to nested list
   mints_review_df_values = mints_review_df.values.tolist() 
   
