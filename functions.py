@@ -197,6 +197,7 @@ def get_multitab_df(input_dict, creds):
   print("Processing: ", spreadsheet_id)
   range_names = input_dict.pop("RANGE_NAMES")
   column_names = input_dict.pop("COLUMN_NAMES")
+  print(column_names)
   start_row = input_dict.pop("START_ROW")
   values = batch_get_values(spreadsheet_id, range_names, creds)
   # initialize empty df
