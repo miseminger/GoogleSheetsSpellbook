@@ -197,7 +197,7 @@ def get_multitab_df(input_dict, creds):
   print("Processing: ", spreadsheet_id)
   range_names = input_dict.pop("RANGE_NAMES")
   column_names = input_dict.pop("COLUMN_NAMES")
-  print(column_names)
+  #print(column_names)
   start_row = input_dict.pop("START_ROW")
   values = batch_get_values(spreadsheet_id, range_names, creds)
   # initialize empty df
@@ -216,15 +216,14 @@ def get_multitab_df(input_dict, creds):
       # only keep columns specified in column_names variable
       sheet_df = sheet_df[column_names]
       # add a column showing the tab name
-      sheet_df["tab"] = tab
+      sheet_df["tab"] = '=HYPERLINK("https://docs.google.com/spreadsheets/d/' + spreadsheet_id + '", "' + tab + '")'
       # append sheet_df to the spreadsheet df
       multitab_df = pd.concat([multitab_df, sheet_df])
   # combine duplicate rows and transform "tab" into a comma-separated list
   sheet_df = sheet_df.fillna('')
-  multitab_df = multitab_df.groupby(column_names).agg({'tab': ', '.join}).reset_index()
+  #multitab_df = multitab_df.groupby(column_names).agg({'tab': ', '.join}).reset_index()
   # add a column showing the spreadsheet_id
   # multitab_df["spreadsheet_id"] = spreadsheet_id
-  #print(multitab_df)
 
   return multitab_df
 
@@ -241,6 +240,17 @@ def compare_terms(mints_df, search_df, result_column, tab_column):
   # make spaces and underscores equivalent for search
   mints_df['search_label'] = mints_df['search_label'].str.replace(' ', '_', regex=False)
   search_df['search_label'] = search_df['search_label'].str.replace(' ', '_', regex=False)
+
+  # if the search_df doesn't already include an 'alternative label' column, add an empty one
+  #print("search_df.columns")
+  #print(search_df.columns)
+  if 'alternative label' not in search_df.columns:
+    search_df['alternative label'] = ''
+  # get a set of all the alternative labels in search_df
+  #alternative_labels_list = search_df['alternative label'].unique().tolist()
+  #alternative_labels_list = [x for x in alternative_labels_list if type(x)==str]
+  #alternative_labels_list = [x.replace('\n', '|') for x in alternative_labels_list]
+  #print(alternative_labels_list)
 
   # if both ID and label match, record 'id_and_label_match' in result_column
   # if tab_column != None, record tab name in tab_column

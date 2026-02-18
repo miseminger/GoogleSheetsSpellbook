@@ -95,23 +95,23 @@ if __name__ == "__main__":
 
   # read in genepio-ROBOT sheets
   robot_df = get_multitab_df(RESOURCE_DICT["GENEPIO_ROBOT_SPREADSHEET"], creds)
-  robot_df = robot_df[robot_df['Ontology ID'].str.contains("GENEPIO")] # remove rows with no IRI
-  robot_df = robot_df[robot_df['label'].notna()] # remove rows with no label
+  robot_df = robot_df[robot_df['Ontology ID'].astype(str).str.contains("GENEPIO")] # remove rows with no IRI
+  robot_df = robot_df[robot_df['label'].notna()] # remove rows where the label is NaN, keep rows where the label is ''
   # rename "Ontology ID" column to "IRI" to match mints sheet
   robot_df = robot_df.rename(columns={"Ontology ID": "IRI"}) 
   # check for duplicate IRIs
   robot_duplicated_IRIs = robot_df[robot_df.duplicated(subset=["IRI"])]
   print(str(robot_duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the ROBOT sheet")
-  print(robot_duplicated_IRIs)
-  print("")
+  #print(robot_duplicated_IRIs)
+  #print("")
 
   # merge mints sheet with genepio-ROBOT sheet
   mints_review_df = compare_terms(mints_review_df, robot_df, 'In GENEPIO ROBOT?', "Tab location in GENEPIO ROBOT")
   # check for duplicate IRIs again
   duplicated_IRIs = mints_review_df[mints_review_df.duplicated(subset=["IRI"])]
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints_review sheet after ROBOT check")
-  print(duplicated_IRIs)
-  print("")
+  #print(duplicated_IRIs)
+  #print("")
   
   ## check if mints are in a curation sheet
   curation_2023_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEET_2023_SPREADSHEET"], creds)
@@ -148,9 +148,11 @@ if __name__ == "__main__":
   mints_review_df_values = mints_review_df.values.tolist() 
   
   # update Mints_review tab
-  update_values(mints_review_sheet_id, "Mints review!A3:K", "RAW", mints_review_df_values, creds)
+  update_values(mints_review_sheet_id, "Mints review!A3:K", "USER_ENTERED", mints_review_df_values, creds)
   #update_values("1Ts4nU6vQRwmnXQz0HzBM7Wz3N4tOVxo9F3-nH6cp06A", "Mints review!A2:K", "RAW", mints_review_df_values, creds)
 
+  # make hyperlinks clickable
+  #update_values(mints_review_sheet_id, "Mints review!A3:K", "USER", mints_review_df_values, creds)
   # update duplicate_IRIs_to_review tab
-  robot_duplicated_IRIs_values = robot_duplicated_IRIs.values.tolist() 
-  update_values(mints_review_sheet_id, "duplicate_IRIs_to_review!A3:K", "RAW", robot_duplicated_IRIs_values, creds)
+  #robot_duplicated_IRIs_values = robot_duplicated_IRIs.values.tolist() 
+  #update_values(mints_review_sheet_id, "duplicate_IRIs_to_review!A3:K", "RAW", robot_duplicated_IRIs_values, creds)
