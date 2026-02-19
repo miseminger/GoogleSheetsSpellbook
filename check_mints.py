@@ -18,7 +18,7 @@ from googleapiclient.errors import HttpError
 
 from functions import get_multitab_df, update_values, compare_terms
 
-mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio.owl?",	"In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation"] #,	"Notes"
+mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio.owl?",	"In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation sheet 1"] #,	"Notes"
 
 def parse_args():
     
@@ -80,6 +80,8 @@ if __name__ == "__main__":
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints sheets")
   #print(duplicated_IRIs) # 41 show at baseline and have already been solved (see 2024 Mints sheet)
   
+  print("mints_df")
+  print(mints_df[mints_df['IRI']=='GENEPIO:0100777'])
 
   # read in CSV of terms that are already in GENEPIO (from ROBOT export of genepio.owl)
   # this CSV must have columns titled ['IRI', 'LABEL']
@@ -105,13 +107,31 @@ if __name__ == "__main__":
   #print(robot_duplicated_IRIs)
   #print("")
 
+  print("")
+  print("in multitab made from ROBOT")
+  print(robot_df.columns)
+  print(robot_df[robot_df['IRI']=='GENEPIO:0100777'])
+
+  tester = robot_df[robot_df['IRI']=='GENEPIO:0100777']
+  print("prestrip")
+  tester = tester.groupby(['label']).agg({'tab': ', '.join}).reset_index()
+  print(tester)
+  print("poststrip")
+  tester['label'] = tester['label'].str.strip()
+  tester = tester.groupby(['label']).agg({'tab': ', '.join}).reset_index()
+  print(tester)
+  print("unique labels")
+  print(tester['label'].unique())
+
   # merge mints sheet with genepio-ROBOT sheet
   mints_review_df = compare_terms(mints_review_df, robot_df, 'In GENEPIO ROBOT?', "Tab location in GENEPIO ROBOT")
   # check for duplicate IRIs again
   duplicated_IRIs = mints_review_df[mints_review_df.duplicated(subset=["IRI"])]
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints_review sheet after ROBOT check")
   #print(duplicated_IRIs)
-  #print("")
+  #print("checking for commas in ROBOT")
+  #print(mints_review_df[mints_review_df["Tab location in GENEPIO ROBOT"].str.contains(",")])
+
   
   ## check if mints are in a curation sheet
   curation_2023_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEET_2023_SPREADSHEET"], creds)
@@ -129,7 +149,7 @@ if __name__ == "__main__":
   # restrict columns to those that should be merged into mints_review
   curation_df = curation_df[["IRI", "label", "tab"]] 
   # merge with mints_review
-  mints_review_df = compare_terms(mints_review_df, curation_df, "In GENEPIO curation?", "Tab location in GENEPIO curation")
+  mints_review_df = compare_terms(mints_review_df, curation_df, "In GENEPIO curation?", "Tab location in GENEPIO curation sheet 1")
   duplicated_IRIs = mints_review_df[mints_review_df.duplicated(subset=["IRI"])]
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints_review sheet after curation sheet check")
 
@@ -148,11 +168,4 @@ if __name__ == "__main__":
   mints_review_df_values = mints_review_df.values.tolist() 
   
   # update Mints_review tab
-  update_values(mints_review_sheet_id, "Mints review!A3:K", "USER_ENTERED", mints_review_df_values, creds)
-  #update_values("1Ts4nU6vQRwmnXQz0HzBM7Wz3N4tOVxo9F3-nH6cp06A", "Mints review!A2:K", "RAW", mints_review_df_values, creds)
-
-  # make hyperlinks clickable
-  #update_values(mints_review_sheet_id, "Mints review!A3:K", "USER", mints_review_df_values, creds)
-  # update duplicate_IRIs_to_review tab
-  #robot_duplicated_IRIs_values = robot_duplicated_IRIs.values.tolist() 
-  #update_values(mints_review_sheet_id, "duplicate_IRIs_to_review!A3:K", "RAW", robot_duplicated_IRIs_values, creds)
+  update_values(mints_review_sheet_id, "Mints review!A3:J", "USER_ENTERED", mints_review_df_values, creds)
