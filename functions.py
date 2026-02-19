@@ -206,7 +206,7 @@ def get_multitab_df(input_dict, creds):
   # fill in empty df sheet by sheet
   for sheet in range(len(values['valueRanges'])):
       tab = values['valueRanges'][sheet]['range'].split('!')[0] # save the name of the tab, eg. '2023_error_curation (Charlie)'
-      #print("    " + tab)
+      print("    " + tab)
       # collect the data in that tab in a pandas df
       sheet_data = values['valueRanges'][sheet]['values']
       sheet_df = pd.DataFrame(sheet_data, columns=sheet_data[0])
@@ -221,8 +221,6 @@ def get_multitab_df(input_dict, creds):
       multitab_df = pd.concat([multitab_df, sheet_df])
   # combine duplicate rows and transform "tab" into a comma-separated list
   multitab_df = multitab_df.fillna('')
-  print("grouping by: ", column_names)
-  print("available columns: ", multitab_df.columns)
   multitab_df = multitab_df.groupby(column_names).agg({'tab': ', '.join}).reset_index()
   # add hyperlink to tab list
   #multitab_df['tab'] = '=HYPERLINK("https://docs.google.com/spreadsheets/d/' + spreadsheet_id + '", "' + multitab_df['tab'] + '")'
@@ -311,10 +309,14 @@ def compare_terms(mints_df, search_df, result_column, tab_column):
     merged_df.loc[id_and_label_cross_row_match_mask, tab_column] = 'ID in ' + merged_df['id_match_tab'] + '; label in ' + merged_df['label_match_tab']
   # restrict columns to original mints_df columns + result_column + tab_column
   merged_df = merged_df.drop(columns=['id_and_label_match', 'id_and_label_match_tab', 'id_match', 'id_match_tab', 'label_match', 'label_match_tab', 'search_label'])
-
+  
+  # drop duplicates
+  merged_df = merged_df.drop_duplicates(keep='first')
+  
   # groupby match type, making tabs into a list
-  groupby_columns = merged_df.columns.tolist() - tab_column
-  print(groupby_columns)
-  merged_df = merged_df.groupby(groupby_columns).agg({tab_column: ', '.join}).reset_index()
+  if tab_column != None:
+    groupby_columns = merged_df.columns.tolist() 
+    groupby_columns.remove(tab_column)
+    merged_df = merged_df.groupby(by=groupby_columns).agg({tab_column: ', '.join}).reset_index()
 
   return merged_df

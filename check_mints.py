@@ -53,6 +53,7 @@ if __name__ == "__main__":
   # If there are no (valid) credentials available, let the user log in.
   if not creds or not creds.valid:
     if creds and creds.expired and creds.refresh_token:
+      print("requesting new token")
       creds.refresh(Request())
     else:
       flow = InstalledAppFlow.from_client_secrets_file(
@@ -78,10 +79,7 @@ if __name__ == "__main__":
   # check for duplicated IRIs with different labels
   duplicated_IRIs = mints_df[mints_df.duplicated(subset=["IRI"])]
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints sheets")
-  #print(duplicated_IRIs) # 41 show at baseline and have already been solved (see 2024 Mints sheet)
-  
-  print("mints_df")
-  print(mints_df[mints_df['IRI']=='GENEPIO:0100777'])
+  #print(duplicated_IRIs)
 
   # read in CSV of terms that are already in GENEPIO (from ROBOT export of genepio.owl)
   # this CSV must have columns titled ['IRI', 'LABEL']
@@ -104,24 +102,6 @@ if __name__ == "__main__":
   # check for duplicate IRIs
   robot_duplicated_IRIs = robot_df[robot_df.duplicated(subset=["IRI"])]
   print(str(robot_duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the ROBOT sheet")
-  #print(robot_duplicated_IRIs)
-  #print("")
-
-  print("")
-  print("in multitab made from ROBOT")
-  print(robot_df.columns)
-  print(robot_df[robot_df['IRI']=='GENEPIO:0100777'])
-
-  tester = robot_df[robot_df['IRI']=='GENEPIO:0100777']
-  print("prestrip")
-  tester = tester.groupby(['label']).agg({'tab': ', '.join}).reset_index()
-  print(tester)
-  print("poststrip")
-  tester['label'] = tester['label'].str.strip()
-  tester = tester.groupby(['label']).agg({'tab': ', '.join}).reset_index()
-  print(tester)
-  print("unique labels")
-  print(tester['label'].unique())
 
   # merge mints sheet with genepio-ROBOT sheet
   mints_review_df = compare_terms(mints_review_df, robot_df, 'In GENEPIO ROBOT?', "Tab location in GENEPIO ROBOT")
@@ -132,7 +112,6 @@ if __name__ == "__main__":
   #print("checking for commas in ROBOT")
   #print(mints_review_df[mints_review_df["Tab location in GENEPIO ROBOT"].str.contains(",")])
 
-  
   ## check if mints are in a curation sheet
   curation_2023_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEET_2023_SPREADSHEET"], creds)
   curation_2024_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEET_2024_SPREADSHEET"], creds)
