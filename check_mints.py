@@ -1,7 +1,8 @@
 ''''
 This script fetches data from the GENEPIO mints sheet, 
-compares it to genepio-edit.owl, and fills in a spreadsheet column
-identifying whether a given mint has been added to the OWL file or not yet.
+compares it to genepio-edit.owl, and fills in spreadsheet columns
+identifying whether a given mint has been added to the OWL file, 
+ROBOT tables or curation tables or not yet.
 '''
 
 import os.path
@@ -148,3 +149,4 @@ if __name__ == "__main__":
   
   # update Mints_review tab
   update_values(mints_review_sheet_id, "Mints review!A3:J", "USER_ENTERED", mints_review_df_values, creds)
+  #update_values("1Ts4nU6vQRwmnXQz0HzBM7Wz3N4tOVxo9F3-nH6cp06A", "Mints review!A3:J", "USER_ENTERED", mints_review_df_values, creds)

@@ -236,6 +236,9 @@ def compare_terms(mints_df, search_df, result_column, tab_column):
   mints_df['search_label'] = mints_df['label']
   search_df = search_df.rename(columns={'label': 'search_label'})
 
+  if tab_column != None:
+    search_df = search_df.rename(columns={'tab': tab_column})
+
   # make 'search_label' columns of mints_df and search_df lowercase
   mints_df['search_label'] = mints_df['search_label'].str.lower()
   search_df['search_label'] = search_df['search_label'].str.lower()
@@ -254,69 +257,45 @@ def compare_terms(mints_df, search_df, result_column, tab_column):
   #alternative_labels_list = [x.replace('\n', '|') for x in alternative_labels_list]
   #print(alternative_labels_list)
 
-  # if both ID and label match, record 'id_and_label_match' in result_column
-  # if tab_column != None, record tab name in tab_column
-  search_df['id_and_label_match'] = 'id_and_label_match' # add column to be used in merge
-  # if tab_column != None, record tab name in tab_column
-  if tab_column != None:
-    search_df['id_and_label_match_tab'] = search_df['tab']
-  else:
-    search_df['id_and_label_match_tab'] = ''
-  merged_df = pd.merge(mints_df, search_df[['IRI', 'search_label', 'id_and_label_match', 'id_and_label_match_tab']], on=['IRI', 'search_label'], how='left')
-
-  # elif only the ID matches, record "id_match" in result_column
-  search_df['id_match'] = 'id_match' # add column to be used in merge
-  # if tab_column != None, record tab name in tab_column
-  if tab_column != None:
-    search_df['id_match_tab'] = search_df['tab']
-  else:
-    search_df['id_match_tab'] = ''
-  merged_df = pd.merge(merged_df, search_df[['IRI', 'id_match', 'id_match_tab']], on=['IRI'], how='left')
-  
-  # elif only the label matches, record "label_match" in result_column
-  search_df['label_match'] = 'label_match' # add column to be used in merge
-  # if tab_column != None, record tab name in tab_column
-  if tab_column != None:
-    search_df['label_match_tab'] = search_df['tab']
-  else:
-    search_df['label_match_tab'] = ''
-  merged_df = pd.merge(merged_df, search_df[['search_label', 'label_match', 'label_match_tab']], on=['search_label'], how='left')
-
-  # merge all match results into result_column
-  # fill in 'no_match' as the default
-  merged_df[result_column] = 'no_match'
-  if tab_column != None:
-    merged_df[tab_column] = ''
-  # fill in 'id_and_label_match'
-  id_and_label_match_mask = (merged_df['id_and_label_match'] == 'id_and_label_match')
-  merged_df.loc[id_and_label_match_mask, result_column] = 'id_and_label_match'
-  if tab_column != None:
-    merged_df.loc[id_and_label_match_mask, tab_column] = merged_df['id_and_label_match_tab']
-  # fill in 'id_match'
-  id_match_mask = (merged_df['id_match'] == 'id_match') & (merged_df[result_column] == 'no_match')
-  merged_df.loc[id_match_mask, result_column] = 'id_match'
-  if tab_column != None:
-    merged_df.loc[id_match_mask, tab_column] = merged_df['id_match_tab']
-  # fill in 'label_match'
-  label_match_mask = (merged_df['label_match'] == 'label_match') & (merged_df[result_column] == 'no_match')
-  merged_df.loc[label_match_mask, result_column] = 'label_match'
-  if tab_column != None:
-    merged_df.loc[label_match_mask, tab_column] = merged_df['label_match_tab']
-  # fill in 'id_and_label_cross_row_match'
-  id_and_label_cross_row_match_mask = (merged_df['label_match'] == 'label_match') & (merged_df['id_match'] == 'id_match') & (merged_df['id_and_label_match'] != 'id_and_label_match')
-  merged_df.loc[id_and_label_cross_row_match_mask, result_column] = 'id_and_label_cross_row_match'
-  if tab_column != None:
-    merged_df.loc[id_and_label_cross_row_match_mask, tab_column] = 'ID in ' + merged_df['id_match_tab'] + '; label in ' + merged_df['label_match_tab']
-  # restrict columns to original mints_df columns + result_column + tab_column
-  merged_df = merged_df.drop(columns=['id_and_label_match', 'id_and_label_match_tab', 'id_match', 'id_match_tab', 'label_match', 'label_match_tab', 'search_label'])
-  
+  id_merge = pd.merge(mints_df[["IRI", "search_label"]], search_df, on='IRI', how='inner')
+  id_merge[result_column] = 'id_match'
+  id_and_label_match_mask = (id_merge['search_label_x'] == id_merge['search_label_y']) 
+  id_merge.loc[id_and_label_match_mask, result_column] = 'id_and_label_match'
+  # drop label_y
+  id_merge = id_merge.drop(columns=['search_label_y'])
   # drop duplicates
-  merged_df = merged_df.drop_duplicates(keep='first')
-  
+  id_merge = id_merge.drop_duplicates(keep='first')
   # groupby match type, making tabs into a list
   if tab_column != None:
-    groupby_columns = merged_df.columns.tolist() 
-    groupby_columns.remove(tab_column)
-    merged_df = merged_df.groupby(by=groupby_columns).agg({tab_column: ', '.join}).reset_index()
+      groupby_columns = id_merge.columns.tolist() 
+      groupby_columns.remove(tab_column)
+      id_merge = id_merge.groupby(by=groupby_columns).agg({tab_column: ', '.join}).reset_index()
+  id_merge = id_merge.rename(columns={'search_label_x': 'search_label'})
 
+  label_merge = pd.merge(mints_df[["IRI", "search_label"]], search_df, on='search_label', how='inner')
+  # record 'label_match' where IRI_x and IRI_y are different
+  label_merge[result_column] = ''
+  label_match_mask = (label_merge['IRI_x'] != label_merge['IRI_y']) 
+  label_merge.loc[label_match_mask, result_column] = 'label_match'
+  # only keep rows that contain 'label_match'
+  label_merge = label_merge[label_merge[result_column]=='label_match']
+  # drop IRI_y
+  label_merge = label_merge.drop(columns=['IRI_y'])
+  # drop duplicates
+  label_merge = label_merge.drop_duplicates(keep='first')
+  # groupby match type, making tabs into a list
+  if tab_column != None:
+      groupby_columns = label_merge.columns.tolist() 
+      groupby_columns.remove(tab_column)
+      label_merge = label_merge.groupby(by=groupby_columns).agg({tab_column: ', '.join}).reset_index()
+  # rename IRI_x to IRI
+  label_merge = label_merge.rename(columns={'IRI_x': 'IRI'})
+
+  # concatenate id_merge and label_merge
+  match_df = pd.concat([id_merge, label_merge])
+  # merge into mints_df
+  merged_df = pd.merge(mints_df, match_df, how='left', on=['IRI', 'search_label'])
+  merged_df[result_column] = merged_df[result_column].fillna('no_match')
+  merged_df = merged_df.fillna('')
+  
   return merged_df
