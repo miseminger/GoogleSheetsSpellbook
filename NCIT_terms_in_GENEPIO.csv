@@ -1,3 +1,4 @@
+ID,LABEL,SYNONYMS
 ENVO:00000009,national geopolitical entity,http://purl.obolibrary.org/obo/NCIT_C25464|independent nation|independent political entity|independent sovereign nation|nation
 ENVO:00000856,city,http://purl.obolibrary.org/obo/NCIT_C80234|urban area
 GENEPIO:0001819,NCIT,National Cancer Institude Thesaurus
