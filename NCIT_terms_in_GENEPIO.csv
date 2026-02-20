@@ -1,0 +1,466 @@
+ENVO:00000009,national geopolitical entity,http://purl.obolibrary.org/obo/NCIT_C25464|independent nation|independent political entity|independent sovereign nation|nation
+ENVO:00000856,city,http://purl.obolibrary.org/obo/NCIT_C80234|urban area
+GENEPIO:0001819,NCIT,National Cancer Institude Thesaurus
+GENEPIO:0001832,ANSI INCITS 38,
+GENEPIO:0002103,subject health status (NCIT),
+NCIT:C100128,Partner,Partner
+NCIT:C100811,Pregnancy Partner,PREGNANCY PARTNER|Pregnancy Partner
+NCIT:C100812,Sexual Partner,SEXUAL PARTNER|Sexual Partner
+NCIT:C103180,Data Standard,Data Standard|data standards
+NCIT:C103245,Cryovial,Cryovial
+NCIT:C105370,Bacterial 16S RNA,16S Ribosomal RNA|16S rRNA|Bacterial 16S RNA|Bacterial 16S Ribosomal RNA|Bacterial 16S rRNA
+NCIT:C106515,Dialysis Fluid,DIALYSIS FLUID|Dialysate|Dialysis Fluid
+NCIT:C106561,Pregnant During the Study,PREGST|Pregnant During the Study
+NCIT:C107103,Sudden Death,"Sudden Death|Sudden Death, NOS"
+NCIT:C110959,Not Answered,Not Answered|Not answered
+NCIT:C111853,Sudden Unexplained Infant Death,SUID|Sudden Unexplained Infant Death
+NCIT:C111854,Sudden Unexplained Death in Childhood,Sudden Unexplained Death in Childhood
+NCIT:C111858,Direct Maternal Death,Direct Maternal Death
+NCIT:C111859,Indirect Maternal Death,Indirect Maternal Death
+NCIT:C111860,Maternal Mortality,Maternal Death|Maternal Mortality
+NCIT:C113122,Blood Collection Tube,BCT|Blood Collection Tube
+NCIT:C113124,Evacuated Blood Specimen Collection Tube,Evacuated Blood Specimen Collection Tube
+NCIT:C113419,Housemate,Housemate|Roommate
+NCIT:C113609,Chronic Liver Disease,Chronic Liver Disease|Chronic liver disease
+NCIT:C113644,Person Role Title,Person Role|Person Role Title|Role Title|Title|title
+NCIT:C114551,Organization Role,Organization Role
+NCIT:C114870,Post-Natal Death at 16-20 Weeks Gestation,Post-Natal Death at 16-20 Weeks Gestation
+NCIT:C114930,Healthy Term Newborn,Healthy Term Newborn
+NCIT:C114931,Healthy Preterm Newborn,Healthy Preterm Newborn
+NCIT:C114938,Late Preterm Infant,Late Preterm Infant|Near Term Infant
+NCIT:C114939,Extremely Preterm Infant,Extreme Immaturity|Extremely Preterm Infant
+NCIT:C114947,Postterm Infant,Post Dates|Postmature|Postterm Infant
+NCIT:C115935,Healthy,Healthy|Well
+NCIT:C116117,Inhibitory Concentration Test,Inhibitory Concentration Test
+NCIT:C116340,Brain Death,Brain Death|Brain death
+NCIT:C116518,Other Intervention or Procedure,Other Intervention or Procedure
+NCIT:C116772,Early Neonatal Death,Early Neonatal Death|Early Neonatal Mortality
+NCIT:C116773,Late Neonatal Death,Late Neonatal Death|Late Neonatal Mortality
+NCIT:C117720,Female Reproductive System Finding,Female Reproductive System Finding
+NCIT:C118676,Perinatal Mortality,Perinatal Death|Perinatal Mortality
+NCIT:C118677,Very Preterm Infant,Very Preterm Infant
+NCIT:C120592,Very Early Neonatal Death,Very Early Neonatal Death
+NCIT:C121303,Post Neonatal Death,Post Neonatal Death
+NCIT:C121416,Loss of Fine Movements,Loss of Fine Movements|Loss of fine movements
+NCIT:C12219,"Anatomic Structure, System, or Substance","Anatomic Structure, System, or Substance|Anatomic Structures and Systems"
+NCIT:C1225,Shiga Toxin,Shiga Toxin
+NCIT:C124295,Pregnant,PREGNANT|Pregnant
+NCIT:C124436,Sex at Birth,SEXRBRTH|Sex Reported at Birth|Sex at Birth
+NCIT:C124600,Early Intrauterine Death,EARLY INTRAUTERINE DEATH|Early IUD|Early Intrauterine Death
+NCIT:C124643,Late Intrauterine Death,LATE INTRAUTERINE DEATH|Late IUD|Late Intrauterine Death
+NCIT:C12471,Soft Tissue,SOFT TISSUE|Soft Tissue|soft tissue
+NCIT:C125203,Transplant-Related Mortality,TRM|Transplant Related Death|Transplant Related Mortality|Transplant-Related Death|Transplant-Related Mortality
+NCIT:C126054,Non-Pathological,NON-PATHOLOGICAL|Non-Pathological
+NCIT:C127784,Schoolmate,SCHOOLMATE|Schoolmate
+NCIT:C12801,Tissue,"Normal|Normal Tissue|TISSUE|Tissue|Tissue, NOS|Tissues|tissue"
+NCIT:C128042,Moderate to Late Preterm Infant,Moderate to Late Preterm Infant
+NCIT:C128985,Minimum Inhibitory Concentration Test,MIC|Minimum Inhibitory Concentration|Minimum Inhibitory Concentration Test
+NCIT:C12964,Connective and Soft Tissue,Connective and Soft Tissue
+NCIT:C130200,Solid Organ Transplant Recipient,Solid Organ Transplant Recipient|Solid Organ Transplantation Recipient
+NCIT:C131759,Bone Marrow Transplant Recipient,Bone Marrow Transplant Recipient|Bone Marrow Transplantation Recipient
+NCIT:C13229,Embryonic Structure,Embryologic Structure|Embryonic Structure
+NCIT:C13235,Fetus,FETUS|Fetal|Fetus|fetus
+NCIT:C132450,Stepmother,"MOTHER, STEP|Step Mother|Stepmother"
+NCIT:C13308,Hepatic,Hepatic|hepatic
+NCIT:C13347,Aspirate,ASPIRATE|Aspirate|aspirate
+NCIT:C13442,Anatomy Qualifier,Anatomic Qualifier|Anatomy Qualifier|Anatomy Qualifiers
+NCIT:C13717,Anatomic Site,Anatomic Location|Anatomic Site|Anatomic Sites|Anatomical Location|Anatomical_Location|CDISC|Location|Site|Topographic (Anatomic) Site|Topographic Site
+NCIT:C141241,"Death During, or within 90 Days of, Index Hospital Admission","Death During, or within 90 Days of, Index Hospital Admission|Death Less than 90 Days or During Index Hospital Admission"
+NCIT:C14139,Immunocompromised,Immunocompromised|Immunocompromised Host|Immunocompromised Patient|Immunosuppressed|Immunosuppressed Host|Immunosuppressed Patient|immunocompromised
+NCIT:C14419,Organism Strain,Organism Strain|STRAIN|Strain|Strain Number|strain
+NCIT:C147908,Hormone Therapy Agent,Hormonal Therapy Agent|Hormone Therapy|Hormone Therapy Agent|Hormone Therapy Drug
+NCIT:C147914,Strategy,Strategy
+NCIT:C150895,Swabbed Material,SWABBED MATERIAL|Swabbed Material
+NCIT:C15189,Biopsy,BIOPSY|BIOPSY_TYPE|Biopsy|Bx|biopsy
+NCIT:C15221,Dialysis,Dialysis|Dialysis Procedure|Dialysis Therapy|dialysis
+NCIT:C15248,Hemodialysis,Artificial Kidney Dialysis|Extracorporeal Dialysis|HEMODIALYSIS|Hemodialysis|Kidney Dialysis|Renal Dialysis
+NCIT:C15258,Immunization,Immunization|immunization
+NCIT:C15306,Primary Prevention,"PRIMARY PREVENTION|Prevention, Primary|Primary Prevention"
+NCIT:C15310,Paracentesis,Paracentesis|paracentesis
+NCIT:C15327,Lumbar Puncture,LP|Lumbar Puncture|Spinal Tap|lumbar puncture|spinal tap
+NCIT:C15329,Surgical Procedure,"Operation|SURGERY|Surgery|Surgery Type|Surgery, NOS|Surgical|Surgical Intervention|Surgical Interventions|Surgical Procedure|Surgical Procedures|Surgically|Type of Surgery|surgery"
+NCIT:C15346,Vaccination,Vaccination|vaccination
+NCIT:C15360,Adjuvant Chemotherapy,Adjuvant|Adjuvant Chemotherapy
+NCIT:C15384,Surgical Incision,Incision|Incisional|Otomy|Surgical Incision|incision
+NCIT:C15392,Thoracentesis,Chest Aspiration|Pleural Cavity Tap|Pleural Tap|Pleurocentesis|Puncture of Pleural Cavity for Aspiration|THORACENTESIS|Thoracentesis|Thoracic Paracentesis|thoracentesis
+NCIT:C15416,Active Immunization,Active Immunization
+NCIT:C154851,Step Father,"FATHER, STEP|Step Father|Stepfather"
+NCIT:C15511,Infection Prophylaxis and Management,"Infection Prophylaxis and Management|Infectious Diseases / Treatment, General|Treatment of Infectious Disease|infectious diseases treatment|management, infection prophylaxis"
+NCIT:C15631,Aspiration,ASPIRATION|Aspiration|aspiration
+NCIT:C15632,Chemotherapy,"CHEMO|CHEMOTHERAPY|Chemo|Chemotherapy|Chemotherapy (NOS)|Chemotherapy, Cancer, General|chemotherapy"
+NCIT:C156427,Cancer-Related Death,Cancer Death|Cancer Related|Cancer Related Death|Cancer-Related Death
+NCIT:C156428,Non-Cancer Related Death,Non-Cancer Death|Non-Cancer Related|Non-Cancer Related Death|Not Cancer Related
+NCIT:C15655,Thoracic Surgical Procedure,Chest Surgery|Thoracic Surgery|Thoracic Surgical Procedure|Thoracic Surgical Procedures
+NCIT:C15657,Blood Treatment,Blood Treatment|Hematologic Procedure|Therapeutic Procedures Hematopoietic System
+NCIT:C156660,Genitourinary System Disorder,Genitourinary Disorder|Genitourinary System Disorder|Urogenital Disease
+NCIT:C15675,Adjuvant Therapy,AJ-Adjuvant Therapy|Adjuvant Therapy|adjunct therapy|adjunctive therapy|adjuvant therapy
+NCIT:C157332,Kidney Transplant Recipient,Kidney Transplant Recipient|Kidney Transplantation Recipient
+NCIT:C157740,Cancer Surgery,Cancer Surgery
+NCIT:C15843,Preventive Intervention,PREVENTATIVE|PRYLX|Prevention|Prevention Measures|Preventive Intervention|Prophylactic|Prophylaxis|prevention|prophylaxis
+NCIT:C159659,Transplant Recipient,Transplant Recipient|Transplantation Recipient
+NCIT:C15986,Pharmacotherapy,"Drug Therapy|Pharmaceutical Therapy|Pharmaceutical Therapy, NOS|Pharmacological Treatment|Pharmacological Treatments|Pharmacotherapy|Treatment With Medication|drug therapy"
+NCIT:C16118,Anti-HIV Therapy,"AIDS anti-HIV therapy|Anti-HIV Therapy|therapy, AIDS anti-HIV|therapy, anti-HIV"
+NCIT:C16119,Antiviral Therapy,"Antiviral Therapy|Infectious Diseases / Treatment, Viral|Treatment of Infectious Diseases, Viral|treatment of viral infectious disease"
+NCIT:C161324,Demographic Group,Demographic Group
+NCIT:C161352,Nitrate Measurement,NITRATE|Nitrate|Nitrate Measurement|Nitric Acid|Nitric Acid Measurement
+NCIT:C161420,First Degree Biological Relative,"First Degree Biological Relative|RELATIVE, BIOLOGICAL, FIRST DEGREE"
+NCIT:C16143,Repository,Bank|Repository
+NCIT:C161601,Surgical Procedure by Type,PROCEDURE_TYPE|Surgical Procedure by Type
+NCIT:C16203,Clinical or Research Activity,Clinical or Research Activity
+NCIT:C16205,Healthcare Activity,Health Care|Health Care Activity|Healthcare|Healthcare Activity
+NCIT:C16212,Cancer Therapeutic Procedure,Cancer Therapeutic Procedure|Cancer Therapy|Cancer Treatment|Malignant Neoplasm Therapy|Malignant Neoplasm Treatment|anticancer therapy
+NCIT:C16268,Elderly,Aged 65 and Over|ELDERLY|Elderly|Elderly (Over 65)|Senior Citizen
+NCIT:C16326,Behavior,Attitude|Behavior|Behavioral|Conduct
+NCIT:C1636,Therapeutic Steroid Hormone,Steroid Hormone|Synthetic Steroids|Therapeutic Steroid Hormone|steroid drug
+NCIT:C16423,Child,CHILD|Child|Children|Children (0-21)
+NCIT:C165131,Study Country Code,Study Country Code|StudyCountry.countryCode
+NCIT:C165587,Pooled Sample,Composite Sample|Pooled|Pooled Sample|Pooled Specimen
+NCIT:C16576,Female,F|FEMALE|Female|female
+NCIT:C165792,Foster Father,Foster Father
+NCIT:C165793,Foster Mother,Foster Mother
+NCIT:C166092,Biological Father of Subject's Child,"Biological Father of Subject's Child|FATHER, BIOLOGICAL OF SUBJECT'S CHILD"
+NCIT:C166093,Biological Mother of Subject's Child,"Biological Mother of Subject's Child|MOTHER, BIOLOGICAL OF SUBJECT'S CHILD"
+NCIT:C166114,Biological Parent,Biological Parent|Natural Parent
+NCIT:C166116,Step Parent,Step Parent
+NCIT:C166129,Adoptive Parent,Adoptive Parent
+NCIT:C166133,Adoptive Father,Adoptive Father
+NCIT:C166134,Adoptive Mother,Adoptive Mother
+NCIT:C166165,Treatment-Related Mortality,TRM|Treatment-Related Mortality
+NCIT:C16632,Geographic Area,Area|Geographic Area|Geographic Location|Geographic Region|Region
+NCIT:C16729,Infant Mortality,Infant Death|Infant Mortality|Infant Mortality Total
+NCIT:C16731,Newborn,NEONATE|Neonatal|Neonate|Newborn
+NCIT:C16742,Instrumentation,Instrument|Instrumentation
+NCIT:C16830,Medical Device,DEVICE|Device|Medical Device|Medical Devices|medical device
+NCIT:C168498,Neonatal Complication,Neonatal Complication|Neonatal Complications
+NCIT:C16866,Model,Model|Model System|Modeling System|Models|model
+NCIT:C168830,Mortality related to Stem Cell Treatment,Mortality related to Stem Cell Treatment
+NCIT:C168970,Death due to Disease Progression,Death due to Disease Progression|Disease Progression|Terminal Disease Progression
+NCIT:C16960,Patient,LAY USER/PATIENT|PATIENT|PT|Patient|Patients|patient
+NCIT:C17005,Population Group,Group|Population|Population Group|Subpopulation|population
+NCIT:C171087,Person/Individual Attribute,Person/Individual Attribute
+NCIT:C171256,Non-Medical Object or Device,Non-Medical Object or Device
+NCIT:C171550,COVID-19-Associated Pneumonia,COVID-19-Associated Pneumonia|Pneumonia|SARS-CoV-2 -Associated Pneumonia
+NCIT:C171551,COVID-19-Associated Acute Respiratory Distress Syndrome,ARDS|COVID-19-Associated Acute Respiratory Distress Syndrome|SARS-CoV-2-Associated Acute Respiratory Distress Syndrome
+NCIT:C171562,COVID-19-Associated Coagulation Disorder,COVID-19-Associated Coagulation Disorder|COVID-19-Associated Coagulopathy|SARS-CoV-2-Associated Coagulation Disorder|SARS-CoV-2-Associated Coagulopathy
+NCIT:C17357,Gender,Gender|gender
+NCIT:C173621,Vaping,Vape|Vaping
+NCIT:C173641,Rectal Swab Specimen,Rectal Swab|Rectal Swab Specimen
+NCIT:C173767,Mitigation Strategy,Mitigation Strategy
+NCIT:C173768,Self-Isolation,Self-Isolation
+NCIT:C17445,Caregiver,CAREGIVER|Caregiver|Caretaker|caregiver
+NCIT:C17456,Experimental Model,"Experimental Model|Experimental Models, Other"
+NCIT:C17471,Youth,Youth|Youth 10-21
+NCIT:C17598,Prosthesis,Prostheses|Prosthesis|prosthesis
+NCIT:C17600,Adult,"ADULT|Adult|Adult Human (21+)|Human, Adult"
+NCIT:C17627,Swab,SWAB|Swab
+NCIT:C17734,At-Risk Population,At-Risk Population|Population at Risk
+NCIT:C17828,Biological Process,Biological Function|Biological Process
+NCIT:C18020,Diagnostic Procedure,DIAGNOSTIC TEST|Diagnostic Method|Diagnostic Procedure|Diagnostic Technique|Diagnostic Test|Evaluation Basis of Disease Status|diagnostic procedure|diagnostic technique
+NCIT:C188268,Middle Name,Middle Name
+NCIT:C18850,"Infant Mortality, Non-AIDS","Infant Mortality, Non-AIDS"
+NCIT:C189008,COVID-19 Complication,COVID-19 Complication|COVID-19 Complications
+NCIT:C18908,Older Population,Older Population|Older Populations
+NCIT:C19067,Title,Title|title
+NCIT:C1908,"Drug, Food, Chemical or Biomedical Material","Drug, Food, Chemical or Biomedical Material"
+NCIT:C1909,Pharmacologic Substance,Agent|DRUG|Drug|Drug Substance|Pharmaceutical Agent|Pharmaceuticals|Pharmacologic Agent|Pharmacologic Substance|Pharmacological Substance|Therapeutic Agent|drug|therapeutic agents|therapeutic_agents
+NCIT:C191421,Cardiovascular Mortality During Acute COVID-19,Cardiovascular Mortality During Acute COVID-19|Cardiovascular Mortality During Acute SARS-CoV-2 Infection
+NCIT:C191434,Mechanical Support,Mechanical Support
+NCIT:C191463,Death due to Cardiovascular Hemorrhage Related to COVID-19,Death due to Cardiovascular Hemorrhage Related to COVID-19|Death due to cardiovascular hemorrhage
+NCIT:C191464,Death due to Cardiovascular Procedure Related to COVID-19,Death due to Cardiovascular Procedure Related to COVID-19|Death due to cardiovascular procedure
+NCIT:C191465,Death due to Other Cardiovascular Cause Related to COVID-19,Death due to Other Cardiovascular Cause Related to COVID-19|Death due to other cardiovascular causes
+NCIT:C19148,In Vivo Model,In Vivo Model
+NCIT:C191480,Death due to Acute Myocardial Infarction Related to COVID-19,Death due to Acute Myocardial Infarction Related to COVID-19|Death due to acute MI
+NCIT:C191537,Death due to Heart Failure Related to COVID-19,Death due to HF|Death due to Heart Failure Related to COVID-19
+NCIT:C191538,Death due to Pulmonary Embolus Related to COVID-19,Death due to Pulmonary Embolus Related to COVID-19|Death due to pulmonary embolus
+NCIT:C191539,Death due to Stroke Related to COVID-19,Death due to Stroke Related to COVID-19|Death due to stroke
+NCIT:C19157,Specimen,Research Specimen|Sample|Specimen
+NCIT:C19160,Occupation or Discipline,Occupation or Discipline
+NCIT:C191626,Sudden Cardiac Death Related to COVID-19,SCD Related to COVID-19|Sudden Cardiac Death Related to COVID-19|Sudden cardiac death
+NCIT:C191627,Sudden Cardiac Death with Return of Spontaneous Circulation Related to COVID-19,Sudden Cardiac Death with Return of Spontaneous Circulation Related to COVID-19|Sudden cardiac death with ROSC
+NCIT:C19238,"Diagnostic, Therapeutic, or Research Equipment","Diagnostic, Therapeutic, and Research Equipment|Diagnostic, Therapeutic, or Research Equipment|Equipment|Hardware"
+NCIT:C19239,"Infant Mortality, AIDS","AIDS, Infant Mortality|Infant Mortality, AIDS"
+NCIT:C192504,Encounter Facility Postal Code,Encounter Facility Postal Code
+NCIT:C192505,Intervention Facility Postal Code,Intervention Facility Postal Code
+NCIT:C192506,Patient Residence Postal Code,Patient Residence Postal Code|Postal Code of Domicile
+NCIT:C19254,Medical Occupation,Health Care Occupation|Medical Occupation
+NCIT:C1932,Chemical Modifier,Chemical Modifier|Modifier
+NCIT:C19332,Personal Attribute,Personal|Personal Attribute|Subject Characteristics
+NCIT:C19498,Document,DOC|Document|Document Type|documentation
+NCIT:C19683,Personal Behavior,Personal Behavior|Personal Conduct
+NCIT:C198995,Person by OccupationType,Person by OccupationType
+NCIT:C198996,Person by Relationship,Person by Relationship
+NCIT:C198997,Person by Activity Type,Person by Activity Type
+NCIT:C198998,Person by Legal Status,Person by Legal Status
+NCIT:C198999,Person by Personal Characteristic,Person by Personal Characteristic
+NCIT:C199000,Person by Living Situation,Person by Living Situation
+NCIT:C199001,Person by Health Status,Person by Health Status
+NCIT:C199141,Health Issue Related Group,Health Issue Related Group
+NCIT:C199218,Death without Remission,Death without Remission
+NCIT:C19988,Organismal Process,Organism-Level Process|Organismal Process|Physiological Process
+NCIT:C200488,Collection Container,Collection Container
+NCIT:C20108,Country Code,Country|Country Code|countryCode
+NCIT:C20181,Conceptual Entity,Conceptual Entity
+NCIT:C20189,Property or Attribute,Property or Attribute
+NCIT:C20200,Outcome,Outcome|Result|outcome|result
+NCIT:C202048,Patient Dead,Patient Dead|Patient Died
+NCIT:C204466,Body Fluid Specimen,Body Fluid Sample|Body Fluid Specimen
+NCIT:C205472,Sex Assigned at Birth,Birth Sex|Sex Assigned at Birth
+NCIT:C20587,Age Related Group,Age Group|Age Related Group
+NCIT:C211,Therapeutic Corticosteroid,Corticosteroids|Therapeutic Corticosteroid|corticosteroid
+NCIT:C21173,Reproductive Process,Reproductive Process|Reproductive System Process
+NCIT:C21480,Relative,RELATIVE|Relation|Relative
+NCIT:C21481,First Degree Relative,"FDR|First Degree Relative|First Degree Relative, NOS|RELATIVE, FIRST DEGREE|first-degree relative"
+NCIT:C21514,Temporal Qualifier,Temporal Qualifier
+NCIT:C2364,Adrenal Agent,Adrenal Agent|Adrenal Drugs
+NCIT:C25155,Birth,Birth|Born|Delivery
+NCIT:C25160,City,City
+NCIT:C25162,Code,CODE|Code|Code Name|Coding System|code
+NCIT:C25164,Date,Date|Date (MM/DD/YYYY)|Dated|date
+NCIT:C25174,Father,FATHER|Father
+NCIT:C25179,Hospitalization,HOSPITALIZATION|Hospitalization|Hospitalized
+NCIT:C25182,Inpatient,Inpatient
+NCIT:C25189,Mother,MOTHER|Mother
+NCIT:C25190,Person,Individual|Person
+NCIT:C25191,Person Name,Contact Name|Individual's Name|Name|Name of Person|Person Name|Person.name
+NCIT:C25193,Occupation,EMPJOB|Employee Job|Employment Category|Job|OCCUPATION|Occupation|Occupation Type|occupation type|occupation_type
+NCIT:C25198,Record,Record|record
+NCIT:C25218,Intervention or Procedure,Intervention|Intervention Strategies|Intervention or Procedure|Interventional|Interventional Procedure Type|Procedure|intervention|interventionDescription|procedure|study intervention|treatment type|treatment_type
+NCIT:C25251,Primary,Primary
+NCIT:C25254,Progressive,Progressive
+NCIT:C25269,Symptomatic,Currently has symptoms|Is_Symptomatic|SYMPTOMS|Symptomatic|symptomatic
+NCIT:C25294,Laboratory Procedure,Lab Test|Lab Tests|Laboratory Procedure|Laboratory Test|Test|Tests|lab exam|lab_exam|laboratory test|laboratory_test
+NCIT:C25337,Number,Number|Numeric|Numerical|number|{Number}
+NCIT:C25341,Location,LOC|Location
+NCIT:C25381,Maiden Name,Maiden|Maiden Name
+NCIT:C25392,Manufacturer,MANUF|MANUFACTURER|Make|Maker|Manufacturer|Manufacturer Name|Manufacturing|Manufacturing Laborer|Manufacturing Labourers
+NCIT:C25407,Address,Address|Physical Address|physicalAddress
+NCIT:C25414,Aliquot,Aliquot
+NCIT:C25447,characteristic,
+NCIT:C25464,Country,COUNTRY|Country
+NCIT:C25499,Event,Event
+NCIT:C25577,Most Recent,Most Recent
+NCIT:C25610,Pathologic,PATHOLOGICAL|Pathologic|sick
+NCIT:C25621,Postal Code,Postal Code|Postal code
+NCIT:C25632,Province,Province
+NCIT:C25667,Secondary,Secondary
+NCIT:C25677,Shape,SHAPE|Shape
+NCIT:C25690,Street Address,Address Line|STREET|Street|Street Address
+NCIT:C25709,Unit of Measure,U|UOM|Unit|Unit of Measure|Unit of Measurement|Unit(s)|Units|unit|unit(s)
+NCIT:C25717,Vital Status,SURVSTAT|Survival Status|Vital Status|Vital Status (at date of last contact)|Vital_Status|vital status|vital_status
+NCIT:C25720,Zip Code,ZIP|Zip Code
+NCIT:C25741,Physician,DR|Doctor|Medical Doctor|Medical Doctors|PHYSICIAN|Physician|physician
+NCIT:C25742,Pregnancy,Gestation|Pregnancy|pregnancy
+NCIT:C26323,Hematopoietic and Lymphoid Cell Disorder,Blood Disease|Blood Disorder|Hematologic Disorder|Hematologic and Lymphocytic Disorder|Hematologic and Lymphoid Cell Disorder|Hematological Disorder|Hematopoietic and Lymphoid Cell Disorder
+NCIT:C26324,Non-Neoplastic Hematopoietic and Lymphoid Cell Disorder,Non-Malignant Hematologic and Lymphocytic Disorder|Non-Neoplastic Hematologic and Lymphocytic Disorder|Non-Neoplastic Hematologic and Lymphoid Cell Disorder|Non-Neoplastic Hematopoietic and Lymphoid Cell Disorder|nonmalignant hematologic disorder
+NCIT:C26548,Gene Product,Gene Product|Genome Encoded Entity
+NCIT:C26549,Untranslated RNA,Functional RNA|Non-Coding RNA|Noncoding RNA|Untranslated RNA|ncRNA
+NCIT:C26726,Infectious Disorder,Clinical Infection|ID|INFECTION|Infection|Infectious|Infectious Disease|Infectious Diseases and Manifestations|Infectious Disorder|Unspecified Infection|infection
+NCIT:C26871,Respiratory System Disorder,Disorder of Respiratory System|Respiratory Disorder|Respiratory System Disorder|Unspecified Respiratory Problem
+NCIT:C27197,Acute Pneumonia,Acute Pneumonia
+NCIT:C27550,Non-Neoplastic Digestive System Disorder,Non-Neoplastic Digestive System Disorder|Non-Neoplastic Gastrointestinal Disorder|Non-Neoplastic Gastrointestinal System Disorder
+NCIT:C27551,Disorder by Site,Disease by Site|Disorder by Site
+NCIT:C27557,Non-Neoplastic Lung Disorder,Non-Neoplastic Lung Disorder|Non-Neoplastic Pulmonary Disorder|Non-neoplastic Lung Disorders|Non-neoplastic Pulmonary Disease|Non-neoplastic Pulmonary Diseases
+NCIT:C27583,Infectious Disorder by Site,Infectious Disorder by Site
+NCIT:C27669,Respiratory and Thoracic Disorder,"Respiratory and Thoracic Disease|Respiratory and Thoracic Disorder|Respiratory, Thoracic, and Mediastinal Disease|Respiratory, Thoracic, and Mediastinal Disorder"
+NCIT:C27954,Adolescent,ADOLESCENT|Adolescent|Adolescents
+NCIT:C27956,Infant,INFANT|Infant
+NCIT:C27992,Disease Qualifier,Disease Qualifier
+NCIT:C27993,General Qualifier,General Modifier|General Qualifier|General Qualifiers
+NCIT:C28102,Disease Clinical Qualifier,Disease Clinical Qualifier
+NCIT:C28147,Embryo,EMBRYO|Embryo|Embryologic|Human Embryo|embryo
+NCIT:C28193,Syndrome,Syndrome|syndrome
+NCIT:C28221,Phlebotomy,Phlebotomy|Venipuncture|blood draw|phlebotomy|venipuncture
+NCIT:C28293,Outpatient,Outpatient|outpatient
+NCIT:C28421,Sex,Gender|SEX|Sex|sex
+NCIT:C28554,Dead,DEAD|DEATH|DIED|Dead|Death|Death (event)|Death NOS|Deceased|Died|EXPIRED|EXPIRED/DEATH|Loss of Life|Patient Deceased|dead|deceased
+NCIT:C2902,Coagulation Disorder,"Coagulation Defect|Coagulation Disorder|Coagulation defect, unspecified|Coagulopathy|Coagulopathy, specify"
+NCIT:C2931,Cardiovascular Disorder,"Cardiovascular Disease|Cardiovascular Disease (CVD)|Cardiovascular Disorder|Cardiovascular Disorder, NOS|Cardiovascular_Disease|Disorder of Cardiovascular System|Unspecified disorder of circulatory system"
+NCIT:C2959,Complication,Complication|Complications|Medical Complication|complication
+NCIT:C296,Bacterial Toxin,Bacterial Toxin|bacterial toxin
+NCIT:C2990,Digestive System Disorder,Digestive Disease|Digestive System Disease|Digestive System Disorder|Disorder of Digestive System|GI Disorder|Gastrointestinal Disorder|Gastrointestinal System Disease|Gastrointestinal System Disorder|Unspecified Gastrointestinal Problem|stomach or intestinal disorder
+NCIT:C2991,Disease or Disorder,"Condition|Diagnosis|Disease|Disease or Disorder|Disease or Disorder, Non-Neoplastic|Diseases|Diseases and Disorders|Disorder|Disorders|Other Disease|condition|disease|disease term|disease type|disease_term|disease_type|disorder"
+NCIT:C30103,Stable,STABLE|Stable
+NCIT:C3079,Heart Disorder,Cardiac Disease|Heart Disease|Heart Disorder|Heart trouble|Unspecified Heart Problem
+NCIT:C308,Immunotherapeutic Agent,BRM|Biological Response Modifier|Biomodulators|Immune Mediators|Immune Modulators|Immune Regulators|Immunomodulating Agent|Immunomodulators|Immunomodulatory Agent|Immunopotentiators|Immunotherapeutic Agent|Immunotherapeutic Drug|Immunotherapy|Immunotherapy Agent
+NCIT:C3149,Kidney Disorder,"Kidney Disease|Kidney Disorder|Kidney disease|Renal Disease|Renal Disorder|Renal Disorder, NOS"
+NCIT:C3196,Liver and Intrahepatic Bile Duct Disorder,"Hepatic Disorder|Liver Disease|Liver Disorder|Liver and Intrahepatic Bile Duct Disorder|Liver disease|Liver disease, unspecified"
+NCIT:C3198,Lung Disorder,Disorder of Lung|Lung Disorder|Lung Disorders|Pulmonary Disease|Pulmonary Diseases|Pulmonary Disorder|Pulmonary Disorders
+NCIT:C32221,Body Part,Body Part|Body Structure
+NCIT:C3333,Pneumonia,"Patient_developed_pneumonia|Pneumonia|Pneumonia, NOS|pneumonia"
+NCIT:C3353,Acute Respiratory Distress Syndrome,ARDS|Acute Respiratory Distress Syndrome|Adult RDS|Adult Respiratory Distress Syndrome|Adult respiratory distress syndrome
+NCIT:C33556,Sinus,SINUS|Sinus|sinus
+NCIT:C3364,Septicemia,Sepsis|Sepsis Syndrome|Septicemia|Systemic Sepsis|blood poisoning|sepsis|septicemia|toxemia
+NCIT:C3367,Finding,Finding|Observable Entity|finding
+NCIT:C33904,Other Anatomic Concept,Other Anatomic Concept|Other Anatomy Concept
+NCIT:C34144,Embryonic Structure or System,Embryologic Structure or System|Embryonic Structure or System
+NCIT:C3426,Ulcer,ULCER|Ulcer|Ulcerated|Ulceration|Ulcerative|Ulcers|ulcer
+NCIT:C3430,Urinary System Disorder,Disorder of Urinary System|Urinary System Disorder|Urologic Disorder|urinary tract disorder
+NCIT:C34433,Bone Marrow Disorder,Bone Marrow Disease|Bone Marrow Disorder
+NCIT:C35016,Shock,Circulatory Collapse|Shock
+NCIT:C35018,Septic Shock,Septic Shock|Systemic Septic Shock
+NCIT:C35461,Clinical Course of Disease,Clinical Course|Clinical Course of Disease|LONGCRSE|Longitudinal Course
+NCIT:C35552,Cardiovascular System Finding,CARDIOVASCULAR SYSTEM|Cardiovascular Finding|Cardiovascular System Finding
+NCIT:C35708,Stone,CALCULUS|Calculi|Calculus|Stone
+NCIT:C35742,Thoracic Disorder,Thoracic Disease|Thoracic Disorder
+NCIT:C35743,Non-Neoplastic Thoracic Disorder,Non-Neoplastic Thoracic Disease|Non-Neoplastic Thoracic Disorder
+NCIT:C35755,Non-Neoplastic Respiratory System Disorder,Non-Neoplastic Respiratory System Disorder
+NCIT:C35773,Bile Duct Stone,Bile Duct Calculus|Bile Duct Stone
+NCIT:C35814,Hematopoietic and Lymphatic System Disorder,Hematopoietic and Lymphatic System Disorder|Hematopoietic and Lymphoid System Disorder
+NCIT:C36278,Finding by Site or System,Finding by Site or System
+NCIT:C36284,Reproductive System Finding,REPRODUCTIVE SYSTEM|Reproductive System Finding
+NCIT:C36288,Connective and Soft Tissue Finding,Connective and Soft Tissue Finding|MUSCULOSKELETAL SYSTEM
+NCIT:C36291,Finding by Cause,Finding by Cause
+NCIT:C3671,Injury,Injury|Trauma|Traumatic Injury|Wound|trauma|wound
+NCIT:C37984,Laboratory,LABORATORY|Lab|Laboratory
+NCIT:C37987,Alive,ALIVE|Alive|Live|Living|alive
+NCIT:C38186,Clinical or Research Facility,Clinical or Research Facility
+NCIT:C3833,Asymptomatic,Asymptomatic|NO SYMPTOMS|asymptomatic
+NCIT:C3959,Hepatobiliary Disorder,Hepatobiliary Disorder|Liver Disease|Liver and Biliary Disease|Liver and Biliary Disorder|Liver and Biliary System Disorder
+NCIT:C40974,First Name,First Name|Forename|Given Name|pi first name|pi_first_name
+NCIT:C40975,Last Name,Family Name|Last Name|Surname|pi last name|pi_last_name
+NCIT:C40978,Telephone Number,Phone|Phone Number|Telephone|Telephone Number
+NCIT:C41009,Qualifier,Modifier|Qualifier
+NCIT:C41075,Implant,Implant|Implantable|Implanted|implant
+NCIT:C41085,Person Contact Information,Contact Info|Person Contact Information
+NCIT:C41256,Family Member,FAMILY MEMBER|Family Member
+NCIT:C41275,Vial,Phial|Vial
+NCIT:C41277,Tube,Tube
+NCIT:C42568,Unit by Category,Unit by Category
+NCIT:C42579,Unit of Mass,Unit of Mass
+NCIT:C42614,Name,Name|name
+NCIT:C42694,Login Name,Account Name|Login Name|User ID|User Name|Username
+NCIT:C42709,Parent,PARENT|Parent|Parental
+NCIT:C42775,E-mail Address,E-mail|E-mail Address|Electronic Mail Address|Email|Email Address
+NCIT:C42856,Sponge,Sponge
+NCIT:C43164,Package Type,Package Type
+NCIT:C43167,Bag,BAG|Bag
+NCIT:C43169,Bottle,BOTTLE|Bottle
+NCIT:C43186,Container,CONTAINER|Container
+NCIT:C43209,Glass Vial,"Glass Vial|VIAL, GLASS"
+NCIT:C43214,Plastic Vial,"Plastic Vial|VIAL, PLASTIC"
+NCIT:C43359,Group,Group|Panel
+NCIT:C43431,Activity,Activity|General activity
+NCIT:C45322,Storage Unit,Storage Device|Storage Unit|StorageEquipment|Unit
+NCIT:C45908,Intersex,INTERSEX|Intersex|Intersexed
+NCIT:C45910,Sex Pooled Sample,Pooled Sample|Sex Pooled Sample|Sex Pooled Specimen|pooled
+NCIT:C46109,Male Gender,Male|Male Gender
+NCIT:C46110,Female Gender,Female|Female Gender
+NCIT:C47955,Means,Means
+NCIT:C48187,Material,Material
+NCIT:C48191,Information,Info|Information
+NCIT:C48443,Standard Operating Procedure,SOP|Standard Operating Procedure|standard operating procedures (SOPs)
+NCIT:C48470,Potency Unit,POTENCY UNIT|Potency Unit|Unit of Potency
+NCIT:C48519,Ounce,Avoirdupois Ounce|International Ounce|OUNCE|OZ|Ounce|[oz_av]|ounce|oz|oz avdp
+NCIT:C48531,Pound,Avoirdupois Pound|LB|POUND|Pound|Pounds|[lb_av]|lb|lb_av|pound
+NCIT:C48655,Missing Value Reason,MVR|Missing Value Reason
+NCIT:C48835,Role,"Functional Role|Generic Role|Role|Role, Generic"
+NCIT:C49163,Surgical Procedure by Site or System,Surgical Procedure by Site or System
+NCIT:C49165,Surgical Procedure by Method,Surgical Procedure by Method
+NCIT:C49188,Microbiology Test,"Laboratory Testing, Microbiology|Microbiology Test"
+NCIT:C49236,Therapeutic Procedure,TREAT|TX|Therapeutic|Therapeutic Interventions|Therapeutic Method|Therapeutic Procedure|Therapeutic Technique|Therapy|Treatment|any therapy|any_therapy|therapy|treatment|treatment or therapy|treatment_or_therapy
+NCIT:C49237,Chemistry Test,Chemistry Measurement|Chemistry Procedure|Chemistry Technique|Chemistry Test
+NCIT:C49493,Clinical Course Adverse Event,Clinical Course Adverse Event
+NCIT:C49498,Recovered from Adverse Event,Patient recovered|RECOVERED/RESOLVED|Recovered|Recovered from Adverse Event
+NCIT:C49641,In Utero,In Utero
+NCIT:C49642,Preterm Infant,Premature Infant|Preterm Infant
+NCIT:C49643,Infant And Toddler,Infant And Toddler|Infant And Toddler (28 Days to 23 Months)
+NCIT:C49683,Children 2-11 Years Old,Children (2-11)|Children 2-11 Years Old
+NCIT:C49685,Adult 18-65 Years Old,Adult (18-65)|Adult 18-65 Years Old
+NCIT:C49755,Device Component or Accessory,Device Component or Accessory
+NCIT:C49844,Belt Device,Belt|Belt Device
+NCIT:C5044,Fluid and Electrolyte Manifestation,Fluid and Electrolyte Manifestation
+NCIT:C50911,Sudden Cardiac Death,SCD|Sudden Cardiac Death
+NCIT:C51953,Microbial Colony Count,Microbial Colony Count
+NCIT:C52009,Amniocentesis,Amniocentesis
+NCIT:C53268,Recipient,Recipient|recipient
+NCIT:C53287,Health Care Professional,HEALTH CARE PROFESSIONAL|Health Care Professional|Health Professional
+NCIT:C53471,Isolate,ISOLATE|Isolate|Microbial Isolate
+NCIT:C53529,Non-Neoplastic Disorder,"NON-NEOPLASTIC|Non-Neoplastic Disease|Non-Neoplastic Disorder|Non-neoplastic Disorder|Non-neoplastic condition, NOS|Non-neoplastic disorder, NOS"
+NCIT:C53531,Non-Neoplastic Disorder by Site,Non-Neoplastic Disease by Site|Non-Neoplastic Disorder by Site
+NCIT:C53547,Non-Neoplastic Disorder by Special Category,Non-Neoplastic Disease by Special Category|Non-Neoplastic Disorder by Special Category
+NCIT:C53550,Non-Neoplastic Liver and Intrahepatic Bile Duct Disorder,Non-Neoplastic Hepatic Disease|Non-Neoplastic Hepatic Disorder|Non-Neoplastic Liver and Intrahepatic Bile Duct Disorder
+NCIT:C54014,Castrated Female,Castrated Female|Spayed Female
+NCIT:C54196,Cardiac Death,Cardiac Death
+NCIT:C54197,Non-Sudden Cardiac Death,Non-Sudden Cardiac Death
+NCIT:C54640,Numeric Country Code,ISO 3166-1 Numeric Country Code|Numeric Country Code
+NCIT:C54641,Alpha-2 Country Code,Alpha-2 Country Code|ISO 3166-1 Alpha-2 Country Code
+NCIT:C54642,Alpha-3 Country Code,Alpha-3 Country Code|ISO 3166-1 Alpha-3 Country Code
+NCIT:C548,Therapeutic Hormone,Synthetic Hormone|Therapeutic Hormone
+NCIT:C574,Immunosuppressant,Immunosuppressant|Immunosuppressive Agents|immunosuppressant|immunosuppressive|immunosuppressive treatment type|immunosuppressive_treatment_type
+NCIT:C60776,Contact Information,Contact Info|Contact Information
+NCIT:C60811,Pediatric Death,PEDIATRIC DEATH|Pediatric Death
+NCIT:C62103,Device,Device|device
+NCIT:C62263,diversitet,
+NCIT:C62574,Facility,Facility
+NCIT:C62649,Spouse,SPOUSE|Spouse
+NCIT:C63362,Vacutainer,Evacuated Blood Specimen Collection Tube|Vacutainer
+NCIT:C64810,Nitrite Measurement,NITRITE|Nitrite|Nitrite Measurement
+NCIT:C64979,Diagnostic Surgical Procedure,Diagnostic Surgical Procedure
+NCIT:C64989,Diagnostic Aspiration,Diagnostic Aspiration
+NCIT:C68615,Birth Date,BD|BRTHDAT|Birth Date|DOB|Date of Birth|birthDate
+NCIT:C69218,Pregnancy Status,PREGSTAT|Pregnancy Status
+NCIT:C69257,Subject Name,Subject Name|patient first name|patient_first_name
+NCIT:C7057,"Disease, Disorder or Finding","Disease, Disorder or Finding"
+NCIT:C70699,Biospecimen,BIOSPECIMEN|Bio-Specimen|BiologicSpecimen|Biological Sample|Biological Specimen|Biospecimen|Sample|Specimen|biospecimen|sample|specimen
+NCIT:C70806,Telecommunication Address,Telecommunication Address|telecomAddress
+NCIT:C70810,Date of Death,DOD|Date of Death|Date of Death (If Deceased)|Death Date|deathDate
+NCIT:C70909,Mechanical Ventilation,MECHANICAL VENTILATION|Mechanical Ventilation|Mechanical ventilation
+NCIT:C71164,Animal Model,"Animal Model|Animal Model, Generic|Research Model, Animal"
+NCIT:C71384,Biological Relative,BIOLOGICALLY RELATED|Biological Relative|Blood Relation|Blood Relative|Consanguineous Relative|Consanguinity|Natural Relative|consanguinity
+NCIT:C71392,Legal Relative,Legal Relation|Legal Relative
+NCIT:C71393,Foster Relative,Foster Relation|Foster Relative
+NCIT:C71394,Adoptive Relative,Adoptive Relation|Adoptive Relative
+NCIT:C71395,Step Relative,Step Relation|Step Relative
+NCIT:C71898,Proprietary Name,Brand|Brand Name|Proprietary Name|TRADENAM|Trade Name|proprietary name
+NCIT:C73706,Spatial Qualifier,Spatial Qualifier
+NCIT:C74723,Turbidity Measurement,TURB|Turbidity|Turbidity Measurement
+NCIT:C74944,Clinical Pathology Procedure,Clinical Pathology Procedure
+NCIT:C74957,Mixed Category Laboratory Procedure,Mixed Category Laboratory Procedure
+NCIT:C77683,Incision Site,"Incision Site|SITE, SURGICAL"
+NCIT:C79426,Cancer Diagnostic or Therapeutic Procedure,Cancer Diagnostic or Therapeutic Procedure
+NCIT:C79916,investigative subject,
+NCIT:C80082,Neonatal Death,Death neonatal|Neonatal Death
+NCIT:C80234,Municipality,Municipality
+NCIT:C80244,Pseudonym,Pseudonym
+NCIT:C80519,Biological Model,Biological Model|Biological Model System|Biological Models|Systems Model
+NCIT:C80693,Bone Marrow Failure,Bone Marrow Failure
+NCIT:C814,Ribosomal RNA,RIBOSOMAL RNA|Ribosomal RNA|rRNA
+NCIT:C81893,Standard,Standard|standard|technical standard
+NCIT:C82465,Death by Natural Cause,DIED - NATURALLY|Death by Natural Cause
+NCIT:C82466,Death by Undetermined Cause,DIED - UNDETERMINED|Death Due to Indeterminate Cause|Death by Undetermined Cause|Unknown Cause of Death
+NCIT:C82508,Life Threatening,Life Threatening|SLIFE
+NCIT:C84327,Freezer,Freezer
+NCIT:C84328,Rack,Rack
+NCIT:C85173,Sudden Infant Death Syndrome,SIDS|Sudden Infant Death Syndrome|crib death|sudden infant death syndrome
+NCIT:C85405,School Age Child,School Age Child
+NCIT:C85540,Microbial Susceptibility Test,MICROSUS|MSTEST|Microbial Susceptibility|Microbial Susceptibility Test|Microbiology Susceptibility Test
+NCIT:C85555,Agar Dilution Method,AGAR DILUTION|Agar Dilution Method
+NCIT:C85596,Epsilometry,E-Test|EPSILOMETER|Epsilometry
+NCIT:C85697,Macro Broth Dilution Method,MACRO BROTH DILUTION|Macro Broth Dilution Method
+NCIT:C87194,State,State|Territory
+NCIT:C87500,,
+NCIT:C87913,Microbiology Specimen Origin,MBLOC|Microbiology Specimen Origin
+NCIT:C89084,Undetermined,UNDETERMINED|Undetermined
+NCIT:C89333,Term Infant,Full Term Infant|Full Term Neonate|Term Infant|Term Neonate
+NCIT:C89342,Toddler,Toddler
+NCIT:C894,Toxin,Toxin|Toxins|toxin
+NCIT:C89811,Territory,Territory
+NCIT:C90351,Accidental Death,ACCIDENTAL DEATH|Accidental Death
+NCIT:C90481,Unscheduled Death,Unscheduled Death
+NCIT:C91106,Clinical or Research Assessment Answer,Clinical or Research Assessment Answer|Clinical or Research Assessment Question Response|Clinical or Research Assessment Response
+NCIT:C91107,Young Adult,Young Adult
+NCIT:C91108,Middle Adult,Middle Adult|Middle Age
+NCIT:C92720,Pregnancy Finding,Pregnancy Finding
+NCIT:C92743,Birthing Labor,Birthing Labor|Labor
+NCIT:C93044,Index Case,Index Case|index case
+NCIT:C93210,Inflammatory Disorder,Inflammatory Disease|Inflammatory Disorder|Inflammatory_Disease
+NCIT:C93582,Job Title,Job Title|jobTitle
+NCIT:C93874,Organization Name,Organization|Organization Name|Organization.name
+NCIT:C94631,Antiretroviral Therapy,ART|Anti-Retroviral Therapy|Anti-retroviral therapy|Antiretroviral Therapy|antiretroviral therapy
+NCIT:C96572,Biological Father,"Biological Father|FATHER, BIOLOGICAL|Father|Natural Father"
+NCIT:C96580,Biological Mother,"Biological Mother|MOTHER, BIOLOGICAL|Mother|Natural Mother"
+NCIT:C96853,Non-Neoplastic Hepatobiliary Disorder,Non-Neoplastic Hepatobiliary Disorder|Non-Neoplastic Liver and Biliary Disorder|Non-Neoplastic Liver and Biliary System Disorder
+NCIT:C97325,Manufactured Object,Manufactured Object
+NCIT:C97331,Intellectual Property,Intellectual Product|Intellectual Property
+NCIT:C98904,Connective and Soft Tissue Injury,Connective and Soft Tissue Injury|Unspecified Tissue Injury
+NCIT:C99944,Died in a Medical Facility,Died in a Medical Facility|EXPIRED IN A MEDICAL FACILITY
