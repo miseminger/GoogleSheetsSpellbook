@@ -1,0 +1,69 @@
+ID,LABEL,SYNONYMS,SubClass Of,SubClasses,Type
+CHEBI:24431,chemical entity,,,sequence mutation set,Class
+CHEBI:33839,macromolecule,,,,Class
+CHEBI:36080,protein,,,,Class
+COB:0000080,complex of molecules,,,,Class
+COB:0000502,characteristic,,,variant functional effect,Class
+GENEPIO:0001741,draft GenEpiO component record,,,variant functional effect record,Class
+GENEPIO:0100299,SARS-CoV-2 gene,,gene,,Class
+GENEPIO:0100598,gene symbol,,'is about' some gene,,Class
+GENEPIO:0100599,gene name,,'is about' some gene,,Class
+GENEPIO:0101034,variant functional effect curation reference document,,,,Class
+GENEPIO:0101035,variant functional effect record,,'has part' exactly 1 'variant functional effect description'|'has part' some 'sequence mutation (symbol) set'|'is about' some 'variant functional effect'|database entry|draft GenEpiO component record|mentions some 'variant functional effect curation reference document',,Class
+GENEPIO:0101036,variant functional effect description,,'is about' some 'variant functional effect'|description,,Class
+GENEPIO:0101091,sequence mutation (symbol),,,,Class
+GENEPIO:0101092,sequence mutation,,,,Class
+GENEPIO:0101127,variant functional effect,,characteristic,altered drug susceptibility of infectious agent|altered infectious agent transmissibility|altered infectivity|altered viral load|host variant functional effect|molecular variant functional effect,Class
+GENEPIO:0101127/GENEPIO_0700001,molecular variant functional effect,,variant functional effect,,Class
+GENEPIO:0101127/GENEPIO_0700002,host variant functional effect,,variant functional effect,,Class
+GENEPIO:0101892,binding affinity,,'characteristic of' some 'complex of molecules',,Class
+GENEPIO:0101896,protein conformation,,'characteristic of' some protein,,Class
+GENEPIO:0101901,host symptomaticity,,'characteristic of' some 'infectious agent host',,Class
+GENEPIO:0101907,detectability of infectious agent,,'characteristic of' some 'infectious agent',,Class
+GENEPIO:0101908,susceptibility of infectious agent to environmental condition,,'characteristic of' some 'infectious agent',,Class
+GENEPIO:0101910,antipathogenic agent susceptibility of infectious agent,,'characteristic of' some 'infectious agent',,Class
+GENEPIO:0101914,host immune response susceptibility of infectious agent,,'characteristic of' some 'infectious agent',,Class
+GENEPIO:0101990,altered viral life cycle stage,,'characteristic of' some Viruses,,Class
+GENEPIO:0102015,altered infectious agent transmissibility,,'characteristic of' some 'infectious agent'|infectious agent transmissibility|variant functional effect,decreased infectious agent transmissibility|increased infectious agent transmissibility,Class
+GENEPIO:0102016,increased infectious agent transmissibility,,altered infectious agent transmissibility,,Class
+GENEPIO:0102017,decreased infectious agent transmissibility,,altered infectious agent transmissibility,,Class
+GENEPIO:0102018,altered drug susceptibility of infectious agent,,'characteristic of' some 'infectious agent'|drug susceptibility of infectious agent|variant functional effect,decreased drug susceptibility of infectious agent|increased drug susceptibility of infectious agent,Class
+GENEPIO:0102019,increased drug susceptibility of infectious agent,,altered drug susceptibility of infectious agent,,Class
+GENEPIO:0102020,decreased drug susceptibility of infectious agent,,altered drug susceptibility of infectious agent,,Class
+GENEPIO:0102021,altered infectivity,,'characteristic of' some 'infectious agent'|infectivity|variant functional effect,decreased infectivity|increased infectivity,Class
+GENEPIO:0102022,increased infectivity,,altered infectivity,,Class
+GENEPIO:0102023,decreased infectivity,,altered infectivity,,Class
+GENEPIO:0102035,sequence mutation (symbol) set,,'has member' min 1 'sequence mutation (symbol)'|denotes some 'sequence mutation set'|sequence data,,Class
+GENEPIO:0102036,sequence mutation set,,'has member' min 1 'sequence mutation'|chemical entity,,Class
+GENEPIO:0102037,vaccine susceptibility of infectious agent,,'characteristic of' some 'infectious agent'|'is about' some vaccine,,Class
+GENEPIO:0102068,host cell stress granule formation rate,,'characteristic of' some 'infectious agent host',,Class
+GENEPIO:0102072,infectious agent host tropism,,'characteristic of' some 'infectious agent',,Class
+GENEPIO:0102074,altered infectious agent gene expression level,,'characteristic of' some 'infectious agent',,Class
+GENEPIO:0102077,host cell syncytium formation rate,,'characteristic of' some 'infectious agent host',,Class
+GENEPIO:0102078,altered posttranslational modification,,'characteristic of' some protein,,Class
+GENEPIO:0102080,altered dimerization,,'characteristic of' some 'complex of molecules',,Class
+GENEPIO:0102082,altered proteolysis,,'characteristic of' some protein,,Class
+GENEPIO:0102100,macromolecular stability,,'characteristic of' some macromolecule,,Class
+GENEPIO:0102142,significant positive correlation study finding,,study finding,,Class
+GENEPIO:0102143,insignificant correlation study finding,,study finding,,Class
+GENEPIO:0102144,reject the null hypothesis,,conclusion based on data,,Class
+GENEPIO:0102145,fail to reject the null hypothesis,,conclusion based on data,,Class
+GENEPIO:0102146,conclusion about an association,,conclusion based on data,,Class
+GENEPIO:0102147,conclusion about no association,,conclusion based on data,,Class
+GENEPIO:0700000,altered viral load,,variant functional effect,,Class
+IAO:0000300,textual entity,,,description,Class
+IDO:0000463,infectious agent transmissibility,,,altered infectious agent transmissibility,Class
+IDO:0000464,infectivity,,,altered infectivity,Class
+IDO:0000470,drug susceptibility of infectious agent,,,altered drug susceptibility of infectious agent,Class
+IDO:0000537,infectious agent host,,,,Class
+IDO:0000596,infectious agent,,,,Class
+NCBITaxon:10239,Viruses,,,,Class
+OBI:0000973,sequence data,,,sequence mutation (symbol) set,Class
+OBI:0001909,conclusion based on data,,has_evidence_item some 'study finding'|statement,conclusion about an association|conclusion about no association|fail to reject the null hypothesis|reject the null hypothesis,Class
+OGG:0000000002,gene,,,SARS-CoV-2 gene,Class
+SEPIO:0000173,study finding,,,insignificant correlation study finding|significant positive correlation study finding,Class
+SEPIO:0000174,statement,,,conclusion based on data|hypothesis,Class
+STATO:0000065,hypothesis,,statement,,Class
+VO:0000001,vaccine,,,,Class
+http://semanticscience.org/resource/SIO_000136,description,,textual entity,variant functional effect description,Class
+http://semanticscience.org/resource/SIO_000756,database entry,,,variant functional effect record,Class
