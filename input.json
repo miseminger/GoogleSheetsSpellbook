@@ -40,5 +40,11 @@
         "RANGE_NAMES": ["import_file", "no_subclasses", "import_file_no_subclass_axioms", "for_enums", "Cancelled terms", "Draft"],
         "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
         "START_ROW": 2
+    },
+    "MADELINE_VIRO_ROBOT_SPREADSHEET": {
+        "SPREADSHEET_ID": "1by9PCtRFKS8ni6V4b4fMFeDvVJ9gWtqF6MeVSuacxwA",
+        "RANGE_NAMES": ["metadata_terms"],
+        "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
+        "START_ROW": 2
     }
 }
