@@ -43,7 +43,7 @@
     },
     "MADELINE_VIRO_ROBOT_SPREADSHEET": {
         "SPREADSHEET_ID": "1by9PCtRFKS8ni6V4b4fMFeDvVJ9gWtqF6MeVSuacxwA",
-        "RANGE_NAMES": ["metadata_terms", "characteristics", "SARS-CoV-2", "MPOX"],
+        "RANGE_NAMES": ["metadata_terms", "characteristics", "SARS-CoV-2", "MPOX", "Draft"],
         "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
         "START_ROW": 2
     }
