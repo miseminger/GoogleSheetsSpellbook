@@ -151,11 +151,6 @@ if __name__ == "__main__":
 
   # get match counts table 
   match_counts_df = count_matches_by_subset(mints_review_df, "In genepio.owl?", "In GENEPIO ROBOT?", "In GENEPIO curation?")
-  match_counts_df = match_counts_df.reset_index()
-  match_counts_df_values = match_counts_df.values.tolist() 
-  # update Mints review legend tab with match type counts table
-  update_values(mints_review_sheet_id, "Mints review legend!G2:I", "USER_ENTERED", match_counts_df_values, creds)
-
 
   # make horizontal bar plot of number of terms not found for each subset
   savefile = "subset_plot.png"
@@ -167,4 +162,9 @@ if __name__ == "__main__":
   #plt.bar_label()
   plt.savefig(savefile)
   print("Subset plot saved as: " + savefile)
+
+  # update Mints review legend tab with match type counts table
+  match_counts_df = match_counts_df.reset_index()
+  match_counts_df_values = match_counts_df.values.tolist() 
+  update_values(mints_review_sheet_id, "Mints review legend!G2:I", "USER_ENTERED", match_counts_df_values, creds)
 
