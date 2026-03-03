@@ -7,7 +7,7 @@ This repo contains scripts that generate the [mints review sheet](https://docs.g
 
 The script ```check_mints.py``` autogenerates the ```Mints review``` tab of the [mints sheet](https://docs.google.com/spreadsheets/d/1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0/edit?gid=1337774973#gid=1337774973). First, it gathers all the minted terms from the ```2022-2025``` tabs into the ```mints_review``` tab. Next it checks whether or not each minted term has been merged into [genepio.owl](https://github.com/GenEpiO/genepio/blob/master/src/ontology/genepio.owl) based on the [ROBOT export](https://robot.obolibrary.org/export.html) table ```genepio_terms.csv```. Finally, it checks whether each mint is described in any of the Google Sheets versions of ROBOT tables and curation sheets requested in ```input.json```, and records the name of the spreadsheet tab where it is found.
 
-It also tabulates the types of matches for each subset and reports them to the ```Mints review``` tab of the [mints sheet](https://docs.google.com/spreadsheets/d/1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0/edit?gid=1337774973#gid=1337774973):
+It also tabulates the types of matches for each subset and reports them to the ```Mints review legend``` tab of the [mints sheet](https://docs.google.com/spreadsheets/d/1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0/edit?gid=1337774973#gid=1337774973):
 <img width="490" height="610" alt="image" src="https://github.com/user-attachments/assets/b7434a1b-9b51-40ba-b412-4ad2743a544a" />
 
 This app is called ```mints-tracker``` and is part of the Google Cloud Console project ```ontology-mints-tracker```. It is an unverified app in Testing mode and should be available to external users, but has yet to be tested on a computer other than ```tamarisk```.
