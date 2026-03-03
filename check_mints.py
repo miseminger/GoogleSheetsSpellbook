@@ -10,6 +10,7 @@ import pandas as pd
 import numpy as np
 import json
 import argparse
+import matplotlib.pyplot as plt
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -17,7 +18,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-from functions import get_multitab_df, update_values, compare_terms
+from functions import get_multitab_df, update_values, compare_terms, count_matches_by_subset
 
 mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio.owl?",	"In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation sheet 1"] #,	"Notes"
 
@@ -135,11 +136,6 @@ if __name__ == "__main__":
   duplicated_IRIs = mints_review_df[mints_review_df.duplicated(subset=["IRI"])]
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints_review sheet after curation sheet check")
 
-  ## troubleshooting "2023_mints_wastewater (Charlie)"
-  #curation_2023_df = curation_2023_df.sort_values(by=["Ontology ID"])
-  #curation_2023_values = curation_2023_df.values.tolist()
-  #update_values(CURATION_SHEET_2023, "Madeline_error_review_2026", "RAW", curation_2023_values)
-
   # replace all NaN values with empty strings
   mints_review_df = mints_review_df.fillna('')
   # make sure columns are in order
@@ -152,3 +148,23 @@ if __name__ == "__main__":
   # update Mints_review tab
   update_values(mints_review_sheet_id, "Mints review!A3:J", "USER_ENTERED", mints_review_df_values, creds)
   #update_values("1Ts4nU6vQRwmnXQz0HzBM7Wz3N4tOVxo9F3-nH6cp06A", "Mints review!A3:J", "USER_ENTERED", mints_review_df_values, creds)
+
+  # get match counts table 
+  match_counts_df = count_matches_by_subset(mints_review_df, "In genepio.owl?", "In GENEPIO ROBOT?", "In GENEPIO curation?")
+  match_counts_df = match_counts_df.reset_index()
+  match_counts_df_values = match_counts_df.values.tolist() 
+  # update Mints review legend tab with match type counts table
+  update_values(mints_review_sheet_id, "Mints review legend!G2:I", "USER_ENTERED", match_counts_df_values, creds)
+
+
+  # make horizontal bar plot of number of terms not found for each subset
+  savefile = "subset_plot.png"
+  ax = match_counts_df['no_match_counts'].plot.barh()
+  plt.title("Mints without matches")
+  plt.ylabel("Subset")
+  plt.xlabel("Number of terms")
+  plt.tight_layout()
+  #plt.bar_label()
+  plt.savefig(savefile)
+  print("Subset plot saved as: " + savefile)
+

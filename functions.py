@@ -3,6 +3,8 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
 
 def create(title):
@@ -299,3 +301,28 @@ def compare_terms(mints_df, search_df, result_column, tab_column):
   merged_df = merged_df.fillna('')
   
   return merged_df
+
+
+def count_matches_by_subset(df, owl_column, robot_column, curation_column):
+
+  no_match_mask = (df[owl_column]=='no_match') & (df[robot_column]=='no_match') & (df[curation_column]=='no_match')
+
+  # count how many terms in each subset have no match anywhere
+  no_match_df = df[no_match_mask]
+  no_match_counts = no_match_df['subset'].value_counts().rename_axis('Subset').reset_index(name='no_match_counts')
+
+  # count how many terms in each subset have at least one ID or Label match somewhere
+  min_1_match_df = df[~no_match_mask]
+  min_1_match_df = min_1_match_df.drop_duplicates(subset=["IRI"])
+  min_1_match_counts = min_1_match_df['subset'].value_counts().rename_axis('Subset').reset_index(name='min_1_match_counts')
+
+  # merge into one df
+  match_counts_df = pd.merge(no_match_counts, min_1_match_counts, on='Subset', how='outer')
+  match_counts_df.loc[match_counts_df['Subset']=='', 'Subset'] = 'No subset given'
+  match_counts_df = match_counts_df.fillna(0)
+  match_counts_df['no_match_counts'] = match_counts_df['no_match_counts'].astype(int)
+  match_counts_df['min_1_match_counts'] = match_counts_df['min_1_match_counts'].astype(int)
+  match_counts_df = match_counts_df.set_index('Subset')
+  print(match_counts_df)
+
+  return match_counts_df
