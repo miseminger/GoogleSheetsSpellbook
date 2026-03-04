@@ -326,3 +326,9 @@ def count_matches_by_subset(df, owl_column, robot_column, curation_column):
   print(match_counts_df)
 
   return match_counts_df
+
+
+def get_hyperlink(spreadsheet_id, tab_name):
+  # Returns a hyperlink to Google Sheets
+  hyperlink = '=HYPERLINK("https://docs.google.com/spreadsheets/d/' + spreadsheet_id + '", "' + tab_name + '")'
+  return hyperlink
