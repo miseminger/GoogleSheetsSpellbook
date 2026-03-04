@@ -7,7 +7,7 @@
      },
     "GENEPIO_ROBOT_SPREADSHEET": {
         "SPREADSHEET_ID": "1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4",
-        "RANGE_NAMES": ["spec_field (new)", "spec_field (retired)", "identifiers (draft)", "SSSOM-Import-Overlay", "spec_enum", "Rhi Term List"],
+        "RANGE_NAMES": ["spec_field (new)", "spec_field (retired)", "identifiers (draft)", "SSSOM-Import-Overlay", "spec_enum", "Rhi Term List", "DEPRECATE (To-dos)", "INSDC SRA Mints"],
         "COLUMN_NAMES": ["Ontology ID", "label"],
         "START_ROW": 2
      },
