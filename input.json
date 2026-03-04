@@ -13,13 +13,13 @@
      },
     "CURATION_SHEET_2023_SPREADSHEET": {
         "SPREADSHEET_ID": "1s6FB9EyPWYBgssIU9a9AKATEfZnMdixwvrGhBXUHAVk",
-        "RANGE_NAMES": ["2023_mints_wastewater_terms (Charlie)", "2023_manual_curation (Charlie)"],
+        "RANGE_NAMES": ["2023_mints_wastewater (Charlie)", "2023_mints_wastewater_terms (Charlie)", "2023_manual_curation (Charlie)", "2023_to_request_ontologies (Charlie)"],
         "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
         "START_ROW": 2
     },
     "CURATION_SHEET_2024_SPREADSHEET": {
         "SPREADSHEET_ID": "14r_qlNJUCGJ_59MA3MR0x4JObsYpQI_2AFJGMu_wyl4",
-        "RANGE_NAMES": ["2024_hAMRonization", "2024_GRDI", "2024_HPAI", "2024_QC", "2024_CanCOGen", "2024_Pathoplexus", "2024_MPOX", "2024_wastewater"],
+        "RANGE_NAMES": ["2024_hAMRonization", "2024_GRDI", "2024_HPAI", "2024_QC", "2024_CanCOGen", "2024_Pathoplexus", "2024_MPOX", "2024_wastewater", "2024_to_request_other_ontologies", "Copy of 2023_mints_wastewater (Charlie)"],
         "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
         "START_ROW": 2
     },
