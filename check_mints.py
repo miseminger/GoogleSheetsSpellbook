@@ -154,11 +154,14 @@ if __name__ == "__main__":
 
   # make horizontal bar plot of number of terms not found for each subset
   savefile = "subset_plot.png"
-  ax = match_counts_df['no_match_counts'].plot.barh()
-  plt.title("Mints without matches")
-  plt.ylabel("Subset")
-  plt.xlabel("Number of terms")
+  ax = match_counts_df['no_match_counts'].plot.barh(color='red')
+  plt.title("Mints without matches", fontweight='bold')
+  plt.ylabel("Subset", fontweight='bold')
+  plt.xlabel("Number of terms", fontweight='bold')
   plt.tight_layout()
+  ax.invert_yaxis()
+  for p in ax.patches:
+      ax.annotate(f"{p.get_width()}", (p.get_width() + p.get_height()/200, p.get_center()[1]), va="center", ha="left")
   #plt.bar_label()
   plt.savefig(savefile)
   print("Subset plot saved as: " + savefile)
