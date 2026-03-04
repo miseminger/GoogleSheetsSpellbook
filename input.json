@@ -23,6 +23,12 @@
         "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
         "START_ROW": 2
     },
+    "TERMS_FOR_EMMA_SPREADSHEET": {
+        "SPREADSHEET_ID": "1B0XKmvs_7yZE8Q6pa45FegjWMY1W_74b0swq9SYM8Pc",
+        "RANGE_NAMES": ["PHA4GE QC Tag", "PHA4GE Primer Spec", "AMBR", "Bits and Pieces", "FoodOn"],
+        "COLUMN_NAMES": ["Preferred Label", "Label Ontology ID", "Synonym"],
+        "START_ROW": 1
+    },
     "MADELINE_MPOX_ROBOT_SPREADSHEET": {
         "SPREADSHEET_ID": "1i5C-lJwd8Ua0AgnABZXUDCUh5eadXgdM0atxVuCXzps",
         "RANGE_NAMES": ["gene_names_no_repeats", "gene_symbols_no_repeats", "protein_names_no_repeats", "protein_symbols_no_repeats"],
