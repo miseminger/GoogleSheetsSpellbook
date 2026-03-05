@@ -3,54 +3,65 @@
         "SPREADSHEET_ID": "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0",
         "RANGE_NAMES": ["2022", "2023", "2024!1:1070", "2025"], 
         "COLUMN_NAMES": ["IRI", "label", "creator (GitHub username)", "reservation date", "subset"],
-        "START_ROW": 1
+        "START_ROW": 1,
+        "RENAME_COLUMNS": {}
      },
     "GENEPIO_ROBOT_SPREADSHEET": {
         "SPREADSHEET_ID": "1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4",
-        "RANGE_NAMES": ["spec_field (new)", "spec_field (retired)", "identifiers (draft)", "SSSOM-Import-Overlay", "spec_enum", "Rhi Term List", "DEPRECATE (To-dos)", "INSDC SRA Mints"],
+        "RANGE_NAMES": ["spec_field (new)", "spec_field (retired)", "identifiers (draft)", "SSSOM-Import-Overlay", "spec_enum", "Rhi Term List", "DEPRECATE (To-dos)", "INSDC SRA Mints", "deprecation"],
         "COLUMN_NAMES": ["Ontology ID", "label"],
-        "START_ROW": 2
+        "START_ROW": 2,
+        "RENAME_COLUMNS": {}
      },
-    "CURATION_SHEET_2023_SPREADSHEET": {
-        "SPREADSHEET_ID": "1s6FB9EyPWYBgssIU9a9AKATEfZnMdixwvrGhBXUHAVk",
-        "RANGE_NAMES": ["2023_mints_wastewater (Charlie)", "2023_mints_wastewater_terms (Charlie)", "2023_manual_curation (Charlie)", "2023_to_request_ontologies (Charlie)"],
-        "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
-        "START_ROW": 2
-    },
-    "CURATION_SHEET_2024_SPREADSHEET": {
-        "SPREADSHEET_ID": "14r_qlNJUCGJ_59MA3MR0x4JObsYpQI_2AFJGMu_wyl4",
-        "RANGE_NAMES": ["2024_hAMRonization", "2024_GRDI", "2024_HPAI", "2024_QC", "2024_CanCOGen", "2024_Pathoplexus", "2024_MPOX", "2024_wastewater", "2024_to_request_other_ontologies", "Copy of 2023_mints_wastewater (Charlie)"],
-        "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
-        "START_ROW": 2
-    },
-    "TERMS_FOR_EMMA_SPREADSHEET": {
-        "SPREADSHEET_ID": "1B0XKmvs_7yZE8Q6pa45FegjWMY1W_74b0swq9SYM8Pc",
-        "RANGE_NAMES": ["PHA4GE QC Tag", "PHA4GE Primer Spec", "AMBR", "Bits and Pieces", "FoodOn"],
-        "COLUMN_NAMES": ["Preferred Label", "Label Ontology ID", "Synonym"],
-        "START_ROW": 1
-    },
-    "MADELINE_MPOX_ROBOT_SPREADSHEET": {
-        "SPREADSHEET_ID": "1i5C-lJwd8Ua0AgnABZXUDCUh5eadXgdM0atxVuCXzps",
-        "RANGE_NAMES": ["gene_names_no_repeats", "gene_symbols_no_repeats", "protein_names_no_repeats", "protein_symbols_no_repeats"],
-        "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
-        "START_ROW": 2
-    },
-    "MADELINE_VIRUSMVP_ROBOT_SPREADSHEET": {
-        "SPREADSHEET_ID": "1s3M6rtEs3fpwtccyN-MuXgRe-fpeF4d1jsIC4N1NgyA",
-        "RANGE_NAMES": ["MI_DRAFT_spec_mint", "MI_ADDED_to_GENEPIO", "MI_TO_DO_STILL", "MI_sc2_gene_protein_data", "MI_not_minting_anymore"],
-        "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
-        "START_ROW": 2
-    },
-    "MADELINE_POKAY_ROBOT_SPREADSHEET": {
-        "SPREADSHEET_ID": "18qmm046gde9Insgc_cNF9NVPRDmUAcwOs-IuLeHmJNM",
-        "RANGE_NAMES": ["import_file", "no_subclasses", "import_file_no_subclass_axioms", "for_enums", "Cancelled terms", "Draft"],
-        "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
-        "START_ROW": 2
-    },
-    "MADELINE_VIRO_ROBOT_SPREADSHEET": {
-        "SPREADSHEET_ID": "1by9PCtRFKS8ni6V4b4fMFeDvVJ9gWtqF6MeVSuacxwA",
-        "RANGE_NAMES": ["metadata_terms", "characteristics", "SARS-CoV-2", "MPOX", "Draft"],
-        "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
-        "START_ROW": 2
-    }
+     "CURATION_SHEETS": {
+        "CURATION_SHEET_2023_SPREADSHEET": {
+            "SPREADSHEET_ID": "1s6FB9EyPWYBgssIU9a9AKATEfZnMdixwvrGhBXUHAVk",
+            "RANGE_NAMES": ["2023_mints_wastewater (Charlie)", "2023_mints_wastewater_terms (Charlie)", "2023_manual_curation (Charlie)", "2023_to_request_ontologies (Charlie)"],
+            "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
+            "START_ROW": 2,
+            "RENAME_COLUMNS": {}
+        },
+        "CURATION_SHEET_2024_SPREADSHEET": {
+            "SPREADSHEET_ID": "14r_qlNJUCGJ_59MA3MR0x4JObsYpQI_2AFJGMu_wyl4",
+            "RANGE_NAMES": ["2024_hAMRonization", "2024_GRDI", "2024_HPAI", "2024_QC", "2024_CanCOGen", "2024_Pathoplexus", "2024_MPOX", "2024_wastewater", "2024_to_request_other_ontologies", "Copy of 2023_mints_wastewater (Charlie)"],
+            "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
+            "START_ROW": 2,
+            "RENAME_COLUMNS": {}
+        },
+        "TERMS_FOR_EMMA_SPREADSHEET": {
+            "SPREADSHEET_ID": "1B0XKmvs_7yZE8Q6pa45FegjWMY1W_74b0swq9SYM8Pc",
+            "RANGE_NAMES": ["PHA4GE QC Tag", "PHA4GE Primer Spec", "AMBR", "Bits and Pieces", "FoodOn"],
+            "COLUMN_NAMES": ["Preferred Label", "Label Ontology ID", "Synonym"],
+            "START_ROW": 1,
+            "RENAME_COLUMNS": {"Preferred Label": "label", "Synonym": "alternative label", "Label Ontology ID": "Ontology ID"}
+        },
+        "MADELINE_MPOX_ROBOT_SPREADSHEET": {
+            "SPREADSHEET_ID": "1i5C-lJwd8Ua0AgnABZXUDCUh5eadXgdM0atxVuCXzps",
+            "RANGE_NAMES": ["gene_names_no_repeats", "gene_symbols_no_repeats", "protein_names_no_repeats", "protein_symbols_no_repeats"],
+            "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
+            "START_ROW": 2,
+            "RENAME_COLUMNS": {}
+        },
+        "MADELINE_VIRUSMVP_ROBOT_SPREADSHEET": {
+            "SPREADSHEET_ID": "1s3M6rtEs3fpwtccyN-MuXgRe-fpeF4d1jsIC4N1NgyA",
+            "RANGE_NAMES": ["MI_DRAFT_spec_mint", "MI_ADDED_to_GENEPIO", "MI_TO_DO_STILL", "MI_sc2_gene_protein_data", "MI_not_minting_anymore"],
+            "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
+            "START_ROW": 2,
+            "RENAME_COLUMNS": {}
+        },
+        "MADELINE_POKAY_ROBOT_SPREADSHEET": {
+            "SPREADSHEET_ID": "18qmm046gde9Insgc_cNF9NVPRDmUAcwOs-IuLeHmJNM",
+            "RANGE_NAMES": ["import_file", "no_subclasses", "import_file_no_subclass_axioms", "for_enums", "Cancelled terms", "Draft"],
+            "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
+            "START_ROW": 2,
+            "RENAME_COLUMNS": {}
+        },
+        "MADELINE_VIRO_ROBOT_SPREADSHEET": {
+            "SPREADSHEET_ID": "1by9PCtRFKS8ni6V4b4fMFeDvVJ9gWtqF6MeVSuacxwA",
+            "RANGE_NAMES": ["metadata_terms", "characteristics", "SARS-CoV-2", "MPOX", "Draft"],
+            "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
+            "START_ROW": 2,
+            "RENAME_COLUMNS": {}
+        }
+     }
 }
