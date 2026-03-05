@@ -132,7 +132,7 @@ if __name__ == "__main__":
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints_review sheet after curation sheet check")
 
   # add hyperlinks to ROBOT column
-  #mints_review_df["Tab location in GENEPIO ROBOT"] = get_hyperlink("1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4", mints_review_df["Tab location in GENEPIO ROBOT"])
+  mints_review_df["Tab location in GENEPIO ROBOT"] = get_hyperlink("1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4", mints_review_df["Tab location in GENEPIO ROBOT"])
 
   # replace all NaN values with empty strings
   mints_review_df = mints_review_df.fillna('')
