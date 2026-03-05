@@ -18,7 +18,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-from functions import get_multitab_df, update_values, compare_terms, count_matches_by_subset
+from functions import get_multitab_df, update_values, compare_terms, count_matches_by_subset, get_hyperlink
 
 mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio.owl?",	"In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation sheet 1"] #,	"Notes"
 
@@ -115,21 +115,13 @@ if __name__ == "__main__":
   #print(mints_review_df[mints_review_df["Tab location in GENEPIO ROBOT"].str.contains(",")])
 
   ## check if mints are in a curation sheet
-  curation_2023_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEET_2023_SPREADSHEET"], creds)
-  curation_2024_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEET_2024_SPREADSHEET"], creds)
-  madeline_mpox_curation_df = get_multitab_df(RESOURCE_DICT["MADELINE_MPOX_ROBOT_SPREADSHEET"], creds)
-  madeline_virusmvp_curation_df = get_multitab_df(RESOURCE_DICT["MADELINE_VIRUSMVP_ROBOT_SPREADSHEET"], creds)
-  madeline_pokay_curation_df = get_multitab_df(RESOURCE_DICT["MADELINE_POKAY_ROBOT_SPREADSHEET"], creds)
-  madeline_viro_df = get_multitab_df(RESOURCE_DICT["MADELINE_VIRO_ROBOT_SPREADSHEET"], creds)
-  emma_terms_df = get_multitab_df(RESOURCE_DICT["TERMS_FOR_EMMA_SPREADSHEET"], creds)
-  emma_terms_df = emma_terms_df.rename(columns={"Preferred Label": "label", "Synonym": "alternative label", "Label Ontology ID": "Ontology ID"})
-  # concatenate curation sheets into one long df
-  curation_df = pd.concat([curation_2023_df, curation_2024_df])
-  curation_df = pd.concat([curation_df, madeline_mpox_curation_df])
-  curation_df = pd.concat([curation_df, madeline_virusmvp_curation_df])
-  curation_df = pd.concat([curation_df, madeline_pokay_curation_df])
-  curation_df = pd.concat([curation_df, madeline_viro_df])
-  curation_df = pd.concat([curation_df, emma_terms_df])
+  curation_df = pd.DataFrame(columns=["Ontology ID", "label", "alternative label", "tab"])
+  for spreadsheet in RESOURCE_DICT["CURATION_SHEETS"]:
+    # get multitab df for each curation sheet
+    multitab_curation_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEETS"][spreadsheet], creds)
+    # concatenate multitab dfs into one long df
+    curation_df = pd.concat([curation_df, multitab_curation_df])
+
   # rename "Ontology ID" column to "IRI" to match mints sheet
   curation_df = curation_df.rename(columns={"Ontology ID": "IRI"}) 
   # restrict columns to those that should be merged into mints_review
@@ -138,6 +130,9 @@ if __name__ == "__main__":
   mints_review_df = compare_terms(mints_review_df, curation_df, "In GENEPIO curation?", "Tab location in GENEPIO curation sheet 1")
   duplicated_IRIs = mints_review_df[mints_review_df.duplicated(subset=["IRI"])]
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints_review sheet after curation sheet check")
+
+  # add hyperlinks to ROBOT column
+  #mints_review_df["Tab location in GENEPIO ROBOT"] = get_hyperlink("1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4", mints_review_df["Tab location in GENEPIO ROBOT"])
 
   # replace all NaN values with empty strings
   mints_review_df = mints_review_df.fillna('')

@@ -201,6 +201,7 @@ def get_multitab_df(input_dict, creds):
   column_names = input_dict.pop("COLUMN_NAMES")
   #print(column_names)
   start_row = input_dict.pop("START_ROW")
+  rename_columns = input_dict.pop("RENAME_COLUMNS")
   values = batch_get_values(spreadsheet_id, range_names, creds)
   # initialize empty df
   multitab_df = pd.DataFrame(columns=column_names)
@@ -224,8 +225,8 @@ def get_multitab_df(input_dict, creds):
   # combine duplicate rows and transform "tab" into a comma-separated list
   multitab_df = multitab_df.fillna('')
   multitab_df = multitab_df.groupby(column_names).agg({'tab': ', '.join}).reset_index()
-  # add hyperlink to tab list
-  #multitab_df['tab'] = '=HYPERLINK("https://docs.google.com/spreadsheets/d/' + spreadsheet_id + '", "' + multitab_df['tab'] + '")'
+  # rename columns according to rename_columns attribute
+  multitab_df = multitab_df.rename(columns=rename_columns)
   # add a column showing the spreadsheet_id
   # multitab_df["spreadsheet_id"] = spreadsheet_id
 
