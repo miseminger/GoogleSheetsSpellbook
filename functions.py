@@ -335,7 +335,7 @@ def count_matches_by_subset(df, owl_column, robot_column, curation_column):
   return match_counts_df
 
 
-def get_sheet_hyperlink(tabs_list):
+def get_hyperlinks_list(tabs_list):
     
     # from a list of spreadsheet ids and tab names, return a list of hyperlinks (one per sheet id)
     # example input: ['coder_2', 'coder_3', 'geek_1', 'geek_4', 'pro_3']
