@@ -5,7 +5,7 @@ from googleapiclient.errors import HttpError
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-
+from itertools import groupby
 
 def create(title):
   """
@@ -222,9 +222,15 @@ def get_multitab_df(input_dict, creds):
       sheet_df["tab"] = tab 
       # append sheet_df to the spreadsheet df
       multitab_df = pd.concat([multitab_df, sheet_df])
+  print("out of the for loop now, printing multiples")
   # combine duplicate rows and transform "tab" into a comma-separated list
   multitab_df = multitab_df.fillna('')
   multitab_df = multitab_df.groupby(column_names).agg({'tab': ', '.join}).reset_index()
+  # add hyperlink to tab column
+  multitab_df["tab"] = get_hyperlink(spreadsheet_id, multitab_df["tab"])
+  # print rows where "tab" column contains ", IGUANA-"
+  print(multitab_df["tab"][multitab_df["tab"].str.contains(", IGUANA-")])
+  print("")
   # rename columns according to rename_columns attribute
   multitab_df = multitab_df.rename(columns=rename_columns)
   # add a column showing the spreadsheet_id
@@ -329,7 +335,70 @@ def count_matches_by_subset(df, owl_column, robot_column, curation_column):
   return match_counts_df
 
 
-def get_hyperlink(spreadsheet_id, tab_name):
-  # Returns a hyperlink to Google Sheets
-  hyperlink = '=HYPERLINK("https://docs.google.com/spreadsheets/d/' + spreadsheet_id + '", "' + tab_name + '")'
-  return hyperlink
+def get_sheet_hyperlink(tabs_list):
+    
+    # from a list of spreadsheet ids and tab names, return a list of hyperlinks (one per sheet id)
+    # example input: ['coder_2', 'coder_3', 'geek_1', 'geek_4', 'pro_3']
+    # example output: =HYPERLINK('coder', '2, 3'),=HYPERLINK('geek', '1, 4'),=HYPERLINK('pro', '3')
+    
+    # sort list: essential for grouping
+    tabs_list.sort()
+    # get list of unique spreadsheet ids
+    ids = [j for j, i in groupby(tabs_list,
+                  lambda a: a.split('_')[0])]
+    # group tabs_list into sublists by spreadsheet id
+    grouped_tabs = [list(i) for j, i in groupby(tabs_list,
+                  lambda a: a.split('_')[0])]
+    # transform nested grouped_tabs_list into a nested list of suffixes
+    for i in range(len(grouped_tabs)):
+        for j in range(len(grouped_tabs[i])):
+            grouped_tabs[i][j] = grouped_tabs[i][j].split('_')[1]
+    # return "=HYPERLINK('prefix', 'suffix_a, suffix_b, ..., suffix_n')"
+    link_list = []
+    for i in range(len(ids)):
+        link_list.append("=HYPERLINK('https://docs.google.com/spreadsheets/d/" + ids[i] + "', '" + ', '.join(grouped_tabs[i]) + "')")
+    hyperlinks = (';'.join(link_list))
+    
+    return hyperlinks
+
+
+def get_hyperlinks_df(df, tab_column, hyperlink_column_prefix):
+# Given a df with a column containing comma-separated strings of the form '"spreadsheet_id"_"tab",spreadsheet_id_tab,...,n',
+#  return the same df with clickable columns of hyperlinks (one column per spreadsheet_id),
+#  where the column names are 'hyperlink_column_prefix_1', 'hyperlink_column_prefix_2', etc.
+# 
+# The parameters are:
+# df: a Pandas df containing the id_tab string type shown above
+# tab_column: the column name in the df to extract hyperlinks from
+# hyperlink_column_prefix: prefix ending in '_' for the new hyperlinks columns to which will be appended integers
+ 
+    # make sure the column doesn't contain NaNs, only empty strings
+    df[tab_column] = df[tab_column].fillna('')
+    # fetch df column into nested list: one list per row
+    column_list = df[tab_column].values.tolist()
+    # separate the single string in each list into many strings, splitting at commas
+    column_list = [x.split(',') for x in column_list]
+    # go through the column row-by-row and add hyperlinks
+    for sublist in range(len(column_list)):
+        # if a row is just an empty string, return it as-is without adding a hyperlink
+        if len(column_list[sublist])==1 and column_list[sublist][0]=='':
+            column_list[sublist] = column_list[sublist]
+        # if a row is not empty, add hyperlinks separated by ';'
+        else:
+            column_list[sublist] = get_sheet_hyperlink(column_list[sublist])
+    # add these hyperlinks to the df in a new column called 'hyperlinks'
+    df['hyperlinks'] = column_list
+    # split the 'hyperlinks' column into several columns, splitting at each ';'
+    hyperlinks_df = df['hyperlinks'].str.split(";", expand=True)
+    # replace NaNs and Nones with ''
+    hyperlinks_df = hyperlinks_df.fillna('')
+    # rename the columns to "hyperlink_column_prefix" + integer beginning at 1
+    hyperlinks_df_cols = [hyperlink_column_prefix + str(x) for x in list(range(1, hyperlinks_df.shape[1] + 1))]
+    hyperlinks_df.columns = hyperlinks_df_cols
+    # add the separated and renamed hyperlinks columns to the original df
+    full_df = pd.concat((df, hyperlinks_df), axis=1)
+    # drop original and placeholder columns
+    full_df = full_df.drop(columns=[tab_column, 'hyperlinks'])
+                           
+    # return the df with added columns
+    return(full_df)
