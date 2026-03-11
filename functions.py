@@ -209,6 +209,8 @@ def get_multitab_df(input_dict, creds):
   # fill in empty df sheet by sheet
   for sheet in range(len(values['valueRanges'])):
       tab = values['valueRanges'][sheet]['range'].split('!')[0] # save the name of the tab, eg. '2023_error_curation (Charlie)'
+      # replace spaces with underscores in tab name 
+      tab = tab.replace(" ", "_")
       print("    " + tab)
       # collect the data in that tab in a pandas df
       sheet_data = values['valueRanges'][sheet]['values']
@@ -224,7 +226,7 @@ def get_multitab_df(input_dict, creds):
       multitab_df = pd.concat([multitab_df, sheet_df])
   multitab_df = multitab_df.fillna('')
   # combine duplicate rows and transform "tab" into a comma-separated list
-  multitab_df = multitab_df.groupby(column_names).agg({'tab': ', '.join}).reset_index()
+  multitab_df = multitab_df.groupby(column_names).agg({'tab': ','.join}).reset_index()
   # rename columns according to rename_columns attribute
   multitab_df = multitab_df.rename(columns=rename_columns)
 
@@ -270,7 +272,7 @@ def compare_terms(mints_df, search_df, result_column, tab_column):
   if tab_column != None:
       groupby_columns = id_merge.columns.tolist() 
       groupby_columns.remove(tab_column)
-      id_merge = id_merge.groupby(by=groupby_columns).agg({tab_column: ', '.join}).reset_index()
+      id_merge = id_merge.groupby(by=groupby_columns).agg({tab_column: ','.join}).reset_index()
   id_merge = id_merge.rename(columns={'search_label_x': 'search_label'})
 
   label_merge = pd.merge(mints_df[["IRI", "search_label"]], search_df, on='search_label', how='inner')
@@ -288,7 +290,7 @@ def compare_terms(mints_df, search_df, result_column, tab_column):
   if tab_column != None:
       groupby_columns = label_merge.columns.tolist() 
       groupby_columns.remove(tab_column)
-      label_merge = label_merge.groupby(by=groupby_columns).agg({tab_column: ', '.join}).reset_index()
+      label_merge = label_merge.groupby(by=groupby_columns).agg({tab_column: ','.join}).reset_index()
   # rename IRI_x to IRI
   label_merge = label_merge.rename(columns={'IRI_x': 'IRI'})
 
@@ -348,21 +350,21 @@ def get_hyperlinks_list(tabs_list):
     # return "=HYPERLINK('prefix', 'suffix_a, suffix_b, ..., suffix_n')"
     link_list = []
     for i in range(len(ids)):
-        link_list.append("=HYPERLINK('https://docs.google.com/spreadsheets/d/" + ids[i] + "', '" + ', '.join(grouped_tabs[i]) + "')")
+        link_list.append('=HYPERLINK("https://docs.google.com/spreadsheets/d/' + ids[i] + '", "' + ', '.join(grouped_tabs[i]) + '")')
     hyperlinks = (';'.join(link_list))
     
     return hyperlinks
 
 
-def get_hyperlinks_df(df, tab_column, hyperlink_column_prefix):
-# Given a df with a column containing comma-separated strings of the form '"spreadsheet_id"_"tab",spreadsheet_id_tab,...,n',
+def get_hyperlinks_df(df, tab_column):
+# Given a df with a column containing comma-separated strings of the form '"spreadsheet_id":"tab",spreadsheet_id_tab,...,n',
 #  return the same df with clickable columns of hyperlinks (one column per spreadsheet_id),
-#  where the column names are 'hyperlink_column_prefix_1', 'hyperlink_column_prefix_2', etc.
+#  where the column names are 'tab_column_1', 'tab_column_2', etc.
 # 
 # The parameters are:
 # df: a Pandas df containing the id_tab string type shown above
 # tab_column: the column name in the df to extract hyperlinks from
-# hyperlink_column_prefix: for the new hyperlinks columns to which will be appended underscores and integers
+# tab_column: for the new hyperlinks columns to which will be appended underscores and integers
  
     # make sure the column doesn't contain NaNs, only empty strings
     df[tab_column] = df[tab_column].fillna('')
@@ -384,16 +386,19 @@ def get_hyperlinks_df(df, tab_column, hyperlink_column_prefix):
     hyperlinks_df = df['hyperlinks'].str.split(";", expand=True)
     # replace NaNs and Nones with ''
     hyperlinks_df = hyperlinks_df.fillna('')
-    # rename the columns to "hyperlink_column_prefix" + integer beginning at 1 (no integer if there is only one column)
+    # rename the columns to "tab_column" + integer beginning at 1 (no integer if there is only one column)
     if hyperlinks_df.shape[1]==1:
-      hyperlinks_df_cols = [hyperlink_column_prefix]
+      hyperlinks_df_cols = [tab_column]
     else:
-      hyperlinks_df_cols = [hyperlink_column_prefix + '_' + str(x) for x in list(range(1, hyperlinks_df.shape[1] + 1))]
+      hyperlinks_df_cols = [tab_column + '_' + str(x) for x in list(range(1, hyperlinks_df.shape[1] + 1))]
     hyperlinks_df.columns = hyperlinks_df_cols
+    # delete all single quotes from df
+    for column in hyperlinks_df.columns:
+      hyperlinks_df[column] = hyperlinks_df[column].str.replace("'", "")
+    # drop original column so its label doesn't get duplicated during concatenation
+    df = df.drop(columns=[tab_column])
     # add the separated and renamed hyperlinks columns to the original df
     full_df = pd.concat((df, hyperlinks_df), axis=1)
-    # drop original and placeholder columns
-    full_df = full_df.drop(columns=[tab_column, 'hyperlinks'])
-                           
+    full_df = full_df.drop(columns=['hyperlinks'])        
     # return the df with added columns
     return(full_df)

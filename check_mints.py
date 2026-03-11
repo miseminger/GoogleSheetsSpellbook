@@ -18,9 +18,9 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-from functions import get_multitab_df, update_values, compare_terms, count_matches_by_subset, get_hyperlink
+from functions import get_multitab_df, update_values, compare_terms, count_matches_by_subset, get_hyperlinks_list, get_hyperlinks_df
 
-mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio.owl?",	"In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation sheet 1"] #,	"Notes"
+mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio.owl?",	"In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation sheet"] #,	"Notes"
 
 def parse_args():
     
@@ -105,14 +105,13 @@ if __name__ == "__main__":
   robot_duplicated_IRIs = robot_df[robot_df.duplicated(subset=["IRI"])]
   print(str(robot_duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the ROBOT sheet")
 
+
   # merge mints sheet with genepio-ROBOT sheet
   mints_review_df = compare_terms(mints_review_df, robot_df, 'In GENEPIO ROBOT?', "Tab location in GENEPIO ROBOT")
   # check for duplicate IRIs again
   duplicated_IRIs = mints_review_df[mints_review_df.duplicated(subset=["IRI"])]
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints_review sheet after ROBOT check")
-  #print(duplicated_IRIs)
-  #print("checking for commas in ROBOT")
-  #print(mints_review_df[mints_review_df["Tab location in GENEPIO ROBOT"].str.contains(",")])
+
 
   ## check if mints are in a curation sheet
   curation_df = pd.DataFrame(columns=["Ontology ID", "label", "alternative label", "tab"])
@@ -127,25 +126,26 @@ if __name__ == "__main__":
   # restrict columns to those that should be merged into mints_review
   curation_df = curation_df[["IRI", "label", "tab"]] 
   # merge with mints_review
-  mints_review_df = compare_terms(mints_review_df, curation_df, "In GENEPIO curation?", "Tab location in GENEPIO curation sheet 1")
+  mints_review_df = compare_terms(mints_review_df, curation_df, "In GENEPIO curation?", "Tab location in GENEPIO curation sheet")
   duplicated_IRIs = mints_review_df[mints_review_df.duplicated(subset=["IRI"])]
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints_review sheet after curation sheet check")
 
-  # add hyperlinks to ROBOT column
-  mints_review_df["Tab location in GENEPIO ROBOT"] = get_hyperlink("1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4", mints_review_df["Tab location in GENEPIO ROBOT"])
-
   # replace all NaN values with empty strings
   mints_review_df = mints_review_df.fillna('')
+  # add hyperlinks to ROBOT tabs - no extra columns added here
+  mints_review_df = get_hyperlinks_df(mints_review_df, "Tab location in GENEPIO ROBOT")
   # make sure columns are in order
   mints_review_df = mints_review_df[mints_review_df_columns]
+  # add hyperlinks to curation tabs - some extra columns added here on the RHS
+  mints_review_df = get_hyperlinks_df(mints_review_df, "Tab location in GENEPIO curation sheet")
   # drop duplicated rows
   mints_review_df = mints_review_df.drop_duplicates()
   # convert df back to nested list
   mints_review_df_values = mints_review_df.values.tolist() 
   
   # update Mints_review tab
-  update_values(mints_review_sheet_id, "Mints review!A3:J", "USER_ENTERED", mints_review_df_values, creds)
-  #update_values("1Ts4nU6vQRwmnXQz0HzBM7Wz3N4tOVxo9F3-nH6cp06A", "Mints review!A3:J", "USER_ENTERED", mints_review_df_values, creds)
+  update_values(mints_review_sheet_id, "Mints review!A3:P", "USER_ENTERED", mints_review_df_values, creds)
+  #update_values("1Ts4nU6vQRwmnXQz0HzBM7Wz3N4tOVxo9F3-nH6cp06A", "Mints review!A3:P", "USER_ENTERED", mints_review_df_values, creds)
 
   # get match counts table 
   match_counts_df = count_matches_by_subset(mints_review_df, "In genepio.owl?", "In GENEPIO ROBOT?", "In GENEPIO curation?")
