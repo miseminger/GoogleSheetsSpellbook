@@ -219,7 +219,7 @@ def get_multitab_df(input_dict, creds):
       # only keep columns specified in column_names variable
       sheet_df = sheet_df[column_names]
       # add a column showing the spreadsheet_id and tab name in readiness for adding hyperlinks later
-      sheet_df["tab"] = spreadsheet_id + '_' + tab 
+      sheet_df["tab"] = spreadsheet_id + ':' + tab 
       # append sheet_df to the spreadsheet df
       multitab_df = pd.concat([multitab_df, sheet_df])
   multitab_df = multitab_df.fillna('')
@@ -337,14 +337,14 @@ def get_hyperlinks_list(tabs_list):
     tabs_list.sort()
     # get list of unique spreadsheet ids
     ids = [j for j, i in groupby(tabs_list,
-                  lambda a: a.split('_')[0])]
+                  lambda a: a.split(':')[0])]
     # group tabs_list into sublists by spreadsheet id
     grouped_tabs = [list(i) for j, i in groupby(tabs_list,
-                  lambda a: a.split('_')[0])]
+                  lambda a: a.split(':')[0])]
     # transform nested grouped_tabs_list into a nested list of suffixes
     for i in range(len(grouped_tabs)):
         for j in range(len(grouped_tabs[i])):
-            grouped_tabs[i][j] = grouped_tabs[i][j].split('_')[1]
+            grouped_tabs[i][j] = grouped_tabs[i][j].split(':')[1]
     # return "=HYPERLINK('prefix', 'suffix_a, suffix_b, ..., suffix_n')"
     link_list = []
     for i in range(len(ids)):
