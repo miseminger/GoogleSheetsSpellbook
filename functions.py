@@ -362,7 +362,7 @@ def get_hyperlinks_df(df, tab_column, hyperlink_column_prefix):
 # The parameters are:
 # df: a Pandas df containing the id_tab string type shown above
 # tab_column: the column name in the df to extract hyperlinks from
-# hyperlink_column_prefix: prefix ending in '_' for the new hyperlinks columns to which will be appended integers
+# hyperlink_column_prefix: for the new hyperlinks columns to which will be appended underscores and integers
  
     # make sure the column doesn't contain NaNs, only empty strings
     df[tab_column] = df[tab_column].fillna('')
@@ -377,15 +377,18 @@ def get_hyperlinks_df(df, tab_column, hyperlink_column_prefix):
             column_list[sublist] = column_list[sublist]
         # if a row is not empty, add hyperlinks separated by ';'
         else:
-            column_list[sublist] = get_sheet_hyperlink(column_list[sublist])
+            column_list[sublist] = get_hyperlinks_list(column_list[sublist])
     # add these hyperlinks to the df in a new column called 'hyperlinks'
     df['hyperlinks'] = column_list
     # split the 'hyperlinks' column into several columns, splitting at each ';'
     hyperlinks_df = df['hyperlinks'].str.split(";", expand=True)
     # replace NaNs and Nones with ''
     hyperlinks_df = hyperlinks_df.fillna('')
-    # rename the columns to "hyperlink_column_prefix" + integer beginning at 1
-    hyperlinks_df_cols = [hyperlink_column_prefix + str(x) for x in list(range(1, hyperlinks_df.shape[1] + 1))]
+    # rename the columns to "hyperlink_column_prefix" + integer beginning at 1 (no integer if there is only one column)
+    if hyperlinks_df.shape[1]==1:
+      hyperlinks_df_cols = [hyperlink_column_prefix]
+    else:
+      hyperlinks_df_cols = [hyperlink_column_prefix + '_' + str(x) for x in list(range(1, hyperlinks_df.shape[1] + 1))]
     hyperlinks_df.columns = hyperlinks_df_cols
     # add the separated and renamed hyperlinks columns to the original df
     full_df = pd.concat((df, hyperlinks_df), axis=1)
