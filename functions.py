@@ -218,23 +218,15 @@ def get_multitab_df(input_dict, creds):
       sheet_df.columns = [colname.replace('\n', ' ') for colname in sheet_df.columns.tolist()]
       # only keep columns specified in column_names variable
       sheet_df = sheet_df[column_names]
-      # add a column showing the tab name
-      sheet_df["tab"] = tab 
+      # add a column showing the spreadsheet_id and tab name in readiness for adding hyperlinks later
+      sheet_df["tab"] = spreadsheet_id + '_' + tab 
       # append sheet_df to the spreadsheet df
       multitab_df = pd.concat([multitab_df, sheet_df])
-  print("out of the for loop now, printing multiples")
-  # combine duplicate rows and transform "tab" into a comma-separated list
   multitab_df = multitab_df.fillna('')
+  # combine duplicate rows and transform "tab" into a comma-separated list
   multitab_df = multitab_df.groupby(column_names).agg({'tab': ', '.join}).reset_index()
-  # add hyperlink to tab column
-  multitab_df["tab"] = get_hyperlink(spreadsheet_id, multitab_df["tab"])
-  # print rows where "tab" column contains ", IGUANA-"
-  print(multitab_df["tab"][multitab_df["tab"].str.contains(", IGUANA-")])
-  print("")
   # rename columns according to rename_columns attribute
   multitab_df = multitab_df.rename(columns=rename_columns)
-  # add a column showing the spreadsheet_id
-  # multitab_df["spreadsheet_id"] = spreadsheet_id
 
   return multitab_df
 
