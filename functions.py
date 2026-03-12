@@ -38,14 +38,14 @@ def create(title):
 
 
   
-def get_values(spreadsheet_id, range_name):
+def get_values(spreadsheet_id, range_name, creds):
   """
   Creates the batch_update the user has access to.
   Load pre-authorized user credentials from the environment.
   TODO(developer) - See https://developers.google.com/identity
   for guides on implementing OAuth2 for the application.
   """
-  creds, _ = google.auth.default()
+  #creds, _ = google.auth.default()
   # pylint: disable=maybe-no-member
   try:
     service = build("sheets", "v4", credentials=creds)
@@ -189,6 +189,23 @@ def batch_get_values(spreadsheet_id, range_names, creds):
     print(f"An error occurred: {error}")
     return error
 
+
+  def get_sheet_df(spreadsheet_id, range_names, start_row, creds):
+  
+    values = batch_get_values(spreadsheet_id, range_names, creds)
+
+    for sheet in range(len(values['valueRanges'])):
+        tab = values['valueRanges'][sheet]['range'].split('!')[0] # save the name of the tab, eg. '2023_error_curation (Charlie)'
+        # replace spaces with underscores in tab name 
+        tab = tab.replace(" ", "_")
+        print("    " + tab)
+        # collect the data in that tab in a pandas df
+        sheet_data = values['valueRanges'][sheet]['values']
+        sheet_df = pd.DataFrame(sheet_data, columns=sheet_data[0])
+        sheet_df = sheet_df[start_row:] # leave off columns in df body
+    
+    return sheet_df
+  
 
 def get_multitab_df(input_dict, creds):
   # eg. range_names = ["2023_to_request_ontologies (Charlie)", "2023_mints_wastewater (Charlie)"]
