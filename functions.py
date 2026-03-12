@@ -419,3 +419,28 @@ def get_hyperlinks_df(df, tab_column):
     full_df = full_df.drop(columns=['hyperlinks'])        
     # return the df with added columns
     return(full_df)
+
+
+
+  def update_merge_status(mints_sheet_id, mints_sheet_range_names, start_row, merged_ids_set, creds):
+    # fetch a mints sheet
+    mints_sheet_df = get_sheet_df(mints_sheet_id, mints_sheet_range_names, start_row, creds)
+    # set MERGED==FALSE as default
+    mints_sheet_df["merged"] = 'FALSE'
+    # iterate through IDs in merged_ids_set
+    for merged_id in merged_ids_set:
+      # if the mints sheet contains a merged_id, set "merged"=="TRUE" for that ID
+      mints_sheet_df.loc[mints_sheet_df['IRI']==merged_id, "merged"] = "TRUE"
+    #print(mints_sheet_df[mints_sheet_df["merged"]=="TRUE"])
+    # convert df back to nested list
+    mints_sheet_df_values = mints_sheet_df.values.tolist() 
+    # add column names as first list in nested list
+    print("columns_list")
+    columns_list = [list(mints_sheet_df.columns)]
+    mints_sheet_df_values = columns_list + mints_sheet_df_values
+    print(columns_list)
+    print("")
+    print("mints_sheet_df_values")
+    print(mints_sheet_df_values[:3])
+    # update mints sheet "merged" column online
+    update_values(mints_sheet_id, mints_sheet_range_names, "USER_ENTERED", mints_sheet_df_values, creds)
