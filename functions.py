@@ -190,21 +190,21 @@ def batch_get_values(spreadsheet_id, range_names, creds):
     return error
 
 
-  def get_sheet_df(spreadsheet_id, range_names, start_row, creds):
-  
-    values = batch_get_values(spreadsheet_id, range_names, creds)
+def get_sheet_df(spreadsheet_id, range_names, start_row, creds):
 
-    for sheet in range(len(values['valueRanges'])):
-        tab = values['valueRanges'][sheet]['range'].split('!')[0] # save the name of the tab, eg. '2023_error_curation (Charlie)'
-        # replace spaces with underscores in tab name 
-        tab = tab.replace(" ", "_")
-        print("    " + tab)
-        # collect the data in that tab in a pandas df
-        sheet_data = values['valueRanges'][sheet]['values']
-        sheet_df = pd.DataFrame(sheet_data, columns=sheet_data[0])
-        sheet_df = sheet_df[start_row:] # leave off columns in df body
-    
-    return sheet_df
+  values = batch_get_values(spreadsheet_id, range_names, creds)
+
+  for sheet in range(len(values['valueRanges'])):
+      tab = values['valueRanges'][sheet]['range'].split('!')[0] # save the name of the tab, eg. '2023_error_curation (Charlie)'
+      # replace spaces with underscores in tab name 
+      tab = tab.replace(" ", "_")
+      print("    " + tab)
+      # collect the data in that tab in a pandas df
+      sheet_data = values['valueRanges'][sheet]['values']
+      sheet_df = pd.DataFrame(sheet_data, columns=sheet_data[0])
+      sheet_df = sheet_df[start_row:] # leave off columns in df body
+  
+  return sheet_df
   
 
 def get_multitab_df(input_dict, creds):
@@ -422,25 +422,22 @@ def get_hyperlinks_df(df, tab_column):
 
 
 
-  def update_merge_status(mints_sheet_id, mints_sheet_range_names, start_row, merged_ids_set, creds):
-    # fetch a mints sheet
-    mints_sheet_df = get_sheet_df(mints_sheet_id, mints_sheet_range_names, start_row, creds)
-    # set MERGED==FALSE as default
-    mints_sheet_df["merged"] = 'FALSE'
-    # iterate through IDs in merged_ids_set
-    for merged_id in merged_ids_set:
-      # if the mints sheet contains a merged_id, set "merged"=="TRUE" for that ID
-      mints_sheet_df.loc[mints_sheet_df['IRI']==merged_id, "merged"] = "TRUE"
-    #print(mints_sheet_df[mints_sheet_df["merged"]=="TRUE"])
-    # convert df back to nested list
-    mints_sheet_df_values = mints_sheet_df.values.tolist() 
-    # add column names as first list in nested list
-    print("columns_list")
-    columns_list = [list(mints_sheet_df.columns)]
-    mints_sheet_df_values = columns_list + mints_sheet_df_values
-    print(columns_list)
-    print("")
-    print("mints_sheet_df_values")
-    print(mints_sheet_df_values[:3])
-    # update mints sheet "merged" column online
-    update_values(mints_sheet_id, mints_sheet_range_names, "USER_ENTERED", mints_sheet_df_values, creds)
+def update_merge_status(mints_sheet_id, mints_sheet_range_names, start_row, merged_ids_set, creds):
+  # fetch a mints sheet
+  mints_sheet_df = get_sheet_df(mints_sheet_id, mints_sheet_range_names, start_row, creds)
+  # set MERGED==FALSE as default
+  mints_sheet_df["merged"] = 'FALSE'
+  # iterate through IDs in merged_ids_set
+  for merged_id in merged_ids_set:
+    # if the mints sheet contains a merged_id, set "merged"=="TRUE" for that ID
+    mints_sheet_df.loc[mints_sheet_df['IRI']==merged_id, "merged"] = "TRUE"
+  #print(mints_sheet_df[mints_sheet_df["merged"]=="TRUE"])
+  # fillna
+  mints_sheet_df = mints_sheet_df.fillna('')
+  # convert df back to nested list
+  mints_sheet_df_values = mints_sheet_df.values.tolist() 
+  # add column names as first list in nested list
+  columns_list = [list(mints_sheet_df.columns)]
+  mints_sheet_df_values = columns_list + mints_sheet_df_values
+  # update mints sheet "merged" column online
+  update_values(mints_sheet_id, mints_sheet_range_names, "USER_ENTERED", mints_sheet_df_values, creds)

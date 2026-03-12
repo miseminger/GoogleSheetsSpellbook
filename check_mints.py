@@ -18,7 +18,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-from functions import get_multitab_df, update_values, compare_terms, count_matches_by_subset, get_hyperlinks_list, get_hyperlinks_df
+from functions import get_multitab_df, update_values, compare_terms, count_matches_by_subset, get_hyperlinks_list, get_hyperlinks_df, update_merge_status
 
 mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio.owl?",	"In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation sheet"] #,	"Notes"
 
@@ -169,3 +169,15 @@ if __name__ == "__main__":
   match_counts_df_values = match_counts_df.values.tolist() 
   update_values(mints_review_sheet_id, "Mints review legend!G2:I", "USER_ENTERED", match_counts_df_values, creds)
 
+  # get set of IDs for terms merged into GENEPIO
+  merged_mask = (mints_review_df['In genepio.owl?']==('id_match' or 'id_and_label_match'))
+  merged_ids = set(mints_review_df['IRI'][merged_mask].tolist())
+
+  # go through the Mints sheets and update the "merged" column
+  #input_dict = RESOURCE_DICT["MINTS_SPREADSHEET"]
+  #mints_sheet_id = input_dict.pop("SPREADSHEET_ID")
+  mints_sheet_range_names = ["2022", "2023", "2024!1:1070", "2025"] #input_dict.pop("RANGE_NAMES")
+  start_row = 1 #input_dict.pop("START_ROW")
+  for range_name in mints_sheet_range_names:
+    print("Updating 'merged' status for: ", range_name)
+    update_merge_status(mints_review_sheet_id, range_name, start_row, merged_ids, creds)
