@@ -22,9 +22,9 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-from functions import get_multitab_df, update_values, compare_terms
+from functions import get_multitab_df, update_values, compare_terms, get_hyperlinks_df
 
-mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	'In viro_terms.csv?',	"In VIRO ROBOT?",	"Tab location in VIRO ROBOT",	"In VIRO curation?",	"Tab location in VIRO curation sheet 1"] #,	"Notes"
+mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	'In viro_terms.csv?',	"In VIRO ROBOT?",	"Tab location in VIRO ROBOT",	"In VIRO curation?",	"Tab location in VIRO curation sheet"] #,	"Notes"
 
 def parse_args():
     
@@ -132,13 +132,17 @@ if __name__ == "__main__":
   # restrict columns to those that should be merged into mints_review
   curation_df = curation_df[["IRI", "label", "tab"]] 
   # merge with mints_review
-  mints_review_df = compare_terms(mints_review_df, curation_df, "In VIRO curation?", "Tab location in VIRO curation sheet 1")
+  mints_review_df = compare_terms(mints_review_df, curation_df, "In VIRO curation?", "Tab location in VIRO curation sheet")
   duplicated_IRIs = mints_review_df[mints_review_df.duplicated(subset=["IRI"])]
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints_review sheet after curation sheet check")
 
   # replace all NaN values with empty strings
   mints_review_df = mints_review_df.fillna('')
-  # make sure columns are in order
+  # add hyperlinks to ROBOT tabs - no extra columns added here
+  mints_review_df = get_hyperlinks_df(mints_review_df, "Tab location in VIRO ROBOT")
+  # add hyperlinks to curation sheet tabs - may be some extra columns added here
+  mints_review_df = get_hyperlinks_df(mints_review_df, "Tab location in VIRO curation sheet")
+   # make sure columns are in order
   mints_review_df = mints_review_df[mints_review_df_columns]
   # drop duplicated rows
   mints_review_df = mints_review_df.drop_duplicates()
