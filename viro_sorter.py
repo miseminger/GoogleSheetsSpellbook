@@ -102,7 +102,7 @@ if __name__ == "__main__":
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints_review sheet after VIRO check")
 
   # read in genepio-ROBOT sheets
-  robot_df = get_multitab_df(RESOURCE_DICT["MADELINE_VIRO_ROBOT_SPREADSHEET"], creds)
+  robot_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEETS"]["MADELINE_VIRO_ROBOT_SPREADSHEET"], creds)
   robot_df = robot_df[robot_df['Ontology ID'].astype(str).str.contains("GENEPIO")] # remove rows with no IRI
   robot_df = robot_df[robot_df['label'].notna()] # remove rows where the label is NaN, keep rows where the label is ''
   # rename "Ontology ID" column to "IRI" to match mints sheet
@@ -121,9 +121,9 @@ if __name__ == "__main__":
   #print(mints_review_df[mints_review_df["Tab location in VIRO ROBOT"].str.contains(",")])
 
   ## check if mints are in a curation sheet
-  madeline_mpox_curation_df = get_multitab_df(RESOURCE_DICT["MADELINE_MPOX_ROBOT_SPREADSHEET"], creds)
-  madeline_virusmvp_curation_df = get_multitab_df(RESOURCE_DICT["MADELINE_VIRUSMVP_ROBOT_SPREADSHEET"], creds)
-  madeline_pokay_curation_df = get_multitab_df(RESOURCE_DICT["MADELINE_POKAY_ROBOT_SPREADSHEET"], creds)
+  madeline_mpox_curation_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEETS"]["MADELINE_MPOX_ROBOT_SPREADSHEET"], creds)
+  madeline_virusmvp_curation_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEETS"]["MADELINE_VIRUSMVP_ROBOT_SPREADSHEET"], creds)
+  madeline_pokay_curation_df = get_multitab_df(RESOURCE_DICT["CURATION_SHEETS"]["MADELINE_POKAY_ROBOT_SPREADSHEET"], creds)
   # concatenate curation sheets into one long df
   curation_df = pd.concat([madeline_mpox_curation_df, madeline_virusmvp_curation_df])
   curation_df = pd.concat([curation_df, madeline_pokay_curation_df])
