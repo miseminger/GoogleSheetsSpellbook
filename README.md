@@ -14,33 +14,30 @@ This app is called ```mints-tracker``` and is part of the Google Cloud Console p
 
 **How to run this code from the shell:**
 
-1. Navigate to ```genepio/src/ontology```. From there, pull the latest version, and open up ODK: 
+1. Navigate to ```genepio/src/ontology```. From there, prepare a new release like this: 
 
-```git pull``` # fetch the latest version of GENEPIO
-
-```git checkout -b release-2026-03-17``` # checkout a new branch in preparation for creating a new release
-
-```sudo docker ps``` # check that Docker is running
-
-```sudo docker pull obolibrary/odkfull``` # pull the ODK docker image
-
-```sudo sh run.sh robot --version``` # check that ODK is running
-
-2. Regenerate genepio-merged.owl by preparing a release (*don't push this release to the repo):
-
-```sudo sh run.sh make prepare_release -B```
+```
+git pull # fetch the latest version of GENEPIO
+git checkout -b release-2026-03-17 # checkout a new branch in preparation for creating a new release
+sudo docker ps # check that Docker is running
+sudo docker pull obolibrary/odkfull # pull the ODK docker image
+sudo sh run.sh robot --version # check that ODK is running
+sudo sh run.sh make prepare_release -B # regenerate genepio-merged.owl by preparing a release (*don't push this release to the repo)
+```
 
 3. Run ROBOT export to get ```genepio-merged.owl``` terms in a CSV file called ```genepio_terms.csv```:
 
-```sudo sh run.sh robot export --input genepio-merged.owl   --header "ID|LABEL|SYNONYMS"   --export genepio_terms.csv```
+```
+sudo sh run.sh robot export --input genepio-merged.owl   --header "ID|LABEL|SYNONYMS"   --export genepio_terms.csv
+```
 
 4. Copy ```genepio_terms.csv``` into GoogleSheetsSpellbook.
 
-5. Activate the conda environment:
-```conda activate google-mint```
-
-6. Run the Python script:
-```python3 check_mints.py --input input.json``` 
+5. Within the GoogleSheetsSpellbook directory, activate the conda environment and run the Python script to update the Mints Review tab online:
+```
+conda activate google-mint
+python3 check_mints.py --input input.json
+``` 
 
 7. Finally, check that the ```mints_review``` tab of the GENEPIO Mints Google sheet is updated correctly.
 
