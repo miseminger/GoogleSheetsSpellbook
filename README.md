@@ -25,21 +25,21 @@ sudo sh run.sh robot --version # check that ODK is running
 sudo sh run.sh make prepare_release -B # regenerate genepio-merged.owl by preparing a release (*don't push this release to the repo)
 ```
 
-3. Run ROBOT export to get ```genepio-merged.owl``` terms in a CSV file called ```genepio_terms.csv```:
+2. Run ROBOT export to get ```genepio-merged.owl``` terms in a CSV file called ```genepio_terms.csv```:
 
 ```
 sudo sh run.sh robot export --input genepio-merged.owl   --header "ID|LABEL|SYNONYMS"   --export genepio_terms.csv
 ```
 
-4. Copy ```genepio_terms.csv``` into GoogleSheetsSpellbook.
+3. Copy ```genepio_terms.csv``` into GoogleSheetsSpellbook.
 
-5. Within the GoogleSheetsSpellbook directory, activate the conda environment and run the Python script to update the Mints Review tab online:
+4. Within the GoogleSheetsSpellbook directory, activate the conda environment and run the Python script to update the Mints Review tab online:
 ```
 conda activate google-mint
 python3 check_mints.py --input input.json
 ``` 
 
-7. Finally, check that the ```mints_review``` tab of the GENEPIO Mints Google sheet is updated correctly.
+5. Finally, check that the ```mints_review``` tab of the GENEPIO Mints Google sheet is updated correctly.
 
 **Requirements:**
 * Follow the directions at: https://developers.google.com/workspace/sheets/api/quickstart/python.
