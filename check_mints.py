@@ -20,7 +20,7 @@ from googleapiclient.errors import HttpError
 
 from functions import get_multitab_df, update_values, compare_terms, count_matches_by_subset, get_hyperlinks_list, get_hyperlinks_df, update_merge_status
 
-mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio.owl?",	"In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation sheet"] #,	"Notes"
+mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio-merged.owl?",	"In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation sheet"] #,	"Notes"
 
 def parse_args():
     
@@ -83,7 +83,7 @@ if __name__ == "__main__":
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints sheets")
   #print(duplicated_IRIs)
 
-  # read in CSV of terms that are already in GENEPIO (from ROBOT export of genepio.owl)
+  # read in CSV of terms that are already in GENEPIO (from ROBOT export of genepio-merged.owl)
   # this CSV must have columns titled ['IRI', 'LABEL']
   genepio_df = pd.read_csv("genepio_terms.csv", sep=',', header=0)
   # rename columns to match mints sheet
@@ -91,7 +91,7 @@ if __name__ == "__main__":
   # drop 'SYNONYMS' column
   #genepio_df = genepio_df.drop(columns=['SYNONYMS'])
   # merge mints sheet with genepio sheet
-  mints_review_df = compare_terms(mints_df, genepio_df, 'In genepio.owl?', None)
+  mints_review_df = compare_terms(mints_df, genepio_df, 'In genepio-merged.owl?', None)
   duplicated_IRIs = mints_review_df[mints_review_df.duplicated(subset=["IRI"])]
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints_review sheet after GENEPIO check")
 
@@ -148,7 +148,7 @@ if __name__ == "__main__":
   #update_values("1Ts4nU6vQRwmnXQz0HzBM7Wz3N4tOVxo9F3-nH6cp06A", "Mints review!A3:P", "USER_ENTERED", mints_review_df_values, creds)
 
   # get match counts table 
-  match_counts_df = count_matches_by_subset(mints_review_df, "In genepio.owl?", "In GENEPIO ROBOT?", "In GENEPIO curation?")
+  match_counts_df = count_matches_by_subset(mints_review_df, "In genepio-merged.owl?", "In GENEPIO ROBOT?", "In GENEPIO curation?")
 
   # make horizontal bar plot of number of terms not found for each subset
   savefile = "subset_plot.png"
@@ -170,7 +170,7 @@ if __name__ == "__main__":
   update_values(mints_review_sheet_id, "Mints review legend!G2:I", "USER_ENTERED", match_counts_df_values, creds)
 
   # get set of IDs for terms merged into GENEPIO
-  merged_mask = (mints_review_df['In genepio.owl?']==('id_match' or 'id_and_label_match'))
+  merged_mask = (mints_review_df['In genepio-merged.owl?']==('id_match' or 'id_and_label_match'))
   merged_ids = set(mints_review_df['IRI'][merged_mask].tolist())
 
   # go through the Mints sheets and update the "merged" column
