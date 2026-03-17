@@ -14,9 +14,11 @@ This app is called ```mints-tracker``` and is part of the Google Cloud Console p
 
 **How to run this code from the shell:**
 
-1. Navigate to ```genepio/src/ontology```. Make sure you have the latest version of ```genepio.owl```. Fetch the latest version of GENEPIO with ```git pull```.
+1. Navigate to ```genepio/src/ontology```. From there, pull the latest version, and open up ODK: 
 
-2. Run ROBOT export to get genepio.owl terms in a CSV file:
+```git pull``` # fetch the latest version of GENEPIO
+
+```git checkout -b release-2026-03-17``` # checkout a new branch in preparation for creating a new release
 
 ```sudo docker ps``` # check that Docker is running
 
@@ -24,15 +26,23 @@ This app is called ```mints-tracker``` and is part of the Google Cloud Console p
 
 ```sudo sh run.sh robot --version``` # check that ODK is running
 
-```sudo sh run.sh robot export --input genepio.owl   --header "ID|LABEL|SYNONYMS"   --export genepio_terms.csv``` # create a CSV of terms in genepio.owl
+2. Regenerate genepio-merged.owl by preparing a release (*don't push this release to the repo):
 
-3. Activate the conda environment:
+```sudo sh run.sh make prepare_release -B```
+
+3. Run ROBOT export to get ```genepio-merged.owl``` terms in a CSV file called ```genepio_terms.csv```:
+
+```sudo sh run.sh robot export --input genepio-merged.owl   --header "ID|LABEL|SYNONYMS"   --export genepio_terms.csv```
+
+4. Copy ```genepio_terms.csv``` into GoogleSheetsSpellbook.
+
+5. Activate the conda environment:
 ```conda activate google-mint```
 
-4. Run the Python script:
+6. Run the Python script:
 ```python3 check_mints.py --input input.json``` 
 
-5. Finally, check that the ```mints_review``` tab of the GENEPIO Mints Google sheet is updated correctly.
+7. Finally, check that the ```mints_review``` tab of the GENEPIO Mints Google sheet is updated correctly.
 
 **Requirements:**
 * Follow the directions at: https://developers.google.com/workspace/sheets/api/quickstart/python.
