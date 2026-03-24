@@ -1,0 +1,82 @@
+	NCIT_containing_entry	column_name	tab
+467	"BLOCKER RESOLUTION: created ""third party role"" [GENEPIO:0102268]
+Rhiannon: Component parts ""third party"" ""laboratory"" ""service provider"" ""name""
+""datum label"" is about; material entity ""laboratory"" [NCIT:C37984]; has role ""service provider role"" OBI:0000947; has role ""third party"" [TBD] #BLOCKER
+Charlie's Processing"	Notes	spec_field
+176	NCIT:C171191	skos:relatedMatch	spec_field
+164	NCIT:C17357	is about	'spec_field_(retired)'
+166	NCIT:C25464	is about	'spec_field_(retired)'
+167	NCIT:C25464	is about	'spec_field_(retired)'
+174	NCIT:C2959	is about	'spec_field_(retired)'
+175	NCIT:C16119	is about	'spec_field_(retired)'
+176	NCIT:C15346	is about	'spec_field_(retired)'
+189	NCIT:C25464|GENEPIO:0002173	is about	'spec_field_(retired)'
+190	NCIT:C25160|GENEPIO:0002173|NCIT:C25577	is about	'spec_field_(retired)'
+191	GENEPIO:0100634|GENEPIO:0002173|NCIT:C25577	is about	'spec_field_(retired)'
+192	NCIT:C25464|GENEPIO:0002173|NCIT:C25577	is about	'spec_field_(retired)'
+297	NCIT:C93638	is about	'spec_field_(retired)'
+100	Yes [NCIT:C49488]	example of usage	'spec_field_(retired)'
+157	Asymptomatic [NCIT:C3833]	example of usage	'spec_field_(retired)'
+160	Recovered [NCIT:C49498]	example of usage	'spec_field_(retired)'
+164	Male [NCIT:C46109]	example of usage	'spec_field_(retired)'
+302	Vaccination [NCIT:C15346]	example of usage	'spec_field_(retired)'
+13	EFO does have crossreferences to NCIT terms so make a request to apply to cross reference directly.	Notes	'SSSOM-import-overlay'
+13	NCIT:C131759	skos:exactMatch	'SSSOM-import-overlay'
+6	"NCBIGene:43740570|
+wikidata:Q88655710|
+NCIT:C199426"	database cross reference	genes
+7	"NCBIGene:43740571|
+NCIT:C199430"	database cross reference	genes
+8	"NCBIGene:43740575|
+NCIT:C199425"	database cross reference	genes
+9	"NCBIGene:43740568|
+wikidata:Q88000922|
+NCIT:C199422"	database cross reference	genes
+10	"NCBIGene:43740578|
+wikidata:Q88088053|
+NCIT:C199434"	database cross reference	genes
+23	NCIT:C199423	database cross reference	genes
+21	OBI:0002839|NCIT:C103245|OBIB:0000031	database cross reference	'temp_mint'
+42	OBI:0002859|NCIT:C113122	database cross reference	'temp_mint'
+43	OBI:0002860|NCIT:C113675	database cross reference	'temp_mint'
+10	http://purl.obolibrary.org/obo/NCIT_C17611 | https://en.wikipedia.org/wiki/Bronchoscopy	definition source	'temp_mint'
+12	http://purl.obolibrary.org/obo/NCIT_C49755 | http://purl.obolibrary.org/obo/SCDO_0000190	definition source	'temp_mint'
+42	http://purl.obolibrary.org/obo/NCIT_C113122	definition source	'temp_mint'
+72	http://purl.obolibrary.org/obo/NCIT_C48673	definition source	'temp_mint'
+77	NCIT:C74723	parent class ID	'I#72'
+78	NCIT:C74723	parent class ID	'I#72'
+69	NCIT:C25164	is about	Sheet25
+161	NCIT:C17357	is about	Sheet25
+163	NCIT:C25464	is about	Sheet25
+164	NCIT:C25464	is about	Sheet25
+171	NCIT:C2959	is about	Sheet25
+172	NCIT:C16119	is about	Sheet25
+173	NCIT:C15346	is about	Sheet25
+186	NCIT:C25464|GENEPIO:0002173	is about	Sheet25
+187	NCIT:C25160|GENEPIO:0002173|NCIT:C25577	is about	Sheet25
+188	GENEPIO:0100634|GENEPIO:0002173|NCIT:C25577	is about	Sheet25
+189	NCIT:C25464|GENEPIO:0002173|NCIT:C25577	is about	Sheet25
+292	NCIT:C93638	is about	Sheet25
+99	Yes [NCIT:C49488]	example of usage	Sheet25
+154	Asymptomatic [NCIT:C3833]	example of usage	Sheet25
+157	Recovered [NCIT:C49498]	example of usage	Sheet25
+161	Male [NCIT:C46109]	example of usage	Sheet25
+297	Vaccination [NCIT:C15346]	example of usage	Sheet25
+132	"Replace with http://purl.obolibrary.org/obo/NCIT_C45430
+These are ""members of"" not information bits. Each data item will reference an actual class not as a parent but some other relation. This is true of many things in GENEPIO."	Issues / Notes	'Copy_of_Rhi_Term_List'
+136	"Could make MONDO NTR under ""substance abuse"" MONDO:0002491, or just use the NCIT version NCIT:C16522.
+Might be worth making these new terms obsolete for the parent term or something similar."	Issues / Notes	'Copy_of_Rhi_Term_List'
+139	"Could use ""liver transplantation"" http://purl.obolibrary.org/obo/NCIT_C15271, but that breaks pattern with the other transplant terms that are possessive e.g. ""kidney transplant recipient"" NCIT:C157332."	Issues / Notes	'Copy_of_Rhi_Term_List'
+69	NCIT:C15631	parent class ID	'Copy_of_Rhi_Term_List'
+70	NCIT:C15631	parent class ID	'Copy_of_Rhi_Term_List'
+71	NCIT:C15631	parent class ID	'Copy_of_Rhi_Term_List'
+390	NCIT:C161352	is about	'Copy_of_Rhi_Term_List'
+391	NCIT:C64810	is about	'Copy_of_Rhi_Term_List'
+408	NCIT:C51953	is about	'Copy_of_Rhi_Term_List'
+429	NCIT:C74723	is about	'Copy_of_Rhi_Term_List'
+64	http://purl.obolibrary.org/obo/NCIT_C41199	definition source	'Copy_of_Rhi_Term_List'
+132	https://www.ebi.ac.uk/ols/ontologies/ncit/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FNCIT_C45430	definition source	'Copy_of_Rhi_Term_List'
+370	http://purl.obolibrary.org/obo/NCIT_C179411	definition source	'Copy_of_Rhi_Term_List'
+390	"http://purl.obolibrary.org/obo/NCIT:C161352 used as a partial source for the ""Example Guidance""."	editor note	'Copy_of_Rhi_Term_List'
+391	"http://purl.obolibrary.org/obo/NCIT:C64810 used as a partial source for the ""Example Guidance""."	editor note	'Copy_of_Rhi_Term_List'
+429	"http://purl.obolibrary.org/obo/NCIT_C74723 used as a partial source for the ""Example Guidance""."	editor note	'Copy_of_Rhi_Term_List'
