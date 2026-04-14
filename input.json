@@ -16,7 +16,7 @@
      "CURATION_SHEETS": {
         "CURATION_SHEET_2023_SPREADSHEET": {
             "SPREADSHEET_ID": "1s6FB9EyPWYBgssIU9a9AKATEfZnMdixwvrGhBXUHAVk",
-            "RANGE_NAMES": ["2023_mints_wastewater (Charlie)", "2023_mints_wastewater_terms (Charlie)", "2023_manual_curation (Charlie)", "2023_to_request_ontologies (Charlie)"],
+            "RANGE_NAMES": ["2023_mints_wastewater_fields", "2023_mints_wastewater_terms", "2023_to_request_ontologies (Charlie)", "2023_manual_curation (Charlie)"],
             "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
             "START_ROW": 2,
             "RENAME_COLUMNS": {}
