@@ -8,7 +8,7 @@
      },
     "GENEPIO_ROBOT_SPREADSHEET": {
         "SPREADSHEET_ID": "1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4",
-        "RANGE_NAMES": ["spec_field", "spec_field (retired)", "identifiers (draft)", "SSSOM-Import-Overlay", "spec_enum", "Copy of Rhi Term List", "DEPRECATE (To-dos)"],
+        "RANGE_NAMES": ["spec_field", "identifiers (draft)", "SSSOM-Import-Overlay", "spec_enum", "Copy of Rhi Term List", "DEPRECATE (To-dos)"],
         "COLUMN_NAMES": ["Ontology ID", "label"],
         "START_ROW": 2,
         "RENAME_COLUMNS": {}
