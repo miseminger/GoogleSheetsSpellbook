@@ -182,6 +182,8 @@ if __name__ == "__main__":
   merged_mask = (mints_review_df['In genepio-merged.owl?']==('id_match' or 'id_and_label_match'))
   merged_ids = set(mints_review_df['IRI'][merged_mask].tolist())
 
+  print("")
+  print("Updating 'merged' statuses...")
   # go through the Mints sheets and update the "merged" column
   #input_dict = RESOURCE_DICT["MINTS_SPREADSHEET"]
   #mints_sheet_id = input_dict.pop("SPREADSHEET_ID")
@@ -190,3 +192,28 @@ if __name__ == "__main__":
   for range_name in mints_sheet_range_names:
     print("Updating 'merged' status for: ", range_name)
     update_merge_status(mints_review_sheet_id, range_name, start_row, merged_ids, creds)
+
+# flag records with duplicate labels but unique IDs for review
+print("")
+print("Searching for duplicated labels across the mints sheets...")
+# to begin, drop rows marked 'CANCELLED'
+mints_review_duplicates_df = mints_review_df.loc[mints_review_df['subset']!='CANCELLED']
+# now reduce it to rows with duplicated labels (ignoring IRIs for now)
+mints_review_duplicates_df = mints_review_duplicates_df.loc[mints_review_duplicates_df.duplicated(subset='label', keep=False)]
+# sort alphabetically by label so it's easier to read
+mints_review_duplicates_df = mints_review_duplicates_df.sort_values(by=["label"])
+
+# now, find out which labels have more than one unique IRI
+# reduce the df again to include only one copy of each unique IRI in the df
+mints_review_duplicates_test_df = mints_review_duplicates_df.drop_duplicates(subset='IRI', keep='first')
+# save all labels that are duplicated in this reduced df: these are the ones we want
+true_duplicate_labels = mints_review_duplicates_test_df.loc[mints_review_duplicates_test_df.duplicated(subset='label', keep=False)]
+true_duplicate_labels = true_duplicate_labels.drop_duplicates(subset='label', keep='first')['label']
+
+# get a copy of the mints_review_df just containing rows with duplicate labels
+duplicate_labels_df = pd.merge(mints_review_duplicates_df, true_duplicate_labels, how='right', on='label')
+# convert df back to nested list
+duplicate_labels_df_values = duplicate_labels_df.values.tolist() 
+  
+# update Mints_review tab
+update_values(mints_review_sheet_id, "Mints review legend!A42:P", "USER_ENTERED", duplicate_labels_df_values, creds)
