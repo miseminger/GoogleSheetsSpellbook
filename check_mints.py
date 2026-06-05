@@ -79,8 +79,10 @@ if __name__ == "__main__":
     # concatenate multitab dfs into one long df
     mints_df = pd.concat([mints_df, multitab_mints_df])
   mints_df = mints_df.drop(columns=['tab']) # drop 'tab' column
+  # drop rows without an IRI
+  missing_IRI_mask = (mints_df['IRI'] != '') 
+  mints_df = mints_df[missing_IRI_mask]
   print(mints_df.shape)
-
 
   # check for duplicated IRIs with different labels
   duplicated_IRIs = mints_df[mints_df.duplicated(subset=["IRI"])]
