@@ -185,7 +185,7 @@ if __name__ == "__main__":
   # go through the Mints sheets and update the "merged" column
   #input_dict = RESOURCE_DICT["MINTS_SPREADSHEET"]
   #mints_sheet_id = input_dict.pop("SPREADSHEET_ID")
-  mints_sheet_range_names = ["2022", "2023", "2024!1:1070", "2025"] #input_dict.pop("RANGE_NAMES")
+  mints_sheet_range_names = ["2022", "2023", "2024!1:1070", "2025", "2026"] #input_dict.pop("RANGE_NAMES")
   start_row = 1 #input_dict.pop("START_ROW")
   for range_name in mints_sheet_range_names:
     print("Updating 'merged' status for: ", range_name)
