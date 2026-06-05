@@ -82,6 +82,9 @@ if __name__ == "__main__":
   # drop rows without an IRI
   missing_IRI_mask = (mints_df['IRI'] != '') 
   mints_df = mints_df[missing_IRI_mask]
+  # drop rows without a label
+  missing_label_mask = (mints_df['label'] != '') 
+  mints_df = mints_df[missing_label_mask]
   print(mints_df.shape)
 
   # check for duplicated IRIs with different labels
