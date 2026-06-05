@@ -72,11 +72,15 @@ if __name__ == "__main__":
   #  # Call the Sheets API
   #  sheet = service.spreadsheets()
 
-
-  # read all mints sheets into a df
-  mints_df = get_multitab_df(RESOURCE_DICT["MINTS_SPREADSHEET"], creds) 
-  mints_df = mints_df.drop(columns=['tab'])# drop 'tab' column
+  mints_df = pd.DataFrame(columns=["IRI", "label", "creator (GitHub username)", "reservation date", "subset"])
+  for spreadsheet in RESOURCE_DICT["MINTS_SPREADSHEETS"]:
+    # get multitab df for each mints sheet
+    multitab_mints_df = get_multitab_df(RESOURCE_DICT["MINTS_SPREADSHEETS"][spreadsheet], creds)
+    # concatenate multitab dfs into one long df
+    mints_df = pd.concat([mints_df, multitab_mints_df])
+  mints_df = mints_df.drop(columns=['tab']) # drop 'tab' column
   print(mints_df.shape)
+
 
   # check for duplicated IRIs with different labels
   duplicated_IRIs = mints_df[mints_df.duplicated(subset=["IRI"])]

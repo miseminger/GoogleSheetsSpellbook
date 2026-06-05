@@ -1,10 +1,19 @@
 {
-    "MINTS_SPREADSHEET": {
-        "SPREADSHEET_ID": "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0",
-        "RANGE_NAMES": ["2022", "2023", "2024!1:1070", "2025"], 
-        "COLUMN_NAMES": ["IRI", "label", "creator (GitHub username)", "reservation date", "subset"],
-        "START_ROW": 1,
-        "RENAME_COLUMNS": {}
+    "MINTS_SPREADSHEETS": {
+        "OLDER SHEETS": {
+            "SPREADSHEET_ID": "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0",
+            "RANGE_NAMES": ["2022", "2023", "2024!1:1070", "2025"], 
+            "COLUMN_NAMES": ["IRI", "label", "creator (GitHub username)", "reservation date", "subset"],
+            "START_ROW": 1,
+            "RENAME_COLUMNS": {}
+        },
+        "2026": {
+            "SPREADSHEET_ID": "1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0",
+            "RANGE_NAMES": ["2026"], 
+            "COLUMN_NAMES": ["IRI", "Label", "Creator", "Reservation Date", "Project"],
+            "START_ROW": 2,
+            "RENAME_COLUMNS": {"Label":"label", "Creator":"creator (GitHub username)", "Project":"subset", "Reservation Date":"reservation date"}
+            }
      },
     "GENEPIO_ROBOT_SPREADSHEET": {
         "SPREADSHEET_ID": "1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4",
