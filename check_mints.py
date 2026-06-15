@@ -158,7 +158,8 @@ if __name__ == "__main__":
 
   # get match counts table 
   match_counts_df = count_matches_by_subset(mints_review_df, "In genepio-merged.owl?", "In GENEPIO ROBOT?", "In GENEPIO curation?")
-
+  print(match_counts_df)
+  
   # make horizontal bar plot of number of terms not found for each subset
   savefile = "subset_plot.png"
   ax = match_counts_df['no_match_counts'].plot.barh(color='red')
