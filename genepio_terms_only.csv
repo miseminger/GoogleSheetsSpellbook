@@ -1,0 +1,2109 @@
+ID,LABEL,SYNONYMS
+GENEPIO:0000002,GSCID-BRC Project and Sample Application Standard,
+GENEPIO:0000003,Minimum Information about any (x) Sequence (MIxS),
+GENEPIO:0000008,Minimum information about a marker gene sequence,
+GENEPIO:0000009,other (metadata value),
+GENEPIO:0000010,other relevance,
+GENEPIO:0000011,other specimen scope,
+GENEPIO:0000012,other material derived from specimen,
+GENEPIO:0000013,other capture type,
+GENEPIO:0000014,other project method,
+GENEPIO:0000015,obsolete: draft GenEpiO BioSample standard,
+GENEPIO:0000016,obsolete: NCBI antibiogram data item,
+GENEPIO:0000017,American HIPPA Protected Health Information (PHI) guidelines,
+GENEPIO:0000018,obsolete: subject species,
+GENEPIO:0000019,obsolete: intersex,
+GENEPIO:0000020,obsolete: isolation date,
+GENEPIO:0000021,culture isolation date,
+GENEPIO:0000022,culture frozen date,
+GENEPIO:0000023,isolate received date,
+GENEPIO:0000024,isolate upload date,
+GENEPIO:0000025,subject anatomical site,
+GENEPIO:0000026,subject health status at time of specimen collection,
+GENEPIO:0000027,specimen source context,
+GENEPIO:0000028,subject body product,
+GENEPIO:0000029,collection depth datum,
+GENEPIO:0000030,obsolete: specimen source environmental material,
+GENEPIO:0000031,subject sex specification,
+GENEPIO:0000032,specimen collection site land use,
+GENEPIO:0000033,fecal indicator bacteria count,
+GENEPIO:0000034,conductivity measurement datum,
+GENEPIO:0000035,dissolved oxygen concentration,
+GENEPIO:0000036,the Global Microbial Identifier Minimum Data for Matching (MDM) Standard,
+GENEPIO:0000037,soluble inorganic material,
+GENEPIO:0000038,soluble inorganic material concentration,
+GENEPIO:0000039,nitrite concentration,
+GENEPIO:0000040,nitrate concentration,
+GENEPIO:0000041,total phosphorous concentration,
+GENEPIO:0000042,stream order categorical measurement datum,
+GENEPIO:0000043,bacteria density,
+GENEPIO:0000044,primary enzyme (LMAAI),
+GENEPIO:0000045,PFGE test specification,
+GENEPIO:0000046,PFGE primary test,
+GENEPIO:0000047,secondary enzyme (LMACI),
+GENEPIO:0000048,PFGE secondary test,
+GENEPIO:0000049,MLST clonal complex,
+GENEPIO:0000050,MLST sequence typing,
+GENEPIO:0000051,core genome fingerprinting assay,
+GENEPIO:0000052,CGF type,
+GENEPIO:0000053,16S rRNA sequencing,
+GENEPIO:0000054,Stx toxin type datum,
+GENEPIO:0000055,Stx toxin subtype datum,
+GENEPIO:0000056,Stx1 Toxin PCR result,
+GENEPIO:0000057,Stx1 cell culture level,
+GENEPIO:0000058,Stx2 Toxin PCR result,
+GENEPIO:0000059,Stx2 cell culture level,
+GENEPIO:0000060,AccuProbe culture identification assay,
+GENEPIO:0000061,AccuProbe Listeria monocytogenes culture identification reagent kit,
+GENEPIO:0000062,AccuProbe test result,
+GENEPIO:0000063,ribotyping,
+GENEPIO:0000064,riboprinting,
+GENEPIO:0000065,Qualicon (DuPont) RiboPrinter Microbial Characterization System,
+GENEPIO:0000066,DuPont identification pattern library,
+GENEPIO:0000067,RiboPrinter DUP Number,
+GENEPIO:0000068,RiboPrinter DUP similarity,
+GENEPIO:0000069,sequencing run date,
+GENEPIO:0000070,sequencing location,
+GENEPIO:0000071,sequencing platform (brand),
+GENEPIO:0000072,sequencing workflow,
+GENEPIO:0000073,sequencing application (software),
+GENEPIO:0000074,obsolete: sequencing assay,
+GENEPIO:0000075,sequencing chemistry,
+GENEPIO:0000076,read length,
+GENEPIO:0000077,obsolete: GSCID-BRC data item,
+GENEPIO:0000078,sequencing run multiplex identifiers,
+GENEPIO:0000079,sequencing run sample identifier,sample name|sample title
+GENEPIO:0000080,sequencing count of chemistry cycles,
+GENEPIO:0000081,sequencing kit,
+GENEPIO:0000082,sequencing kit version,
+GENEPIO:0000083,adapter sequence,
+GENEPIO:0000084,read adapter trimming,
+GENEPIO:0000085,library preparation kit,
+GENEPIO:0000086,number of expected base pairs per genome,
+GENEPIO:0000087,number of reads passing filter,
+GENEPIO:0000088,sequencer flow cell cluster density,
+GENEPIO:0000089,phred quality score,
+GENEPIO:0000090,assembly method,
+GENEPIO:0000091,assembly status,
+GENEPIO:0000092,read coverage,
+GENEPIO:0000093,contig count,
+GENEPIO:0000094,assembly name (identifier),
+GENEPIO:0000095,genome annotation algorithm,
+GENEPIO:0000096,genome annotation source,
+GENEPIO:0000097,obsolete: NCBI BioSample data item,
+GENEPIO:0000099,,
+GENEPIO:0000100,,
+GENEPIO:0000101,,
+GENEPIO:0000102,IRIDA case ID,
+GENEPIO:0000103,obsolete: NCBI BioProject data item,
+GENEPIO:0000104,obsolete: INSDC MDM standard,
+GENEPIO:0000105,obsolete: MIxS data item,
+GENEPIO:0000106,draft data standard,
+GENEPIO:0000107,obsolete: HIPPA PHI data item,
+GENEPIO:0000108,obsolete: PulseNet data item,
+GENEPIO:0000109,I2B2 Data Protection role standard,
+GENEPIO:0000110,subject health status (GSCID-BRC),
+GENEPIO:0000111,GSCID-BRC Core Sample standard,
+GENEPIO:0000112,GSCID-BRC Core Project standard,
+GENEPIO:0000113,specimen category,
+GENEPIO:0000114,subject age - unit,
+GENEPIO:0000115,NCBI standard,National Center for Biotechnology Information standard
+GENEPIO:0000117,specimen collection location - city or region,
+GENEPIO:0000118,specimen collection location - country,
+GENEPIO:0000119,Darwin Core Terms,
+GENEPIO:0000120,travel history item,
+GENEPIO:0000121,travel start date,
+GENEPIO:0000122,travel end date,
+GENEPIO:0000123,infection aquired during travel,
+GENEPIO:0000124,draft pathogenic epidemiology case investigation record,
+GENEPIO:0000125,draft pathogenic epi case exposure record,
+GENEPIO:0000126,draft pathogenic epi case food record,
+GENEPIO:0000127,food brought back from travel,
+GENEPIO:0000128,epidemiology contact network model,
+GENEPIO:0000129,epi contact network model - human,
+GENEPIO:0000130,epi contact network model - animal,
+GENEPIO:0000131,note,
+GENEPIO:0000132,draft pathogenic epi case general information record,
+GENEPIO:0000133,draft pathogenic epi case isolate detail record,
+GENEPIO:0000134,specimen source substance,
+GENEPIO:0000135,isolate sequence filename,
+GENEPIO:0000136,cluster identifier,
+GENEPIO:0000137,draft pathogenic epi case test record,
+GENEPIO:0000138,contact specification - lab test requester,
+GENEPIO:0000139,food cultural origin,
+GENEPIO:0000140,draft pathogenic epi case travel record,
+GENEPIO:0000141,Region (England) (entry subject to GAZ replacement),
+GENEPIO:0000142,contact specification - epi network contact,
+GENEPIO:0000143,public health lab epidemiology contextual data standard,
+GENEPIO:0000144,draft whole genome sequencing lab test record,
+GENEPIO:0000145,draft WGS lab bioinformatics process record,
+GENEPIO:0000146,draft WGS lab sequencing record,
+GENEPIO:0000147,NCBI SRA meta information standard,
+GENEPIO:0000148,isolate raw read filename,
+GENEPIO:0000149,library preparation kit version,
+GENEPIO:0000150,read trimming and filtering software,
+GENEPIO:0000151,bioinformatics pipeline name,
+GENEPIO:0000152,bioinformatics pipeline version,
+GENEPIO:0000153,bioinformatics pipeline protocol,
+GENEPIO:0000154,draft WGS lab sequencing quality metrics record,
+GENEPIO:0000155,draft WGS lab assembly quality metrics record,
+GENEPIO:0000156,project data type,
+GENEPIO:0000157,assembly project,
+GENEPIO:0000158,clone ends project,
+GENEPIO:0000159,epigenomics project,
+GENEPIO:0000160,exome resequencing project,
+GENEPIO:0000161,genome sequencing project,
+GENEPIO:0001000,draft ReSeq Tuberculosis data platform standard,
+GENEPIO:0001001,test threshold measurement comparator,
+GENEPIO:0001002,less than,
+GENEPIO:0001003,less than or equal to,
+GENEPIO:0001004,equal to,
+GENEPIO:0001005,greater than or equal to,
+GENEPIO:0001006,greater than,
+GENEPIO:0001007,NCBI Antibiogram standard,
+GENEPIO:0001008,obsolete: NCBI isolate AMR testing model,
+GENEPIO:0001009,obsolete: restaurant,
+GENEPIO:0001010,Canadian Integrated Public Health Information System (iPHIS) Standard,
+GENEPIO:0001011,MIRU24 - international standard,
+GENEPIO:0001012,MIRU24 - Canadian standard,
+GENEPIO:0001013,spray-wading water,
+GENEPIO:0001014,pool water,
+GENEPIO:0001015,obsolete: hot tub,
+GENEPIO:0001016,obsolete: cafeteria,
+GENEPIO:0001017,obsolete: bakery,
+GENEPIO:0001018,obsolete: delicatessen,
+GENEPIO:0001019,obsolete: food kiosk,
+GENEPIO:0001020,obsolete: grocery store,
+GENEPIO:0001021,obsolete: specialty/ethnic store,
+GENEPIO:0001022,obsolete: market,
+GENEPIO:0001023,treatment history datum,
+GENEPIO:0001024,obsolete: take out restaurant,
+GENEPIO:0001025,treatment start date,
+GENEPIO:0001026,canoeing / kayaking / boating,
+GENEPIO:0001027,hiking,
+GENEPIO:0001028,camping,
+GENEPIO:0001029,obsolete: social gathering,
+GENEPIO:0001030,obsolete: party,
+GENEPIO:0001031,obsolete: wedding,
+GENEPIO:0001032,obsolete: baby shower,
+GENEPIO:0001033,obsolete: potluck,
+GENEPIO:0001034,obsolete: community event,
+GENEPIO:0001035,obsolete: long term care facility,
+GENEPIO:0001036,treatment end date,
+GENEPIO:0001037,food related exposure event,
+GENEPIO:0001038,infection-specific food detail,
+GENEPIO:0001039,tuberculosis treatment drug,
+GENEPIO:0001040,vegetarian,
+GENEPIO:0001041,organism location history datum,
+GENEPIO:0001042,food avoidance,
+GENEPIO:0001043,special diet,
+GENEPIO:0001044,water related exposure event,
+GENEPIO:0001045,municipal water,
+GENEPIO:0001046,immigration year of arrival,
+GENEPIO:0001047,bottled water,
+GENEPIO:0001048,infectious disease exposure event,
+GENEPIO:0001049,human related exposure event,
+GENEPIO:0001050,animal related exposure event,
+GENEPIO:0001051,NCBI BioSample isolate (human name or description),
+GENEPIO:0001052,obsolete: petting zoo,
+GENEPIO:0001053,agricultural fair,
+GENEPIO:0001054,isolate passage history datum,
+GENEPIO:0001055,NCBI pathotype,
+GENEPIO:0001056,obsolete: pet treat,
+GENEPIO:0001057,obsolete: pet food (raw),
+GENEPIO:0001058,human exposure event - travel datum,
+GENEPIO:0001059,boat / cruise travel,
+GENEPIO:0001060,train travel,
+GENEPIO:0001061,bus travel,
+GENEPIO:0001062,car travel,
+GENEPIO:0001063,airline travel,
+GENEPIO:0001064,travel mode,
+GENEPIO:0001065,travel reason,
+GENEPIO:0001066,travel for pleasure,
+GENEPIO:0001067,business activity,
+GENEPIO:0001068,religious missionairy activity,
+GENEPIO:0001069,rural backpacking activity,
+GENEPIO:0001070,visiting relative/friends,
+GENEPIO:0001071,travel tour,
+GENEPIO:0001072,unsure of travel reason,
+GENEPIO:0001073,draft tuberculosis - specimen contextual data standard,
+GENEPIO:0001074,behavioural risk factor,
+GENEPIO:0001075,obsolete: E. coli serotype part,
+GENEPIO:0001076,O antigen,
+GENEPIO:0001077,H antigen,
+GENEPIO:0001078,homeless status,
+GENEPIO:0001079,serovar/serotype common name,
+GENEPIO:0001080,Salmonella serovar,
+GENEPIO:0001081,Salmonella serovar name,
+GENEPIO:0001082,Salmonella antigenic formula,
+GENEPIO:0001083,drug use status,
+GENEPIO:0001084,incarceration status,
+GENEPIO:0001085,HIV status,
+GENEPIO:0001086,HIV risk status,
+GENEPIO:0001087,A.I.D.S status,
+GENEPIO:0001088,drug abuse status,
+GENEPIO:0001089,injection drug use status,
+GENEPIO:0001090,recreational drug use status,
+GENEPIO:0001091,methadone use status,
+GENEPIO:0001092,substantial alcohol use/abuse status,
+GENEPIO:0001093,smoking status,
+GENEPIO:0001094,country of birth,
+GENEPIO:0001095,sequence number,
+GENEPIO:0001096,date last seen alive,
+GENEPIO:0001097,second line or reserve tuberculosis drug,
+GENEPIO:0001098,tuberculosis infection anatomical site,
+GENEPIO:0001099,obsolete: NCBI Antibiogram model,
+GENEPIO:0001100,draft antibiogram drug test model,
+GENEPIO:0001101,predicted exposure start,
+GENEPIO:0001102,predicted exposure end,
+GENEPIO:0001103,map project,
+GENEPIO:0001104,metagenome project,
+GENEPIO:0001105,metagenome assembly project,
+GENEPIO:0001106,other project data type,
+GENEPIO:0001107,phenotype or genotype project,
+GENEPIO:0001108,proteome project,
+GENEPIO:0001109,random survey project,
+GENEPIO:0001110,targeted locus (loci) project,
+GENEPIO:0001111,transcriptome or gene expression,
+GENEPIO:0001112,variation project,
+GENEPIO:0001113,INSDC country qualifier,
+GENEPIO:0001114,phenotype project objective,
+GENEPIO:0001115,genome material from specimen,
+GENEPIO:0001116,TB lineage 7 - Ethiopia,
+GENEPIO:0001117,organs or organ parts,
+GENEPIO:0001118,travel outside Canada,
+GENEPIO:0001119,travel outside province/territory,
+GENEPIO:0001120,CanCOGeN SARS-CoV-2 specification,The Canadian COVID-19 Genomics Network SARS-CoV-2 specification|The Canadian COVID-19 Genomics Network severe acute respiratory syndrome coronavirus 2 specification|The Canadian coronavirus 2019 Genomics Network severe acute respiratory syndrome coronavirus 2 specification
+GENEPIO:0001121,data field category,data slot category
+GENEPIO:0001122,database identifiers field category,PCDS:database identifiers|PCDS:database_identifiers_slot_group|database identifiers slot category
+GENEPIO:0001123,specimen collector sample ID,PCDS:specimen_sample_collector_sample_id|sample collector sample identifier|sample collector sample identifier field|sample collector sample identifier slot|sample_collector_sample_ID|specimen collector sample ID|specimen collector sample ID slot
+GENEPIO:0001126,lifespan history item,
+GENEPIO:0001128,related specimen primary id,PCDS:related_specimen_primary_id|related specimen primary ID|related specimen primary ID slot|related specimen primary identifier|related specimen primary identifier field|related specimen primary identifier slot
+GENEPIO:0001131,IRIDA sample ID,IRIDA sample ID|IRIDA sample identifier|IRIDA sample identifier|IRIDA sample name|IRIDA sample name|Integrated Rapid Infectious Disease Analysis sample ID|Integrated Rapid Infectious Disease Analysis sample identifier|Integrated Rapid Infectious Disease Analysis sample name|PCDS:irida_sample_name
+GENEPIO:0001133,umbrella bioproject accession,PCDS:umbrella_bioproject_accession|umbrella bioproject accession|umbrella bioproject accession slot
+GENEPIO:0001136,bioproject accession,PCDS:bioproject_accession|bioproject accession|bioproject accession slot|bioproject_accession
+GENEPIO:0001139,biosample accession,PCDS:biosample_accession|biosample accession|biosample accession slot|biosample_accession
+GENEPIO:0001142,sra accession,PCDS:sra_accession|SRA accession|SRA accession slot|SRA_accession|Sequence Read Archive accession field|Sequence Read Archive accession slot
+GENEPIO:0001145,genbank ena ddbj accession,GenBank accession|GenBank/ENA/DDBJ accession|GenBank_ENA_DDBJ_accession|GenBank_accession|INSDC accession|INSDC_accession|National Genetic Sequence Data Base accession|PCDS:genbank_ena_ddbj_accession
+GENEPIO:0001147,gisaid accession,GISAID accession|GISAID accession slot|Global Initiative on Sharing Avian Influenza Data accession field|Global Initiative on Sharing Avian Influenza Data accession slot|PCDS:gisaid_accession
+GENEPIO:0001149,third party lab sample ID,PCDS:third_party_lab_sample_id|third party lab sample ID|third party lab sample ID slot|third party lab sample identifier|third party lab sample identifier field|third party lab sample identifier slot
+GENEPIO:0001150,sample collection and processing field category,PCDS:sample collection and processing|PCDS:sample_collection_and_processing_slot_group|sample collection and processing slot category
+GENEPIO:0001151,untreated water,
+GENEPIO:0001153,sample collected by organisation name,PCDS:sample_collected_by_organisation_name|sample collected by|sample collected by slot|sample_collected_by
+GENEPIO:0001154,treated water - ambient temperature,
+GENEPIO:0001156,sample collector contact email,PCDS:sample_collector_contact_email|sample collector contact email|sample collector contact email slot|sample_collector_contact_email
+GENEPIO:0001158,sample collector contact address,PCDS:sample_collector_contact_address|sample collector contact address|sample collector contact address slot
+GENEPIO:0001159,sequence submitted by,PCDS:sequence_submitted_by|sequence submitted by|sequence submitted by slot|sequence_submitted_by
+GENEPIO:0001162,epidemiology investigation data item,
+GENEPIO:0001163,obsolete distribution event,
+GENEPIO:0001164,obsolete supply point / event,
+GENEPIO:0001165,sequence submitter contact email,PCDS:sequence_submitted_by_contact_email|sequence submitter contact email|sequence submitter contact email slot
+GENEPIO:0001167,sequence submitter contact address,PCDS:sequence_submitter_contact_address|sequence submitter contact address|sequence submitter contact address slot
+GENEPIO:0001168,well water - treated,
+GENEPIO:0001169,Well water - untreated,
+GENEPIO:0001170,organism datum,
+GENEPIO:0001171,organism role,
+GENEPIO:0001172,isolate organism role,
+GENEPIO:0001174,sample collection start date,PCDS:sample_collection_date|sample collection date|sample collection date slot|sample_collection_date
+GENEPIO:0001175,animal role,
+GENEPIO:0001177,sample collection date precision,PCDS:sample_collection_date_precision|sample collection date precision|sample collection date precision slot
+GENEPIO:0001179,sample received date,PCDS:sample_received_date|sample received date|sample received date slot|sample_received_date
+GENEPIO:0001181,sampling location name country,PCDS:geo_loc_name_country|geo_loc name (country)|geographical location country name|sample collection name country
+GENEPIO:0001182,plant role,
+GENEPIO:0001183,taxonomic datum,
+GENEPIO:0001185,sampling location name state province region,PCDS:geo_loc_name_state_province_territory_region|geo_loc name (state/province/territory)|geo_loc name (state/province/territory/region)|geographical location state or province or territory name or region|sample collection name state province region
+GENEPIO:0001186,infectious disease treatment,
+GENEPIO:0001187,antimicrobial resistance test drug,
+GENEPIO:0001189,sampling location name city,PCDS:geo_loc_name_city|geo_loc name (city)|geographical location city name|sample collection location name city
+GENEPIO:0001191,organism,PCDS:organism|organism|organism slot
+GENEPIO:0001192,analytic datum,
+GENEPIO:0001193,obsolete: type of illness,
+GENEPIO:0001196,specimen with confirmed presence of disease agent,
+GENEPIO:0001198,purpose of sampling,PCDS:purpose_of_sampling|purpose of sampling|purpose of sampling slot|purpose_of_sampling
+GENEPIO:0001200,purpose of sampling details,PCDS:purpose_of_sampling_details|purpose of sampling details|purpose of sampling details slot
+GENEPIO:0001202,third party laboratory service provider name,PCDS:third_party_lab_service_provider_name|third party lab service provider label|third party lab service provider name|third party laboratory service provider label
+GENEPIO:0001204,nml submitted specimen type,NML submitted specimen type|NML submitted specimen type slot|National Microbiology Laboratory submitted specimen type|National Microbiology Laboratory submitted specimen type field|National Microbiology Laboratory submitted specimen type slot|PCDS:nml_submitted_specimen_type
+GENEPIO:0001205,dietary restriction,
+GENEPIO:0001206,patient type,
+GENEPIO:0001208,obsolete: mother,
+GENEPIO:0001209,related specimen relationship type field category,PCDS:related_specimen_relationship_type_slot_group|Related specimen relationship type|Related specimen relationship type slot
+GENEPIO:0001211,anatomical material,PCDS:anatomical_material|anatomical material|anatomical material slot|anatomical_material
+GENEPIO:0001212,subject disease outcome,
+GENEPIO:0001214,anatomical part,PCDS:anatomical_part|anatomical part|anatomical part slot|anatomical_part
+GENEPIO:0001216,body product,PCDS:body_product|body product|body product slot|body_product
+GENEPIO:0001217,treated water - warm/hot,
+GENEPIO:0001219,jacuzzi water,
+GENEPIO:0001220,spa water,
+GENEPIO:0001221,whirlpool water,
+GENEPIO:0001222,patient as host datum,
+GENEPIO:0001223,environmental material field,PCDS:environmental_material|environmental material|environmental_material|environmental_material
+GENEPIO:0001224,pregnancy history item,
+GENEPIO:0001225,date of conception,
+GENEPIO:0001226,lifespan history record,
+GENEPIO:0001227,obsolete: food cooking method,
+GENEPIO:0001228,obsolete: food preservation method,
+GENEPIO:0001229,infectious disease case datum,
+GENEPIO:0001231,laboratory data,
+GENEPIO:0001232,environmental site field,PCDS:environmental_site|environmental site|environmental_site|environmental_site
+GENEPIO:0001234,collection device,PCDS:collection_device|collection device|collection device slot|collection_device
+GENEPIO:0001236,specimen record,
+GENEPIO:0001237,specimen source material category,specimen type (host or environmental context)
+GENEPIO:0001238,symbiotic role,
+GENEPIO:0001239,obsolete: NCBI BioSample attribute package,
+GENEPIO:0001240,obsolete: host sample material,
+GENEPIO:0001241,collection method,PCDS:collection_method|collection method|collection method slot|collection_method
+GENEPIO:0001243,collection protocol,PCDS:collection_protocol|collection protocol|collection protocol slot
+GENEPIO:0001244,food specimen detail,
+GENEPIO:0001245,patient specimen,
+GENEPIO:0001246,environmental specimen,environmental
+GENEPIO:0001247,animal specimen,
+GENEPIO:0001248,built environment specimen,
+GENEPIO:0001249,food specimen,
+GENEPIO:0001250,natural environment specimen,
+GENEPIO:0001251,exposure event person,
+GENEPIO:0001253,specimen processing,GENEPIO:0100286|GENEPIO:0100435|PCDS:specimen_processing
+GENEPIO:0001255,lab host,PCDS:lab_host|lab host|lab host slot
+GENEPIO:0001257,exposure group statistics record,
+GENEPIO:0001258,symptom history item,
+GENEPIO:0001259,health state record,
+GENEPIO:0001260,obsolete: swab,
+GENEPIO:0001261,passage number,PCDS:passage_number|passage number|passage number slot
+GENEPIO:0001262,obsolete: fluid - aspirate,
+GENEPIO:0001264,passage method,PCDS:passage_method|passage method|passage method slot
+GENEPIO:0001266,biomaterial extracted,PCDS:biomaterial_extracted|biomaterial extracted|biomaterial extracted slot
+GENEPIO:0001267,plant rinse,
+GENEPIO:0001268,host information field category,PCDS:host information|PCDS:host_information_slot_group|host information slot category
+GENEPIO:0001269,outbreak animal exposure event location,
+GENEPIO:0001270,animal exposure process,
+GENEPIO:0001271,animal exposure event by material,
+GENEPIO:0001272,exposure by human contact,
+GENEPIO:0001273,obsolete: human exposure activity type,
+GENEPIO:0001274,outbreak human exposure event location,
+GENEPIO:0001275,human to human exposure process,
+GENEPIO:0001276,water exposure by source,
+GENEPIO:0001277,human water activity,
+GENEPIO:0001286,health authority,
+GENEPIO:0001287,symptom record,
+GENEPIO:0001289,PFGE pattern,
+GENEPIO:0001291,phage type salmonella (DT),
+GENEPIO:0001292,phage type e-coli 0157 (PT),
+GENEPIO:0001293,sequence record,
+GENEPIO:0001297,outbreak exposure event location,
+GENEPIO:0001302,lab test history record,
+GENEPIO:0001338,obsolete: earth surface,
+GENEPIO:0001342,data specification,
+GENEPIO:0001356,specimen history item,
+GENEPIO:0001367,,
+GENEPIO:0001368,,
+GENEPIO:0001369,,
+GENEPIO:0001370,,
+GENEPIO:0001372,,
+GENEPIO:0001373,,
+GENEPIO:0001386,host (common name),PCDS:host_common_name|host (common name)|host (common name) slot
+GENEPIO:0001387,host (scientific name),PCDS:host_scientific_name|host (scientific name)|host (scientific name) slot
+GENEPIO:0001388,host health state,PCDS:host_health_state|host health state|host health state slot
+GENEPIO:0001389,host health status details,PCDS:host_health_status_details|host health status details|host health status details slot
+GENEPIO:0001390,host health outcome,PCDS:host_health_outcome|host health outcome|host health outcome slot
+GENEPIO:0001391,host disease,PCDS:host_disease|host disease|host disease slot|host_disease
+GENEPIO:0001392,host age,PCDS:host_age|host age|host age slot
+GENEPIO:0001393,host age unit,PCDS:host_age_unit|host age unit|host age unit slot
+GENEPIO:0001394,host age bin,PCDS:host_age_bin|host age bin|host age bin slot
+GENEPIO:0001395,host gender,PCDS:host_gender|host gender|host gender slot
+GENEPIO:0001396,host residence geo loc name country,PCDS:host_residence_geo_loc_name_country|host residence geo_loc name (country)|host residence geo_loc name (country) slot|host residence geographical location country name field|host residence geographical location country name slot
+GENEPIO:0001397,host residence geo loc name state province territory,PCDS:host_residence_geo_loc_name_state_province_territory|host residence geo_loc name (state/province/territory)|host residence geo_loc name (state/province/territory) slot|host residence geographical location state or province or territory name field|host residence geographical location state or province or territory name slot
+GENEPIO:0001398,host subject id,PCDS:host_subject_id|host subject ID|host subject ID slot|host subject identifier|host subject identifier field|host subject identifier slot
+GENEPIO:0001399,symptom onset date,PCDS:symptom_onset_date|symptom onset date|symptom onset date slot
+GENEPIO:0001400,signs and symptoms,PCDS:signs_and_symptoms|signs and symptoms|signs and symptoms slot
+GENEPIO:0001401,preexisting conditions and risk factors,PCDS:preexisting_conditions_and_risk_factors|pre-existing conditions and risk factors|pre-existing conditions and risk factors slot
+GENEPIO:0001402,complications,PCDS:complications|complications|complications slot
+GENEPIO:0001403,host vaccination information field category,PCDS:host vaccination information|PCDS:host_vaccination_information_slot_group|host vaccination information slot category
+GENEPIO:0001404,host vaccination status,PCDS:host_vaccination_status|host vaccination status|host vaccination status slot
+GENEPIO:0001406,number of vaccine doses received,PCDS:number_of_vaccine_doses_received|number of vaccine doses received|number of vaccine doses received slot
+GENEPIO:0001409,host exposure information field category,PCDS:host exposure information|PCDS:host_exposure_information_slot_group|host exposure information slot category
+GENEPIO:0001410,location of exposure geo loc name country,PCDS:location_of_exposure_geo_loc_name_country|location of exposure geo_loc name (country)|location of exposure geo_loc name (country) slot|location of exposure geographical location country name field|location of exposure geographical location country name slot
+GENEPIO:0001411,destination of most recent travel city,PCDS:destination_of_most_recent_travel_city|destination city of most recent travel field|destination city of most recent travel slot|destination of most recent travel (city)|destination of most recent travel (city) slot
+GENEPIO:0001412,destination of most recent travel state province territory,PCDS:destination_of_most_recent_travel_state_province_territory|destination of most recent travel (state/province/territory)|destination of most recent travel (state/province/territory) slot|destination state or province or territory of most recent travel field|destination state or province or territory of most recent travel slot
+GENEPIO:0001413,destination of most recent travel country,PCDS:destination_of_most_recent_travel_country|destination of most recent travel (country)|destination of most recent travel (country) slot
+GENEPIO:0001414,most recent travel departure date,PCDS:most_recent_travel_departure_date|most recent travel departure date|most recent travel departure date slot
+GENEPIO:0001415,most recent travel return date,PCDS:most_recent_travel_return_date|most recent travel return date|most recent travel return date slot
+GENEPIO:0001416,travel history,PCDS:travel_history|travel history|travel history slot
+GENEPIO:0001417,exposure event,PCDS:exposure_event|exposure event|exposure event slot
+GENEPIO:0001418,exposure contact level,PCDS:exposure_contact_level|exposure contact level|exposure contact level slot
+GENEPIO:0001419,host role,PCDS:host_role|host role|host role slot
+GENEPIO:0001420,diagnostic test,
+GENEPIO:0001421,obsolete: sample datum,
+GENEPIO:0001422,obsolete: laboratory sequencing datum,
+GENEPIO:0001423,genomic sequencing annotation datum,
+GENEPIO:0001424,lab test record,
+GENEPIO:0001425,sequencing assembly datum,
+GENEPIO:0001426,container record,
+GENEPIO:0001427,health care personal identifier,
+GENEPIO:0001428,exposure setting,PCDS:exposure_setting|exposure setting|exposure setting slot
+GENEPIO:0001429,strain identifier,
+GENEPIO:0001430,line list object,
+GENEPIO:0001431,exposure details,PCDS:exposure_details|exposure details|exposure details slot
+GENEPIO:0001432,awaiting ontology review,
+GENEPIO:0001433,,
+GENEPIO:0001434,host reinfection information field category,PCDS:host reinfection information|PCDS:host_reinfection_information_slot_group|host reinfection information slot category
+GENEPIO:0001435,prior sarscov2 infection status,PCDS:prior_sarscov2_infection|prior SARS-CoV-2 infection|prior SARS-CoV-2 infection slot
+GENEPIO:0001436,prior sarscov2 infection isolate ID,PCDS:prior_sarscov2_infection_isolate|prior SARS-CoV-2 infection isolate|prior SARS-CoV-2 infection isolate ID slot|prior SARS-CoV-2 infection isolate identifier field|prior SARS-CoV-2 infection isolate identifier slot
+GENEPIO:0001437,prior sarscov2 infection date,PCDS:prior_sarscov2_infection_date|prior SARS-CoV-2 infection date|prior SARS-CoV-2 infection date slot
+GENEPIO:0001438,prior sarscov2 antiviral treatment,PCDS:prior_sarscov2_antiviral_treatment|prior SARS-CoV-2 antiviral treatment|prior SARS-CoV-2 antiviral treatment slot
+GENEPIO:0001439,prior sarscov2 antiviral treatment agent,PCDS:prior_sarscov2_antiviral_treatment_agent|prior SARS-CoV-2 antiviral treatment agent|prior SARS-CoV-2 antiviral treatment agent slot
+GENEPIO:0001440,prior sarscov2 antiviral treatment date,PCDS:prior_sarscov2_antiviral_treatment_date|prior SARS-CoV-2 antiviral treatment date|prior SARS-CoV-2 antiviral treatment date slot
+GENEPIO:0001441,sequence information field category,PCDS:sequence information data collection_slot_group|PCDS:sequencing|PCDS:sequencing information|sequence information|sequencing|sequencing information slot category|sequencing slot category|sequencing_information
+GENEPIO:0001442,exposure group healthy count,
+GENEPIO:0001443,exposure group ill count,
+GENEPIO:0001444,human general activity,
+GENEPIO:0001445,purpose of sequencing,PCDS:purpose_of_sequencing|purpose of sequencing|purpose of sequencing slot|purpose_of_sequencing
+GENEPIO:0001446,purpose of sequencing details,PCDS:purpose_of_sequencing_details|purpose of sequencing details|purpose of sequencing details slot
+GENEPIO:0001447,sequencing date,PCDS:sequencing_date|sequencing date|sequencing date slot
+GENEPIO:0001448,library id,PCDS:library_id|library ID|library ID slot|library identifier|library identifier field|library identifier slot|library_ID
+GENEPIO:0001449,amplicon size,PCDS:amplicon_size|PCDS:amplicon_size_minimum_value|amplicon size|amplicon size slot
+GENEPIO:0001450,library preparation kit,PCDS:library_preparation_kit|library preparation kit|library preparation kit slot|library_preparation_kit
+GENEPIO:0001451,flow cell barcode,PCDS:flow_cell_barcode|flow cell barcode|flow cell barcode slot
+GENEPIO:0001452,sequencing instrument,PCDS:sequencing_instrument|sequencing instrument|sequencing instrument slot|sequencing_instrument
+GENEPIO:0001453,sequencing protocol name,PCDS:sequencing_protocol_name|sequencing protocol name|sequencing protocol name slot
+GENEPIO:0001454,sequencing protocol,PCDS:sequencing_protocol|sequencing protocol|sequencing protocol slot|sequencing_protocol
+GENEPIO:0001455,sequencing kit number,PCDS:sequencing_kit_number|sequencing kit number|sequencing kit number slot
+GENEPIO:0001456,amplicon pcr primer scheme,PCDS:amplicon_pcr_primer_scheme|amplicon pcr primer scheme|amplicon pcr primer scheme slot|amplicon polymerase chain reaction primer scheme field|amplicon polymerase chain reaction primer scheme slot
+GENEPIO:0001457,bioinformatics and QC metrics field category,PCDS:bioinformatics and QC metrics|PCDS:raw_sequence_data_processing_method_slot_group|bioinformatics and QC metrics slot category|bioinformatics and Quality Control metrics field category|bioinformatics and Quality Control metrics slot category
+GENEPIO:0001458,raw sequence data processing method,PCDS:dehosting_method|raw sequence data processing method|raw sequence data processing method slot
+GENEPIO:0001459,dehosting method,PCDS:consensus_sequence_name|dehosting method|dehosting method slot
+GENEPIO:0001460,consensus sequence name,PCDS:consensus_sequence_filename|consensus sequence name|consensus sequence name slot
+GENEPIO:0001461,consensus sequence filename,PCDS:assembly_filename|assembly filename|consensus sequence filename|consensus sequence filename slot
+GENEPIO:0001462,consensus sequence filepath,PCDS:consensus_sequence_filepath|consensus sequence filepath|consensus sequence filepath slot
+GENEPIO:0001463,consensus sequence software name,PCDS:consensus_sequence_software_name|consensus sequence software name|consensus sequence software name slot
+GENEPIO:0001464,exposure history record,
+GENEPIO:0001465,isolate history record,
+GENEPIO:0001466,outbreak history record,
+GENEPIO:0001467,pregnancy history record,
+GENEPIO:0001468,diagnosis record,
+GENEPIO:0001469,consensus sequence software version,PCDS:consensus_sequence_software_version|consensus sequence software version|consensus sequence software version slot
+GENEPIO:0001470,exposure event record,
+GENEPIO:0001471,hospitalization event record,
+GENEPIO:0001472,breadth of coverage value,PCDS:breadth_of_coverage_value|breadth of coverage value|breadth of coverage value slot
+GENEPIO:0001473,exposure history item,
+GENEPIO:0001474,depth of coverage value,PCDS:depth_of_coverage_value|depth of coverage value|depth of coverage value slot
+GENEPIO:0001475,depth of coverage threshold,PCDS:depth_of_coverage_threshold|depth of coverage threshold|depth of coverage threshold slot
+GENEPIO:0001476,r1 fastq filename,PCDS:r1_fastq_filename|r1 fastq filename|r1 fastq filename slot|r1_fastq_filename
+GENEPIO:0001477,r2 fastq filename,PCDS:r2_fastq_filename|r2 fastq filename|r2 fastq filename slot|r2_fastq_filename
+GENEPIO:0001478,r1 fastq filepath,PCDS:r1_fastq_filepath|r1 fastq filepath|r1 fastq filepath slot
+GENEPIO:0001479,r2 fastq filepath,PCDS:r2_fastq_filepath|r2 fastq filepath|r2 fastq filepath slot
+GENEPIO:0001480,fast5 filename,PCDS:fast5_filename|fast5 filename|fast5 filename slot|fast5_filename
+GENEPIO:0001481,fast5 filepath,PCDS:fast5_filepath|fast5 filepath|fast5 filepath slot
+GENEPIO:0001482,number of base pairs sequenced,PCDS:number_of_base_pairs_sequenced|number of base pairs sequenced|number of base pairs sequenced slot
+GENEPIO:0001483,consensus genome length,PCDS:consensus_genome_length|consensus genome length|consensus genome length slot
+GENEPIO:0001484,ns per 100 kbp,Ns per 100 kbp|Ns per 100 kbp slot|Ns per 100 kilobase pairs|Ns per 100 kilobase pairs field|Ns per 100 kilobase pairs slot|PCDS:ns_per_100_kbp|unidentified nucleotides per 100 kbp field|unidentified nucleotides per 100 kbp slot
+GENEPIO:0001485,reference genome accession,PCDS:reference_genome_accession|reference genome accession|reference genome accession slot
+GENEPIO:0001486,hospital admission date,
+GENEPIO:0001487,exposure event end,
+GENEPIO:0001488,exposure event start,
+GENEPIO:0001489,bioinformatics protocol,PCDS:bioinformatics_protocol|bioinformatics protocol|bioinformatics protocol slot
+GENEPIO:0001490,hospitalization history item,
+GENEPIO:0001491,isolate history item,
+GENEPIO:0001492,outbreak history item,
+GENEPIO:0001493,hospital discharge date,
+GENEPIO:0001494,notification date,
+GENEPIO:0001495,outbreak date,
+GENEPIO:0001496,outbreak over,
+GENEPIO:0001497,test history item,
+GENEPIO:0001498,lineage and variant information field category,PCDS:lineage and variant information|lineage and variant information slot category
+GENEPIO:0001499,lab test result date,
+GENEPIO:0001500,lineage/clade name,PCDS:lineage_clade_name|lineage or clade name field|lineage or clade name slot|lineage/clade name|lineage/clade name slot
+GENEPIO:0001501,lineage clade analysis software name,PCDS:lineage_clade_analysis_software_name|lineage or clade analysis software name field|lineage or clade analysis software name slot|lineage/clade analysis software name|lineage/clade analysis software name slot
+GENEPIO:0001502,lineage clade analysis software version,PCDS:lineage_clade_analysis_software_version|lineage or clade analysis software version field|lineage or clade analysis software version slot|lineage/clade analysis software version|lineage/clade analysis software version slot
+GENEPIO:0001503,variant designation,PCDS:variant_designation|variant designation|variant designation slot
+GENEPIO:0001504,variant evidence,PCDS:variant_evidence|variant evidence|variant evidence slot
+GENEPIO:0001505,variant evidence details,PCDS:variant_evidence_details|variant evidence details|variant evidence details slot
+GENEPIO:0001506,pathogen diagnostic testing field category,PCDS:pathogen_diagnostic_testing_slot_group|data slot category
+GENEPIO:0001507,diagnostic gene name,GENEPIO:0001510|GENEPIO:0001513|GENEPIO:0100576|GENEPIO:0100578|PCDS:gene_name_*|gene name 1|gene name 2|gene name 3|gene name 4|gene name 5
+GENEPIO:0001508,diagnostic pcr protocol,GENEPIO:0001511|GENEPIO:0001514|PCDS:diagnostic_pcr_protocol_*|diagnostic pcr protocol 1|diagnostic pcr protocol 2|diagnostic pcr protocol 3
+GENEPIO:0001509,diagnostic pcr ct value,GENEPIO:0001512|GENEPIO:0001515|GENEPIO:0100577|GENEPIO:0100579|PCDS:diagnostic_pcr_ct_value_*|diagnostic pcr ct value 1|diagnostic pcr ct value 2|diagnostic pcr ct value 3|diagnostic pcr ct value 4|diagnostic pcr ct value 5
+GENEPIO:0001510,diagnostic gene name 2,gene name 2
+GENEPIO:0001511,diagnostic pcr protocol 2,GENEPIO:0001508|diagnostic pcr protocol
+GENEPIO:0001512,diagnostic pcr Ct value 2,GENEPIO:0001509|diagnostic pcr ct value
+GENEPIO:0001513,diagnostic gene name 3,gene name 3
+GENEPIO:0001516,contributor acknowledgement field category,PCDS:contributor_acknowledgement_slot_group|PCDS:lineage and variant information|lineage and variant information slot category
+GENEPIO:0001517,data authors,PCDS:authors|authors|data authors slot|data contributors fields|data contributors slot
+GENEPIO:0001518,dataharmonizer provenance,DataHarmonizer provenance|DataHarmonizer provenance slot|PCDS:dataharmonizer_provenance
+GENEPIO:0001522,data enumeration,
+GENEPIO:0001523,signs and symptoms,signs & symptoms
+GENEPIO:0001532,food specimen datum,
+GENEPIO:0001533,food specimen specification,
+GENEPIO:0001534,disease cluster notification agency,
+GENEPIO:0001535,obsolete: NCBI BioProject ID,
+GENEPIO:0001536,exposure group unknown health status count,
+GENEPIO:0001537,person role,
+GENEPIO:0001538,exposed person role,
+GENEPIO:0001541,obsolete: parent-guardian role,
+GENEPIO:0001543,illness causality,
+GENEPIO:0001548,pre-existing condition,
+GENEPIO:0001550,resolving health trend,improving|recovering
+GENEPIO:0001551,close interpersonal relationship exposure,
+GENEPIO:0001552,obsolete: household exposure,
+GENEPIO:0001553,exposure to individual with diarrhea,
+GENEPIO:0001554,other human exposure,
+GENEPIO:0001555,sexual contact exposure,
+GENEPIO:0001556,exposure via diaper changing (human fecal),
+GENEPIO:0001558,container identifier,
+GENEPIO:0001559,outbreak identifier,
+GENEPIO:0001560,reference genome size,
+GENEPIO:0001561,assembly genome size,
+GENEPIO:0001562,reference genome identifier,
+GENEPIO:0001563,genome size delta ratio,
+GENEPIO:0001564,genome size delta ratio QC threshold,
+GENEPIO:0001565,contig N50 length QC threshold,
+GENEPIO:0001566,contig N99 length QC threshold,
+GENEPIO:0001567,subject organism (host) taxonomic species,
+GENEPIO:0001568,assembly quality control datum,
+GENEPIO:0001569,clinical or host-associated pathogen,
+GENEPIO:0001570,contig N99,
+GENEPIO:0001571,contig count QC threshold,
+GENEPIO:0001572,project relevance,
+GENEPIO:0001573,agricultural project relevance,
+GENEPIO:0001574,medical knowledge relevance,
+GENEPIO:0001575,industrial processing relevance,
+GENEPIO:0001576,evolution modelling relevance,
+GENEPIO:0001577,environmental project relevance,
+GENEPIO:0001578,model organism relevance,
+GENEPIO:0001579,obsolete: NCBI BioProject model,
+GENEPIO:0001580,obsolete: NCBI SRA model,
+GENEPIO:0001581,draft NCBI BioSample model - mixed clinical and environmental/food/other,
+GENEPIO:0001582,monoisolate sample scope,
+GENEPIO:0001583,multiisolate sample scope,
+GENEPIO:0001584,multispecies sample scope,
+GENEPIO:0001585,environment sample scope,
+GENEPIO:0001586,synthetic sample scope,
+GENEPIO:0001587,single cell,
+GENEPIO:0001588,other project objective,
+GENEPIO:0001589,United Nations,
+GENEPIO:0001590,"environmental, food or other pathogen",
+GENEPIO:0001591,whole genomic data capture,
+GENEPIO:0001592,raw sequence read objective,
+GENEPIO:0001593,sequence project objective,
+GENEPIO:0001594,analysis objective,
+GENEPIO:0001595,assembly objective,
+GENEPIO:0001596,sequence annotation objective,
+GENEPIO:0001597,sequence variation project objective,
+GENEPIO:0001598,epigenetic markers objective,
+GENEPIO:0001599,transcript or protein expression objective,
+GENEPIO:0001600,mapping objective,
+GENEPIO:0001601,phenotypic observation data from specimen,
+GENEPIO:0001602,sequencing project method,
+GENEPIO:0001603,array project method,
+GENEPIO:0001604,mass spectrometry project method,
+GENEPIO:0001606,contact specification - person,
+GENEPIO:0001607,investigation datum,
+GENEPIO:0001608,commensal role,
+GENEPIO:0001609,draft isolate details model,
+GENEPIO:0001610,subject age,
+GENEPIO:0001611,draft NCBI component model,
+GENEPIO:0001612,draft IRIDA BioSample model,
+GENEPIO:0001613,draft GenEpiO epidemiology case record,
+GENEPIO:0001614,subject description,
+GENEPIO:0001615,host profile or identifers,
+GENEPIO:0001616,subject identifier,
+GENEPIO:0001617,subject disease,
+GENEPIO:0001618,missing,
+GENEPIO:0001619,not applicable,
+GENEPIO:0001620,not collected,
+GENEPIO:0001621,draft isolate identifier model,
+GENEPIO:0001622,draft GenEpiO isolate testing model,
+GENEPIO:0001623,draft NCBI isolate source location model,
+GENEPIO:0001624,draft GenEpiO isolate environment model,
+GENEPIO:0001625,subject disease stage,
+GENEPIO:0001626,environmental datum,
+GENEPIO:0001627,temperature of sample,
+GENEPIO:0001628,de-novo assembly,
+GENEPIO:0001629,obsolete: sample body source,
+GENEPIO:0001630,contig length QC threshold,
+GENEPIO:0001631,contig NG50,
+GENEPIO:0001632,contig length,
+GENEPIO:0001633,contig L50,
+GENEPIO:0001634,contig LG99,
+GENEPIO:0001635,obsolete: specimen from subject datum,
+GENEPIO:0001636,animal body product,
+GENEPIO:0001637,obsolete: specimen source material category,
+GENEPIO:0001638,draft GenEpiO general information record,
+GENEPIO:0001639,antigenic formula,
+GENEPIO:0001640,specimen organism taxonomy (species),
+GENEPIO:0001641,identifier model,
+GENEPIO:0001642,curator organization name,
+GENEPIO:0001643,Agriculture and Agri-Food Canada,
+GENEPIO:0001644,isolate identifier,
+GENEPIO:0001645,identifier status,
+GENEPIO:0001646,data protection role,
+GENEPIO:0001647,original submission,
+GENEPIO:0001648,NCBI Contributing organization / project,
+GENEPIO:0001649,food - liquid,
+GENEPIO:0001650,draft NCBI BioSample identifier model,
+GENEPIO:0001651,INSDC institution code,
+GENEPIO:0001652,draft IRIDA epidemiological case model,
+GENEPIO:0001653,previous (archaic) identifier,
+GENEPIO:0001654,geographic location datum,
+GENEPIO:0001655,obsolete: categorical tree specification,
+GENEPIO:0001656,latitude and longitude coordinate (ISO 6709),
+GENEPIO:0001657,draft NCBI BioSample geo_loc_name model,
+GENEPIO:0001658,draft GenEpiO isolate sequencing model,
+GENEPIO:0001659,case identifier,
+GENEPIO:0001660,neuter,
+GENEPIO:0001661,pooled male and female,
+GENEPIO:0001662,in process,undetermined
+GENEPIO:0001663,swimming / wading,
+GENEPIO:0001664,infection detail datum,
+GENEPIO:0001665,antibiotics required,
+GENEPIO:0001666,INSDC standard,International Nucleotide Database Collaboration standard
+GENEPIO:0001667,outcome of pregnancy associated with illness,
+GENEPIO:0001668,not provided,
+GENEPIO:0001669,stable health status,
+GENEPIO:0001670,induced abortion,
+GENEPIO:0001671,live birth,
+GENEPIO:0001672,obsolete: gestation duration (weeks),
+GENEPIO:0001673,date of pregnancy outcome,
+GENEPIO:0001674,contact specification - physician,
+GENEPIO:0001675,obsolete: matrix - solid,
+GENEPIO:0001676,contact specification - parent/guardian,
+GENEPIO:0001677,contact specification - patient,
+GENEPIO:0001678,draft GenEpiO case epidemiology record,
+GENEPIO:0001679,contact specification - address,
+GENEPIO:0001680,obsolete: draft IRIDA model,
+GENEPIO:0001681,laboratory sequencing datum,
+GENEPIO:0001682,host illness associated with,
+GENEPIO:0001683,draft subject demographic specification,
+GENEPIO:0001684,E. coli K antigen specification,
+GENEPIO:0001685,other antigen specification,
+GENEPIO:0001686,E. coli serotype specification,
+GENEPIO:0001687,Salmonella serovar specification,
+GENEPIO:0001688,test specification,
+GENEPIO:0001689,listeria antigen,
+GENEPIO:0001690,obsolete: matrix - fluid,
+GENEPIO:0001691,listeria serotype 1/2a,
+GENEPIO:0001692,listeria serotype 1/2b,
+GENEPIO:0001693,listeria serotype 1/2c,
+GENEPIO:0001694,listeria serotype 1/2,
+GENEPIO:0001695,listeria serotype 3a,
+GENEPIO:0001696,listeria serotype 3b,
+GENEPIO:0001697,listeria serotype 4a,
+GENEPIO:0001698,listeria serotype 4b,
+GENEPIO:0001699,listeria serotype 4c,
+GENEPIO:0001700,listeria serotype 4d,
+GENEPIO:0001701,listeria serotype 4e,
+GENEPIO:0001702,non-monocytogenes listeria antigen,
+GENEPIO:0001703,listeria serotype 3c,
+GENEPIO:0001704,textual test result,
+GENEPIO:0001705,obsolete: draft GenEpiO BioProject standard,
+GENEPIO:0001706,NCBI BioSample collection code,
+GENEPIO:0001707,draft NCBI BioSample host model,
+GENEPIO:0001708,food - solid,
+GENEPIO:0001709,lab test datum,
+GENEPIO:0001710,Xbal,
+GENEPIO:0001711,Ascl,
+GENEPIO:0001712,Smal,
+GENEPIO:0001713,Blnl,
+GENEPIO:0001714,Apal,
+GENEPIO:0001715,Kpnl,
+GENEPIO:0001716,subgroup,
+GENEPIO:0001717,viral subtype,
+GENEPIO:0001718,serotype specification,
+GENEPIO:0001719,phage type specification,
+GENEPIO:0001720,obsolete: swab - food contact surface,
+GENEPIO:0001721,NCBI culture collection,
+GENEPIO:0001722,NCBI specimen voucher,
+GENEPIO:0001723,culture identifier,
+GENEPIO:0001724,subject organism common name,
+GENEPIO:0001725,temperature of air - average daily,
+GENEPIO:0001726,obsolete: swab - inanimate object surface,
+GENEPIO:0001727,obsolete: swab - meat,
+GENEPIO:0001728,obsolete: swab - rectal swab,
+GENEPIO:0001729,obsolete: swab - tissue,
+GENEPIO:0001730,unknown source,
+GENEPIO:0001731,human clinical specimen,patient sample
+GENEPIO:0001732,obsolete: environmental (swab or sampling),
+GENEPIO:0001733,avian - wild,
+GENEPIO:0001734,avian - domesticated,
+GENEPIO:0001735,human clinical specimen - invasive,
+GENEPIO:0001736,ph measurement value,PCDS:ph_measurement_value
+GENEPIO:0001737,precipitation,
+GENEPIO:0001738,assembly and annotation project objective,
+GENEPIO:0001740,line list row record,
+GENEPIO:0001741,draft GenEpiO component record,
+GENEPIO:0001742,subnational region,
+GENEPIO:0001743,public health data standard,
+GENEPIO:0001744,0D space,
+GENEPIO:0001747,reagent derived material from specimen,
+GENEPIO:0001748,transcriptome data from specimen,
+GENEPIO:0001749,proteome data derived from specimen,
+GENEPIO:0001750,purified chromosome from specimen,
+GENEPIO:0001751,Targeted Locus Loci data capture,
+GENEPIO:0001752,clone end data capture,
+GENEPIO:0001753,exome specific data capture,
+GENEPIO:0001754,random survey data capture,
+GENEPIO:0001755,contact specification,
+GENEPIO:0001756,contact specification - phone,
+GENEPIO:0001757,millimetres per day,
+GENEPIO:0001758,obsolete: millisiemens,
+GENEPIO:0001759,millisiemens per centimetre,
+GENEPIO:0001760,cubic metre per second,
+GENEPIO:0001761,micromole per kilogram,
+GENEPIO:0001762,micromole per litre,
+GENEPIO:0001764,quality control record,
+GENEPIO:0001765,1 - standard draft,
+GENEPIO:0001766,2 - high quality draft,
+GENEPIO:0001767,3 - improved high quality draft,
+GENEPIO:0001768,4 - annotation-directed improvement,
+GENEPIO:0001769,5 - non-contiguous finished,
+GENEPIO:0001770,6 - finished,
+GENEPIO:0001771,contig NG99,
+GENEPIO:0001773,contig LG50,
+GENEPIO:0001774,contig L99,
+GENEPIO:0001775,subject age at time of specimen collection,
+GENEPIO:0001776,pathogen specific data standard,
+GENEPIO:0001777,draft tuberculosis contextual data standard,
+GENEPIO:0001778,draft PulseNet Canada Salmonella submission standard,
+GENEPIO:0001779,PFGE Xbal pattern,
+GENEPIO:0001780,PFGE Blnl pattern,
+GENEPIO:0001781,National Laboratory for Enteric Pathogens Identifier,
+GENEPIO:0001782,upload modified date,
+GENEPIO:0001783,travel destination,
+GENEPIO:0001784,symptom duration,
+GENEPIO:0001785,specimen collection location - city,
+GENEPIO:0001786,obsolete: sample city,
+GENEPIO:0001787,genus of pathogen,
+GENEPIO:0001788,species of pathogen,
+GENEPIO:0001789,symptom cessation date,
+GENEPIO:0001790,specimen datum,
+GENEPIO:0001791,isolate identifier specification,
+GENEPIO:0001792,data obfuscated,
+GENEPIO:0001793,data aggregated,
+GENEPIO:0001794,limited data set,
+GENEPIO:0001795,de-identified data,
+GENEPIO:0001796,data protected,
+GENEPIO:0001797,specimen collector,
+GENEPIO:0001798,NCBI BioSample culture identifier,
+GENEPIO:0001799,user identifier,
+GENEPIO:0001800,sequence identifier,
+GENEPIO:0001801,metagenomic species identification,
+GENEPIO:0001802,document citation identifier,
+GENEPIO:0001803,organization identifier,
+GENEPIO:0001804,collection identifier,
+GENEPIO:0001805,variant calling / pathogen identification and clustering,
+GENEPIO:0001806,isolate (pathogen) identification,
+GENEPIO:0001807,obsolete: NCBI BioSample ID -,
+GENEPIO:0001808,specimen title,
+GENEPIO:0001809,draft GenEpiO isolate source context,
+GENEPIO:0001810,restricted access,
+GENEPIO:0001811,State (United States of America),
+GENEPIO:0001812,health status trend datum,
+GENEPIO:0001813,ITIS,Integrated Taxonomic Information System
+GENEPIO:0001815,MSH,
+GENEPIO:0001816,NCI_Thesaurus,
+GENEPIO:0001817,,
+GENEPIO:0001818,MESH,Medical Subject Headings
+GENEPIO:0001819,NCIT,National Cancer Institude Thesaurus
+GENEPIO:0001820,NIFSTD,
+GENEPIO:0001821,SNOMEDCT,
+GENEPIO:0001822,ASFIS,UN FAO Fisheries and Aquaculture Statistics and Information Branch database
+GENEPIO:0001823,FTT,
+GENEPIO:0001824,TGN,
+GENEPIO:0001825,Wikipedia,
+GENEPIO:0001826,SWEETRealm,
+GENEPIO:0001827,Geonames,
+GENEPIO:0001828,EcoLexicon,
+GENEPIO:0001829,draft IRIDA standard,
+GENEPIO:0001830,ISO3166-1,
+GENEPIO:0001831,ISO3166-2,
+GENEPIO:0001832,ANSI INCITS 38,
+GENEPIO:0001833,GNISID,
+GENEPIO:0001834,LTER,
+GENEPIO:0001835,NCBI BioSample Pathogen.cl standard,
+GENEPIO:0001836,NCBI BioProject standard,
+GENEPIO:0001837,AHA HIPPA standard,American Hospital Association HIPAA Standard
+GENEPIO:0001838,PubMed,NCBI PubMed
+GENEPIO:0001839,PulseNet submission standard,Pulse Net International BioSample Metadata
+GENEPIO:0001840,good health status,
+GENEPIO:0001841,fair health status,
+GENEPIO:0001842,serious health status,
+GENEPIO:0001843,health status history datum,
+GENEPIO:0001844,origin,
+GENEPIO:0001845,NHS standard,National Health Service terminology
+GENEPIO:0001846,critical but stable health status,
+GENEPIO:0001847,comfortable health status,
+GENEPIO:0001848,progressing well health status,
+GENEPIO:0001849,discharged from hospital,
+GENEPIO:0001850,datum status,
+GENEPIO:0001851,recorded,
+GENEPIO:0001852,undetermined health status - awaiting assessment,
+GENEPIO:0001853,worsening health trend,deteriorating
+GENEPIO:0001854,n-dimensional space,
+GENEPIO:0001855,1D space,
+GENEPIO:0001856,2D space,
+GENEPIO:0001857,3D space,
+GENEPIO:0001858,n-dimensional coordinate,
+GENEPIO:0001859,n-dimensional concept,
+GENEPIO:0001860,1D coordinate,
+GENEPIO:0001861,2D coordinate,
+GENEPIO:0001862,latitude specification (ISO 6709),
+GENEPIO:0001863,longitude specification (ISO 6709),
+GENEPIO:0001864,1D coordinate system,
+GENEPIO:0001865,2D coordinate system,
+GENEPIO:0001866,3D coordinate system,
+GENEPIO:0001867,radial coordinate system,
+GENEPIO:0001868,angular coordinate,
+GENEPIO:0001869,linear coordinate,
+GENEPIO:0001870,area calculation,
+GENEPIO:0001871,geographic coordinate,
+GENEPIO:0001872,removed date,
+GENEPIO:0001873,datetime range intermediate,
+GENEPIO:0001874,updated date,
+GENEPIO:0001875,datetime range member - UNUSED?,
+GENEPIO:0001876,datetime range item,
+GENEPIO:0001877,datetime range end,
+GENEPIO:0001878,datetime range start,
+GENEPIO:0001879,significant digits,
+GENEPIO:0001880,datetime linear coordinate,
+GENEPIO:0001881,datetime set item,
+GENEPIO:0001882,created date,
+GENEPIO:0001883,entity history item,
+GENEPIO:0001884,n-dimensional entity,
+GENEPIO:0001885,surface area,
+GENEPIO:0001886,designated area on Earth,
+GENEPIO:0001887,landmark,
+GENEPIO:0001888,Canada postal code,
+GENEPIO:0001889,Canada postal code FSA,
+GENEPIO:0001890,obsolete: US postal code,
+GENEPIO:0001891,alphanumeric phrase,
+GENEPIO:0001892,entity history record,
+GENEPIO:0001893,generic range history record,
+GENEPIO:0001894,lingual set,
+GENEPIO:0001895,non-lingual set,
+GENEPIO:0001896,phone type,
+GENEPIO:0001897,phone type - home,
+GENEPIO:0001897,phone type - home,
+GENEPIO:0001898,phone type - mobile,
+GENEPIO:0001899,phone type - work,
+GENEPIO:0001900,set,
+GENEPIO:0001901,ordered set,
+GENEPIO:0001902,unordered set,
+GENEPIO:0001903,set of unordered strings,
+GENEPIO:0001904,phone number (North America),
+GENEPIO:0001905,points in 2 dimensions,
+GENEPIO:0001906,quadratic surface,
+GENEPIO:0001907,spheroid,
+GENEPIO:0001908,plane,
+GENEPIO:0001909,quantity unit,
+GENEPIO:0001910,decimal,
+GENEPIO:0001911,integer,
+GENEPIO:0001912,ones,
+GENEPIO:0001913,tens,
+GENEPIO:0001914,hundreds,
+GENEPIO:0001915,thousands,
+GENEPIO:0001916,tenths,
+GENEPIO:0001917,hundredths,
+GENEPIO:0001918,millions,
+GENEPIO:0001919,number,
+GENEPIO:0001921,sequencing instrument model,
+GENEPIO:0001922,circle,
+GENEPIO:0001923,Illumina platform,
+GENEPIO:0001924,Complete Genomics platform,
+GENEPIO:0001925,earth area boundary census,
+GENEPIO:0001926,Roche LS454 platform,
+GENEPIO:0001927,PacBio platform,
+GENEPIO:0001928,SOLiD 4hq System,
+GENEPIO:0001929,SOLiD 5500,
+GENEPIO:0001930,SOLiD 5500xl,
+GENEPIO:0001931,SOLiD PI System,
+GENEPIO:0001932,SOLiD System 2.0,
+GENEPIO:0001933,SOLiD System 3.0,
+GENEPIO:0001934,2D entity,
+GENEPIO:0001935,obsolete: Ion Torrent PGM,
+GENEPIO:0001936,454 Genome Sequencer FLX Titanium,
+GENEPIO:0001937,454 Genome Sequencer,
+GENEPIO:0001938,454 Genome Sequencer Junior,
+GENEPIO:0001939,obsolete: Illumina HiSeq Sequencer,
+GENEPIO:0001940,library selection,
+GENEPIO:0001941,5-methylcytidine antibody method,
+GENEPIO:0001942,CAGE method,
+GENEPIO:0001943,CF-H method,
+GENEPIO:0001944,CF-M method,
+GENEPIO:0001945,CF-S method,
+GENEPIO:0001946,CF-T method,
+GENEPIO:0001947,ChIP method,
+GENEPIO:0001948,DNAse method,
+GENEPIO:0001949,HMPR method,
+GENEPIO:0001950,Hybrid Selection method,
+GENEPIO:0001951,MBD2 protein methyl-CpG binding domain method,
+GENEPIO:0001952,MF method,
+GENEPIO:0001953,MNase method,
+GENEPIO:0001954,MSLL method,
+GENEPIO:0001955,PCR method,
+GENEPIO:0001956,RACE method,
+GENEPIO:0001957,RANDOM PCR method,
+GENEPIO:0001958,RANDOM method,
+GENEPIO:0001959,RT-PCR method,
+GENEPIO:0001960,Reduced Representation method,
+GENEPIO:0001961,Restriction Digest method,
+GENEPIO:0001962,cDNA method,
+GENEPIO:0001963,size fractionation method,
+GENEPIO:0001964,other library method,
+GENEPIO:0001965,library source,
+GENEPIO:0001966,genomic source,
+GENEPIO:0001967,metagenomic source,
+GENEPIO:0001968,metatranscriptomic source,
+GENEPIO:0001969,other library source,
+GENEPIO:0001970,synthetic source,
+GENEPIO:0001971,transcriptomic source,
+GENEPIO:0001972,viral RNA source,
+GENEPIO:0001973,library strategy,
+GENEPIO:0001974,amplicon strategy,
+GENEPIO:0001975,Bisulfite-Seq strategy,
+GENEPIO:0001976,clone end strategy,
+GENEPIO:0001977,clone strategy,
+GENEPIO:0001978,CTS strategy,
+GENEPIO:0001979,ChIP-Seq strategy,
+GENEPIO:0001980,DNase-Hypersensitivity strategy,
+GENEPIO:0001981,EST strategy,
+GENEPIO:0001982,finishing strategy,
+GENEPIO:0001983,FL-cDNA strategy,
+GENEPIO:0001984,MBD-Seq strategy,
+GENEPIO:0001985,MNase-Seq strategy,
+GENEPIO:0001986,MRE-Seq strategy,
+GENEPIO:0001987,MeDIP-Seq strategy,
+GENEPIO:0001988,other library strategy,
+GENEPIO:0001989,pool clone strategy,
+GENEPIO:0001990,RNA-Seq strategy,
+GENEPIO:0001991,WCS strategy,
+GENEPIO:0001992,WGS strategy,
+GENEPIO:0001993,WXS strategy,
+GENEPIO:0001994,library construction protocol,
+GENEPIO:0001995,library name,
+GENEPIO:0001996,2D boundary,
+GENEPIO:0001997,colony forming unit per 100 milliliter,
+GENEPIO:0001998,decimal quantity unit,
+GENEPIO:0001999,draft tuberculosis - dataset features and provenance,
+GENEPIO:0002000,draft tuberculosis - case specimen characteristics,
+GENEPIO:0002001,draft tuberculosis - case subject characteristics,
+GENEPIO:0002002,draft tuberculosis - case risk factors,
+GENEPIO:0002003,draft tuberculosis - case clinical presentation,
+GENEPIO:0002004,draft tuberculosis - case laboratory testing,
+GENEPIO:0002005,draft tuberculosis - case medication,
+GENEPIO:0002006,draft isolate whole genome sequencing model,
+GENEPIO:0002007,draft tuberculosis - case model,
+GENEPIO:0002008,Mycobacterium tuberculosis lineage,
+GENEPIO:0002009,"TB lineage 2 - East-Asian, includes Bejing",
+GENEPIO:0002010,"TB lineage 3 - East-African Indian, includes CAS/Delhi",
+GENEPIO:0002011,"TB lineage 4 - Euro-American, includes Haarlem, LAM3, X, T, F11, H37Rv",
+GENEPIO:0002012,TB lineage 1 - Indo-Oceanic,
+GENEPIO:0002013,TB lineage 5 - West African 1,
+GENEPIO:0002014,TB lineage 6 - West African 2,
+GENEPIO:0002015,isolate preparation facility,
+GENEPIO:0002016,plant product,
+GENEPIO:0002017,geospatial name,
+GENEPIO:0002018,personal health datum,
+GENEPIO:0002019,host hospital service status,
+GENEPIO:0002020,admitted to hospital,
+GENEPIO:0002021,treated and released (not admitted to hospital),
+GENEPIO:0002022,treated and transferred,
+GENEPIO:0002023,satisfactory health status,
+GENEPIO:0002024,subject health status (UK NHS),
+GENEPIO:0002025,subject health status (AHA),
+GENEPIO:0002026,stable health trend,
+GENEPIO:0002027,obsolete: ordinal variable,
+GENEPIO:0002028,mapping (reference based),
+GENEPIO:0002029,data protection item,
+GENEPIO:0002030,subject provided consent,
+GENEPIO:0002031,ordinal value specification,
+GENEPIO:0002032,consent datum,
+GENEPIO:0002033,agency provided consent,
+GENEPIO:0002034,draft ISO sequence repository field,
+GENEPIO:0002035,centre point,
+GENEPIO:0002036,phenotypic antimicrobial drug susceptibility test datum,
+GENEPIO:0002037,obsolete: antimicrobial resistance phenotype,
+GENEPIO:0002038,obsolete: antibiotic intermediate resistance (I),
+GENEPIO:0002039,obsolete: antibiotic nonsensitive (high resistance),
+GENEPIO:0002040,antibiotic resistance not defined,
+GENEPIO:0002041,obsolete: antibiotic resistant (R),
+GENEPIO:0002042,obsolete: antibiotic sensitive (S),
+GENEPIO:0002043,obsolete: sensitive - dose dependent,
+GENEPIO:0002044,MIC dilution measurement datum,
+GENEPIO:0002045,obsolete: antimicrobial resistance testing method,
+GENEPIO:0002046,obsolete: agar dilution evidence,
+GENEPIO:0002047,antimicrobial resistance testing method device or reagent,
+GENEPIO:0002048,antimicrobial resistant plasmid type,
+GENEPIO:0002049,obsolete: antimicrobial resistance testing platform,
+GENEPIO:0002050,obsolete: Microscan,
+GENEPIO:0002051,obsolete: Phoenix,
+GENEPIO:0002052,obsolete: Sensititre,
+GENEPIO:0002053,obsolete: Vitek,
+GENEPIO:0002054,obsolete: Trek,
+GENEPIO:0002055,obsolete: manual - noncommercial,
+GENEPIO:0002056,obsolete: antimicrobial resistance testing platform vendor,
+GENEPIO:0002057,obsolete: Siemens,
+GENEPIO:0002058,obsolete: Biomérieux,
+GENEPIO:0002059,obsolete: Becton Dickinson,
+GENEPIO:0002060,Etest (device),E-Test|Epsilometer test
+GENEPIO:0002061,GM-NEG,
+GENEPIO:0002062,obsolete: antimicrobial resistance testing reference standard,
+GENEPIO:0002063,obsolete: British Society for Antimicrobial Chemotherapy (BSAC),
+GENEPIO:0002064,obsolete: Clinical and Laboratory Standards Institute (CLSI),NCCLS
+GENEPIO:0002065,obsolete: Deutsches Institut für Normung,
+GENEPIO:0002066,obsolete: European Committe on Antimicrobial Susceptibility Testing (EUCAST),
+GENEPIO:0002067,obsolete: National Committee on Clinical Laboratory Standards (NCCLS),
+GENEPIO:0002068,obsolete: Société Française de Microbiologie (SFM),
+GENEPIO:0002069,obsolete: SIR,
+GENEPIO:0002070,obsolete: WRG,
+GENEPIO:0002071,first line tuberculosis drug,
+GENEPIO:0002072,last resort antibiotic,
+GENEPIO:0002073,National Institute of Allergy and Infectious Disease standard,
+GENEPIO:0002074,RefSeq accession identifier,
+GENEPIO:0002075,Genomic Standards Consortium (GSC) standard,
+GENEPIO:0002076,specimen collection site - geographic feature,
+GENEPIO:0002077,subject organism,
+GENEPIO:0002078,number of passages,
+GENEPIO:0002079,passage protocol,
+GENEPIO:0002080,obsolete: drug minimum inhibitory concentration unit,
+GENEPIO:0002081,draft sequence repository data - specimen collection,
+GENEPIO:0002082,contact specification - specimen related organization,
+GENEPIO:0002083,draft sequence repository contextual data standard,
+GENEPIO:0002084,draft sequence repository data - isolate,
+GENEPIO:0002085,draft sequence repository data - sequencing,
+GENEPIO:0002086,draft sequence repository data - geographic location,
+GENEPIO:0002087,draft sequence repository data - isolate passage history,
+GENEPIO:0002088,draft sequence repository data - antibiogram,
+GENEPIO:0002089,draft sequence repository data - virulence,
+GENEPIO:0002090,draft sequence repository data - sequencing quality control,
+GENEPIO:0002091,draft sequence repository data - submission to NCBI/DDBJ,
+GENEPIO:0002092,draft sequence repository data - submission to EBI,
+GENEPIO:0002093,sequencing dna extraction method datum,
+GENEPIO:0002094,obsolete: specimen collection device,
+GENEPIO:0002095,read paired-end merging software,
+GENEPIO:0002096,read adapter trimming software,
+GENEPIO:0002097,specimen collection location - state/province/territory/region,
+GENEPIO:0002098,obsolete: wild type (WT),
+GENEPIO:0002099,obsolete: non-wild type (NWT),
+GENEPIO:0002100,test drug maximum concentration,
+GENEPIO:0002101,test drug minimum concentration,
+GENEPIO:0002102,obsolete: antimicrobial resistance tissue specificity,
+GENEPIO:0002103,subject health status (NCIT),
+GENEPIO:0002104,contact specification - professional role,
+GENEPIO:0002105,specimen processing organization type,
+GENEPIO:0002106,draft sequence repository data - food specimen,
+GENEPIO:0002107,isolation medium,PCDS:isolation_medium
+GENEPIO:0002108,draft travel log specification,
+GENEPIO:0002109,draft EBI antimicrobial susceptibility test V. 2017-08-30,
+GENEPIO:0002110,MIC diffusion measurement datum,
+GENEPIO:0002111,antimicrobial resistance testing reference standard version,
+GENEPIO:0002112,draft sequence repository data - antibiogram MIC measurement,
+GENEPIO:0002113,time value specification,
+GENEPIO:0002114,feces collection,stool collection
+GENEPIO:0002115,sputum collection,
+GENEPIO:0002116,rinsing for specimen collection,
+GENEPIO:0002117,swabbing for specimen collection,
+GENEPIO:0002118,exudate collection,
+GENEPIO:0002119,vacuuming for specimen collection,
+GENEPIO:0002120,tube containing media or preservative,
+GENEPIO:0002121,tube containing antimicrobial,
+GENEPIO:0002122,Whirlpak sampling bag,
+GENEPIO:0002123,spoon,
+GENEPIO:0002124,fork,
+GENEPIO:0002125,hand scoop,
+GENEPIO:0002126,trier,
+GENEPIO:0002127,vaccum device,
+GENEPIO:0002128,investigation identifier specification,
+GENEPIO:0002129,draft Enterobase contextual data standard,
+GENEPIO:0002130,virulence factor name,
+GENEPIO:0002131,virulence testing protocol name,
+GENEPIO:0002132,detection limit,
+GENEPIO:0002133,disease cluster,
+GENEPIO:0002134,infectious disease cluster,
+GENEPIO:0002135,EBI ENA Webin environmental feature,
+GENEPIO:0002136,EBI European Nucleotide Archive Webin,
+GENEPIO:0002137,breadth of coverage,
+GENEPIO:0002138,mean contig length,
+GENEPIO:0002139,raw sequence data processing datum,
+GENEPIO:0002140,specimen strain or isolate identifier,
+GENEPIO:0002141,latitude and longitude coordinate (NCBI BioSample format),
+GENEPIO:0002142,decimal value specification,
+GENEPIO:0002143,floating point value specification,
+GENEPIO:0002144,unsigned integer value specification,
+GENEPIO:0002145,date value specification,
+GENEPIO:0002146,assembly genome size specification,
+GENEPIO:0002147,sequencing facility name specification,
+GENEPIO:0002148,date value specification (ISO 8601),
+GENEPIO:0002149,strain identifier specification,
+GENEPIO:0002150,MIC diffusion measurement specification,
+GENEPIO:0002151,unsigned short integer value specification,
+GENEPIO:0002152,genomic sequence length specification,
+GENEPIO:0002153,MIC dilution measurement specification,
+GENEPIO:0002154,specimen collection date (ISO 8601),
+GENEPIO:0002155,date of diagnosis (ISO 8601),
+GENEPIO:0002156,subject age specification,
+GENEPIO:0002157,subject age at time of specimen collection specification,
+GENEPIO:0002158,boolean value specification,
+GENEPIO:0002159,specimen identifier specification,
+GENEPIO:0002160,email address specification,
+GENEPIO:0002161,"region, province, state or territory specification",
+GENEPIO:0002162,specimen collection site specification,
+GENEPIO:0002163,subject organism common name specification,
+GENEPIO:0002164,subject identifier specification,
+GENEPIO:0002165,subject disease specification,
+GENEPIO:0002166,unsigned long integer value specification,
+GENEPIO:0002167,specimen collection site,
+GENEPIO:0002168,drug MIC unit specification,
+GENEPIO:0002169,test drug maximum concentration specification,
+GENEPIO:0002170,test drug minimum concentration specification,
+GENEPIO:0002171,listeria antigen specification,
+GENEPIO:0002172,URL specification,
+GENEPIO:0002173,travel destination specification,
+GENEPIO:0002174,specimen source substance specification,
+GENEPIO:0002175,specimen from organism specification,
+GENEPIO:0002176,duration specification,
+GENEPIO:0002177,_test_individual,
+GENEPIO:0002178,obsolete: field specification,
+GENEPIO:0002179,PulseNet:LabID,
+GENEPIO:0002180,SourceCountry,
+GENEPIO:0002181,obsolete: antimicrobial resistance phenotype - epidemiological cut-off values,
+GENEPIO:0002182,PulseNet:SourceCountry,
+GENEPIO:0002183,PulseNet:SourceState,
+GENEPIO:0002184,PulseNet:SourceCity,
+GENEPIO:0002185,PulseNet Canada field,
+GENEPIO:0002186,PulseNet Canada Salmonella field,
+GENEPIO:0002187,PulseNet:SourceSite,
+GENEPIO:0002188,PulseNet:SourceType,
+GENEPIO:0002189,PulseNet:Traveled_To,
+GENEPIO:0002190,PulseNet:TypeDetails,
+GENEPIO:0002191,PulseNet:SubmittedNumber,
+GENEPIO:0002192,PulseNet:OtherStateIsolate,
+GENEPIO:0002193,PulseNet:PatientAge,
+GENEPIO:0002194,PulseNet:PatientSex,
+GENEPIO:0002195,PulseNet:IsolatDate,
+GENEPIO:0002196,PulseNet:UploadModifiedDate,
+GENEPIO:0002197,PulseNet:AntigenForm,
+GENEPIO:0002198,PulseNet:Subspecies,
+GENEPIO:0002199,PulseNet:OGroup,
+GENEPIO:0002200,PulseNet:Serotype,
+GENEPIO:0002201,PulseNet:Outbreak,
+GENEPIO:0002202,PulseNet:cdc_id,
+GENEPIO:0002203,PulseNet:ListMember,
+GENEPIO:0002204,PulseNet:Phagetype,
+GENEPIO:0002205,PulseNet:TEMP,
+GENEPIO:0002206,PulseNet:Status,
+GENEPIO:0002207,PulseNet:NARMS-EB,
+GENEPIO:0002208,PulseNet:FoodNet,
+GENEPIO:0002209,PulseNet:PFGE-XbaI-file,
+GENEPIO:0002210,PulseNet:PFGE-XbaI-pattern,
+GENEPIO:0002211,PulseNet:PFGE-XbaI-rundate,
+GENEPIO:0002212,PulseNet:PFGE-XbaI-status,
+GENEPIO:0002213,PulseNet:PFGE-BlnI-file,
+GENEPIO:0002214,PulseNet:PFGE-BlnI-pattern,
+GENEPIO:0002215,PulseNet:PFGE-BlnI-rundate,
+GENEPIO:0002216,PulseNet:PFGE-BlnI-status,
+GENEPIO:0002217,PulseNet:PFGE-SpeI-file,
+GENEPIO:0002218,PulseNet:PFGE-SpeI-pattern,
+GENEPIO:0002219,PulseNet:PFGE-SpeI-rundate,
+GENEPIO:0002220,PulseNet:PFGE-SpeI-status,
+GENEPIO:0002221,PulseNet:ReceivedDate,
+GENEPIO:0002222,specimen collection service,
+GENEPIO:0002223,bioinformatics analysis service,
+GENEPIO:0002224,isolate preparation service,
+GENEPIO:0002225,specimen related service,
+GENEPIO:0002226,specimen repository/biobank service,
+GENEPIO:0002227,ISO_23418.organization_contact.service,
+GENEPIO:0002228,critical health status,grave
+GENEPIO:0002229,PulseNet:UploadDate,
+GENEPIO:0002230,Salmonella subspecies,
+GENEPIO:0002231,PFGE Spel pattern,
+GENEPIO:0002232,fecal indicator,
+GENEPIO:0002233,food isolate,
+GENEPIO:0002234,microbial 16S RNA typing,
+GENEPIO:0002464,E. coli H antigen specification,
+GENEPIO:0002465,E. coli O antigen specification,
+GENEPIO:0002468,string value specification,
+GENEPIO:0002682,Helicos platform,
+GENEPIO:0002683,Ion Torrent platform,
+GENEPIO:0002684,SOLiD sequening platform,Sequencing by Oligonucleotide Ligation and Detection
+GENEPIO:0002713,obsolete: drag swab,
+GENEPIO:0002749,rinse,
+GENEPIO:0002750,animal rinse,
+GENEPIO:0003358,obsolete: surface wipe,
+GENEPIO:0004318,culture plate,
+GENEPIO:0004323,fluid from meat rinse,
+GENEPIO:0004324,BGI Genomics platform,
+GENEPIO:0004325,MGI platform,
+GENEPIO:0004326,fecal grab,
+GENEPIO:0004432,Illumina NextSeq 1000,
+GENEPIO:0004433,Oxford Nanopore Flongle,
+GENEPIO:0004434,University of Manitoba (UM),
+GENEPIO:0004511,stomach content,
+GENEPIO:0004512,fecal composite,
+GENEPIO:0004513,feces (fresh),
+GENEPIO:0004514,feces (environmental),
+GENEPIO:0004522,box corer,
+GENEPIO:0005677,NML lab sample ID,NML lab number|NML lab number slot|NML lab sample number field|National Microbiology Laboratory lab number|National Microbiology Laboratory lab number field|National Microbiology Laboratory lab number slot|PCDS:nml_lab number|PHAC NML lab number|Public Health Agency of Canada National Microbiology Laboratory lab number
+GENEPIO:0005678,NML LabWare sample primary key,NML LabWare sample id|NML LabWare sample number|NML LabWare sample number field|NML LabWare sample number slot|National Microbiology Laboratory LabWare sample number|National Microbiology Laboratory LabWare sample number field|National Microbiology Laboratory LabWare sample number slot|PCDS:nml_labware_sample_number|PHAC NML LabWare sample number|Public Health Agency of Canada National Microbiology Laboratory LabWare sample number
+GENEPIO:0100001,cluster/outbreak investigation sampling,Cluster/Outbreak investigation
+GENEPIO:0100002,diagnostic testing sampling,Diagnostic testing
+GENEPIO:0100003,research sampling,Research
+GENEPIO:0100004,surveillance sampling,Surveillance
+GENEPIO:0100005,baseline surveillance strategy,Baseline surveillance (random sampling)|random sampling
+GENEPIO:0100006,targeted surveillance strategy,Targeted surveillance (non-random sampling)|non-random sampling
+GENEPIO:0100007,priority surveillance project strategy,Priority surveillance project
+GENEPIO:0100008,screening for Variants of Concern strategy,Screening for Variants of Concern (VoC)|screening for VOC|screening for VoC
+GENEPIO:0100009,longitudinal surveillance strategy,Longitudinal surveillance (repeat sampling of individuals)|repeat sampling of individuals
+GENEPIO:0100010,re-infection surveillance strategy,Re-infection surveillance
+GENEPIO:0100011,vaccine escape surveillance strategy,Vaccine escape surveillance
+GENEPIO:0100012,travel-associated surveillance strategy,Travel-associated surveillance
+GENEPIO:0100013,domestic travel surveillance strategy,Domestic travel surveillance
+GENEPIO:0100014,international travel surveillance strategy,International travel surveillance
+GENEPIO:0100015,surveillance of international border crossing by air travel or ground transport strategy,Surveillance of international border crossing by air travel or ground transport
+GENEPIO:0100016,surveillance of international border crossing by air travel strategy,Surveillance of international border crossing by air travel
+GENEPIO:0100017,surveillance of international border crossing by ground transport strategy,Surveillance of international border crossing by ground transport
+GENEPIO:0100018,surveillance from international worker testing strategy,Surveillance from international worker testing
+GENEPIO:0100019,obsolete: cluster/outbreak investigation strategy,
+GENEPIO:0100020,multi-jurisdictional outbreak investigation strategy,Multi-jurisdictional outbreak investigation
+GENEPIO:0100021,intra-jurisdictional outbreak investigation strategy,Intra-jurisdictional outbreak investigation
+GENEPIO:0100022,obsolete: research strategy,
+GENEPIO:0100023,viral passage experiment strategy,Viral passage experiment
+GENEPIO:0100024,protocol testing sampling,Protocol testing|Protocol testing experiment
+GENEPIO:0100025,personal protective gown, PPE gown| personal protective equipment gown |protective gown 
+GENEPIO:0100026,collection cup,
+GENEPIO:0100027,swab,
+GENEPIO:0100028,suprapubic aspiration,
+GENEPIO:0100029,tracheal aspiration,
+GENEPIO:0100030,vacuum aspiration,
+GENEPIO:0100031,air filtration,
+GENEPIO:0100032,bronchoalveolar lavage,BAL
+GENEPIO:0100033,gastric lavage,
+GENEPIO:0100034,saline gargle,mouth rinse and gargle
+GENEPIO:0100035,scraping,
+GENEPIO:0100036,finger prick,
+GENEPIO:0100037,prior antiviral treatment,
+GENEPIO:0100038,washout tear collection,
+GENEPIO:0100039,virus passage,
+GENEPIO:0100040,RNA re-extraction (post RT-PCR),RNA re-extraction (post reverse transcription-polymerase chain reaction)
+GENEPIO:0100041,293/ACE2 cell line,293/hACE2 cell line
+GENEPIO:0100042,EFK3B cell line,Efk-3B clone 3B cell|Efk3B cell|Eptesicus fucus kidney 3B cell
+GENEPIO:0100043,HRCE cell line,human renal cortical epithelial cell line
+GENEPIO:0100044,VeroE6/TMPRSS2 cell line,Vero E6/TMPRSS2 cell|Vero-E6/TMPRSS2 cell
+GENEPIO:0100045,hospitalized (non-ICU) datum,Hospitalized (Non-ICU)|Hospitalized (non-intensive care units)
+GENEPIO:0100046,hospitalized (ICU) datum,Hospitalized (ICU)|Hospitalized (intensive care units)
+GENEPIO:0100047,medically isolated datum,Mechanical Ventilation
+GENEPIO:0100048,medically isolated (negative pressure) datum,Medically Isolated
+GENEPIO:0100049,subject age at time of specimen collection bin (0 - 9),0 - 9
+GENEPIO:0100050,subject age at time of specimen collection bin (10 - 19),10 - 19
+GENEPIO:0100051,subject age at time of specimen collection bin (20 - 29),20 - 29
+GENEPIO:0100052,subject age at time of specimen collection bin (30 - 39),30 - 39
+GENEPIO:0100053,subject age at time of specimen collection bin (40 - 49),40 - 49
+GENEPIO:0100054,subject age at time of specimen collection bin (50 - 59),50 - 59
+GENEPIO:0100055,subject age at time of specimen collection bin (60 - 69),60 - 69
+GENEPIO:0100056,subject age at time of specimen collection bin (70 - 79),70 - 79
+GENEPIO:0100057,subject age at time of specimen collection bin (80 - 89),80 - 89
+GENEPIO:0100058,subject age at time of specimen collection bin (90 - 99),90 - 99
+GENEPIO:0100059,subject age at time of specimen collection bin (100+),100+
+GENEPIO:0100060,subject age at time of specimen collection bin,
+GENEPIO:0100061,inability to arouse,Inability to arouse (inability to stay awake)|inability to stay awake
+GENEPIO:0100062,cyanotic face,Cyanotic face (bluish face)|bluish face
+GENEPIO:0100063,central cyanosis,
+GENEPIO:0100064,cyanotic lips,Cyanotic lips (bluish lips)|bluish lips
+GENEPIO:0100065,peripheral cyanosis,
+GENEPIO:0100066,fever (>=38°C),fever (>=100.4°F)
+GENEPIO:0100068,silent hypoxemia,Silent hypoxemia
+GENEPIO:0100070,pharyngeal exudate,Pharyngeal exudate
+GENEPIO:0100071,obsolete: prostration,
+GENEPIO:0100072,pseudo-chilblains on fingers,Pseudo-chilblains on fingers (covid fingers)|covid fingers
+GENEPIO:0100073,pseudo-chilblains on toes,Pseudo-chilblains on toes (covid toes)|covid toes
+GENEPIO:0100074,cardiac injury,
+GENEPIO:0100075,chronic cough,
+GENEPIO:0100076,chronic gastrointestinal disease,
+GENEPIO:0100077,postpartum (≤6 weeks),
+GENEPIO:0100078,drug abuse,
+GENEPIO:0100079,injection drug abuse,
+GENEPIO:0100080,cardiac transplant,
+GENEPIO:0100081,liver transplant,
+GENEPIO:0100082,variant of concern (SARS-CoV-2),VOC|Variant of Concern (VOC)|VoC
+GENEPIO:0100083,variant of interest (SARS-CoV-2),VOI|Variant of Interest (VOI)
+GENEPIO:0100084,tachyarrhythmia,
+GENEPIO:0100085,noncardiogenic pulmonary edema,
+GENEPIO:0100086,neurogenic pulmonary edema,NPE
+GENEPIO:0100087,obsolete: cardiac injury,
+GENEPIO:0100088,fulminant myocarditis,
+GENEPIO:0100089,complete Kawasaki disease,complete Kawasaki syndrome
+GENEPIO:0100090,incomplete Kawasaki disease,incomplete Kawasaki syndrome
+GENEPIO:0100091,acute liver injury,
+GENEPIO:0100092,ventilation induced lung injury,VILI
+GENEPIO:0100093,muscle injury,
+GENEPIO:0100094,organ failure,
+GENEPIO:0100095,secondary staph infection,
+GENEPIO:0100096,secondary strep infection,
+GENEPIO:0100097,hyperinflammatory shock,
+GENEPIO:0100098,refractory cardiogenic shock,
+GENEPIO:0100099,refractory cardiogenic plus vasoplegic shock,
+GENEPIO:0100100,fully vaccinated,
+GENEPIO:0100101,partially vaccinated,
+GENEPIO:0100102,not vaccinated,unvaccinated
+GENEPIO:0100103,filter,
+GENEPIO:0100104,mRNA extract,mRNA (messenger RNA)|messenger RNA extract
+GENEPIO:0100105,Illumina sequencing instrument model,
+GENEPIO:0100106,Illumina Genome Analyzer,
+GENEPIO:0100107,obsolete: Illumina Genome Analyzer II,
+GENEPIO:0100108,obsolete: Illumina Genome Analyzer IIx,
+GENEPIO:0100109,Illumina HiScanSQ,
+GENEPIO:0100110,Illumina HiSeq,
+GENEPIO:0100111,Illumina HiSeq X,
+GENEPIO:0100112,Illumina HiSeq X Five,Illumina HiSeq X 5
+GENEPIO:0100113,Illumina HiSeq X Ten,Illumina HiSeq X 10
+GENEPIO:0100114,obsolete: Illumina HiSeq 1000,
+GENEPIO:0100115,Illumina HiSeq 1500,
+GENEPIO:0100116,obsolete: Illumina HiSeq 2000,
+GENEPIO:0100117,obsolete: Illumina HiSeq 2500,
+GENEPIO:0100118,obsolete: Illumina HiSeq 3000,
+GENEPIO:0100119,obsolete: Illumina HiSeq 4000,
+GENEPIO:0100120,Illumina iSeq,
+GENEPIO:0100121,Illumina iSeq 100,
+GENEPIO:0100122,Illumina NovaSeq,
+GENEPIO:0100123,Illumina NovaSeq 6000,
+GENEPIO:0100124,Illumina MiniSeq,
+GENEPIO:0100125,obsolete: Illumina MiSeq,
+GENEPIO:0100126,Illumina NextSeq,
+GENEPIO:0100127,obsolete: Illumina NextSeq 500,
+GENEPIO:0100128,Illumina NextSeq 550,
+GENEPIO:0100129,Illumina NextSeq 2000,
+GENEPIO:0100130,Pacific Biosciences sequencing instrument model,
+GENEPIO:0100131,PacBio RS,
+GENEPIO:0100132,obsolete: PacBio RS II,
+GENEPIO:0100133,PacBio Sequel,
+GENEPIO:0100134,PacBio Sequel II,
+GENEPIO:0100135,Ion Torrent sequencing instrument model,
+GENEPIO:0100136,Ion Torrent PGM,
+GENEPIO:0100137,Ion Torrent Proton,
+GENEPIO:0100138,Ion Torrent S5 XL,
+GENEPIO:0100139,Ion Torrent S5,
+GENEPIO:0100140,Oxford Nanopore sequencing instrument model,
+GENEPIO:0100141,Oxford Nanopore GridION,
+GENEPIO:0100142,Oxford Nanopore MinION,
+GENEPIO:0100143,Oxford Nanopore PromethION,
+GENEPIO:0100144,BGI Genomics sequencing instrument model,
+GENEPIO:0100145,BGI Genomics BGISEQ-500,BGISEQ-500
+GENEPIO:0100146,MGI sequencing instrument model,
+GENEPIO:0100147,MGI DNBSEQ-T7,DNBSEQ-T7
+GENEPIO:0100148,MGI DNBSEQ-G400,DNBSEQ-G400|MGISEQ-2000
+GENEPIO:0100149,MGI DNBSEQ-G400RS,DNBSEQ-G400RS FAST
+GENEPIO:0100150,MGI DNBSEQ-G50,DNBSEQ-G50
+GENEPIO:0100184,contact with known COVID-19 case exposure process,Contact with Known COVID-19 Case|contact with known COVID19 case
+GENEPIO:0100185,contact with patient exposure process,Contact with Patient
+GENEPIO:0100186,contact with probable COVID-19 case exposure process,Contact with Probable COVID-19 Case|contact with probable COVID19 case
+GENEPIO:0100187,contact with person with acute respiratory illness exposure process,Contact with Person with Acute Respiratory Illness
+GENEPIO:0100188,contact with person with fever and/or cough exposure process,Contact with Person with Fever and/or Cough
+GENEPIO:0100189,contact with person who recently travelled exposure process,Contact with Person who Recently Travelled
+GENEPIO:0100190,"occupational, residency or patronage exposure process","Occupational, Residency or Patronage Exposure"
+GENEPIO:0100191,animal rescue exposure process,Animal Rescue
+GENEPIO:0100192,childcare exposure process,Childcare
+GENEPIO:0100193,daycare exposure process,Daycare
+GENEPIO:0100194,nursery exposure process,Nursery
+GENEPIO:0100195,community service centre exposure process,Community Service Centre
+GENEPIO:0100196,correctional facility exposure process,Correctional Facility
+GENEPIO:0100197,dormitory exposure process,Dormitory
+GENEPIO:0100198,first nations reserve exposure process,First Nations Reserve
+GENEPIO:0100199,funeral home exposure process,Funeral Home
+GENEPIO:0100200,group home exposure process,Group Home
+GENEPIO:0100201,healthcare setting exposure process,Healthcare Setting
+GENEPIO:0100202,ambulance exposure process,Ambulance
+GENEPIO:0100203,acute care facility exposure process,Acute Care Facility
+GENEPIO:0100204,clinic exposure process,Clinic
+GENEPIO:0100205,community health centre exposure process,Community Health Centre
+GENEPIO:0100206,emergency department exposure process,Emergency Department
+GENEPIO:0100207,intensive care unit exposure process,ICU|ICU
+GENEPIO:0100208,ward exposure process,Ward
+GENEPIO:0100209,long-term care facility exposure process,LTC facility|Long-Term Care Facility
+GENEPIO:0100210,pharmacy exposure process,Pharmacy
+GENEPIO:0100211,physician's Office exposure process,Physician's Office
+GENEPIO:0100212,household exposure process,Household
+GENEPIO:0100213,insecure housing exposure process,Insecure Housing (Homeless)|homeless
+GENEPIO:0100214,occupational exposure process,Occupational Exposure
+GENEPIO:0100215,worksite exposure process,Worksite
+GENEPIO:0100216,outdoors exposure process,Outdoors
+GENEPIO:0100217,hiking trail exposure process,Hiking Trail
+GENEPIO:0100218,ski resort exposure process,Ski Resort
+GENEPIO:0100219,sampling strategy specification,
+GENEPIO:0100220,place of worship exposure process,Place of Worship
+GENEPIO:0100221,church exposure process,Church
+GENEPIO:0100222,mosque exposure process,Mosque
+GENEPIO:0100223,temple exposure process,Temple
+GENEPIO:0100224,school exposure process,School
+GENEPIO:0100225,temporary residence exposure process,Temporary Residence
+GENEPIO:0100226,homeless shelter exposure process,Homeless Shelter
+GENEPIO:0100227,hotel exposure process,Hotel
+GENEPIO:0100228,veterinary care clinic exposure process,Veterinary Care Clinic
+GENEPIO:0100229,travel exposure process,Travel Exposure
+GENEPIO:0100230,travelled on a cruise ship exposure process,Travelled on a Cruise Ship
+GENEPIO:0100231,travelled on a plane exposure process,Travelled on a Plane
+GENEPIO:0100232,travelled on ground transport exposure process,Travelled on Ground Transport
+GENEPIO:0100233,no prior antiviral treatment,
+GENEPIO:0100234,prior infection,
+GENEPIO:0100235,other exposure setting exposure process,Other Exposure Setting
+GENEPIO:0100236,no prior infection,
+GENEPIO:0100237,mass gathering exposure datum,Mass Gathering
+GENEPIO:0100238,convention exposure datum,Convention
+GENEPIO:0100239,convocation exposure datum,Convocation
+GENEPIO:0100240,agricultural event exposure datum,Agricultural Event
+GENEPIO:0100241,religious gathering exposure datum,Religious Gathering
+GENEPIO:0100242,mass exposure datum,Mass
+GENEPIO:0100243,family gathering exposure datum,Family Gathering
+GENEPIO:0100244,family reunion exposure datum,Family Reunion
+GENEPIO:0100245,funeral exposure datum,Funeral
+GENEPIO:0100246,indirect contact,
+GENEPIO:0100247,close indirect contact,face-to-face contact
+GENEPIO:0100248,casual indirect contact,
+GENEPIO:0100249,attendee role,Attendee
+GENEPIO:0100250,passenger role,Passenger
+GENEPIO:0100251,resident role,Resident
+GENEPIO:0100252,visitor role,Visitor
+GENEPIO:0100253,volunteer role,Volunteer
+GENEPIO:0100254,work role,Work
+GENEPIO:0100255,administrator role,Administrator
+GENEPIO:0100256,first responder role,First Responder
+GENEPIO:0100257,firefighter role,Firefighter
+GENEPIO:0100258,paramedic role,Paramedic
+GENEPIO:0100259,police officer role,Police Officer
+GENEPIO:0100260,housekeeper role,Housekeeper
+GENEPIO:0100261,kitchen worker role,Kitchen Worker
+GENEPIO:0100262,laboratory worker role,Laboratory Worker
+GENEPIO:0100263,personal care aid role,Personal Care Aid|personal care aide role
+GENEPIO:0100264,pharmacist role,Pharmacist
+GENEPIO:0100265,veterinarian role,Veterinarian
+GENEPIO:0100266,acquaintance role,Acquaintance of case
+GENEPIO:0100267,relative role,Relative of case
+GENEPIO:0100268,child role,Child of case
+GENEPIO:0100269,parent-guardian role,Parent of case|guardian of case role|parent of caserole
+GENEPIO:0100270,father role,Father of case
+GENEPIO:0100271,mother role,Mother of case
+GENEPIO:0100272,spouse role,Spouse of case
+GENEPIO:0100273,sample has epidemiological link to Variant of Concern strategy,Sample has epidemiological link to Variant of Concern (VoC)|sample has epidemiological link to VoC
+GENEPIO:0100274,sample has epidemiological link to Omicron variant strategy,Sample has epidemiological link to Omicron Variant
+GENEPIO:0100275,interstate/ interprovincial travel surveillance strategy,Interstate/ interprovincial travel surveillance
+GENEPIO:0100276,intra-state/ intra-provincial travel surveillance strategy,Intra-state/ intra-provincial travel surveillance
+GENEPIO:0100277,sample collected in quarantine,PCDS:sample_collected_in_quarantine|sample collected in quarantine|sample collected in quarantine slot
+GENEPIO:0100278,data abstraction details,PCDS:data_abstraction_details|data abstraction details|data abstraction details slot
+GENEPIO:0100279,variant under monitoring (SARS-CoV-2),VBM|VUM|Variant Being Monitored|Variant Under Monitoring (VUM)
+GENEPIO:0100280,sampling location name county region,PCDS:geo_loc_name_county_region|geo_loc name (county)|geo_loc name (county/region)|geographical location county or region name|sample collection name county region
+GENEPIO:0100281,epidemiology case ID,PCDS:case_id|case ID|case identifier|epidemiology case identifier
+GENEPIO:0100282,gisaid virus name,GISAID virus name|GISAID virus name slot|Global Initiative on Sharing Avian Influenza Data virus name field|Global Initiative on Sharing Avian Influenza Data virus name slot|PCDS:gisaid_virus_name
+GENEPIO:0100283,host specimen voucher,PCDS:host_specimen_voucher|host specimen voucher|host specimen voucher ID slot|host specimen voucher identifier field|host specimen voucher identifier slothost specimen voucher ID field|host specimen voucher slot
+GENEPIO:0100284,culture collection ID,PCDS:culture_collection|culture collection|culture collection slot
+GENEPIO:0100285,sample plan name,GENEPIO:0100430|PCDS:sample_plan_name|sample plan name
+GENEPIO:0100286,obsolete: specimen processing,
+GENEPIO:0100288,host health status details at time of specimen collection,
+GENEPIO:0100289,host health complications at time of specimen collection,
+GENEPIO:0100290,pre-existing conditions and risk factors at time of specimen collection,
+GENEPIO:0100291,signs and symptoms at time of specimen collection,
+GENEPIO:0100293,variant designation (SARS-CoV-2),
+GENEPIO:0100295,exposure datum,
+GENEPIO:0100296,obsolete: exposure process,
+GENEPIO:0100297,obsolete: cell line cell,
+GENEPIO:0100298,vaccination status,
+GENEPIO:0100300,health signs and symptoms enumeration,signs and symptoms
+GENEPIO:0100301,pre-existing conditions and risk factors enumeration,pre-existing conditions and risk factors
+GENEPIO:0100302,health complications enumeration,complications
+GENEPIO:0100303,person role enumeration,host role
+GENEPIO:0100309,sampling location latitude,PCDS:geo_loc_latitude|geographical location latitude|sample collection location latitude
+GENEPIO:0100310,sampling location longitude,PCDS:geo_loc_longitude|geographical location longitude|sample collection location longitude
+GENEPIO:0100311,specimen processing details,PCDS:specimen_processing_details|specimen processing details|specimen processing details slot
+GENEPIO:0100312,host ethnicity,PCDS:host_ethnicity|host ethnicity|host ethnicity slot
+GENEPIO:0100313,vaccine name dose number,GENEPIO:0100315|GENEPIO:0100317|GENEPIO:0100319|PCDS:vaccine_name_dose_*|vaccination dose 1 vaccine name|vaccination dose 2 vaccine name|vaccination dose 3 vaccine name|vaccination dose 4 vaccine name|vaccination dose four vaccine name|vaccination dose one vaccine name|vaccination dose three vaccine name|vaccination dose two vaccine name
+GENEPIO:0100314,vaccination date dose number,GENEPIO:0100316|GENEPIO:0100318|GENEPIO:0100320|PCDS:vaccination_date_dose_*|vaccination dose 1 vaccination date|vaccination dose 2 vaccination date|vaccination dose 3 vaccination date|vaccination dose 4 vaccination date|vaccination dose four vaccination date|vaccination dose one vaccination date|vaccination dose three vaccination date|vaccination dose two vaccination date|vaccination_date_dose_1|vaccination_date_dose_2|vaccination_dose_1_vaccination_date|vaccination_dose_2_vaccination_date|vaccination_dose_3_vaccination_date|vaccination_dose_4_vaccination_date
+GENEPIO:0100315,vaccine name dose 2,vaccination dose 2 vaccine name|vaccination dose two vaccine name
+GENEPIO:0100316,vaccination date dose 2,PCDS:vaccination_date_dose_*|vaccination dose 2 vaccination date|vaccination_date_dose_2
+GENEPIO:0100317,vaccine name dose 3,vaccination dose 3 vaccine name|vaccination dose three vaccine name
+GENEPIO:0100318,vaccination date dose 3,PCDS:vaccination_date_dose_*|vaccination dose 3 vaccination date|vaccination_date_dose_3
+GENEPIO:0100319,vaccine name dose 4,vaccination dose 4 vaccine name|vaccination dose four vaccine name
+GENEPIO:0100320,vaccination date dose 4,PCDS:vaccination_date_dose_*|vaccination dose 4 vaccination date|vaccination_date_dose_4
+GENEPIO:0100321,vaccination history,PCDS:vaccination_history
+GENEPIO:0100323,NCBI SRA title,PCDS:ncbi_sra_title|PHA4GE:NCBI SRA title|title
+GENEPIO:0100324,NCBI SRA library strategy,NCBI SRA library_strategy|PCDS:ncbi_sra_library_strategy|library strategy
+GENEPIO:0100325,NCBI SRA library source,NCBI SRA library_source|PCDS:ncbi_sra_library_source|library source
+GENEPIO:0100326,NCBI SRA library selection,NCBI SRA library_selection|PCDS:ncbi_sra_library_selection|library selection
+GENEPIO:0100327,NCBI SRA library layout,NCBI SRA library_layout|PCDS:ncbi_sra_library_layout|library layout
+GENEPIO:0100328,NCBI SRA filetype,NCBI SRA filetype|PCDS:ncbi_sra_filetype|filetype
+GENEPIO:0100329,NCBI SRA filename,NCBI SRA filename|PCDS:ncbi_sra_filename|filename|filename2|filename3|filename4
+GENEPIO:0100330,NCBI SRA filename2,NCBI SRA filename2|PCDS:ncbi_sra_filename2|filename|filename2|filename3|filename4
+GENEPIO:0100334,healthcare worker role,Healthcare Worker
+GENEPIO:0100354,rotational worker role,Rotational Worker
+GENEPIO:0100355,seasonal worker role,Seasonal Worker
+GENEPIO:0100356,retrospective sequencing strategy,Retrospective sequencing
+GENEPIO:0100357,contact with infected individual,
+GENEPIO:0100413,travel point of entry type field category,PCDS:antimicrobial resistance|PCDS:travel_point_of_entry_type_slot_group|travel point of entry type|travel point of entry type slot
+GENEPIO:0100414,border testing test day type field category,PCDS:Environmental conditions and measurements|PCDS:border_testing_test_day_type_slot_group|border testing test day type|border testing test day type slot
+GENEPIO:0100415,at-home community healthcare exposure process,Community Healthcare (At-Home) Setting
+GENEPIO:0100416,sequenced by,PCDS:sequenced_by|sequenced by|sequenced by slot|sequenced_by
+GENEPIO:0100417,recreational event datum,Recreational Event
+GENEPIO:0100418,concert event datum,Concert
+GENEPIO:0100419,sporting event datum,Sporting Event
+GENEPIO:0100420,community healthcare worker,Community Healthcare Worker
+GENEPIO:0100422,sequenced by contact email,GENEPIO:0001253|PCDS:sequenced_by_contact_email|sequenced by contact email|sequenced by contact email slot|sequenced_by_contact_email
+GENEPIO:0100423,sequenced by contact address,PCDS:sequenced_by_contact_address|sequenced by contact address|sequenced by contact address slot
+GENEPIO:0100427,alternative sample id,PCDS:alternative_sample_id|alternative sample ID|alternative sample ID slot|alternative sample identifier|alternative sample identifier field|alternative sample identifier slot|alternative_sample_ID
+GENEPIO:0100428,sample collected by laboratory name,PCDS:sample_collected_by_laboratory_name|sample collected by laboratory name|sample collected by laboratory name slot|sample_collected_by_laboratory_name
+GENEPIO:0100429,sample collection project name,PCDS:sample_collection_project_name|sample collection project name|sample collection project name slot|sample_collection_project_name
+GENEPIO:0100431,sample plan id,PCDS:sample_plan_id|sample plan ID|sample plan ID slot|sample plan identifier|sample plan identifier field|sample plan identifier slot|sample_plan_ID
+GENEPIO:0100432,sample collector contact name,PCDS:sample_collector_contact_name|sample collector contact name|sample collector contact name slot|sample_collector_contact_name
+GENEPIO:0100433,presampling activity,PCDS:presampling_activity|presampling activity|presampling activity slot|presampling_activity
+GENEPIO:0100434,presampling activity details,PCDS:presampling_activity_details|presampling activity details|presampling activity details slot|presampling_activity_details
+GENEPIO:0100436,sampling location name site,PCDS:geo_loc_name_site|geo_loc name (site)|geographical location site name|sample collection name site
+GENEPIO:0100437,food product origin geo loc name country,PCDS:food_product_origin_geo_loc_name_country|food product origin geo loc name (country)|food product origin geo loc name (country) slot|food product origin geographical location country name|food product origin geographical location country name field|food product origin geographical location country name slot|food_product_origin geo_loc_name (country)
+GENEPIO:0100438,host origin geo loc name country,PCDS:host_origin_geo_loc_name_country|host origin geo loc name (country)|host origin geo loc name (country) slot|host origin geographical location name|host origin geographical location name field|host origin geographical location name slot|host_origin geo_loc_name (country)
+GENEPIO:0100439,original sample description,PCDS:original_sample_description|original sample description|original sample description slot|original_sample_description
+GENEPIO:0100440,water depth value,PCDS:water_depth|water depth|water depth slot|water_depth
+GENEPIO:0100441,air temperature value,PCDS:air_temperature|air temperature|air temperature slot|air_temperature
+GENEPIO:0100443,animal or plant population,PCDS:animal_or_plant_population|weather type|weather type slot|weather_type
+GENEPIO:0100444,food product,PCDS:food_product|animal or plant population|animal or plant population slot|animal_or_plant_population
+GENEPIO:0100445,food product properties,PCDS:food_product_properties|food product|food product slot|food_product
+GENEPIO:0100446,animal source of food,PCDS:animal_source_of_food|food product properties|food product properties slot|food_product_properties
+GENEPIO:0100447,food packaging,PCDS:food_packaging|animal source of food|animal source of food slot|animal_source_of_food
+GENEPIO:0100448,sample storage method,PCDS:sample_storage_method|food packaging|food packaging slot|food_packaging
+GENEPIO:0100449,sample storage medium,PCDS:sample_storage_medium|sample storage method|sample storage method slot|sample_storage_method
+GENEPIO:0100450,host ecotype,PCDS:host_ecotype|sample storage medium|sample storage medium slot|sample_storage_medium
+GENEPIO:0100451,host breed,PCDS:host_breed|host (ecotype)|host (ecotype) slot
+GENEPIO:0100452,host (food production name),PCDS:host_food_production_name|host (breed)|host (breed) slot
+GENEPIO:0100453,strain and isolation information field category,PCDS:pathogen diagnostic testing|PCDS:strain_and_isolation_information_slot_group|host (food production name)|host (food production name) slot
+GENEPIO:0100454,microbiological method,PCDS:microbiological_method|microbiological method|microbiological method slot
+GENEPIO:0100455,strain,PCDS:strain|strain|strain slot
+GENEPIO:0100456,obsolete: isolate ID field,
+GENEPIO:0100457,alternative isolate id,PCDS:alternative_isolate_id|alternative isolate ID|alternative isolate ID slot|alternative isolate identifier|alternative isolate identifier field|alternative isolate identifier slot|alternative_isolate_ID
+GENEPIO:0100458,progeny isolate id,PCDS:progeny_isolate_id|progeny isolate ID|progeny isolate ID slot|progeny isolate identifier|progeny isolate identifier field|progeny isolate identifier slot|progeny_isolate_ID
+GENEPIO:0100459,irida isolate id,IRIDA isolate ID|IRIDA isolate ID slot|IRIDA isolate identifier|IRIDA isolate identifier field|IRIDA isolate identifier slot|IRIDA_isolate_ID|Integrated Rapid Infectious Disease Analysis isolate ID field|Integrated Rapid Infectious Disease Analysis isolate ID slot|Integrated Rapid Infectious Disease Analysis isolate identifier field|Integrated Rapid Infectious Disease Analysis isolate identifier slot|PCDS:irida_isolate_id
+GENEPIO:0100460,irida project id,IRIDA project ID|IRIDA project ID slot|IRIDA project identifier|IRIDA project identifier field|IRIDA project identifier slot|Integrated Rapid Infectious Disease Analysis project ID field|Integrated Rapid Infectious Disease Analysis project ID slot|Integrated Rapid Infectious Disease Analysis project identifier field|Integrated Rapid Infectious Disease Analysis project identifier slot|PCDS:irida_project_id
+GENEPIO:0100461,isolated by,PCDS:isolated_by|isolated by|isolated by slot|isolated_by
+GENEPIO:0100462,isolated by laboratory name,PCDS:isolated_by_laboratory_name|isolated by laboratory name|isolated by laboratory name slot|isolated_by_laboratory_name
+GENEPIO:0100463,isolated by contact name,PCDS:isolated_by_contact_name|isolated by contact name|isolated by contact name slot|isolated_by_contact_name
+GENEPIO:0100464,isolated by contact email,PCDS:isolated_by_contact_email|isolated by contact email|isolated by contact email slot|isolated_by_contact_email
+GENEPIO:0100465,isolation date,PCDS:isolation_date|isolate collection date|isolate collection date field|isolate collection date slot|isolation date|isolation date slot|isolation_date
+GENEPIO:0100466,isolate received date,PCDS:isolate_received_date|isolate received date|isolate received date slot|isolate_received_date
+GENEPIO:0100467,serovar,PCDS:serovar|serotype field|serotype slot|serovar|serovar slot
+GENEPIO:0100468,serotyping method,PCDS:serotyping_method|serotyping method|serotyping method slot|serotyping_method
+GENEPIO:0100469,phagetype,PCDS:phagetype|phagetype|phagetype slot
+GENEPIO:0100470,sequenced by laboratory name,PCDS:sequenced_by_laboratory_name|sequenced by laboratory name|sequenced by laboratory name slot
+GENEPIO:0100471,sequenced by contact name,PCDS:sequenced_by_contact_name|sequenced by contact name|sequenced by contact name slot|sequenced_by_contact_name
+GENEPIO:0100472,sequencing project name,PCDS:sequencing_project_name|sequencing project name|sequencing project name slot|sequencing_project_name
+GENEPIO:0100473,sequencing platform,PCDS:sequencing_platform|sequencing platform|sequencing platform slot|sequencing_platform
+GENEPIO:0100474,sequence submitted by contact name,PCDS:sequence_submitted_by_contact_name|sequence submitted by contact name|sequence submitted by contact name slot|sequence_submitted_by_contact_name
+GENEPIO:0100475,publication id,PCDS:publication_id|publication ID|publication ID slot|publication identifier|publication identifier field|publication identifier slot|publication_ID
+GENEPIO:0100476,attribute package,PCDS:attribute_package|attribute package|attribute package slot|attribute_package
+GENEPIO:0100477,public repository information field category,PCDS:contributor acknowledgement|PCDS:public_repository_information_slot_group|contributor acknowledgement slot category
+GENEPIO:0100478,risk assessment information field category,PCDS:risk_assessment_information_slot_group
+GENEPIO:0100479,antimicrobial resistance field category,PCDS:antimicrobial resistance|antimicrobial resistance slot category
+GENEPIO:0100480,prevalence metrics,PCDS:prevalence_metrics|prevalence metrics|prevalence metrics slot|prevalence_metrics
+GENEPIO:0100481,prevalence metrics details,PCDS:prevalence_metrics_details|prevalence metrics details|prevalence metrics details slot|prevalence_metrics_details
+GENEPIO:0100482,stage of production,PCDS:stage_of_production|stage of production|stage of production slot|stage_of_production
+GENEPIO:0100483,experimental intervention,PCDS:experimental_intervention|experimental intervention|experimental intervention slot|experimental_intervention
+GENEPIO:0100484,experiment intervention details,PCDS:experiment_intervention_details|experiment intervention details|experiment intervention details slot|experiment_intervention_details
+GENEPIO:0100485,child care or education worker,Child Care/Education Worker
+GENEPIO:0100486,essential worker,Essential Worker
+GENEPIO:0100487,international worker,International worker
+GENEPIO:0100488,transport worker,Transport Worker
+GENEPIO:0100489,transport truck driver,Transport Truck Driver
+GENEPIO:0100500,sexual partner role,Sexual partner of case
+GENEPIO:0100501,contact with known Monkeypox case exposure process,Contact with Known Monkeypox Case|contact with known Monkeypox case
+GENEPIO:0100502,contact with probable Monkeypox case exposure process,Contact with Probable Monkeypox Case|contact with probable Monkeypox case
+GENEPIO:0100511,AMR testing by,AMR testing by|AMR testing by slot|AMR_testing_by|PCDS:amr_testing_by|antimicrobial resistance testing by|antimicrobial resistance testing by field|antimicrobial resistance testing by slot
+GENEPIO:0100512,AMR testing by laboratory name,AMR testing by laboratory name|AMR testing by laboratory name slot|AMR_testing_by_laboratory_name|PCDS:amr_testing_by_laboratory_name|antimicrobial resistance testing by laboratory name|antimicrobial resistance testing by laboratory name field|antimicrobial resistance testing by laboratory name slot
+GENEPIO:0100513,AMR testing by contact name,AMR testing by contact name|AMR testing by contact name slot|AMR_testing_by_contact_name|PCDS:amr_testing_by_contact_name|antimicrobial resistance testing by contact name|antimicrobial resistance testing by contact name field|antimicrobial resistance testing by contact name slot
+GENEPIO:0100514,AMR testing by contact email,AMR testing by contact email|AMR testing by contact email slot|AMR_testing_by_contact_email|PCDS:amr_testing_by_contact_email|antimicrobial resistance testing by contact email|antimicrobial resistance testing by contact email field|antimicrobial resistance testing by contact email slot
+GENEPIO:0100515,AMR testing date,AMR testing date|AMR testing date slot|AMR_testing_date|PCDS:amr_testing_date|antimicrobial resistance testing date|antimicrobial resistance testing date field|antimicrobial resistance testing date slot
+GENEPIO:0100516,AMR testing susceptible breakpoint,AMR testing susceptible breakpoint|AMR testing susceptible breakpoint slot|AMR_testing_susceptible_breakpoint|PCDS:*_susceptible_breakpoint|PCDS:amr_testing_susceptible_breakpoint|antimicrobial resistance testing susceptible breakpoint|antimicrobial resistance testing susceptible breakpoint field|antimicrobial resistance testing susceptible breakpoint slot
+GENEPIO:0100517,AMR testing intermediate breakpoint,AMR testing intermediate breakpoint|AMR testing intermediate breakpoint slot|AMR_testing_intermediate_breakpoint|PCDS:*_intermediate_breakpoint|PCDS:amr_testing_intermediate_breakpoint|antimicrobial resistance testing intermediate breakpoint|antimicrobial resistance testing intermediate breakpoint field|antimicrobial resistance testing intermediate breakpoint slot
+GENEPIO:0100518,AMR testing resistant breakpoint,AMR testing resistant breakpoint|AMR testing resistant breakpoint slot|AMR_testing_resistant_breakpoint|PCDS:*_resistant_breakpoint|PCDS:amr_testing_resistant_breakpoint|antimicrobial resistance testing resistant breakpoint|antimicrobial resistance testing resistant breakpoint field|antimicrobial resistance testing resistant breakpoint slot
+GENEPIO:0100520,AMR testing standard details,AMR testing standard details|AMR testing standard details slot|AMR_testing_standard_details|PCDS:*_testing_standard_details|PCDS:amr_testing_standard_details|antimicrobial resistance testing standard details|antimicrobial resistance testing standard details field|antimicrobial resistance testing standard details slot
+GENEPIO:0100521,AMR agent name,PCDS:amr_agent_name|antimicrobial agent name|antimicrobial agent name slot|antimicrobial_agent_name
+GENEPIO:0100522,AMR measurement,AMR measurement|AMR measurement slot|AMR_measurement|PCDS:*_measurement|PCDS:amr_measurement|antimicrobial resistance measurement|antimicrobial resistance measurement field|antimicrobial resistance measurement slot
+GENEPIO:0100523,AMR measurement units,AMR measurement units|AMR measurement units slot|AMR_measurement_units|PCDS:*_measurement_units|PCDS:amr_measurement_units|antimicrobial resistance measurement units|antimicrobial resistance measurement units field|antimicrobial resistance measurement units slot
+GENEPIO:0100524,AMR measurement sign,AMR measurement sign|AMR measurement sign slot|AMR_measurement_sign|PCDS:*_measurement_sign|PCDS:amr_measurement_sign|antimicrobial resistance measurement sign|antimicrobial resistance measurement sign field|antimicrobial resistance measurement sign slot
+GENEPIO:0100525,AMR phenotype,AMR phenotype|AMR phenotype slot|AMR_phenotype|PCDS:*_resistance_phenotype|PCDS:amr_phenotype|antimicrobial resistance phenotype|antimicrobial resistance phenotype field|antimicrobial resistance phenotype slot
+GENEPIO:0100526,AMR laboratory typing method,AMR laboratory typing method|AMR laboratory typing method slot|AMR_laboratory_typing_method|PCDS:*_laboratory_typing_method|PCDS:amr_laboratory_typing_method|antimicrobial resistance laboratory typing method|antimicrobial resistance laboratory typing method field|antimicrobial resistance laboratory typing method slot
+GENEPIO:0100527,AMR laboratory typing platform,AMR laboratory typing platform|AMR laboratory typing platform slot|AMR_laboratory_typing_platform|PCDS:*_laboratory_typing_platform|PCDS:amr_laboratory_typing_platform|antimicrobial resistance laboratory typing platform|antimicrobial resistance laboratory typing platform field|antimicrobial resistance laboratory typing platform slot
+GENEPIO:0100528,AMR laboratory typing platform version,AMR laboratory typing platform version|AMR laboratory typing platform version slot|AMR_laboratory_typing_platform_version|PCDS:*_laboratory_typing_platform_version|PCDS:amr_laboratory_typing_platform_version|antimicrobial resistance laboratory typing platform version|antimicrobial resistance laboratory typing platform version field|antimicrobial resistance laboratory typing platform version slot
+GENEPIO:0100529,AMR vendor name,AMR vendor name|AMR vendor name slot|AMR_vendor_name|PCDS:*_vendor_name|PCDS:amr_vendor_name|antimicrobial resistance vendor name|antimicrobial resistance vendor name field|antimicrobial resistance vendor name slot
+GENEPIO:0100530,AMR testing standard,AMR testing standard|AMR testing standard slot|AMR_testing_standard|PCDS:*_testing_standard|PCDS:amr_testing_standard|antimicrobial resistance testing standard|antimicrobial resistance testing standard|antimicrobial resistance testing standard field|antimicrobial resistance testing standard slot
+GENEPIO:0100531,AMR testing standard version,AMR testing standard version|AMR testing standard version slot|AMR_testing_standard_version|PCDS:*_testing_standard_version|PCDS:amr_testing_standard_version|antimicrobial resistance testing standard version|antimicrobial resistance testing standard version field|antimicrobial resistance testing standard version slot
+GENEPIO:0100532,prior mpox infection status,PCDS:prior_mpox_infection|prior Monkeypox infection|prior Monkeypox infection
+GENEPIO:0100533,prior mpox infection date,PCDS:prior_mpox_infection_date|prior Monkeypox infection date|prior Monkeypox infection date slot
+GENEPIO:0100534,prior mpox antiviral treatment,PCDS:prior_mpox_antiviral_treatment|prior Monkeypox antiviral treatment|prior Monkeypox antiviral treatment slot
+GENEPIO:0100535,prior antiviral treatment during prior mpox infection,PCDS:prior_antiviral_treatment_during_prior_mpox_infection|prior antiviral treatment during prior Monkeypox infection|prior antiviral treatment during prior Monkeypox infection slot
+GENEPIO:0100548,environmental testing sampling,Environmental testing
+GENEPIO:0100549,clinical trial sampling strategy,
+GENEPIO:0100550,field experiment sampling,Field experiment
+GENEPIO:0100551,Public Health Agency of Canada (PHAC),PHAC
+GENEPIO:0100552,Canadian Food Inspection Agency (CFIA),CFIA
+GENEPIO:0100553,Agriculture and Agri-Food Canada (AAFC),AAFC
+GENEPIO:0100554,Health Canada,HC
+GENEPIO:0100555,Environment and Climate Change Canada (ECCC),ECCC|Environment Canada
+GENEPIO:0100556,Fisheries and Oceans Canada (DFO),DFO
+GENEPIO:0100557,quality control method name,PCDS:quality_control_method_name|qc method name field|qc method name slot|quality control method name|quality control method name field|quality control method name slot
+GENEPIO:0100558,quality control method version,PCDS:quality_control_method_version|qc method version field|qc method version slot|quality control method version|quality control method version field|quality control method version slot
+GENEPIO:0100559,quality control determination,PCDS:quality_control_determination|qc determination field|qc determination slot|quality control determination|quality control determination field|quality control determination slot
+GENEPIO:0100560,quality control issues,PCDS:quality_control_issues|qc issues field|qc issues slot|quality control issues|quality control issues field|quality control issues slot
+GENEPIO:0100561,quality control details,PCDS:quality_control_details|qc details field|qc details slot|quality control details|quality control details field|quality control details slot
+GENEPIO:0100562,no quality control issues identified datum,no quality control issues identified
+GENEPIO:0100563,sequence passed quality control datum,sequence passed quality control
+GENEPIO:0100564,sequence failed quality control datum,sequence failed quality control
+GENEPIO:0100565,minor quality control issues identified datum,minor quality control issues identified
+GENEPIO:0100566,sequence flagged for potential quality control issues datum,sequence flagged for potential quality control issues
+GENEPIO:0100567,quality control not performed datum,quality control not performed
+GENEPIO:0100568,low quality sequence datum,low quality sequence
+GENEPIO:0100569,sequence contaminated datum,sequence contaminated
+GENEPIO:0100570,low average genome coverage datum,low average genome coverage
+GENEPIO:0100571,low percent genome captured datum,low percent genome captured
+GENEPIO:0100572,read lengths shorter than expected datum,read lengths shorter than expected
+GENEPIO:0100573,sequence amplification artifacts datum,sequence amplification artifacts
+GENEPIO:0100574,low signal to noise ratio datum,low signal to noise ratio
+GENEPIO:0100575,low coverage of characteristic mutations datum,low coverage of characteristic mutations
+GENEPIO:0100576,diagnostic gene name 4,gene name 4
+GENEPIO:0100577,diagnostic pcr Ct value 3,GENEPIO:0001509|diagnostic pcr ct value
+GENEPIO:0100578,diagnostic gene name 5,gene name 5
+GENEPIO:0100579,diagnostic pcr Ct value 5,GENEPIO:0001509|diagnostic pcr ct value
+GENEPIO:0100580,antiviral therapy,PCDS:antiviral_therapy|antiviral therapy|antiviral therapy slot
+GENEPIO:0100581,Environmental Pathogen Attribute Package (Pathogen.env),
+GENEPIO:0100582,survey study sampling strategy,
+GENEPIO:0100583,taxonomic identification process,PCDS:taxonomic_identification_process|taxonomic identification method|taxonomic identification process|taxonomic identification process slot|taxonomic_identification_process
+GENEPIO:0100584,taxonomic identification process details,PCDS:taxonomic_identification_process_details|taxonomic identification method details|taxonomic identification process details|taxonomic identification process details slot|taxonomic_identification_process_details
+GENEPIO:0100586,data field,data column|data slot
+GENEPIO:0100587,PHA4GE SARS-CoV-2 specification,PHA4GE SARS-CoV-2 contextual data specification|Public Health Alliance for Genomic Epidemiology SARS-CoV-2 specification|Public Health Alliance for Genomic Epidemiology severe acute respiratory syndrome coronavirus 2 specification
+GENEPIO:0100588,Canadian pathogen genomics specification,
+GENEPIO:0100589,GRDI AMR One Health specification,Genomics Research & Development Initiative Antimicrobial Resistance One Health specification
+GENEPIO:0100590,Canadian Monkeypox specification,
+GENEPIO:0100591,International Monkeypox specification,
+GENEPIO:0100592,obsolete: specimen storage duration,
+GENEPIO:0100593,obsolete: specimen storage temperature,
+GENEPIO:0100594,obsolete: specimen storage location,
+GENEPIO:0100595,sequence file name,input file name
+GENEPIO:0100596,contig number identifier, contig identifier|contig ID 
+GENEPIO:0100597,genomic orientation, strand orientation|strand 
+GENEPIO:0100598,gene symbol,
+GENEPIO:0100599,gene name,
+GENEPIO:0100600,breadth of coverage percentage, % coverage (breadth) | breadth of coverage %|coverage (breadth) 
+GENEPIO:0100601,breadth of coverage ratio,
+GENEPIO:0100602,sequence identity percentage,
+GENEPIO:0100603,reference database name,
+GENEPIO:0100604,reference sequence,
+GENEPIO:0100605,accession number,accession identifier
+GENEPIO:0100606,reference sequence accession number, reference sequence accession identifier|reference accession 
+GENEPIO:0100607,sequence length measurement datum,
+GENEPIO:0100608,reference sequence length measurement datum,
+GENEPIO:0100609,reference gene sequence length datum,reference gene length
+GENEPIO:0100610,reference protein sequence length datum,reference protein length
+GENEPIO:0100611,input sequence length measurement datum,
+GENEPIO:0100612,input gene sequence length measurement datum,input gene length
+GENEPIO:0100613,input protein sequence length measurement datum,input protein length
+GENEPIO:0100614,virus transport medium,
+GENEPIO:0100615,food quality date,PCDS:food_quality_date|food quality date|food quality date slot|food_quality_date
+GENEPIO:0100616,food packaging date,PCDS:food_packaging_date|food packaging date|food packaging date slot|food_packaging_date
+GENEPIO:0100617,incubation temperature value,PCDS:incubation_temperature_value
+GENEPIO:0100618,incubation temperature unit,PCDS:incubation_temperature_unit
+GENEPIO:0100619,isolate storage location,PCDS:isolate_storage_location
+GENEPIO:0100620,cellular respiration type field category,PCDS:cellular_respiration_type_slot_group|PCDS:strain and isolation information|strain and isolation information slot category
+GENEPIO:0100623,amplicon pcr primer list,PCDS:amplicon_pcr_primer_list
+GENEPIO:0100624,sequence identity variance ratio,PCDS:sequence_identity_variance_ratio
+GENEPIO:0100625,tophit taxon determination,PCDS:tophit_taxon_determination
+GENEPIO:0100626,trimmed ribosomal gene sequence,PCDS:trimmed_ribosomal_gene_sequence
+GENEPIO:0100627,bioinformatics analysis details,PCDS:bioinformatics_analysis_details
+GENEPIO:0100628,host field,host slot; host organism field; host organism slot
+GENEPIO:0100629,geographical location field,geo_loc field|geo_loc slot|geographical location column|geographical location slot
+GENEPIO:0100630,host geographical location field,host geo_loc|host geographical location slot
+GENEPIO:0100632,date field,date column|date slot
+GENEPIO:0100633,host vaccination field,host vaccination slot
+GENEPIO:0100634,State or Province or Territory,
+GENEPIO:0100635,antimicrobial field,antimicrobial slot
+GENEPIO:0100636,antimicrobial resistance field,AMR field|AMR slot|antimicrobial resistance slot
+GENEPIO:0100637,exposure field,exposure slot
+GENEPIO:0100638,prior infection field,prior infection slot
+GENEPIO:0100648,tophit strain determination,PCDS:tophit_strain_determination
+GENEPIO:0100649,travel history availability,PCDS:travel_history_availability
+GENEPIO:0100658,wet wipe,
+GENEPIO:0100659,PHA4GE genomics specification,Public Health Alliance for Genomic Epidemiology specification
+GENEPIO:0100660,PHA4GE quality control specification,PHA4GE QC contextual data tags specification|PHA4GE QC specification|PHA4GE QC tags specification|PHA4GE quality control contextual data tags specification|Public Health Alliance for Genomic Epidemiology quality control specification
+GENEPIO:0100661,quality control field,qc field|qc slot|quality control slot
+GENEPIO:0100662,quality control datum,
+GENEPIO:0100663,quality control determination enumeration,quality control determination
+GENEPIO:0100664,quality control issues enumeration,quality control issues
+GENEPIO:0100665,childcare worker role,
+GENEPIO:0100666,education worker role,
+GENEPIO:0100690,available data types,PCDS:available_data_types|available data types|available data types slot|available_data_types
+GENEPIO:0100697,sediment depth,PCDS:sediment_depth|sediment depth|sediment depth slot|sediment_depth
+GENEPIO:0100698,water temperature value,PCDS:water_temperature|water temperature|water temperature slot|water_temperature
+GENEPIO:0100699,food product production stream,PCDS:food_product_production_stream|food product production stream|food product production stream slot|food_product_production_stream
+GENEPIO:0100700,anatomical region,PCDS:anatomical_region|anatomical region|anatomical region slot|anatomical_region
+GENEPIO:0100701,dataset attribute bundle,dataset component tag|dataset data type|dataset tag
+GENEPIO:0100702,documentation data tag,documentation|documentation attribute bundle|documentation data type
+GENEPIO:0100703,experimental parameters documentation tag,experimental parameters documentation|experimental parameters documentation data type
+GENEPIO:0100704,feed history documentation tag,feed history|feed history data type
+GENEPIO:0100705,land use information documentation tag,land use information|land use information data type
+GENEPIO:0100706,therapeutic administration history documentation tag,therapeutic administration history|therapeutic administration history documentation data type
+GENEPIO:0100707,chemical characterization data tag,chemical characterization|chemical characterization attribute bundle|chemical characterization data type
+GENEPIO:0100708,pH measurement characterization tag,pH measurement|pH measurement characterization data tag
+GENEPIO:0100709,dissolved oxygen measurement characterization tag,dissolved oxygen measurement|dissolved oxygen measurement characterization data tag
+GENEPIO:0100710,nitrate measurement characterization tag,nitrate measurement|nitrate measurement characterization data tag
+GENEPIO:0100711,nitrite measurement characterization tag,nitrite measurement|nitrite measurement characterization data tag
+GENEPIO:0100712,phosphorous measurement characterization tag,phosphorous measurement|phosphorous measurement characterization data tag
+GENEPIO:0100713,salinity measurement characterization tag,salinity measurement|salinity measurement characterization data tag
+GENEPIO:0100714,microbiological characterization data tag,microbiological characterization|microbiological characterization attribute bundle|microbiological characterization data type
+GENEPIO:0100715,microbiological identification data tag,microbiological characterization attribute bundle|microbiological identification|microbiological identification data type
+GENEPIO:0100716,microbiological identification tag (Beckson Dickson BBL Crystal),microbiological identification (Beckson Dickson BBL Crystal)|microbiological identification data type (Beckson Dickson BBL Crystal)
+GENEPIO:0100717,microbiological identification tag (bioMérieux API),microbiological identification (bioMérieux API)|microbiological identification data type (bioMérieux API)
+GENEPIO:0100718,microbiological identification tag (Biolog),microbiological identification (Biolog)|microbiological identification data type (Biolog)
+GENEPIO:0100719,microbiological identification tag (Fatty acid methyl esters (FAME)),microbiological identification (FAME)|microbiological identification data type (Fatty acid methyl esters)
+GENEPIO:0100720,microbiological identification tag (Sensititre),microbiological identification (Sensititre)|microbiological identification data type (Sensititre)
+GENEPIO:0100721,microbiological identification tag (ViTek),microbiological identification (ViTek)|microbiological identification data type (ViTek)
+GENEPIO:0100722,phage type identification tag,phage type|phage type data type
+GENEPIO:0100723,serotype identification tag,serotype|serotype data type
+GENEPIO:0100724,phenotypic microbiological characterization data tag,phenotypic microbiological characterization|phenotypic microbiological characterization attribute bundle|phenotypic microbiological characterization data type
+GENEPIO:0100725,antimicrobial resistance (AMR) phenotypic testing characterization tag,AMR phenotypic testing|AMR phenotypic testing data type|AMR phenotypic testing tag|antimicrobial resistance phenotypic testing data type
+GENEPIO:0100726,biolog phenotype microarray characterization tag,biolog phenotype microarray|biolog phenotype microarray data type
+GENEPIO:0100727,microbiological quantification data tag,microbiological quantification|microbiological quantification attribute bundle|microbiological quantification data type
+GENEPIO:0100728,colony count microbiological quantification tag,colony count|colony count data type
+GENEPIO:0100729,total coliform count microbiological quantification tag,total coliform count|total coliform count data type
+GENEPIO:0100730,total fecal coliform count microbiological quantification tag,total fecal coliform count|total fecal coliform count data type
+GENEPIO:0100731,infectivity assay tag,infectivity assay|infectivity assay data type
+GENEPIO:0100732,enzyme-linked immunosorbent assay (ELISA) toxin binding tag,ELISA toxin binding|ELISA toxin binding data type|enzyme-linked immunosorbent assay (ELISA) toxin binding data type
+GENEPIO:0100733,molecular characterization data tag,Molecular characterization|microbiological quantification attribute bundle|molecular characterization data type
+GENEPIO:0100734,16S rRNA Sanger sequencing characterization tag,16S rRNA Sanger sequencing|16S rRNA Sanger sequencing data type
+GENEPIO:0100735,polymerase chain reaction (PCR) marker detection characterization tag,PCR marker detection|PCR marker detection data type|Polymerase chain reaction (PCR) marker detection data type
+GENEPIO:0100736,BOX-A1R-based repetitive extragenic palindromic (BOX) PCR fingerprint tag,BOX PCR fingerprint|BOX PCR fingerprint tag|BOX-A1R-based repetitive extragenic palindromic (BOX) PCR fingerprint data type
+GENEPIO:0100737,enterobacterial repetitive intergenic consensus (ERIC) PCR fingerprint tag,ERIC PCR fingerprint|ERIC PCR fingerprint data type|ERIC PCR fingerprint tag|enterobacterial repetitive intergenic consensus polymerase chain reaction fingerprint data type
+GENEPIO:0100738,plasmid type characterization data tag,plasmid type|plasmid type data type
+GENEPIO:0100739,ribotype characterization data tag,ribotype|ribotype data type
+GENEPIO:0100740,molecular quantification data tag,molecular quantification|molecular quantification attribute bundle|molecular quantification data type
+GENEPIO:0100741,quantitative polymerase chain reaction (qPCR) marker organism quantification tag,qPCR marker organism quantification|qPCR marker organism quantification data type|qPCR marker organism quantification tag|quantitative polymerase chain reaction (qPCR) marker organism quantification data type
+GENEPIO:0100742,physical characterization data tag,physical characterization|physical characterization attribute bundle|physical characterization data type
+GENEPIO:0100743,conductivity measurement characterization tag,conductivity measurement|conductivity measurement data type
+GENEPIO:0100744,mollusc shell measurement characterization tag,mollusc shell measurement|mollusc shell measurement data type
+GENEPIO:0100745,mollusc shell length tag,mollusc shell length|mollusc shell length data type
+GENEPIO:0100746,matter compostion characterization tag,matter compostion|matter compostion data type
+GENEPIO:0100747,dry matter composition tag,dry matter composition|dry matter composition data type
+GENEPIO:0100748,organic matter composition tag,organic matter composition|organic matter composition data type
+GENEPIO:0100749,turbidity measurement tag,turbidity measurement|turbidity measurement data type
+GENEPIO:0100750,available data types enumeration,
+GENEPIO:0100752,specimen collector subsample id,PCDS:specimen_collector_subsample_id|sample collector sub-sample ID slot|sample collector sub-sample identifer slot|specimen collector subsample ID
+GENEPIO:0100753,metagenomeassembled genome mag id,PCDS:metagenomeassembled_genome_mag_id|metagenome assembled genome ID|metagenome-assembled genome (MAG) ID|metagenome-assembled genome (MAG) ID slot|metagenome-assembled genome identifier
+GENEPIO:0100759,enterobase accession,Enterobase accession|Enterobase accession slot|PCDS:enterobase_accession
+GENEPIO:0100760,sampling site ID,PCDS:sampling_site_id|sampling site ID|sampling site ID slot|sampling site code
+GENEPIO:0100761,sampling event id,PCDS:sampling_event_id|sampling event ID|sampling event ID slot
+GENEPIO:0100762,sample collection data steward name,PCDS:sample_collection_data_steward_name|sample collection data steward name|sample collection data steward name slot
+GENEPIO:0100763,sample processing date,PCDS:sample_processing_date|sample processing date|sample processing date slot
+GENEPIO:0100764,sample collection time,PCDS:sample_collection_time
+GENEPIO:0100765,sample collection time of day,PCDS:sample_collection_time_of_day
+GENEPIO:0100766,sample collection time duration value,PCDS:sample_collection_time_duration_value
+GENEPIO:0100767,sample collection duration unit,PCDS:sample_collection_time_duration_unit
+GENEPIO:0100768,sample volume measurement,PCDS:sample_volume_measurement_value|sample volume measurement value|sample volume measurement value slot
+GENEPIO:0100769,sample volume measurement unit,PCDS:sample_volume_measurement_unit|sample volume measurement unit|sample volume measurement unit slot
+GENEPIO:0100770,environmental material properties field,PCDS:environmental_material_properties|environmental material properties|environmental_material_properties
+GENEPIO:0100771,wastewater system type,PCDS:wastewater_system_type|wastewater system type|wastewater system type slot
+GENEPIO:0100772,nucleic acid extraction kit,PCDS:nucleic_acid_extraction_kit|extraction kit|nucleic acid extraction kit|nucleic acid extraction kit slot
+GENEPIO:0100773,water catchment area human population measurement value,PCDS:water_catchment_area_human_population_measurement_value|water catchment human population measurement value|water catchment human population measurement value slot
+GENEPIO:0100774,water catchment area human population range,PCDS:water_catchment_area_human_population_range|water catchment human population range|water catchment human population range slot
+GENEPIO:0100775,water catchment area human population measurement method,PCDS:water_catchment_area_human_population_measurement_method|water catchment human population measurement method|water catchment human population measurement method slot
+GENEPIO:0100776,water catchment area human population density value,PCDS:water_catchment_area_human_population_density_value|water catchment human population density value|water catchment human population density value slot
+GENEPIO:0100777,water catchment area human population density unit,PCDS:water_catchment_area_human_population_density_unit|water catchment human population density unit|water catchment human population density unit slot
+GENEPIO:0100778,populated area type field category,PCDS:populated_area_type_slot_group|populated area type|populated area type slot
+GENEPIO:0100779,sampling weather conditions,PCDS:sampling_weather_conditions|sampling weather conditions|sampling weather conditions slot
+GENEPIO:0100780,presampling weather conditions,PCDS:presampling_weather_conditions|presampling weather conditions|presampling weather conditions slot
+GENEPIO:0100781,ph measurement method,PCDS:ph_measurement_method|pH measurement method|pH measurement method slot
+GENEPIO:0100783,turbidity measurement value,PCDS:turbidity_measurement_value|turbidity measurement value|turbidity measurement value slot
+GENEPIO:0100784,dissolved oxygen measurement unit,PCDS:dissolved_oxygen_measurement_unit|dissolved oxygen measurement unit|dissolved oxygen measurement unit slot
+GENEPIO:0100785,dissolved oxygen measurement method,PCDS:dissolved_oxygen_measurement_method|dissolved oxygen measurement method|dissolved oxygen measurement method slot
+GENEPIO:0100786,oxygen reduction potential (ORP) measurement unit,PCDS:oxygen_reduction_potential_orp_measurement_unit|oxygen reduction potential (ORP) measurement unit|oxygen reduction potential (ORP) measurement unit slot
+GENEPIO:0100787,oxygen reduction potential orp measurement method,PCDS:oxygen_reduction_potential_orp_measurement_method|oxygen reduction potential (ORP) measurement method|oxygen reduction potential (ORP) measurement method slot
+GENEPIO:0100788,chemical oxygen demand measurement,PCDS:chemical_oxygen_demand_cod_measurement_value|chemical oxygen demand (COD) measurement value|chemical oxygen demand (COD) measurement value slot
+GENEPIO:0100789,chemical oxygen demand (COD) measurement unit,PCDS:chemical_oxygen_demand_cod_measurement_unit|chemical oxygen demand (COD) measurement unit|chemical oxygen demand (COD) measurement unit slot
+GENEPIO:0100790,chemical oxygen demand cod measurement method,PCDS:chemical_oxygen_demand_cod_measurement_method|chemical oxygen demand (COD) measurement method|chemical oxygen demand (COD) measurement method slot
+GENEPIO:0100791,carbonaceous biochemical oxygen demand measurement,PCDS:carbonaceous_biochemical_oxygen_demand_cbod_measurement_value|carbonaceous biochemical oxygen demand (CBOD) measurement value|carbonaceous biochemical oxygen demand (CBOD) measurement value slot
+GENEPIO:0100792,carbonaceous biochemical oxygen demand (CBOD) measurement unit,PCDS:carbonaceous_biochemical_oxygen_demand_cbod_measurement_unit|carbonaceous biochemical oxygen demand (CBOD) measurement unit|carbonaceous biochemical oxygen demand (CBOD) measurement unit slot
+GENEPIO:0100793,carbonaceous biochemical oxygen demand cbod measurement method,PCDS:carbonaceous_biochemical_oxygen_demand_cbod_measurement_method|carbonaceous biochemical oxygen demand (CBOD) measurement method|carbonaceous biochemical oxygen demand (CBOD) measurement method slot
+GENEPIO:0100794,total suspended solids measurement,PCDS:total_suspended_solids_tss_measurement_value|total suspended solids (TSS) measurement value|total suspended solids (TSS) measurement value slot
+GENEPIO:0100795,total suspended solids (TSS) measurement unit,PCDS:total_suspended_solids_tss_measurement_unit|total suspended solids (TSS) measurement unit|total suspended solids (TSS) measurement unit slot
+GENEPIO:0100796,total suspended solids tss measurement method,PCDS:total_suspended_solids_tss_measurement_method|total suspended solids (TSS) measurement method|total suspended solids (TSS) measurement method slot
+GENEPIO:0100797,total dissolved solids measurement,PCDS:total_dissolved_solids_tds_measurement_value|total dissolved solids (TDS) measurement value|total dissolved solids (TDS) measurement value slot
+GENEPIO:0100798,total dissolved solids (TDS) measurement unit,PCDS:total_dissolved_solids_tds_measurement_unit|total dissolved solids (TDS) measurement unit|total dissolved solids (TDS) measurement unit slot
+GENEPIO:0100799,total dissolved solids tds measurement method,PCDS:total_dissolved_solids_tds_measurement_method|total dissolved solids (TDS) measurement method|total dissolved solids (TDS) measurement method slot
+GENEPIO:0100800,total solids ts measurement value,PCDS:total_solids_ts_measurement_value|total solids (TS) measurement value|total solids (TS) measurement value slot
+GENEPIO:0100801,total solids (TS) measurement unit,PCDS:total_solids_ts_measurement_unit|total solids (TS) measurement unit|total solids (TS) measurement unit slot
+GENEPIO:0100802,total solids ts measurement method,PCDS:total_solids_ts_measurement_method|total solids (TS) measurement method|total solids (TS) measurement method slot
+GENEPIO:0100803,conductivity measurement unit,PCDS:conductivity_measurement_unit|conductivity measurement unit|conductivity measurement unit slot
+GENEPIO:0100804,conductivity measurement method,PCDS:conductivity_measurement_method|conductivity measurement method|conductivity measurement method slot
+GENEPIO:0100805,salinity measurement value,PCDS:salinity_measurement_value|salinity measurement value|salinity measurement value slot
+GENEPIO:0100806,salinity measurement unit,PCDS:salinity_measurement_unit|salinity measurement unit|salinity measurement unit slot
+GENEPIO:0100807,salinity measurement method,PCDS:salinity_measurement_method|salinity measurement method|salinity measurement method slot
+GENEPIO:0100808,total nitrogen tn measurement value,PCDS:total_nitrogen_tn_measurement_value|total nitrogen (TN) measurement value|total nitrogen (TN) measurement value slot
+GENEPIO:0100809,total nitrogen (TN) measurement unit,PCDS:total_nitrogen_tn_measurement_unit|total nitrogen (TN) measurement unit|total nitrogen (TN) measurement unit slot
+GENEPIO:0100810,total nitrogen tn measurement method,PCDS:total_nitrogen_tn_measurement_method|total nitrogen (TN) measurement method|total nitrogen (TN) measurement method slot
+GENEPIO:0100811,total phosphorus tp measurement value,PCDS:total_phosphorus_tp_measurement_value|total phosphorus (TP) measurement value|total phosphorus (TP) measurement value slot
+GENEPIO:0100812,total phosphorus (TP) measurement unit,PCDS:total_phosphorus_tp_measurement_unit|total phosphorus (TP) measurement unit|total phosphorus (TP) measurement unit slot
+GENEPIO:0100813,total phosphorus tp measurement method,PCDS:total_phosphorus_tp_measurement_method|total phosphorus (TP) measurement method|total phosphorus (TP) measurement method slot
+GENEPIO:0100814,fecal contamination indicator,PCDS:fecal_contamination_indicator|faecal contamination indicator|faecal contamination indicator slot|fecal contamination indicator|fecal contamination indicator slot
+GENEPIO:0100815,fecal contamination value,PCDS:fecal_contamination_value|faecal contamination value|faecal contamination value slot|fecal contamination value|fecal contamination value slot
+GENEPIO:0100816,fecal contamination unit,PCDS:fecal_contamination_unit|faecal contamination unit|faecal contamination unit slot|fecal contamination unit|fecal contamination unit slot
+GENEPIO:0100817,fecal contamination method,PCDS:fecal_contamination_method|faecal contamination method|faecal contamination method slot|fecal contamination method|fecal contamination method slot
+GENEPIO:0100818,fecal coliform count value,PCDS:fecal_coliform_count_value|faecal coliform count value|faecal coliform count value slot|fecal coliform count value|fecal coliform count value slot
+GENEPIO:0100819,fecal coliform count unit,PCDS:fecal_coliform_count_unit|faecal coliform count unit|faecal coliform count unit slot|fecal coliform count unit|fecal coliform count unit slot
+GENEPIO:0100820,fecal coliform count method,PCDS:fecal_coliform_count_method|faecal coliform count method|faecal coliform count method slot|fecal coliform count method|fecal coliform count method slot
+GENEPIO:0100821,sample temperature value at collection,PCDS:sample_temperature_value_at_collection|sample temperature at collection value slot|sample temperature value (at collection)
+GENEPIO:0100822,sample temperature at collection unit,PCDS:sample_temperature_unit_at_collection|sample temperature at collection unit slot|sample temperature unit (at collection)
+GENEPIO:0100823,sample temperature value when received,PCDS:sample_temperature_value_when_received|sample temperature value (when received)|sample temperature when received value slot
+GENEPIO:0100824,sample temperature when received unit,PCDS:sample_temperature_unit_when_received|sample temperature unit (when received)|sample temperature when received unit slot
+GENEPIO:0100825,sequence assembly software name,PCDS:sequence_assembly_software_name|assembly software name
+GENEPIO:0100826,sequence assembly software version,PCDS:sequence_assembly_software_version|assembly software version
+GENEPIO:0100827,number of total reads,PCDS:number_of_total_reads|number of total reads|number of total reads slot
+GENEPIO:0100828,number of unique reads,PCDS:number_of_unique_reads|number of unique reads|number of unique reads slot
+GENEPIO:0100829,minimum posttrimming read length,PCDS:minimum_posttrimming_read_length|minimum post-trimming read length|minimum post-trimming read length slot
+GENEPIO:0100830,percent ns across total genome length,PCDS:percent_ns_across_total_genome_length|percent Ns across total genome length|percent Ns across total genome length slot
+GENEPIO:0100831,deduplication method,PCDS:deduplication_method|deduplication method|deduplication method slot
+GENEPIO:0100832,read mapping software name,PCDS:read_mapping_software_name|read alignment software name field|read alignment software name slot|read mapping software name|read mapping software name slot
+GENEPIO:0100833,read mapping software version,PCDS:read_mapping_software_version|read alignment software version field|read alignment software version slot|read mapping software version|read mapping software version slot
+GENEPIO:0100834,taxonomic reference database name,PCDS:taxonomic_reference_database_name|taxonomic reference database name|taxonomic reference database name slot
+GENEPIO:0100835,taxonomic reference database version,PCDS:taxonomic_reference_database_version|taxonomic reference database version|taxonomic reference database version slot
+GENEPIO:0100836,read mapping criteria,PCDS:read_mapping_criteria|read mapping criteria|read mapping criteria slot
+GENEPIO:0100837,urinary contamination indicator,PCDS:urinary_contamination_indicator|urinary contamination indicator|urinary contamination indicator slot
+GENEPIO:0100838,urinary contamination value,PCDS:urinary_contamination_value|urinary contamination value|urinary contamination value slot
+GENEPIO:0100839,urinary contamination unit,PCDS:urinary_contamination_unit|urinary contamination unit|urinary contamination unit slot
+GENEPIO:0100840,urinary contamination method,PCDS:urinary_contamination_method|urinary contamination method|urinary contamination method slot
+GENEPIO:0100843,dna fragment length,DNA fragment length|DNA fragment length slot|PCDS:dna_fragment_length
+GENEPIO:0100844,genome completeness,PCDS:genome_completeness|genome completeness|genome completeness slot
+GENEPIO:0100845,percent read contamination,PCDS:percent_read_contamination|percent read contamination|percent read contamination slot
+GENEPIO:0100846,sequence assembly length,PCDS:sequence_assembly_length|sequence assembly length|sequence assembly length slot
+GENEPIO:0100847,artic-v1 strategy,artic v1|artic-v1
+GENEPIO:0100848,artic-v2 strategy,artic v2|artic-v2
+GENEPIO:0100849,artic-v3 strategy,artic v3|artic-v3
+GENEPIO:0100850,artic-v4 strategy,artic v4|artic-v4
+GENEPIO:0100851,artic-v4.1 strategy,artic v4.1|artic-v4.1
+GENEPIO:0100852,artic-v5.0.0_400 strategy,artic v5.0.0_400|artic-v5.0.0_400
+GENEPIO:0100853,artic-v5.1.0_400 strategy,artic v5.1.0_400|artic-v5.1.0_400
+GENEPIO:0100854,artic-v5.2.0_1200 strategy,artic v5.2.0_1200|artic-v5.2.0_1200
+GENEPIO:0100855,artic-v5.2.0_400 strategy,artic v5.2.0_400|artic-v5.2.0_400
+GENEPIO:0100856,artic-v5.3.2_400 strategy,artic v5.3.2_400|artic-v5.3.2_400
+GENEPIO:0100857,eden-v1 strategy,eden v1|eden-v1
+GENEPIO:0100858,midnight bccdc version 1 strategy,midnight bccdc v1|midnight-bccdc-v1
+GENEPIO:0100859,midnight bccdc version 2 strategy,midnight bccdc v2|midnight-bccdc-v2
+GENEPIO:0100860,midnight bccdc version 3 strategy,midnight bccdc v3|midnight-bccdc-v3
+GENEPIO:0100861,midnight bccdc version 4 strategy,midnight bccdc v4|midnight-bccdc-v4
+GENEPIO:0100862,midnight version 3 strategy,midnight ont v3|midnight v3|midnight-ont-v3|midnight-v3
+GENEPIO:0100863,midnight version 1 strategy,midnight 1200|midnight v1|midnight-1200|midnight-v1
+GENEPIO:0100864,midnight version 2 strategy,midnight v2|midnight-v2
+GENEPIO:0100865,varskip-vsl1a strategy,VarSkip Long 1a|varskip vsl1a|varskip-vsl1a
+GENEPIO:0100866,varskip-vss1a strategy,VarSkip 1a|varskip vss1a|varskip-vss1a
+GENEPIO:0100867,varskip-vss2a strategy,VarSkip 2a|varskip vss2a|varskip-vss2a
+GENEPIO:0100868,varskip-vss2b strategy,VarSkip 2b|varskip vss2b|varskip-vss2b
+GENEPIO:0100877,scale of sampling,PCDS:scale_of_sampling|scale of sampling|scale of sampling slot
+GENEPIO:0100878,alkalinity measurement value,PCDS:alkalinity_measurement_value|alkalinity measurement value|alkalinity measurement value slot
+GENEPIO:0100879,alkalinity measurement unit,PCDS:alkalinity_measurement_unit|alkalinity measurement unit|alkalinity measurement unit slot
+GENEPIO:0100880,alkalinity measurement method,PCDS:alkalinity_measurement_method|alkalinity measurement method|alkalinity measurement method slot
+GENEPIO:0100898,digestive tract substance,
+GENEPIO:0100899,caecal content,
+GENEPIO:0100900,intestinal content,
+GENEPIO:0100905,total daily flow rate measurement value,PCDS:total_daily_flow_rate_measurement_value
+GENEPIO:0100906,total daily flow rate measurement unit,PCDS:total_daily_flow_rate_measurement_unit|total daily flow rate measurement unit|total daily flow rate measurement unit slot
+GENEPIO:0100907,total daily flow rate measurement method,PCDS:total_daily_flow_rate_measurement_method|total daily flow rate measurement method|total daily flow rate measurement method slot
+GENEPIO:0100908,instantaneous flow rate measurement value,PCDS:instantaneous_flow_rate_measurement_value|instantaneous flow rate measurement value|instantaneous flow rate measurement value slot
+GENEPIO:0100909,instantaneous flow rate measurement unit,PCDS:instantaneous_flow_rate_measurement_unit|instantaneous flow rate measurement unit|instantaneous flow rate measurement unit slot
+GENEPIO:0100910,instantaneous flow rate measurement method,PCDS:instantaneous_flow_rate_measurement_method|instantaneous flow rate measurement method|instantaneous flow rate measurement method slot
+GENEPIO:0100911,precipitation measurement value,PCDS:precipitation_measurement_value|precipitation measurement value|precipitation measurement value slot
+GENEPIO:0100912,precipitation measurement unit,PCDS:precipitation_measurement_unit|precipitation measurement unit|precipitation measurement unit slot
+GENEPIO:0100913,precipitation measurement method,PCDS:precipitation_measurement_method|precipitation measurement method|precipitation measurement method slot
+GENEPIO:0100914,turbidity measurement unit,PCDS:turbidity_measurement_unit|turbidity measurement unit|turbidity measurement unit slot
+GENEPIO:0100916,conductivity measurement value,PCDS:conductivity_measurement_value|conductivity measurement value|conductivity measurement value slot
+GENEPIO:0100918,specimen collector project id,PCDS:specimen_collector_project_id|specimen collector project ID|specimen collector project ID slot
+GENEPIO:0100919,watershed shapefile availability,PCDS:watershed_shapefile_availability|watershed shapefile availability|watershed shapefile availability slot
+GENEPIO:0100920,watershed shapefile filename,PCDS:watershed_shapefile_filename|watershed shapefile filename|watershed shapefile filename slot
+GENEPIO:0100921,experimental specimen role type,PCDS:experimental_specimen_role_type|experimental control type|experimental control type slot
+GENEPIO:0100922,experimental control details,PCDS:experimental_control_details|experimental control details|experimental control details slot
+GENEPIO:0100923,endogenous control details,PCDS:endogenous_control_details|endogenous control details|endogenous control details slot
+GENEPIO:0100924,extraction recovery efficiency measurement value,PCDS:extraction_recovery_efficiency_measurement_value|extraction recovery efficiency measurement value|extraction recovery efficiency measurement value slot
+GENEPIO:0100925,extraction recovery efficiency measurement method,PCDS:extraction_recovery_efficiency_measurement_method|extraction recovery efficiency measurement method|extraction recovery efficiency measurement method slot
+GENEPIO:0100929,PONAR grab sampler,
+GENEPIO:0100930,soil sample probe,
+GENEPIO:0100932,specimen collection by scooping,
+GENEPIO:0100933,sediment sampling,
+GENEPIO:0100934,soil coring,
+GENEPIO:0100935,ambient temperature measurement value,PCDS:ambient_temperature_measurement_value|ambient temperature measurement unit|ambient temperature measurement unit slot
+GENEPIO:0100936,ambient temperature measurement unit,PCDS:ambient_temperature_measurement_unit|ambient temperature measurement value|ambient temperature measurement value slot
+GENEPIO:0100937,number of contigs,PCDS:number_of_contigs|number of contigs|number of contigs value slot
+GENEPIO:0100938,n50,N50 value|N50 value slot|PCDS:n50
+GENEPIO:0100939,nucleic acid extraction method,PCDS:nucleic_acid_extraction_method|nucleic acid extraction method|nucleic acid extraction method slot
+GENEPIO:0100940,environmental conditions and measurements field category,PCDS:Environmental conditions and measurements
+GENEPIO:0100941,grab sampling device,grab sampler
+GENEPIO:0100942,composite sampling device,composite sampler
+GENEPIO:0100943,core sampling device,core sampler
+GENEPIO:0100944,vacuum sludge sampling device,vacuum sludge sampler
+GENEPIO:0100945,cone-shaped sampling device,cone-shaped sampler
+GENEPIO:0100946,horizontal grab sampling device,horizontal grab sampler
+GENEPIO:0100947,vertical grab sampling device,vertical grab sampler
+GENEPIO:0100948,passive sampling device,passive sampler|trap sampler
+GENEPIO:0100949,moore swab,
+GENEPIO:0100950,automatic composite sampling device,automatic composite sampler
+GENEPIO:0100951,automatic flow-proportional composite sampling device,automatic flow-proportional sampler
+GENEPIO:0100952,automatic sequential composite sampling device,automatic sequential sampler|automatic time-proportional sampler
+GENEPIO:0100953,grab sampling,
+GENEPIO:0100954,composite sampling,
+GENEPIO:0100955,passive composite sampling,
+GENEPIO:0100956,automatic composite sampling,
+GENEPIO:0100957,manual composite sampling,
+GENEPIO:0100962,diagnostic target presence,PCDS:diagnostic_target_presence_*
+GENEPIO:0100963,diagnostic measurement value,PCDS:diagnostic_measurement_value_*|diagnostic measurement value 1|diagnostic measurement value 2|diagnostic measurement value 3
+GENEPIO:0100964,diagnostic measurement unit,PCDS:diagnostic_measurement_unit_*|diagnostic measurement unit 1|diagnostic measurement unit 2|diagnostic measurement unit 3
+GENEPIO:0100965,diagnostic measurement method,PCDS:diagnostic_measurement_method_*|diagnostic measurement method 1|diagnostic measurement method 2|diagnostic measurement method 3
+GENEPIO:0100966,genomic target enrichment method,PCDS:genomic_target_enrichment_method|genomic target enrichment method|genomic target enrichment method slot
+GENEPIO:0100967,genomic target enrichment method details,PCDS:genomic_target_enrichment_method_details|genomic target enrichment method details|genomic target enrichment method details slot
+GENEPIO:0100968,454 Genome Sequencer FLX+,454 GS FLX+
+GENEPIO:0100969,454 Genome Sequencer Junior,454 GS Junior
+GENEPIO:0100970,SOLiD 5500xl-W Genetic Analyzer,SOLiD 5500xl-W
+GENEPIO:0100972,MGI DNBSEQ-G99,DNBSEQ-G99
+GENEPIO:0100973,MGI DNBSEQ-E25,DNBSEQ-E25
+GENEPIO:0100974,Applied Biosystems sequencing instrument model,
+GENEPIO:0100975,ABI PRISM 310 Genetic Analyzer,AB 310 Genetic Analyzer|AB 310 sequencer
+GENEPIO:0100976,AB 3130 Genetic Analyzer,AB 3130 sequencer
+GENEPIO:0100977,AB 3130xL Genetic Analyzer,AB 3130xL sequencer
+GENEPIO:0100978,AB 3500 Genetic Analyzer,AB 3500 sequencer
+GENEPIO:0100979,AB 3500xL Genetic Analyzer,AB 3500xL sequencer
+GENEPIO:0100980,AB 3730 Genetic Analyzer,AB 3730 sequencer
+GENEPIO:0100981,AB 3730xL Genetic Analyzer,AB 3730xL sequencer
+GENEPIO:0100996,pooled sample id,PCDS:pooled_sample_id|pooled sample ID|pooled sample ID slot|pooled sample identifier field|pooled sample identifier slot
+GENEPIO:0100997,sequencing assay type,PCDS:sequencing_assay_type|sequencing assay type|sequencing assay type slot
+GENEPIO:0101003,Weep fluid collection (pouring),
+GENEPIO:0101013,turbidity measurement method,PCDS:turbidity_measurement_method|turbidity measurement method|turbidity measurement method slot
+GENEPIO:0101014,sample storage duration value,PCDS:sample_storage_duration_value|sample storage duration value|sample storage duration value slot
+GENEPIO:0101015,sample storage duration unit,PCDS:sample_storage_duration_unit|sample storage duration unit|sample storage duration unit slot
+GENEPIO:0101017,specimen control role,control sample
+GENEPIO:0101018,positive control specimen role,positive control sample|positive control specimen
+GENEPIO:0101019,negative control specimen role,negative control sample|negative control specimen
+GENEPIO:0101020,rRNA depletion method,
+GENEPIO:0101023,available data type details,PCDS:available_data_type_details|available data types details|available data types details slot
+GENEPIO:0101025,water depth units,PCDS:water_depth_units|water depth units|water depth units slot
+GENEPIO:0101026,sediment depth units,PCDS:sediment_depth_units|sediment depth units|sediment depth units slot
+GENEPIO:0101027,air temperature units,PCDS:air_temperature_units|air temperature units|air temperature units slot
+GENEPIO:0101028,water temperature units,PCDS:water_temperature_units|water temperature units|water temperature units slot
+GENEPIO:0101029,experimental protocol;experimental protocol field;experimental protocol name,PCDS:experimental_protocol_name|experimental protocol|experimental protocol slot
+GENEPIO:0101071,sample collection end date,PCDS:sample_collection_end_date|sample collection end date|sample collection end date slot
+GENEPIO:0101072,sample collection start time,PCDS:sample_collection_start_time
+GENEPIO:0101073,sample collection end time,PCDS:sample_collection_end_time|sample collection end time|sample collection end time slot
+GENEPIO:0101074,taxonomic analysis report filename,PCDS:taxonomic_analysis_report_filename|taxonomic analysis report filename|taxonomic analysis report filename slot
+GENEPIO:0101075,taxonomic analysis date,PCDS:taxonomic_analysis_date|taxonomic analysis date|taxonomic analysis date slot
+GENEPIO:0101076,AMR analysis software name,AMR analysis software name|AMR analysis software name slot|PCDS:amr_analysis_software_name
+GENEPIO:0101077,AMR analysis software version,AMR analysis software version|AMR analysis software version slot|PCDS:amr_analysis_software_version
+GENEPIO:0101078,AMR reference database name,AMR reference database name|AMR reference database name slot|PCDS:amr_reference_database_name
+GENEPIO:0101079,AMR reference database version,AMR reference database version|AMR reference database version slot|PCDS:amr_reference_database_version
+GENEPIO:0101080,AMR analysis report filename,AMR analysis report filename|AMR analysis report filename slot|PCDS:amr_analysis_report_filename
+GENEPIO:0101081,lineage/clade analysis report filename,PCDS:lineage_clade_analysis_report_filename|lineage/clade analysis report filename|lineage/clade analysis report filename slot
+GENEPIO:0101082,Taxonomic identification information field category,PCDS:taxonomic_identification_information_slot_group
+GENEPIO:0101085,nucleic acid storage duration value,PCDS:nucleic_acid_storage_duration_value
+GENEPIO:0101086,nucleic acid storage duration unit,PCDS:nucleic_acid_storage_duration_unit
+GENEPIO:0101090,residual sample status,PCDS:residual_sample_status
+GENEPIO:0101102,sequencing flow cell version,PCDS:sequencing_flow_cell_version
+GENEPIO:0101104,diagnostic testing threshold value,PCDS:diagnostic_testing_threshold_value
+GENEPIO:0101105,diagnostic testing threshold units,PCDS:diagnostic_testing_threshold_units
+GENEPIO:0101106,diagnostic testing details,PCDS:diagnostic_testing_details
+GENEPIO:0101107,sample collection data steward contact email,PCDS:sample_collection_data_steward_contact_email
+GENEPIO:0101108,influenza subtype,PCDS:Taxonomic identification information|PCDS:influenza_subtype
+GENEPIO:0101109,influenza subtyping scheme name,PCDS:influenza_subtyping_scheme_name
+GENEPIO:0101110,virus identifier,PCDS:virus_identifier
+GENEPIO:0101111,who oie fao h5 clade,PCDS:who_oie_fao_h5_clade
+GENEPIO:0101112,experimental specimen details,PCDS:experimental_specimen_details
+GENEPIO:0101113,influenza antiviral treatment administration,PCDS:influenza_antiviral_treatment_administration
+GENEPIO:0101114,influenza antiviral agent,PCDS:influenza_antiviral_agent
+GENEPIO:0101115,influenza antiviral treatment date,PCDS:influenza_antiviral_treatment_date
+GENEPIO:0101116,genetic target name,PCDS:genetic_target_name
+GENEPIO:0101117,genetic target region,PCDS:genetic_target_region
+GENEPIO:0101118,genetic target region reference genome,PCDS:genetic_target_region_reference_genome
+GENEPIO:0101197,environmental material constituent,PCDS:environmental_material_constituent|environmental_material_constituent
+GENEPIO:0101203,insdc sequence read accession,PCDS:insdc_sequence_read_accession
+GENEPIO:0101204,insdc assembly accession,PCDS:insdc_assembly_accession
+GENEPIO:0101205,proximal environmental site,PCDS:proximal_environmental_site
+GENEPIO:0101715,genome sequence filename,PCDS:genome_sequence_filename|genome sequence file name
+GENEPIO:0101716,genome sequence file path,PCDS:genome_sequence_file_path
+GENEPIO:0102038,assay target name 2,PCDS:assay_target_name_*
+GENEPIO:0102039,assay target name 3,PCDS:assay_target_name_*
+GENEPIO:0102041,diagnostic gene symbol,GENEPIO:0102042|GENEPIO:0102043|PCDS:gene_symbol_*|gene symbol 1|gene symbol 2|gene symbol 3
+GENEPIO:0102042,diagnostic gene symbol 2,gene symbol 2
+GENEPIO:0102043,diagnostic gene symbol 3,gene symbol 3
+GENEPIO:0102045,assay target details,PCDS:assay_target_details_*|assay target details 1|assay target details 2|assay target details 3
+GENEPIO:0102049,target taxonomic name,PCDS:target_taxonomic_name_*
+GENEPIO:0102052,assay target name,GENEPIO:0102038|GENEPIO:0102039|PCDS:assay_target_name_*|assay target name 1|assay target name 2|assay target name 3
+GENEPIO:0102067,sample collection url,PCDS:sample_collection_url
+GENEPIO:0102068,amplicon pcr primer scheme url,PCDS:amplicon_pcr_primer_scheme_url
+GENEPIO:0102069,AMR analysis date,PCDS:amr_analysis_date
+GENEPIO:0102070,lineage clade analysis date,PCDS:lineage_clade_analysis_date
+GENEPIO:0102071,experimental protocol url,PCDS:experimental_protocol_url
+GENEPIO:0102078,pathoplexus accession,PCDS:pathoplexus_accession
+GENEPIO:0102079,data steward contact name,PCDS:data_steward_contact_name
+GENEPIO:0102080,data steward contact email,PCDS:data_steward_contact_email
+GENEPIO:0102133,viral clade,PCDS:viral_clade
+GENEPIO:0102140,infectious disease stage,PCDS:infectious_disease_stage_*|infectious disease stage 1|infectious disease stage 2|infectious disease stage 3
+GENEPIO:0102141,antibody symbol,PCDS:antibody_symbol_*|antibody symbol 1|antibody symbol 2|antibody symbol 3
+GENEPIO:0102148,MGI DNBSEQ-G40 FluroXpert,DNBSEQ-G40 FluroXpert
+GENEPIO:0102149,MGI DNBSEQ-G800,DNBSEQ-G800
+GENEPIO:0102150,MGI DNBSEQ-T1+,DNBSEQ-T1+
+GENEPIO:0102151,MGI DNBSEQ-T20x2,DNBSEQ-T20x2
+GENEPIO:0102152,Ion GeneStudio S5 Plus,
+GENEPIO:0102153,Ion GeneStudio S5 Prime,
+GENEPIO:0102154,Ion Torrent Genexus,
+GENEPIO:0102155,PacBio Onso,
+GENEPIO:0102156,PacBio Revio,
+GENEPIO:0102157,PacBio Sequel IIe,
+GENEPIO:0102158,PacBio Vega,
+GENEPIO:0102162,sample collection name,PCDS:sample_collection_name
+GENEPIO:0102179,water associated outbreak investigation sampling,water associated outbreak investigation
+GENEPIO:0102180,environmental surveillance sampling,Environmental surveillance
+GENEPIO:0102181,surface water quality surveillance sampling,Surface water quality surveillance
+GENEPIO:0102182,monitoring strategy,Monitoring
+GENEPIO:0102183,algal bloom monitoring,Algal bloom monitoring
+GENEPIO:0102184,community triggered environmental monitoring,
+GENEPIO:0102185,ISCO sampling device,ISCO sampler
+GENEPIO:0102186,Torpedo passive water sampling device,Torpedo passive water sampler
+GENEPIO:0102187,18S ribosomal gene sequencing assay,
+GENEPIO:0102188,Viral amplicon sequencing,
+GENEPIO:0102189,Cytochrome c oxidase I barcoding,
+GENEPIO:0102190,Magnetic bead capture,
+GENEPIO:0102191,Poly(A) selection,
+GENEPIO:0102192,cubic meter per second,m^3/s
+GENEPIO:0102193,cubic meter per minute,m^3/min
+GENEPIO:0102194,cubic meter per hour,m^3/h
+GENEPIO:0102195,liter per second,L/s
+GENEPIO:0102196,liter per minute,L/min
+GENEPIO:0102197,liter per hour,L/h
+GENEPIO:0102198,liter per day,L/day
+GENEPIO:0102199,million gallons per day,MG/D
+GENEPIO:0102200,practical salinity unit,PSU
+GENEPIO:0102201,weight for weight,% w/w
+GENEPIO:0102202,gene copies per liter,GC/L
+GENEPIO:0102203,colony forming units per 100 milliliter,CFU/100 mL
+GENEPIO:0102204,colony forming units per grams total solids,CFU/gTS
+GENEPIO:0102205,most probable number per milliliter,MPN/mL
+GENEPIO:0102206,most probable number per 100 milliliter,MPN/100 mL
+GENEPIO:0102209,Digital real time polymerase chain reaction (dPCR),
+GENEPIO:0102268,third party role,third-party role
+GENEPIO:0102269,filename,NCIT:C171191|data filename|file name
+GENEPIO:0102271,prior measles infection date,PCDS:prior_measles_infection_date
+GENEPIO:0102272,prior antiviral treatment,PCDS:prior_antiviral_treatment
+GENEPIO:0102273,prior antiviral treatment during prior infection,PCDS:prior_antiviral_treatment_during_prior_infection
+GENEPIO:0102274,prior pathogen infection status,PCDS:prior_infection
+GENEPIO:0102275,prior measles infection status,PCDS:prior_measles_infection
+GENEPIO:0102276,prior pathogen infection date,PCDS:prior_infection_date
+GENEPIO:0102277,prior antiviral treatment agent,PCDS:prior_antiviral_treatment_agent
+GENEPIO:0102278,prior antiviral treatment date,PCDS:prior_antiviral_treatment_date
+GENEPIO:0102280,NML data field,
+GENEPIO:0102281,GenapSys sequencing instrument model,sequencing instrument model
+GENEPIO:0102282,GenapSys GS111,GS111
+GENEPIO:0102283,GeneMind sequencing instrument model,sequencing instrument model
+GENEPIO:0102284,GeneMind FASTASeq 300,FASTASeq 300
+GENEPIO:0102285,GeneMind GenoCare 1600,GenoCare 1600
+GENEPIO:0102286,GeneMind GenoLab M,GenoLab M
+GENEPIO:0102287,Helicos sequencing instrument model,
+GENEPIO:0102288,Tapestri sequencing instrument model,
+GENEPIO:0102289,Ultima sequencing instrument model,
+GENEPIO:0102290,Vela sequencing instrument model,
+GENEPIO:0102291,Ultima UG100,UG100
+GENEPIO:0102292,Vela Sentosa SQ301,Sentosa SQ301
+GENEPIO:0102293,prior pathogen infection isolate ID,
+GENEPIO:0102294,Illumina MiSeq i100,
+GENEPIO:0102295,Illumina MiSeq i100 Plus,
+GENEPIO:0102297,genotyping database name,PCDS:genotyping_database_name|genotyping database name slot
+GENEPIO:0102298,genotyping database version,PCDS:genotyping_database_version|genotyping database version slot
+GENEPIO:0102299,genotyping schema name,PCDS:genotyping_schema_name
+GENEPIO:0102300,genotyping software name,PCDS:genotyping_software_name
+obo:GENEPIO:0100292,host role at time of specimen collection,

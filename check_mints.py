@@ -94,7 +94,7 @@ if __name__ == "__main__":
 
   # read in CSV of terms that are already in GENEPIO (from ROBOT export of genepio-merged.owl)
   # this CSV must have columns titled ['IRI', 'LABEL']
-  genepio_df = pd.read_csv("genepio_terms.csv", sep=',', header=0)
+  genepio_df = pd.read_csv("genepio_terms_only.csv", sep=',', header=0)
   # rename columns to match mints sheet
   genepio_df = genepio_df.rename(columns={"ID": "IRI", "LABEL": "label", "SYNONYMS": "alternative label"})
   # drop 'SYNONYMS' column
