@@ -213,7 +213,8 @@ def get_multitab_df(input_dict, creds):
   # get multiple sheets within spreadsheet_id into one large df
   # startrow is 0-indexed: so if the first row of data is row 2 in Google Sheets, write startrow=1 here
   spreadsheet_id = input_dict.pop("SPREADSHEET_ID")
-  print("Processing: ", spreadsheet_id)
+  print("")
+  print("Searching for mints in: ", spreadsheet_id)
   range_names = input_dict.pop("RANGE_NAMES")
   column_names = input_dict.pop("COLUMN_NAMES")
   #print(column_names)

@@ -100,7 +100,7 @@ if __name__ == "__main__":
   # drop 'SYNONYMS' column
   #genepio_df = genepio_df.drop(columns=['SYNONYMS'])
   # merge mints sheet with genepio sheet
-  mints_review_df = compare_terms(mints_df, genepio_df, 'In genepio-merged.owl?', None)
+  mints_review_df = compare_terms(mints_df, genepio_df, 'In genepio.owl?', None)
   duplicated_IRIs = mints_review_df[mints_review_df.duplicated(subset=["IRI"])]
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints_review sheet after GENEPIO check")
 
