@@ -25,13 +25,15 @@ sudo sh run.sh robot --version # check that ODK is running
 sudo sh run.sh make prepare_release -B # regenerate genepio.owl by preparing a release (*don't push this release to the repo)
 ```
 
-2. Run ROBOT export to get ```genepio.owl``` terms in a CSV file called ```genepio_terms.csv```:
+2. Run ROBOT export to get ```genepio.owl``` terms in a CSV file called ```genepio_terms.csv```, then trim the file so it only contains GENEPIO terms:
 
 ```
 sudo sh run.sh robot export --input ../../genepio.owl   --header "ID|LABEL|SYNONYMS"   --export genepio_terms.csv
+cat genepio_terms.csv | head -1 > genepio_terms_only.csv
+cat genepio_terms_only.csv | grep GENEPIO >> genepio_terms_only.csv
 ```
 
-3. Copy ```genepio_terms.csv``` into GoogleSheetsSpellbook.
+3. Copy ```genepio_terms_only.csv``` into GoogleSheetsSpellbook.
 
 4. Within the GoogleSheetsSpellbook directory, activate the conda environment and run the Python script to update the Mints Review tab online:
 ```
