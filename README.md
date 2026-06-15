@@ -22,13 +22,13 @@ git checkout -b release-2026-03-17 # checkout a new branch in preparation for cr
 sudo docker ps # check that Docker is running
 sudo docker pull obolibrary/odkfull # pull the ODK docker image
 sudo sh run.sh robot --version # check that ODK is running
-sudo sh run.sh make prepare_release -B # regenerate genepio-merged.owl by preparing a release (*don't push this release to the repo)
+sudo sh run.sh make prepare_release -B # regenerate genepio.owl by preparing a release (*don't push this release to the repo)
 ```
 
-2. Run ROBOT export to get ```genepio-merged.owl``` terms in a CSV file called ```genepio_terms.csv```:
+2. Run ROBOT export to get ```genepio.owl``` terms in a CSV file called ```genepio_terms.csv```:
 
 ```
-sudo sh run.sh robot export --input genepio-merged.owl   --header "ID|LABEL|SYNONYMS"   --export genepio_terms.csv
+sudo sh run.sh robot export --input ../../genepio.owl   --header "ID|LABEL|SYNONYMS"   --export genepio_terms.csv
 ```
 
 3. Copy ```genepio_terms.csv``` into GoogleSheetsSpellbook.
