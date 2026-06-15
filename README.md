@@ -25,7 +25,7 @@ sudo sh run.sh robot --version # check that ODK is running
 sudo sh run.sh make prepare_release -B # regenerate genepio.owl by preparing a release (*don't push this release to the repo)
 ```
 
-2. Run ROBOT export to get ```genepio.owl``` terms in a CSV file called ```genepio_terms.csv```, then trim the file so it only contains GENEPIO terms:
+2. Run ROBOT export to get terms from ```genepio.owl``` (in GENEPIO's root folder) into a CSV file called ```genepio_terms.csv```, then trim the file so it only contains GENEPIO terms:
 
 ```
 sudo sh run.sh robot export --input ../../genepio.owl   --header "ID|LABEL|SYNONYMS"   --export genepio_terms.csv
