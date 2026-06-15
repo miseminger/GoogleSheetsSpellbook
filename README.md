@@ -33,9 +33,9 @@ cat genepio_terms.csv | head -1 > genepio_terms_only.csv
 cat genepio_terms.csv | grep GENEPIO >> genepio_terms_only.csv
 ```
 
-3. Copy ```genepio_terms_only.csv``` into GoogleSheetsSpellbook.
+3. Copy ```genepio_terms_only.csv``` into the ```GoogleSheetsSpellbook``` directory.
 
-4. Within the GoogleSheetsSpellbook directory, activate the conda environment and run the Python script to update the Mints Review tab online:
+4. Within the ```GoogleSheetsSpellbook``` directory, activate the conda environment and run the Python script to update the Mints Review tab online:
 ```
 conda activate google-mint
 python3 check_mints.py --input input.json
