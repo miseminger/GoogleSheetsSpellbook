@@ -30,7 +30,7 @@ sudo sh run.sh make prepare_release -B # regenerate genepio.owl by preparing a r
 ```
 sudo sh run.sh robot export --input ../../genepio.owl   --header "ID|LABEL|SYNONYMS"   --export genepio_terms.csv
 cat genepio_terms.csv | head -1 > genepio_terms_only.csv
-cat genepio_terms_only.csv | grep GENEPIO >> genepio_terms_only.csv
+cat genepio_terms.csv | grep GENEPIO >> genepio_terms_only.csv
 ```
 
 3. Copy ```genepio_terms_only.csv``` into GoogleSheetsSpellbook.
