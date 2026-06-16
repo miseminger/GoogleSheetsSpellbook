@@ -1,8 +1,7 @@
 ''''
-This script fetches data from the GENEPIO mints sheet, 
-compares it to genepio-edit.owl, and fills in spreadsheet columns
-identifying whether a given mint has been added to the OWL file, 
-ROBOT tables or curation tables or not yet.
+This script fetches data from the GENEPIO mints sheet 
+and identifies whether a given mint has been added to genepio.owl, 
+ROBOT tables or curation tables or none yet.
 '''
 
 import os.path
@@ -20,7 +19,7 @@ from googleapiclient.errors import HttpError
 
 from functions import get_multitab_df, update_values, compare_terms, count_matches_by_subset, get_hyperlinks_list, get_hyperlinks_df, update_merge_status
 
-mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio-merged.owl?",	"In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation sheet"] #,	"Notes"
+mints_review_df_columns = ["IRI",	"label", "creator (GitHub username)",	"reservation date",	"subset",	"In genepio.owl?",	"label in genepio.owl", "alternative label in genepio.owl", "In GENEPIO ROBOT?",	"Tab location in GENEPIO ROBOT",	"In GENEPIO curation?",	"Tab location in GENEPIO curation sheet"] #,	"Notes"
 
 def parse_args():
     
@@ -92,17 +91,23 @@ if __name__ == "__main__":
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints sheets")
   #print(duplicated_IRIs)
 
-  # read in CSV of terms that are already in GENEPIO (from ROBOT export of genepio-merged.owl)
+  # read in CSV of terms that are already in GENEPIO (from ROBOT export of genepio.owl)
   # this CSV must have columns titled ['IRI', 'LABEL']
   genepio_df = pd.read_csv("genepio_terms_only.csv", sep=',', header=0)
   # rename columns to match mints sheet
   genepio_df = genepio_df.rename(columns={"ID": "IRI", "LABEL": "label", "SYNONYMS": "alternative label"})
-  # drop 'SYNONYMS' column
-  #genepio_df = genepio_df.drop(columns=['SYNONYMS'])
   # merge mints sheet with genepio sheet
   mints_review_df = compare_terms(mints_df, genepio_df, 'In genepio.owl?', None)
+  # check for duplicated IRIs
   duplicated_IRIs = mints_review_df[mints_review_df.duplicated(subset=["IRI"])]
   print(str(duplicated_IRIs.shape[0]) + " duplicate IRIs detected in the Mints_review sheet after GENEPIO check")
+  # add 'label' and 'alternative label' columns from genepio sheet for terms with 'id_match'
+  genepio_df = genepio_df.rename(columns={"label": "label in genepio.owl", "alternative label": "alternative label in genepio.owl"})
+  mints_review_df = pd.merge(mints_review_df, genepio_df, on='IRI', how='left')
+  # keep 'label' and 'alternative label' only for id_match rows
+  id_match_mask = (mints_review_df['In genepio.owl?'] != 'id_match') 
+  mints_review_df.loc[id_match_mask, "label in genepio.owl"] = ''
+  mints_review_df.loc[id_match_mask, "alternative label in genepio.owl"] = ''
 
   # read in genepio-ROBOT sheets
   robot_df = get_multitab_df(RESOURCE_DICT["GENEPIO_ROBOT_SPREADSHEET"], creds)
@@ -157,7 +162,7 @@ if __name__ == "__main__":
   #update_values("1Ts4nU6vQRwmnXQz0HzBM7Wz3N4tOVxo9F3-nH6cp06A", "Mints review!A3:P", "USER_ENTERED", mints_review_df_values, creds)
 
   # get match counts table 
-  match_counts_df = count_matches_by_subset(mints_review_df, "In genepio-merged.owl?", "In GENEPIO ROBOT?", "In GENEPIO curation?")
+  match_counts_df = count_matches_by_subset(mints_review_df, "In genepio.owl?", "In GENEPIO ROBOT?", "In GENEPIO curation?")
   print(match_counts_df)
   
   # make horizontal bar plot of number of terms not found for each subset
@@ -180,7 +185,7 @@ if __name__ == "__main__":
   update_values(mints_review_sheet_id, "Mints review legend!G2:I", "USER_ENTERED", match_counts_df_values, creds)
 
   # get set of IDs for terms merged into GENEPIO
-  merged_mask = (mints_review_df['In genepio-merged.owl?']==('id_match' or 'id_and_label_match'))
+  merged_mask = (mints_review_df['In genepio.owl?']==('id_match' or 'id_and_label_match'))
   merged_ids = set(mints_review_df['IRI'][merged_mask].tolist())
 
   print("")
