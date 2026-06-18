@@ -4,10 +4,11 @@
 1. [The Mints Tracker](#the-mints-tracker)
 2. [The Mints review tab in detail](#the-mints-review-tab-in-detail)
 3. [Match type descriptions](#match-type-descriptions)
-4. [Other summaries](#other-summaries)
-5. [How to run this code yourself](#How-to-run-this-code-yourself)
-6. [How to add new search spaces](#How-to-add-new-search-spaces)
-7. [Useful links](#useful-links)
+4. [How the Tracker looks for matches](#how-the-tracker-looks-for-matches)
+5. [Other summaries](#other-summaries)
+6. [How to run this code yourself](#How-to-run-this-code-yourself)
+7. [How to add new search spaces](#How-to-add-new-search-spaces)
+8. [Useful links](#useful-links)
 
 # The Mints Tracker
 
@@ -49,6 +50,10 @@ What's in each column? The following table explains.
 Also available in the ``Mints review legend`` tab, this table describes the different match types tabulated (and not tabulated) by the Mints Tracker.
 
 <img width="1038" height="541" alt="image" src="https://github.com/user-attachments/assets/07149119-8944-4c8b-aaf5-a5431d9e1937" />
+
+# How the Tracker looks for matches
+
+MRI: TO DO
 
 # Other summaries
 
