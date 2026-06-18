@@ -13,7 +13,10 @@ This app is called ```mints-tracker``` and is part of the Google Cloud Console p
 
 # About the mints_review summary
 
-<img width="1794" height="934" alt="image" src="https://github.com/user-attachments/assets/832a417d-e954-492e-8b54-d38a0e744171" />
+The scripts update the "Mints review" tab of the GENEPIO_Term ID Reservations Sheet.
+<img width="1801" height="589" alt="image" src="https://github.com/user-attachments/assets/5d37fb65-2fe5-47ae-b66e-7e40272fcb2f" />
+
+What's in each column? The following table explains.
 
 |Column | Description | Example |
 |-|-|-|
