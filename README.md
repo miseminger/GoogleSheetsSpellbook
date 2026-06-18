@@ -1,9 +1,8 @@
 # GoogleSheetsSpellbook
 
+# What it does
+
 This repo contains scripts that generate the [mints review sheet](https://docs.google.com/spreadsheets/d/1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0/edit?gid=1337774973#gid=1337774973) for [GENEPIO](https://github.com/genepio/genepio) with the [Google Sheets API Python Client](https://developers.google.com/workspace/sheets/api/quickstart/python).
-
-<img width="1794" height="934" alt="image" src="https://github.com/user-attachments/assets/832a417d-e954-492e-8b54-d38a0e744171" />
-
 
 The script ```check_mints.py``` autogenerates the ```Mints review``` tab of the [mints sheet](https://docs.google.com/spreadsheets/d/1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0/edit?gid=1337774973#gid=1337774973). First, it gathers all the minted terms from the ```2022-2025``` tabs into the ```mints_review``` tab. Next it checks whether or not each minted term has been merged into [genepio.owl](https://github.com/GenEpiO/genepio/blob/master/src/ontology/genepio.owl) based on the [ROBOT export](https://robot.obolibrary.org/export.html) table ```genepio_terms.csv```. Finally, it checks whether each mint is described in any of the Google Sheets versions of ROBOT tables and curation sheets requested in ```input.json```, and records the name of the spreadsheet tab where it is found.
 
@@ -11,6 +10,27 @@ It also tabulates the types of matches for each subset and reports them to the `
 <img width="490" height="610" alt="image" src="https://github.com/user-attachments/assets/b7434a1b-9b51-40ba-b412-4ad2743a544a" />
 
 This app is called ```mints-tracker``` and is part of the Google Cloud Console project ```ontology-mints-tracker```. It is an unverified app in Testing mode and should be available to external users, but has yet to be tested on a computer other than ```tamarisk```.
+
+# About the mints_review summary
+
+<img width="1794" height="934" alt="image" src="https://github.com/user-attachments/assets/832a417d-e954-492e-8b54-d38a0e744171" />
+
+|Column | Description | Example |
+|-|-|-|
+| IRI	| The CURIE of the term, copied directly from the mints sheets.|GENEPIO:0100300|
+| label	|The term's label, copied directly from the mints sheets.|patient signs and symptoms data|
+| "creator (GitHub username)" |The term creator's GitHub username, copied directly from the mints sheets.|cmrn-rhi|
+| reservation date |The term reservation date, copied directly from the mints sheets.|2022-01-19|
+|	subset |The subset the term belongs to, copied directly from the mints sheets.|CanCOGeN|
+|	In genepio.owl?	|The match type between the mint and ``genepio.owl``, as determined by the script. This column must contain one of four options at right.|``id_match``, ``label_match``, ``id_and_label_match``, or ``no_match``|
+| label in genepio.owl |For mints that flag as ``id_match``, this column displays the term label in genepio.owl that is associated with this IRI.||
+|	alternative label in ``genepio.owl`` |For mints that flag as ``id_match``, this column displays the alternative term label in ``genepio.owl`` that is associated with this IRI. The alternative labels are retrieved using the ``SYNONYM`` header from [ROBOT export](https://robot.obolibrary.org/export) and includes any "oboInOwl exact, broad, narrow, related, or IAO alternative term".||
+|	In GENEPIO ROBOT?	|The match type between the mint and any matches found in the GENEPIO ROBOT tables, as determined by the script. This column must contain one of four options at right.|``id_match``, ``label_match``, ``id_and_label_match``, or ``no_match``|
+| Tab location in GENEPIO ROBOT |A hyperlink that points to the GENEPIO ROBOT Tables and displays the name of the tab where the match was found.|[spec_field](https://docs.google.com/spreadsheets/d/1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4/edit?gid=1020610779#gid=1020610779)|
+|	In GENEPIO curation? |The match type between the mint and any matches found in the GENEPIO curation sheets, as determined by the script. This column must contain one of four options at right.|``id_match``, ``label_match``, ``id_and_label_match``, or ``no_match``|
+|	Tab location in GENEPIO curation sheet 1	|A hyperlink that points to the specific GENEPIO Curation Sheet and displays the name(s) of the tab where the match was found. If more than one tab contains a match, this hyperlink displays a comma-separated list of tab names.||
+| Tab location in GENEPIO curation sheet 2	|In case matches are found in more than one sheet, this column holds the hyperlink to the second curation sheet.||
+| Notes	|||															
 
 **How to run this code from the shell:**
 
