@@ -34,6 +34,10 @@ What's in each column? The following table explains.
 |	Tab location in GENEPIO curation sheet 1	|A hyperlink that points to the specific GENEPIO Curation Sheet and displays the name(s) of the tab where the match was found. If more than one tab contains a match, this hyperlink displays a comma-separated list of tab names.||
 | Tab location in GENEPIO curation sheet 2	|In case matches are found in more than one sheet, this column holds the hyperlink to the second curation sheet.||														
 
+# Match type descriptions
+
+<img width="1038" height="541" alt="image" src="https://github.com/user-attachments/assets/07149119-8944-4c8b-aaf5-a5431d9e1937" />
+
 # How to run this code yourself
 
 **Requirements:**
