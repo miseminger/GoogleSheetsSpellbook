@@ -66,7 +66,7 @@ It also contains a table of mints with duplicate labels. This table is identical
 # How to run this code yourself
 
 **Requirements:**
-* This code was developed using Python 3.13.11 and Ubuntu 20.04. It has yet to be tested on a computer other than ``tamarisk``, so installation instructions will update after user testing!
+* This code was developed using Python 3.13.11 and Ubuntu 20.04. It has yet to be tested on a computer other than ``tamarisk``, so installation instructions will be updated after user testing!
 * Install all required packages using Conda: the ``environment.yaml`` file in the root folder here contains everything you will need and creates an environment called ```google-mint```.
 * You'll need a Google Cloud Project to run this. Follow the directions at: https://developers.google.com/workspace/sheets/api/quickstart/python.
 * I had to add myself as a test user to gain access with ```quickstart.py``` as in [the tutorial](https://developers.google.com/workspace/sheets/api/quickstart/python).
