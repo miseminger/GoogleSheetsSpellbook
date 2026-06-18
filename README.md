@@ -1,6 +1,14 @@
 # GoogleSheetsSpellbook
 
-# What it does
+# Table of Contents
+1. [The Mints Tracker](#the-mints-tracker)
+2. [The Mints review tab in detail](#the-mints-review-tab-in-detail)
+3. [Match type descriptions](#match-type-descriptions)
+4. [How to run this code yourself](#How-to-run-this-code-yourself)
+5. [How to add new search spaces](#How-to-add-new-search-spaces)
+6. [Useful links](#useful-links)
+
+# The Mints Tracker
 
 This repo contains scripts that generate the [mints review sheet](https://docs.google.com/spreadsheets/d/1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0/edit?gid=1337774973#gid=1337774973) for [GENEPIO](https://github.com/genepio/genepio) with the [Google Sheets API Python Client](https://developers.google.com/workspace/sheets/api/quickstart/python).
 
@@ -80,7 +88,9 @@ python3 check_mints.py --input input.json
 
 5. Finally, check that the ```mints_review``` tab of the GENEPIO Mints Google sheet is updated correctly.
 
+# How to add new search spaces
 
+The locations of the search spaces are all encoded in ``input.json``. Editing this file will allow you to search new tabs or keep up with renaming old tabs.
 
 # Useful links
 
