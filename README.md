@@ -35,7 +35,7 @@ What's in each column? The following table explains.
 | Tab location in GENEPIO curation sheet 2	|In case matches are found in more than one sheet, this column holds the hyperlink to the second curation sheet.||
 | Notes	|||															
 
-**How to run this code from the shell:**
+# How to run this code yourself
 
 1. Navigate to ```genepio/src/ontology```. From there, prepare a new release like this: 
 
