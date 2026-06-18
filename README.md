@@ -21,7 +21,9 @@ This app is called ```mints-tracker``` and is part of the Google Cloud Console p
 
 # The Mints review tab in detail
 
-The scripts update the "Mints review" tab of the GENEPIO_Term ID Reservations Sheet. The header row is untouched by the updates, but the data below will refresh each time the script is run. The mints always show up in the same order, but the number of times each mint is mentioned may vary depending on where matches are found and what kinds of matches they are at runtime.
+The scripts update the ``Mints review`` tab of the GENEPIO_Term ID Reservations Sheet. The header row is untouched by the updates, but the data below will refresh each time the script is run. The mints always show up in the same order, but the number of times each mint is mentioned may vary depending on where matches are found and what kinds of matches they are at runtime.
+
+Here's a screengrab of the ``Mints review`` tab so you can get a quick idea of what it looks like:
 <img width="1801" height="589" alt="image" src="https://github.com/user-attachments/assets/5d37fb65-2fe5-47ae-b66e-7e40272fcb2f" />
 
 What's in each column? The following table explains.
