@@ -11,9 +11,9 @@ It also tabulates the types of matches for each subset and reports them to the `
 
 This app is called ```mints-tracker``` and is part of the Google Cloud Console project ```ontology-mints-tracker```. It is an unverified app in Testing mode and should be available to external users, but has yet to be tested on a computer other than ```tamarisk```.
 
-# About the mints_review summary
+# The Mints review tab in detail
 
-The scripts update the "Mints review" tab of the GENEPIO_Term ID Reservations Sheet.
+The scripts update the "Mints review" tab of the GENEPIO_Term ID Reservations Sheet. The header row is untouched by the updates, but the data below will refresh each time the script is run. The mints always show up in the same order, but the number of times each mint is mentioned may vary depending on where matches are found and what kinds of matches they are at runtime.
 <img width="1801" height="589" alt="image" src="https://github.com/user-attachments/assets/5d37fb65-2fe5-47ae-b66e-7e40272fcb2f" />
 
 What's in each column? The following table explains.
@@ -32,10 +32,20 @@ What's in each column? The following table explains.
 | Tab location in GENEPIO ROBOT |A hyperlink that points to the GENEPIO ROBOT Tables and displays the name of the tab where the match was found.|[spec_field](https://docs.google.com/spreadsheets/d/1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4/edit?gid=1020610779#gid=1020610779)|
 |	In GENEPIO curation? |The match type between the mint and any matches found in the GENEPIO curation sheets, as determined by the script. This column must contain one of four options at right.|``id_match``, ``label_match``, ``id_and_label_match``, or ``no_match``|
 |	Tab location in GENEPIO curation sheet 1	|A hyperlink that points to the specific GENEPIO Curation Sheet and displays the name(s) of the tab where the match was found. If more than one tab contains a match, this hyperlink displays a comma-separated list of tab names.||
-| Tab location in GENEPIO curation sheet 2	|In case matches are found in more than one sheet, this column holds the hyperlink to the second curation sheet.||
-| Notes	|||															
+| Tab location in GENEPIO curation sheet 2	|In case matches are found in more than one sheet, this column holds the hyperlink to the second curation sheet.||														
 
 # How to run this code yourself
+
+**Requirements:**
+* This code was developed using Python 3.13.11 and Ubuntu 20.04. It has yet to be tested on a computer other than mine, so installation instructions will update after user testing!
+* Install all required packages using Conda: the ``environment.yaml`` file in the root folder here contains everything you will need and creates an environment called ```google-mint```.
+* You'll need a Google Cloud Project to run this. Follow the directions at: https://developers.google.com/workspace/sheets/api/quickstart/python.
+* I had to add myself as a test user to gain access with ```quickstart.py``` as in [the tutorial](https://developers.google.com/workspace/sheets/api/quickstart/python).
+* Remember to enable the Google Sheets API at https://console.developers.google.com/apis/api/sheets.googleapis.com/overview?project=88442894636.
+* ```credentials.json``` is stored locally and not shown in this repo in order to keep the client secret a secret...
+* ~~ADC must be in place for functions.py to work. See [Issue #1](https://github.com/miseminger/GoogleSheetsSpellbook/issues/1) for directions.~~
+
+**Running the code**
 
 1. Navigate to ```genepio/src/ontology```. From there, prepare a new release like this: 
 
@@ -66,17 +76,9 @@ python3 check_mints.py --input input.json
 
 5. Finally, check that the ```mints_review``` tab of the GENEPIO Mints Google sheet is updated correctly.
 
-**Requirements:**
-* Follow the directions at: https://developers.google.com/workspace/sheets/api/quickstart/python.
-* Install all required packages using Conda: the environment.yaml file contains everything you will need and creates an environment called ```google-mint```.
-* This code was developed using Python 3.13.11 and Ubuntu 20.04.
-* I had to add myself as a test user to gain access with ```quickstart.py``` as in [the tutorial](https://developers.google.com/workspace/sheets/api/quickstart/python).
-* Remember to enable the Google Sheets API at https://console.developers.google.com/apis/api/sheets.googleapis.com/overview?project=88442894636.
-* ```credentials.json``` is stored locally and not shown in this repo in order to keep the client secret a secret...
-* ~~ADC must be in place for functions.py to work. See [Issue #1](https://github.com/miseminger/GoogleSheetsSpellbook/issues/1) for directions.~~
 
 
-**Useful links:**
+# Useful links
 
 * [Charlie and Ivan's Mint QC script](https://github.com/cbarcl01/mint_qc_script)
 * [Google Sheets API guide with Python snippets](https://developers.google.com/workspace/sheets/api/guides/concepts) - A1 notation for spreadsheet data ranges is explained on the first page
