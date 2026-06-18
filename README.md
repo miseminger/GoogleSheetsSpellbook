@@ -106,11 +106,14 @@ python3 check_mints.py --input input.json
 5. Finally, check that the ```mints_review``` tab of the GENEPIO Mints Google sheet is updated correctly.
 
 **Troubleshooting**
+
 Common error messages and what to do about them are detailed in the Wiki at https://github.com/miseminger/GoogleSheetsSpellbook/wiki/Troubleshooting.
 
 # How to add new search spaces
 
-The locations of the search spaces are all encoded in ``input.json``. Editing this file will allow you to search new tabs or keep up with renaming old tabs. MRI TO UPDATE.
+All the details about where the Mints Tracker currently looks for mints--which Google Sheets, which tabs and which columns--are hardcoded in  ``input.json``. Editing ``input.json`` will allow you to search through different ROBOT tables and curation sheets, search new tabs in known sheets, or keep up with renaming old tabs. Let's see what it looks like. MI TO DO.
+
+
 
 # Useful links
 
