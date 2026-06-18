@@ -4,9 +4,10 @@
 1. [The Mints Tracker](#the-mints-tracker)
 2. [The Mints review tab in detail](#the-mints-review-tab-in-detail)
 3. [Match type descriptions](#match-type-descriptions)
-4. [How to run this code yourself](#How-to-run-this-code-yourself)
-5. [How to add new search spaces](#How-to-add-new-search-spaces)
-6. [Useful links](#useful-links)
+4. [Other summaries](#other-summaries)
+5. [How to run this code yourself](#How-to-run-this-code-yourself)
+6. [How to add new search spaces](#How-to-add-new-search-spaces)
+7. [Useful links](#useful-links)
 
 # The Mints Tracker
 
@@ -15,7 +16,6 @@ This repo contains scripts that generate the [mints review sheet](https://docs.g
 The script ```check_mints.py``` autogenerates the ```Mints review``` tab of the [mints sheet](https://docs.google.com/spreadsheets/d/1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0/edit?gid=1337774973#gid=1337774973). First, it gathers all the minted terms from the ```2022-2025``` tabs into the ```mints_review``` tab. Next it checks whether or not each minted term has been merged into [genepio.owl](https://github.com/GenEpiO/genepio/blob/master/src/ontology/genepio.owl) based on the [ROBOT export](https://robot.obolibrary.org/export.html) table ```genepio_terms.csv```. Finally, it checks whether each mint is described in any of the Google Sheets versions of ROBOT tables and curation sheets requested in ```input.json```, and records the name of the spreadsheet tab where it is found.
 
 It also tabulates the types of matches for each subset and reports them to the ```Mints review legend``` tab of the [mints sheet](https://docs.google.com/spreadsheets/d/1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0/edit?gid=1337774973#gid=1337774973):
-<img width="490" height="610" alt="image" src="https://github.com/user-attachments/assets/b7434a1b-9b51-40ba-b412-4ad2743a544a" />
 
 This app is called ```mints-tracker``` and is part of the Google Cloud Console project ```ontology-mints-tracker```. It is an unverified app in Testing mode and should be available to external users, but has yet to be tested on a computer other than ```tamarisk```.
 
@@ -44,12 +44,16 @@ What's in each column? The following table explains.
 
 # Match type descriptions
 
+Also available in the ``Mints review legend`` tab, this table describes the different match types tabulated (and not tabulated) by the Mints Tracker.
+
 <img width="1038" height="541" alt="image" src="https://github.com/user-attachments/assets/07149119-8944-4c8b-aaf5-a5431d9e1937" />
+
+# Other summaries
 
 # How to run this code yourself
 
 **Requirements:**
-* This code was developed using Python 3.13.11 and Ubuntu 20.04. It has yet to be tested on a computer other than mine, so installation instructions will update after user testing!
+* This code was developed using Python 3.13.11 and Ubuntu 20.04. It has yet to be tested on a computer other than ``tamarisk``, so installation instructions will update after user testing!
 * Install all required packages using Conda: the ``environment.yaml`` file in the root folder here contains everything you will need and creates an environment called ```google-mint```.
 * You'll need a Google Cloud Project to run this. Follow the directions at: https://developers.google.com/workspace/sheets/api/quickstart/python.
 * I had to add myself as a test user to gain access with ```quickstart.py``` as in [the tutorial](https://developers.google.com/workspace/sheets/api/quickstart/python).
