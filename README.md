@@ -42,8 +42,8 @@ What's in each column? The following table explains.
 |	In GENEPIO ROBOT?	|The match type between the mint and any matches found in the GENEPIO ROBOT tables, as determined by the script. This column must contain one of four options at right.|``id_match``, ``label_match``, ``id_and_label_match``, or ``no_match``|
 | Tab location in GENEPIO ROBOT |A hyperlink that points to the GENEPIO ROBOT Tables and displays the name of the tab where the match was found.|[spec_field](https://docs.google.com/spreadsheets/d/1L1051tGcWerbCJkFPnBTe6gQ_9sYuthvmNPNf7Ljtq4/edit?gid=1020610779#gid=1020610779)|
 |	In GENEPIO curation? |The match type between the mint and any matches found in the GENEPIO curation sheets, as determined by the script. This column must contain one of four options at right.|``id_match``, ``label_match``, ``id_and_label_match``, or ``no_match``|
-|	Tab location in GENEPIO curation sheet 1	|A hyperlink that points to the specific GENEPIO Curation Sheet and displays the name(s) of the tab where the match was found. If more than one tab contains a match, this hyperlink displays a comma-separated list of tab names.||
-| Tab location in GENEPIO curation sheet 2	|In case matches are found in more than one sheet, this column holds the hyperlink to the second curation sheet.||														
+|	Tab location in GENEPIO curation sheet 1	|A hyperlink that points to the specific GENEPIO Curation Sheet and displays the name(s) of the tab where the match was found. If more than one tab contains a match, this hyperlink displays a comma-separated list of tab names.| [Copy_of_2023_mints_wastewater_(Charlie)](https://docs.google.com/spreadsheets/d/1by9PCtRFKS8ni6V4b4fMFeDvVJ9gWtqF6MeVSuacxwA](https://docs.google.com/spreadsheets/d/14r_qlNJUCGJ_59MA3MR0x4JObsYpQI_2AFJGMu_wyl4) |
+| Tab location in GENEPIO curation sheet 2	|In case matches are found in more than one sheet, this column holds the hyperlink to the second curation sheet.| [2023_mints_wastewater_fields](https://docs.google.com/spreadsheets/d/1s6FB9EyPWYBgssIU9a9AKATEfZnMdixwvrGhBXUHAVk) |														
 
 # Match type descriptions
 
