@@ -125,7 +125,28 @@ Common error messages and what to do about them are detailed in the Wiki at http
 
 # How to add new search spaces
 
-All the details about where the Mints Tracker currently looks for mints--which Google Sheets, which tabs and which columns--are hardcoded in  ``input.json``. Editing ``input.json`` will allow you to search through different ROBOT tables and curation sheets, search new tabs in known sheets, or keep up with renaming old tabs. Let's see what it looks like. MI TO DO.
+All the details about where the Mints Tracker currently looks for mints--which Google Sheets, which tabs and which columns--are hardcoded in  ``input.json``. Editing ``input.json`` will allow you to search through different ROBOT tables and curation sheets, search new tabs in known sheets, or keep up with renaming old tabs. Let's see what it looks like. 
+
+This entry holds the information needed to fetch all the mints from the mints sheets before 2026:
+
+<img width="868" height="165" alt="image" src="https://github.com/user-attachments/assets/c936d94a-b545-47ce-ae25-3fa1f19a6478" />
+
+This is what the keys mean:
+
+- SPREADSHEET_ID: The Google Sheets spreadsheet ID, eg. for the Mints sheet, it's the bolded part of https://docs.google.com/spreadsheets/d/**1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0**/edit?gid=372081842#gid=372081842. The spreadsheet ID is stable even if the spreadsheet name changes.
+- RANGE_NAMES: A list of the tab names and (if applicable) rows within each tab to search; must be manually updated every time a new tab is added or a tab name is changed. The ranges are written in [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts). Note ``"2024!1:1070"`` in the screenshot, which means that for the 2024 mints sheet we only want to include rows 1 to 1070 in the search.
+- COLUMN_NAMES: The names of the columns to include, either for search or for inclusion in the mints review sheet. These are copied directly from the Google Sheet header names and are case sensitive.
+- START_ROW: The first row containing data, 0-indexed. This means that if the first row of data in the Google Sheet is row 2 (like in the screenshot below), you'd enter "1" for START_ROW (=2-1).
+- RENAME_COLUMNS: A dictionary for renaming columns in the spreadsheet within the script. This does not update the spreadsheet itself, but it is needed to help the script know which columns to look at, if they are named something different in the sheet than the script is expecting. The 2026 mints sheet is structured a little differently and makes use of this to map the columns to same names as the other mints sheets and make search possible:
+  
+  <img width="1167" height="143" alt="image" src="https://github.com/user-attachments/assets/ad54b2dd-b9c3-4c85-8fd5-d1f4cf3a517d" />
+
+  
+Here's a screenshot of the first four lines in the 2025 Mints sheet so you can compare:
+
+<img width="785" height="140" alt="image" src="https://github.com/user-attachments/assets/7dbf37c0-a2ab-44c8-9528-19dd6d07a28c" />
+
+
 
 
 
