@@ -59,9 +59,20 @@ As to **where** the Tracker looks for matches, this is manually hardcoded in in 
 
 # Other summaries
 
+**Matches by subset**
+
 The ``Mints review legend`` tab contains a summary table showing the number of matched and unmatched mints per subset. This table automatically updates each time the script is run.
 
 <img width="495" height="604" alt="image" src="https://github.com/user-attachments/assets/ed59fa11-bee0-41ca-83cc-5183f77e484e" />
+
+**Matches by subset plot**
+
+This is fairly unnecessary but I made it because I like graphs. Every time the Mints Tracker runs, it saves a plot called [subset_plot.png](https://github.com/miseminger/GoogleSheetsSpellbook/blob/main/subset_plot.png) in the root folder. It contains the same information as the matches by subset chart, but in bar plot form.
+
+<img width="634" height="473" alt="image" src="https://github.com/user-attachments/assets/76b191e2-5014-45a5-a86d-8708d4c8c29b" />
+
+
+**Duplicate labels**
 
 It also contains a table of mints with duplicate labels. This table is identical to the table in the ``Mints review tab``, but only includes mints with different IRIs that have the same label, to easily be able to check if any mints have been accidentally duplicated. Duplication may or may not be an issue for each mint--it's a case-by-case thing.
 <img width="1688" height="604" alt="image" src="https://github.com/user-attachments/assets/a2e0754d-c692-4d8a-8d8e-80c7d832cf99" />
