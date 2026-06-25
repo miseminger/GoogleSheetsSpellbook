@@ -58,6 +58,7 @@ MRI: TO DO
 # Other summaries
 
 The ``Mints review legend`` tab contains a summary table showing the number of matched and unmatched mints per subset. This table automatically updates each time the script is run.
+
 <img width="495" height="604" alt="image" src="https://github.com/user-attachments/assets/ed59fa11-bee0-41ca-83cc-5183f77e484e" />
 
 It also contains a table of mints with duplicate labels. This table is identical to the table in the ``Mints review tab``, but only includes mints with different IRIs that have the same label, to easily be able to check if any mints have been accidentally duplicated. Duplication may or may not be an issue for each mint--it's a case-by-case thing.
