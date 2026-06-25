@@ -53,7 +53,9 @@ Also available in the ``Mints review legend`` tab, this table describes the diff
 
 # How the Tracker looks for matches
 
-MRI: TO DO
+When the Tracker looks for mint label matches, its search is case-insensitive and does not distinguish between underscores and spaces. 
+
+As to **where** the Tracker looks for matches, this is manually hardcoded in in ``input.json`` (and can be easily edited to add new tabs and spreadsheets to search).
 
 # Other summaries
 
