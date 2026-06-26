@@ -5,7 +5,7 @@
 2. [The Mints review tab in detail](#the-mints-review-tab-in-detail)
 3. [Match type descriptions](#match-type-descriptions)
 4. [How the Tracker looks for matches](#how-the-tracker-looks-for-matches)
-5. [How the Tracker updates merge status][#how-the-tracker-updates-merge-status]
+5. [How the Tracker updates merge status](#how-the-tracker-updates-merge-status)
 6. [Other summaries](#other-summaries)
 7. [How to run this code yourself](#How-to-run-this-code-yourself)
 8. [How to add new search spaces](#How-to-add-new-search-spaces)
