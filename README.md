@@ -60,7 +60,7 @@ As to **where** the Tracker looks for matches, this is manually hardcoded in in 
 
 # How the Tracker updates merge status
 
-The Tracker automatically assigns ``MERGED=TRUE`` to terms in the mints sheets where the column 'In genepio.owl?' contains ``id_match`` or ``id_and_label_match``.
+The Tracker automatically assigns ``MERGED=TRUE`` to terms in the mints sheets where the column 'In genepio.owl?' contains ``id_match`` or ``id_and_label_match``, and assigns ``MERGED=FALSE`` otherwise.
 
 For example, in the Mints review tab we have:
 
