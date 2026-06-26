@@ -62,11 +62,11 @@ As to **where** the Tracker looks for matches, this is manually hardcoded in in 
 
 The Tracker automatically assigns ``MERGED=TRUE`` to terms in the mints sheets where the column 'In genepio.owl?' contains ``id_match`` or ``id_and_label_match``, and assigns ``MERGED=FALSE`` otherwise.
 
-For example, in the Mints review tab we have:
+For example, in the Mints review tab we have three example terms from 2022:
 
 <img width="447" height="96" alt="image" src="https://github.com/user-attachments/assets/6b549e1c-d8a7-4617-a869-2a0b7b21fd95" />
 
-And in the Mints sheet, the Tracker has assigned the following MERGED statuses:
+And in the 2022 Mints sheet, the Tracker has assigned the following MERGED statuses:
 <img width="478" height="77" alt="image" src="https://github.com/user-attachments/assets/d1b4239c-1297-4072-8574-adcde298c35a" />
 
 
