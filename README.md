@@ -5,7 +5,7 @@
 2. [The Mints review tab in detail](#the-mints-review-tab-in-detail)
 3. [Match type descriptions](#match-type-descriptions)
 4. [How the Tracker looks for matches](#how-the-tracker-looks-for-matches)
-5. [How the Tracker updates "MERGED" status][#how-the-tracker-updates-"MERGED"-status]
+5. [How the Tracker updates merge status][#how-the-tracker-updates-merge-status]
 6. [Other summaries](#other-summaries)
 7. [How to run this code yourself](#How-to-run-this-code-yourself)
 8. [How to add new search spaces](#How-to-add-new-search-spaces)
@@ -58,7 +58,7 @@ When the Tracker looks for mint label matches, its search is case-insensitive an
 
 As to **where** the Tracker looks for matches, this is manually hardcoded in in ``input.json`` (and can be easily edited to add new tabs and spreadsheets to search).
 
-# How the Tracker updates "MERGED" status
+# How the Tracker updates merge status
 
 The Tracker automatically assigns ``MERGED=TRUE`` to terms in the mints sheets where the column 'In genepio.owl?' contains ``id_match`` or ``id_and_label_match``.
 
