@@ -5,10 +5,11 @@
 2. [The Mints review tab in detail](#the-mints-review-tab-in-detail)
 3. [Match type descriptions](#match-type-descriptions)
 4. [How the Tracker looks for matches](#how-the-tracker-looks-for-matches)
-5. [Other summaries](#other-summaries)
-6. [How to run this code yourself](#How-to-run-this-code-yourself)
-7. [How to add new search spaces](#How-to-add-new-search-spaces)
-8. [Useful links](#useful-links)
+5. [How the Tracker updates "MERGED" status][#how-the-tracker-updates-"MERGED"-status]
+6. [Other summaries](#other-summaries)
+7. [How to run this code yourself](#How-to-run-this-code-yourself)
+8. [How to add new search spaces](#How-to-add-new-search-spaces)
+9. [Useful links](#useful-links)
 
 # The Mints Tracker
 
