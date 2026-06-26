@@ -342,7 +342,6 @@ def count_matches_by_subset(df, owl_column, robot_column, curation_column):
   match_counts_df['no_match_counts'] = match_counts_df['no_match_counts'].astype(int)
   match_counts_df['min_1_match_counts'] = match_counts_df['min_1_match_counts'].astype(int)
   match_counts_df = match_counts_df.set_index('Subset')
-  print(match_counts_df)
 
   return match_counts_df
 
