@@ -185,7 +185,7 @@ if __name__ == "__main__":
   update_values(mints_review_sheet_id, "Mints review legend!G2:I", "USER_ENTERED", match_counts_df_values, creds)
 
   # get set of IDs for terms merged into GENEPIO
-  merged_mask = (mints_review_df['In genepio.owl?']==('id_match' or 'id_and_label_match'))
+  merged_mask = (mints_review_df['In genepio.owl?']=='id_match') | (mints_review_df['In genepio.owl?']=='id_and_label_match')
   merged_ids = set(mints_review_df['IRI'][merged_mask].tolist())
 
   print("")
