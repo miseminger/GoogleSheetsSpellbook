@@ -146,7 +146,7 @@ This entry holds the information needed to fetch all the mints from the mints sh
 
 This is what the keys mean:
 
-- SPREADSHEET_ID: The Google Sheets spreadsheet ID, eg. for the Mints sheet, it's the bolded part of https://docs.google.com/spreadsheets/d/**1Ieo0jokfXBbWIQv32g5D5s7x8FIeh7f-gGX6qI6AhN0**/edit?gid=372081842#gid=372081842. The spreadsheet ID is stable even if the spreadsheet name changes.
+- SPREADSHEET_ID: The [Google Sheets spreadsheet ID](https://developers.google.com/workspace/sheets/api/guides/concepts). The spreadsheet ID is stable even if the spreadsheet name changes.
 - RANGE_NAMES: A list of the tab names and (if applicable) rows within each tab to search; must be manually updated every time a new tab is added or a tab name is changed. The ranges are written in [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts). Note ``"2024!1:1070"`` in the screenshot, which means that for the 2024 mints sheet we only want to include rows 1 to 1070 in the search.
 - COLUMN_NAMES: The names of the columns to include, either for search or for inclusion in the mints review sheet. These are copied directly from the Google Sheet header names and are case sensitive.
 - START_ROW: The first row containing data, 0-indexed. This means that if the first row of data in the Google Sheet is row 2 (like in the screenshot below), you'd enter "1" for START_ROW (=2-1).
