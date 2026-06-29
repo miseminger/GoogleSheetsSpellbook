@@ -71,6 +71,13 @@
             "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
             "START_ROW": 2,
             "RENAME_COLUMNS": {}
+        },
+            "NCIT_CURATION_SPREADSHEET": {
+                "SPREADSHEET_ID": "1uJMMLXLDYaz5K4UWBtD4iZxWzG_ePI4jwIvNiNHbLqY",
+                "RANGE_NAMES": ["NCIT_curation_sheet"],
+                "COLUMN_NAMES": ["Ontology ID", "label", "alternative label"],
+                "START_ROW": 2,
+                "RENAME_COLUMNS": {}
         }
      }
 }
